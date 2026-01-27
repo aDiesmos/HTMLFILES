@@ -1,30 +1,50 @@
-<center>
-<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=131796&s=7' border='0' >
-</center>
-</html><!DOCTYPE html>
-<html lang="en-us">
-  <head>
-<base href="https://cdn.jsdelivr.net/gh/waycrosspublicmedia/livediesmos@main/baldis-basics/">
+<!DOCTYPE html>
 
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Baldi's Basics Field Trip Camping Remake</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+
+<!-- Ultimate Game Stash file--> 
+<!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
+
+
+
+<html>
+  <head>
+    <base href="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/baldis-basics/">
+    <title>Baldi's Basics</title>
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <script type="text/javascript" src="/js/main.js"></script>
+
+    <link rel="stylesheet" href="TemplateData/style.css" />
+     <script>
+    window.fileMergerConfig = {
+      files: [
+        { name: 'baldi.data.unityweb', parts: 2 },
+        { name: 'baldi.wasm.code.unityweb', parts: 1 },
+        { name: 'baldi.wasm.framework.unityweb', parts: 1 },
+      ],
+      basePath: 'unity/',
+      debug: true
+    };
+  </script>
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/merge.js"></script>
     <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
+    <script src="baldi.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "baldi.json", {
+        onProgress: UnityProgress,
+        Module: {
+          onRuntimeInitialized: function () {
+            UnityProgress(gameInstance, "complete");
+          },
+        },
+      });
     </script>
   </head>
-  <body>
+  <body style="margin: 0;">
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 1366px; height: 768px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">Baldi's Basics Field Trip Camping Remake</div>
+      <div id="unityContainer" style="width: 960px; height: 600px; padding: 0px; margin: 0px; border: 0px; position: relative; background: rgb(35, 31, 32);">
+        <div id="gameContainer" style="width: 800px; height: 560px; margin: auto;"></div>
       </div>
+      <script src="firebase-app.js"></script>
     </div>
   </body>
 </html>
