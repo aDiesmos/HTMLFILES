@@ -216,6 +216,51 @@ Licensed under the MIT License (view LICENSE.md for more information)
             e.returnValue = '';
         });
     </script>
+<script>
+// Simple URL-based game loader
+(function() {
+    // Check for game parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const game = urlParams.get('game');
+    
+    if (game) {
+        // Wait for emulator to initialize
+        setTimeout(() => {
+            // Construct game URL
+            const gameUrl = `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/gba@main/binaries/${game}.gba`;
+            
+            // Create a fake file input event
+            fetch(gameUrl)
+                .then(response => response.arrayBuffer())
+                .then(arrayBuffer => {
+                    // Create a mock File object
+                    const blob = new Blob([arrayBuffer], { type: 'application/octet-stream' });
+                    const file = new File([blob], `${game}.gba`);
+                    
+                    // Check if we have a ROM load handler
+                    const romInput = document.getElementById('rom_load');
+                    if (romInput && typeof romInput.onchange === 'function') {
+                        // Create a DataTransfer to hold the file
+                        const dataTransfer = new DataTransfer();
+                        dataTransfer.items.add(file);
+                        romInput.files = dataTransfer.files;
+                        
+                        // Trigger the change event
+                        const event = new Event('change', { bubbles: true });
+                        romInput.dispatchEvent(event);
+                        
+                        // Update page title
+                        document.title = `${game.replace(/_/g, ' ')} - Diesmos Games`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Failed to load game:', error);
+                    alert(`Failed to load ${game}: ${error.message}`);
+                });
+        }, 1000); // Wait 1 second for emulator to initialize
+    }
+})();
+</script>
 </body>
 
 </html>
