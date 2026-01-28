@@ -28,7 +28,7 @@ function translateGameUrl(oldUrl) {
     if (gameMatch && gameMatch[1]) {
       const gameName = gameMatch[1];
       // Create URL to the GBA player with game parameter
-      return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/gba/player?game=${gameName}.html`;
+      return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/gba/player.html?game=${gameName}`;
     }
   }
   
