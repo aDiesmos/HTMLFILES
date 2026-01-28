@@ -4374,8 +4374,8 @@ const games = [
     id: 619,
     title: "Cookie Clicker Classic",
     image: "https://chicken.parmacitieschools.org/images/Cookie-Clicker-Classic-main.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/Cookie-Clicker-Classic-main/",
-    isNew: false
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cookieclicker.html",
+    isNew: true
   },
   {
     id: 620,
