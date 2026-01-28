@@ -6216,6 +6216,7 @@ function toggleFullscreen(element) {
 
 // Function to load game using Blob URL trick
 // Function to load game using Blob URL trick
+// Updated loadGameInIframe function with GBA special handling
 async function loadGameInIframe(gameUrl, gameTitle) {
   try {
     hideError();
@@ -6223,7 +6224,7 @@ async function loadGameInIframe(gameUrl, gameTitle) {
 
     currentGameUrl = gameUrl;
     gameIframe.src = 'about:blank';
-   
+
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 20000);
 
@@ -6241,78 +6242,150 @@ async function loadGameInIframe(gameUrl, gameTitle) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
 
-      const htmlContent = await response.text();
+      let htmlContent = await response.text();
 
-      /* ===============================
-         🚨 GITHUB 50MB PACKAGE DETECTOR
-         =============================== */
-      if (
-        htmlContent.includes('Package size exceeded the configured limit') ||
-        htmlContent.includes('Try https://github.com/') ||
-        htmlContent.includes('50 MB file size limit')
-      ) {
+      // 🎮 SPECIAL HANDLING FOR GBA GAMES
+      if (gameUrl.includes('/gba/player.html')) {
+        // Extract game parameter from the original URL
+        const urlObj = new URL(gameUrl, window.location.origin);
+        const gameParam = urlObj.searchParams.get('game');
+        
+        if (gameParam) {
+          console.log(`Injecting game parameter for GBA: ${gameParam}`);
+          
+          // Inject JavaScript to set the game parameter before the page loads
+          const injectScript = `
+            <script>
+              // Inject game parameter before original script runs
+              (function() {
+                // Override getGameFromURL to return our game
+                window.getGameFromURL = function() {
+                  return "${gameParam}";
+                };
+                
+                // Also set it in URLSearchParams for compatibility
+                const url = new URL(window.location);
+                url.searchParams.set('game', "${gameParam}");
+                window.history.replaceState({}, '', url);
+                
+                // Set in sessionStorage
+                sessionStorage.setItem('gba_current_game', "${gameParam}");
+                
+                console.log('[GBA INJECTOR] Game parameter injected:', "${gameParam}");
+              })();
+            </script>
+          `;
+          
+          // Find the head or body tag and inject our script
+          const headIndex = htmlContent.indexOf('<head>');
+          if (headIndex !== -1) {
+            const insertPos = headIndex + 6; // After <head>
+            htmlContent = htmlContent.slice(0, insertPos) + injectScript + htmlContent.slice(insertPos);
+          } else {
+            // If no head tag, add it at the beginning
+            htmlContent = injectScript + htmlContent;
+          }
+          
+          // Also modify the onload function to ensure game loads
+          const onloadIndex = htmlContent.indexOf('window.onload = function()');
+          if (onloadIndex !== -1) {
+            // Replace the onload function with one that loads our game
+            const onloadEnd = htmlContent.indexOf('}', onloadIndex);
+            const newOnload = `
+              window.onload = function() {
+                // First run the original code
+                //Populate settings:
+                registerDefaultSettings();
+                //Initialize Iodine:
+                registerIodineHandler();
+                //Initialize the timer:
+                calculateTiming();
+                //Initialize the graphics:
+                registerBlitterHandler();
+                //Initialize the audio:
+                registerAudioHandler();
+                //Register the save handler callbacks:
+                registerSaveHandlers();
+                //Register the GUI controls.
+                registerGUIEvents();
+                //Register GUI settings.
+                registerGUISettings();
+                
+                // FORCE LOAD THE GAME
+                var gameID = "${gameParam}";
+                var gameName = games[gameID];
+                
+                if (gameID && gameName) {
+                  console.log(\`[FORCE LOAD] Game: \${gameName} [\${gameID}]\`);
+                  document.title = \`\${gameName} on GBA Online\`;
+                  
+                  var t = document.createElement("p");
+                  t.innerHTML = "Loaded \\"" + gameName + "\\"";
+                  t.id = "loadedGameMsg";
+                  document.body.appendChild(t);
+                  
+                  setTimeout(function () {
+                    $("#loadedGameMsg").fadeOut();
+                    setTimeout(function () {
+                      $("#loadedGameMsg").remove();
+                    }, 3000);
+                  }, 3000);
+                  
+                  // Download the BIOS and ROM
+                  downloadBIOS();
+                } else {
+                  console.log("Game not found:", "${gameParam}");
+                  document.title = defaultTitle;
+                }
+              };
+            `;
+            htmlContent = htmlContent.slice(0, onloadIndex) + newOnload + htmlContent.slice(onloadEnd + 1);
+          }
+        }
+      }
+
+      // Check for GitHub 50MB limit
+      if (htmlContent.includes('Package size exceeded the configured limit') ||
+          htmlContent.includes('Try https://github.com/') ||
+          htmlContent.includes('50 MB file size limit')) {
         hideLoading();
-        gameIframe.src = 'about:blank'; // Keep iframe blank
-
+        gameIframe.src = 'about:blank';
         showError(
           'This game cannot be loaded. 💔',
-          `
-The game HTML file does not exist or exceeds GitHub's 50 MB file limit.
-
-This usually means:
-• The HTML file was never uploaded
-• The game is too large for GitHub Pages
-• Only the folder exists, not the compiled HTML
-
-Suggested action:
-Open the repository folder directly and verify the HTML file exists.
-          `.trim()
+          'The game HTML file does not exist or exceeds GitHub\'s 50 MB file limit.'
         );
-
-        // Store this as the last error to prevent auto-clearing
         lastError = 'github_50mb_limit';
         return false;
       }
 
-      /* ===============================
-         ❌ INVALID / EMPTY HTML CHECK
-         =============================== */
-      if (
-        !htmlContent.includes('<html') &&
-        !htmlContent.includes('<!DOCTYPE') &&
-        htmlContent.length < 100 // Also check for very short responses
-      ) {
+      // Check for invalid HTML
+      if (!htmlContent.includes('<html') &&
+          !htmlContent.includes('<!DOCTYPE') &&
+          htmlContent.length < 100) {
         hideLoading();
         gameIframe.src = 'about:blank';
-        
         showError(
           'Invalid HTML content. 💔',
-          `
-The server returned content that doesn't look like valid HTML.
-
-Response length: ${htmlContent.length} characters
-First 100 chars: ${htmlContent.substring(0, 100)}...
-          `.trim()
+          'The server returned content that doesn\'t look like valid HTML.'
         );
-        
         lastError = 'invalid_html';
         return false;
       }
 
-      /* ===============================
-         ✅ NORMAL LOAD PATH
-         =============================== */
+      // Create blob with modified content
       const blob = new Blob([htmlContent], { type: 'text/html' });
       const blobUrl = URL.createObjectURL(blob);
-
+      
+      // Set iframe source
       gameIframe.src = blobUrl;
-
+      
+      // Clean up previous blob URL
       if (window.previousBlobUrl) {
         URL.revokeObjectURL(window.previousBlobUrl);
       }
       window.previousBlobUrl = blobUrl;
-
-      // Reset error state since we successfully loaded
+      
+      // Reset error state
       lastError = null;
       return true;
 
@@ -6320,22 +6393,10 @@ First 100 chars: ${htmlContent.substring(0, 100)}...
       clearTimeout(timeoutId);
       hideLoading();
       gameIframe.src = 'about:blank';
-
       showError(
         'The game failed to load. 💔',
-        `
-Fetch failed or was blocked.
-
-Reason:
-${fetchError.message}
-
-This may be caused by:
-• CORS restrictions
-• Missing HTML file
-• Network interruption
-        `.trim()
+        `Fetch failed or was blocked. Reason: ${fetchError.message}`
       );
-
       lastError = 'fetch_error';
       return false;
     }
@@ -6343,22 +6404,14 @@ This may be caused by:
   } catch (fatalError) {
     hideLoading();
     gameIframe.src = 'about:blank';
-
     showError(
       'Unexpected loader error. 💔',
-      `
-A fatal error occurred while preparing the game.
-
-Details:
-${fatalError.message}
-      `.trim()
+      `A fatal error occurred while preparing the game. Details: ${fatalError.message}`
     );
-
     lastError = 'fatal_error';
     return false;
   }
 }
-
 
 // Show/hide loading/error states - FIXED: Better error handling
 function showLoading() {
