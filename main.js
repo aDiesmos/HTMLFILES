@@ -34,6 +34,11 @@ function translateGameUrl(oldUrl) {
 }
 
 function extractGamePath(fullUrl) {
+  // If the URL is already a jsDelivr URL, return it as-is
+  if (fullUrl.includes('https://cdn.jsdelivr.net/gh/')) {
+    return fullUrl;
+  }
+  
   // Remove protocol and domain to get the path
   let path = fullUrl;
   
