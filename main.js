@@ -6223,7 +6223,15 @@ async function loadGameInIframe(gameUrl, gameTitle) {
 
     currentGameUrl = gameUrl;
     gameIframe.src = 'about:blank';
-
+    // Check if this is a GBA game with query parameters
+    const isGbaGame = gameUrl.includes('/gba/player.html?game=');
+    
+    if (isGbaGame) {
+      // For GBA games, load directly in iframe with full URL
+      // This preserves the query parameters
+      gameIframe.src = gameUrl;
+      return true;
+    }
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 20000);
 
