@@ -22,9 +22,18 @@ function logToClicky() {
 function translateGameUrl(oldUrl) {
   if (!oldUrl) return '';
   
-  // Handle player.html?game= format
+  // Handle GBA games with special format
+  if (oldUrl.includes('/gba/player.html?game=')) {
+    const gameMatch = oldUrl.match(/player\.html\?game=([^&]+)/);
+    if (gameMatch && gameMatch[1]) {
+      const gameName = gameMatch[1];
+      // Special handling for GBA games - they use a different player.html
+      return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/gba/player.html?game=${gameName}`;
+    }
+  }
+  
+  // Handle player.html?game= format (non-GBA)
   if (oldUrl.includes('player.html?game=')) {
-    // Extract the actual game URL
     const urlMatch = oldUrl.match(/player\.html\?game=(.+)/);
     if (urlMatch && urlMatch[1]) {
       const gameUrl = decodeURIComponent(urlMatch[1]);
@@ -53,18 +62,19 @@ function extractGamePath(fullUrl) {
   // Remove trailing slash
   path = path.replace(/\/$/, '');
   
-  // Extract the folder structure (e.g., "whatver/vex2" or "livediesmos/vex2")
+  // Extract the folder structure
   const parts = path.split('/');
-  if (parts.length < 1) return ''; // Changed from < 2 to handle single part URLs
+  if (parts.length < 1) return '';
   
+  // Special case: GBA games (already handled in translateGameUrl)
   // Special case: Single domain link like "bdfi26"
   if (parts.length === 1) {
     const gameName = parts[0];
     return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/waycrosspublicmedia/${gameName}.html`;
   }
   
-  const urlPath = parts.slice(0, -1).join('/'); // Get everything except the last part
-  const gameName = parts.pop(); // Get the last part (game name)
+  const urlPath = parts.slice(0, -1).join('/');
+  const gameName = parts.pop();
   
   // Construct the new URL
   return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/${urlPath}/${gameName}.html`;
