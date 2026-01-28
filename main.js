@@ -1,5 +1,8 @@
 // URL Translation Functions with improved extraction
 function translateImageUrl(oldUrl) {
+    if (oldUrl.includes('https://cdn.jsdelivr.net/gh/')) {
+    return oldUrl;
+  }
   if (!oldUrl) return '';
   
 function logToClicky() {
