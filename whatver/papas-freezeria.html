@@ -1,77 +1,129 @@
+<Module>
 
-<!DOCTYPE html>
-<html lang="en"><head>
-<base href="https://cdn.jsdelivr.net/gh/waycrosspublicmedia/whatver@main/papas-freezeria/">
 
-<!--Made with love by Quester#0378-->
-<link href="../css/waflash.css" rel="stylesheet" type="text/css">
-<title>Papa's Freezeria - Bigfoot's Game Shack</title>
+
+<Module>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>really cool flash game</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+    }
+    #flash-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: black;
+      overflow: hidden;
+    }
+    .black-box {
+      position: fixed;
+      background: black;
+      z-index: 10;
+    }
+    #box-top {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+    }
+    #box-bottom {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+    }
+    #box-left {
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+    }
+    #box-right {
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 100%;
+    }
+    ruffle-player {
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: block;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle@0.2.0-nightly.2025.10.2/ruffle.min.js"></script>
 </head>
-<body dir="ltr">
-<script>
-		var gameConfig = {
-			swfUrl: 'swf/papasfreezeria.swf'
-		}
-</script>
-<div id="waflashContainer">
-<canvas class="waflashCanvas" id="canvas" tabindex="1"></canvas>
-<div id="waflashStatus" style="display: none;">Playing...</div>
-<script>
-		var ua = navigator.userAgent.toLowerCase();
-		if ( (navigator.appName =='Netscape' && ua.indexOf('trident') != -1) || (ua.indexOf("msie") != -1)) {
-    		var waf = document.getElementById('waflashStatus');
-			waf.style.display ='block';
-			waf.innerText ='??? ?????(IE) ??? ??? ???? ???? !\n??, ???? ?? ????? ??????.';
-			gtag('event', 'connect_from_ie', {'event_category': 'error', 'event_label': ua });
-		}
-	</script>
-<script crossorigin="anonymous" type="module">
-		let is_mobile = /Mobi/i.test(window.navigator.userAgent);
-		if (is_mobile) {
-			function scrollToSubject() {
-				try {
-					window.scrollTo({
-						top: 100,
-						left: 0,
-						behavior: 'smooth'
-					});
-				} catch (e) {}
-			}
-			scrollToSubject();
-			window.addEventListener("orientationchange", function() {
-				setTimeout(scrollToSubject, 100);
-			});
-		} else {
-			document.getElementById('canvas').focus();
-		}
-		document.getElementById('canvas').addEventListener("keydown", function(ev) {
-			ev.preventDefault();
-			ev.stopPropagation();
-		});
-		document.getElementById('canvas').addEventListener("click", function() {
-			document.getElementById('canvas').focus();
-		});
-		document.addEventListener("mousedown", (function() {
-			const canvasElement = document.getElementById('canvas');
-			let focused = false;
-			return function(ev) {
-				if (ev.target == canvasElement) {
-					if (!focused) {
-						canvasElement.focus();
-						focused = true;
-					}
-				} else {
-					if (focused) {
-						focused = false;
-					}
-				}
-				return true;
-			}
-		})());
-		import {
-			createWaflash
-		} from 'https://cdn.jsdelivr.net/gh/AndreajnRcm4/b398dl2h74v@3f0db6b9a0bed7641e3ed167fc07070b891b72fb/js/waflash-player.min.js';
-		createWaflash(gameConfig.swfUrl, window.wafOptions || {});
-	</script>
-</div>
-</body></html>
+<body>
+  <div id="flash-container"></div>
+  <div class="black-box" id="box-top"></div>
+  <div class="black-box" id="box-bottom"></div>
+  <div class="black-box" id="box-left"></div>
+  <div class="black-box" id="box-right"></div>
+  <script>
+    const container = document.getElementById("flash-container");
+    const boxTop = document.getElementById("box-top");
+    const boxBottom = document.getElementById("box-bottom");
+    const boxLeft = document.getElementById("box-left");
+    const boxRight = document.getElementById("box-right");
+    
+    function resizeGame() {
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+      const aspectRatio = 5.5 / 3;
+      
+      // Use 95% of available space instead of 100%
+      let width = Math.floor(windowWidth * 1);
+      let height = Math.floor(width / aspectRatio);
+      
+      if (height > windowHeight * 1) {
+        height = Math.floor(windowHeight * 1);
+        width = Math.floor(height * aspectRatio);
+      }
+      
+      container.style.width = `${width}px`;
+      container.style.height = `${height}px`;
+      
+      // Calculate margins
+      const topMargin = (windowHeight - height) / 2;
+      const leftMargin = (windowWidth - width) / 2;
+      
+      // Set black box sizes
+      boxTop.style.height = `${topMargin}px`;
+      boxBottom.style.height = `${topMargin}px`;
+      boxLeft.style.width = `${leftMargin}px`;
+      boxRight.style.width = `${leftMargin}px`;
+    }
+    
+    window.addEventListener("resize", resizeGame);
+    window.addEventListener("DOMContentLoaded", () => {
+      resizeGame();
+      const ruffle = window.RufflePlayer?.newest() || window.RufflePlayer?.createPlayer();
+      if (ruffle && container) {
+        const player = ruffle.createPlayer();
+        player.style.width = "100%";
+        player.style.height = "100%";
+        player.style.background = "black";
+        container.appendChild(player);
+        player.load("$1");
+      } else {
+        container.textContent = "Ruffle failed to load."; 
+      }
+    });
+  </script>
+    <param name="movie" value="https://cdn.jsdelivr.net/gh/LoloNiz/Freezeria@9a00da26caa0977a3c0d068015611aa87eea5b35/papa_s_freezeria.swf">
+    <embed src="https://cdn.jsdelivr.net/gh/LoloNiz/Freezeria@9a00da26caa0977a3c0d068015611aa87eea5b35/papa_s_freezeria.swf" width="100%" height="100%">
+</body>
+</html>
+]]></Content>
+</Module>

@@ -2,13 +2,10 @@
 <html lang="en-us">
 
 <head>
-<base href="https://cdn.jsdelivr.net/gh/waycrosspublicmedia/livediesmos@main/funnymadracing/">
-
+    <base href = "https://cdn.jsdelivr.net/gh/cooldude2349/everything@main/funnyrace/">
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Funny Mad Racing</title>
-	<script src="/js/all.js"></script>
-
 
 	<style>
 		html,
@@ -74,7 +71,7 @@
 		<script>
 			var canvas = document.querySelector("#unity-canvas");
 			var config = {
-				dataUrl: "Build/TPG_FunnyMadRacing_V01a.data.unityweb",
+				dataUrl: "https://cdn.jsdelivr.net/npm/funnyrace@1.0.4/TPG_FunnyMadRacing_V01a.data.unityweb",
 				frameworkUrl: "Build/TPG_FunnyMadRacing_V01a.framework.js.unityweb",
 				codeUrl: "Build/TPG_FunnyMadRacing_V01a.wasm.unityweb",
 				streamingAssetsUrl: "StreamingAssets",
@@ -122,10 +119,10 @@
 					h = 450;
 				}
 
-				container.style.width = canvas.style.width = w + "px";
-				container.style.height = canvas.style.height = h + "px";
-				container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
-				container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
+				container.style.width = canvas.style.width = 100 + "%";
+				container.style.height = canvas.style.height = 100 + "%";
+				//container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
+				//container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
 			}
 
 			createUnityInstance(canvas, config, progressHandler).then(function (instance) {
@@ -139,7 +136,7 @@
 		</script>
 
 		<!--RHM API-->
-		<script type="text/javascript" src="js/rhmApi.js"></script>
+		<script type="text/javascript" src="js/rhmApi-edit.js"></script>
 
 	</div>
 </body>
