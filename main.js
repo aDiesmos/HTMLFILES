@@ -93,18 +93,11 @@ const games = [
     isNew: false
   },
   {
-    id: 5,
-    title: "Cut the Rope: Holiday",
-    image: "https://chicken.parmacitieschools.org/images/ctr-holiday.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/ctr-holiday/",
-    isNew: false
-  },
-  {
     id: 6,
     title: "Cat Connection",
     image: "https://chicken.parmacitieschools.org/images/catconnection.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/catconnection/",
-    isNew: false
+    isNew: true
   },
   {
     id: 7,
@@ -951,7 +944,7 @@ const games = [
     title: "Class of '09: The Re-Up",
     image: "https://chicken.parmacitieschools.org/images/re-up.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/gamepath/re-up/",
-    isNew: false
+    isNew: true
   },
   {
     id: 128,
@@ -972,14 +965,14 @@ const games = [
     title: "Slope Ball",
     image: "https://chicken.parmacitieschools.org/images/slope-ball.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/slope-ball/",
-    isNew: false
+    isNew: true
   },
   {
     id: 131,
     title: "Slope 2",
     image: "https://chicken.parmacitieschools.org/images/slope2.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/slope2/",
-    isNew: false
+    isNew: true
   },
   {
     id: 132,
@@ -1035,7 +1028,7 @@ const games = [
     title: "Papas Sushiria",
     image: "https://chicken.parmacitieschools.org/images/papas-sushiria.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/papas-sushiria/",
-    isNew: false
+    isNew: true
   },
   {
     id: 140,
@@ -1196,7 +1189,7 @@ const games = [
     title: "Love Letters",
     image: "https://chicken.parmacitieschools.org/images/love-letters.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/love-letters/",
-    isNew: false
+    isNew: true
   },
   {
     id: 163,
@@ -1315,7 +1308,7 @@ const games = [
     title: "BLOODMONEY!",
     image: "https://chicken.parmacitieschools.org/images/bmoney.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bmoney/",
-    isNew: false
+    isNew: true
   },
   {
     id: 181,
@@ -2106,14 +2099,14 @@ const games = [
     title: "Papas Freezeria",
     image: "https://chicken.parmacitieschools.org/images/papas-freezeria.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/papas-freezeria",
-    isNew: false
+    isNew: true
   },
   {
     id: 295,
     title: "Papas Hot Doggeria",
     image: "https://chicken.parmacitieschools.org/images/papas-hot-doggeria.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/papas-hot-doggeria/",
-    isNew: false
+    isNew: true
   },
   {
     id: 296,
@@ -3947,21 +3940,21 @@ const games = [
     title: "FNAF 2",
     image: "https://chicken.parmacitieschools.org/images/FNAF2.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/FNAF2/",
-    isNew: false
+    isNew: true
   },
   {
     id: 558,
     title: "FNAF 3",
     image: "https://chicken.parmacitieschools.org/images/FNAF3.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/FNAF3/",
-    isNew: false
+    isNew: true
   },
   {
     id: 559,
     title: "FNAF 4",
     image: "https://chicken.parmacitieschools.org/images/FNAF4.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/FNAF4/",
-    isNew: false
+    isNew: true
   },
   {
     id: 560,
@@ -4386,9 +4379,9 @@ const games = [
   {
     id: 620,
     title: "Cooking Mama",
-    image: "https://chicken.parmacitieschools.org/images/cookingmama.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/cookingmama/",
-    isNew: false
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cookingmama.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cookingmama.html",
+    isNew: true
   },
   {
     id: 621,
@@ -4661,7 +4654,7 @@ const games = [
     title: "FNAF",
     image: "https://chicken.parmacitieschools.org/images/fnaf.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/fnaf/",
-    isNew: false
+    isNew: true
   },
   {
     id: 660,
@@ -5060,28 +5053,28 @@ const games = [
     title: "Papa's Burgeria",
     image: "https://chicken.parmacitieschools.org/images/burger.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/papasburgeria/",
-    isNew: false
+    isNew: true
   },
   {
     id: 718,
     title: "Papa's Pizzaria",
     image: "https://chicken.parmacitieschools.org/images/pizza.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/pizza/",
-    isNew: false
+    isNew: true
   },
   {
     id: 719,
     title: "Papas Pancakeria",
     image: "https://chicken.parmacitieschools.org/images/papas-pancakeria.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/papas-pancakeria/",
-    isNew: false
+    isNew: true
   },
   {
     id: 720,
     title: "Papas Wingeria",
     image: "https://chicken.parmacitieschools.org/images/papaswingeria.jpg",
     url: "https://chicken.parmacitieschools.org/whatver/papaswingeria/",
-    isNew: false
+    isNew: true
   },
   {
     id: 721,
@@ -5102,7 +5095,7 @@ const games = [
     title: "Plants vs Zombies",
     image: "https://chicken.parmacitieschools.org/images/pvz.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/pvz/",
-    isNew: false
+    isNew: true
   },
   {
     id: 724,
@@ -5179,7 +5172,7 @@ const games = [
     title: "Rooftop snipers",
     image: "https://chicken.parmacitieschools.org/images/rooftopsnipers.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/rooftopsnipers/",
-    isNew: false
+    isNew: true
   },
   {
     id: 735,
@@ -5663,6 +5656,104 @@ const games = [
     image: "https://chicken.parmacitieschools.org/images/redux.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/fnf/redux/",
     isNew: false
+  },
+    {
+    id: 804,
+    title: "1v1.lol",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/1v1lol.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/1v1lol.html",
+    isNew: true
+  },
+    {
+    id: 805,
+    title: "Cave Story",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cavestory.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cavestory.html",
+    isNew: true
+  },
+    {
+    id: 806,
+    title: "Peggle",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/Peggle.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/Peggle.html",
+    isNew: true
+  },
+    {
+    id: 807,
+    title: "Cooking Mama 2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cookingmama2.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cookingmama2.html",
+    isNew: true
+  },
+    {
+    id: 808,
+    title: "Cooking Mama 3",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cookingmama3.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cookingmama3.html",
+    isNew: true
+  },
+    {
+    id: 809,
+    title: "Crazy Cattle 3D",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/crazycattle3d.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/crazycattle3d.html",
+    isNew: true
+  },
+    {
+    id: 810,
+    title: "Dan the Man",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/dantheman.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/dantheman.html",
+    isNew: true
+  },
+  {
+    id: 811,
+    title: "DEAD PLATE",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/deadplate.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/deadplate.html",
+    isNew: true
+  },
+  {
+    id: 812,
+    title: "Duck Life 8",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/ducklife8.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/ducklife8.html",
+    isNew: true
+  },
+  {
+    id: 813,
+    title: "Endroll",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/endroll.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/endroll.html",
+    isNew: true
+  },
+  {
+    id: 814,
+    title: "Gladihoppers",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gladihoppers.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gladihoppers.html",
+    isNew: true
+  },
+  {
+    id: 815,
+    title: "Fancy Pants Adventure 4 Part 1",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fancypants4p1.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fancypants4p1.html",
+    isNew: true
+  },
+    {
+    id: 816,
+    title: "Fancy Pants Adventure 4 Part 2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fancypants4p2.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fancypants4p2.html",
+    isNew: true
+  },
+  {
+    id: 817,
+    title: "Get Yoked",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/getyoked.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/getyoked.html",
+    isNew: true
   },
 ];
 
