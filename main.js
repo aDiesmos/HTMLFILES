@@ -27,12 +27,12 @@ function translateGameUrl(oldUrl) {
     const gameMatch = oldUrl.match(/player\.html\?game=([^&]+)/);
     if (gameMatch && gameMatch[1]) {
       const gameName = gameMatch[1];
-      // Special handling for GBA games - they use a different player.html
-      return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/gba/player.html?game=${gameName}`;
+      // Create URL to the GBA player with game parameter
+      return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/gba/player?game=${gameName}.html`;
     }
   }
   
-  // Handle player.html?game= format (non-GBA)
+  // Handle other player.html?game= format
   if (oldUrl.includes('player.html?game=')) {
     const urlMatch = oldUrl.match(/player\.html\?game=(.+)/);
     if (urlMatch && urlMatch[1]) {
@@ -6223,15 +6223,7 @@ async function loadGameInIframe(gameUrl, gameTitle) {
 
     currentGameUrl = gameUrl;
     gameIframe.src = 'about:blank';
-    // Check if this is a GBA game with query parameters
-    const isGbaGame = gameUrl.includes('/gba/player.html?game=');
-    
-    if (isGbaGame) {
-      // For GBA games, load directly in iframe with full URL
-      // This preserves the query parameters
-      gameIframe.src = gameUrl;
-      return true;
-    }
+   
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 20000);
 
