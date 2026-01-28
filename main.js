@@ -426,154 +426,154 @@ const games = [
     id: 52,
     title: "Mario Party Advance",
     image: "https://chicken.parmacitieschools.org/images/marioparty.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#marioparty",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=marioparty",
     isNew: false
   },
   {
     id: 53,
     title: "WarioWare, Inc.",
     image: "https://chicken.parmacitieschools.org/images/wario_ware.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#wario_ware",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=wario_ware",
     isNew: false
   },
   {
     id: 54,
     title: "The Legend of Zelda: A Link to the Past",
     image: "https://chicken.parmacitieschools.org/images/zelda_past.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#zelda_past",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=zelda_past",
     isNew: false
   },
   {
     id: 55,
     title: "Final Fantasy 1 & 2 Advance",
     image: "https://chicken.parmacitieschools.org/images/ff1and2.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#ff1and2",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=ff1and2",
     isNew: false
   },
   {
     id: 56,
     title: "Final Fantasy IV Advance (Sound Restoration Mod)",
     image: "https://chicken.parmacitieschools.org/images/ff4S.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#ff4S",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=ff4S",
     isNew: false
   },
   {
     id: 57,
     title: "Final Fantasy VI Advance",
     image: "https://chicken.parmacitieschools.org/images/ff6.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#ff6",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=ff6",
     isNew: false
   },
   {
     id: 58,
     title: "Final Fantasy Tactics Advance",
     image: "https://chicken.parmacitieschools.org/images/final_fantasy_tactics.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#final_fantasy_tactics",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=final_fantasy_tactics",
     isNew: false
   },
   {
     id: 59,
     title: "Fire Emblem",
     image: "https://chicken.parmacitieschools.org/images/fire_emblem.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#fire_emblem",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=fire_emblem",
     isNew: false
   },
   {
     id: 60,
     title: "Digimon Racing",
     image: "https://chicken.parmacitieschools.org/images/digimon_racing.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#digimon_racing",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=digimon_racing",
     isNew: false
   },
   {
     id: 61,
     title: "The Legend of Zelda: The Minish Cap",
     image: "https://chicken.parmacitieschools.org/images/zelda_minish.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#zelda_minish",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=zelda_minish",
     isNew: false
   },
   {
     id: 62,
     title: "Bomberman Max 2 - Blue Advance",
     image: "https://chicken.parmacitieschools.org/images/bomberman_max2blue.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#bomberman_max2blue",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=bomberman_max2blue",
     isNew: false
   },
   {
     id: 63,
     title: "Bomberman Tournament",
     image: "https://chicken.parmacitieschools.org/images/bomberman_tournament.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#bomberman_tournament",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=bomberman_tournament",
     isNew: false
   },
   {
     id: 64,
     title: "Bubble Bobble: Old and New",
     image: "https://chicken.parmacitieschools.org/images/bubblebobble.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#bubblebobble",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=bubblebobble",
     isNew: false
   },
   {
     id: 65,
     title: "F-Zero - GP Legend",
     image: "https://chicken.parmacitieschools.org/images/fzero_gp.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#fzero_gp",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=fzero_gp",
     isNew: false
   },
   {
     id: 66,
     title: "F-Zero - Maximum Velocity",
     image: "https://chicken.parmacitieschools.org/images/fzero_max.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#fzero_max",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=fzero_max",
     isNew: false
   },
   {
     id: 67,
     title: "Game & Watch Gallery 4",
     image: "https://chicken.parmacitieschools.org/images/gamewatch4.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#gamewatch4",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=gamewatch4",
     isNew: false
   },
   {
     id: 68,
     title: "Golden Sun",
     image: "https://chicken.parmacitieschools.org/images/goldensun.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#goldensun",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=goldensun",
     isNew: false
   },
   {
     id: 69,
     title: "Gunstar Super Heroes",
     image: "https://chicken.parmacitieschools.org/images/gunstar_super_heroes.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#gunstar_super_heroes",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=gunstar_super_heroes",
     isNew: false
   },
   {
     id: 70,
     title: "Hamtaro - Ham-Ham Heartbreak",
     image: "https://chicken.parmacitieschools.org/images/hamtaro_heartbreak.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#hamtaro_heartbreak",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=hamtaro_heartbreak",
     isNew: false
   },
   {
     id: 71,
     title: "Iridion 3D",
     image: "https://chicken.parmacitieschools.org/images/iridion.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#iridion",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=iridion",
     isNew: false
   },
   {
     id: 72,
     title: "Kirby & The Amazing Mirror",
     image: "https://chicken.parmacitieschools.org/images/kirbymirror.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#kirbymirror",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=kirbymirror",
     isNew: false
   },
   {
     id: 73,
     title: "Kirby: Nightmare in Dream Land",
     image: "https://chicken.parmacitieschools.org/images/kirbynightmare.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#kirbynightmare",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=kirbynightmare",
     isNew: false
   },
   {
@@ -4878,14 +4878,14 @@ const games = [
     id: 692,
     title: "Mario and Luigi: Superstar Saga",
     image: "https://chicken.parmacitieschools.org/images/player#superstar.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#superstar",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=superstar",
     isNew: false
   },
   {
     id: 693,
     title: "Mario Kart: Super Circuit",
     image: "https://chicken.parmacitieschools.org/images/player#mariokart.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#mariokart",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=mariokart",
     isNew: false
   },
   {
@@ -5095,14 +5095,14 @@ const games = [
     id: 724,
     title: "Pokemon: FireRed",
     image: "https://chicken.parmacitieschools.org/images/pokemonred.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#pokemonred",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=pokemonred",
     isNew: false
   },
   {
     id: 725,
     title: "Pokemon: LeafGreen",
     image: "https://chicken.parmacitieschools.org/images/pokemongreen.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#pokemongreen",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=pokemongreen",
     isNew: false
   },
   {
@@ -5256,21 +5256,21 @@ const games = [
     id: 747,
     title: "Sonic Advance",
     image: "https://chicken.parmacitieschools.org/images/sonic_advance.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#sonic_advance",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=sonic_advance",
     isNew: false
   },
   {
     id: 748,
     title: "Sonic Advance 2",
     image: "https://chicken.parmacitieschools.org/images/sonic_advance2.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#sonic_advance2",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=sonic_advance2",
     isNew: false
   },
   {
     id: 749,
     title: "Sonic Advance 3",
     image: "https://chicken.parmacitieschools.org/images/sonic_advance3.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#sonic_advance3",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=sonic_advance3",
     isNew: false
   },
   {
@@ -5368,28 +5368,28 @@ const games = [
     id: 763,
     title: "Super Mario Advance",
     image: "https://chicken.parmacitieschools.org/images/supermarioadvance.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#supermarioadvance",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=supermarioadvance",
     isNew: false
   },
   {
     id: 764,
     title: "Super Mario Advance 2",
     image: "https://chicken.parmacitieschools.org/images/supermarioadvance2.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#supermarioadvance2",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=supermarioadvance2",
     isNew: false
   },
   {
     id: 765,
     title: "Super Mario Advance 3",
     image: "https://chicken.parmacitieschools.org/images/supermarioadvance3.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#supermarioadvance3",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=supermarioadvance3",
     isNew: false
   },
   {
     id: 766,
     title: "Super Mario Advance 4",
     image: "https://chicken.parmacitieschools.org/images/supermarioadvance4.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#supermarioadvance4",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=supermarioadvance4",
     isNew: false
   },
   {
@@ -5494,7 +5494,7 @@ const games = [
     id: 781,
     title: "The Simpsons: Road Rage",
     image: "https://chicken.parmacitieschools.org/images/simpsons.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#simpsons",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=simpsons",
     isNew: false
   },
   {
