@@ -3885,7 +3885,7 @@ const games = [
   },
   {
     id: 548,
-    title: "Celeste",
+    title: "Celeste (PICO 8)",
     image: "https://chicken.parmacitieschools.org/images/celeste.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/celeste/",
     isNew: false
@@ -4935,17 +4935,17 @@ const games = [
   },
   {
     id: 699,
-    title: "Minecraft 1.12(buggy and laggy)",
-    image: "https://chicken.parmacitieschools.org/images/mine.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/mine/",
-    isNew: false
+    title: "Minecraft 1.12.2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mc112.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mc112.html",
+    isNew: true
   },
   {
     id: 700,
-    title: "Minecraft 1.11.2",
-    image: "https://chicken.parmacitieschools.org/images/mine.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/mine/",
-    isNew: false
+    title: "Minecraft 1.21.4",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mc121.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mc121.html",
+    isNew: true
   },
   {
     id: 701,
@@ -4959,28 +4959,28 @@ const games = [
     title: "Motox3m",
     image: "https://chicken.parmacitieschools.org/images/motox3m.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/motox3m/",
-    isNew: false
+    isNew: true
   },
   {
     id: 704,
     title: "Motox3m 2",
     image: "https://chicken.parmacitieschools.org/images/moto-x3m-2.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/moto-x3m-2/",
-    isNew: false
+    isNew: true
   },
   {
     id: 705,
     title: "Motox3m Pool Party",
     image: "https://chicken.parmacitieschools.org/images/moto-x3m-pool-party.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/moto-x3m-pool-party/",
-    isNew: false
+    isNew: true
   },
   {
     id: 706,
     title: "Motox3m Spooky",
     image: "https://chicken.parmacitieschools.org/images/motox3m-spooky.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/motox3m-spooky/",
-    isNew: false
+    isNew: true
   },
   {
     id: 707,
@@ -5757,6 +5757,118 @@ const games = [
     title: "Get Yoked",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/getyoked.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/getyoked.html",
+    isNew: true
+  },
+    {
+    id: 818,
+    title: "Going Balls",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/goingballs.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/goingballs.html",
+    isNew: true
+  },
+    {
+    id: 819,
+    title: "Growden.io",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/growdenio.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/growdenio.html",
+    isNew: true
+  },
+    {
+    id: 820,
+    title: "Gorilla Tag",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gtag.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gtag.html",
+    isNew: true
+  },
+    {
+    id: 821,
+    title: "Milk Inside a Bag of Milk inside a Bag of Milk",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/milkinside.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/milkinside.html",
+    isNew: true
+  },
+    {
+    id: 822,
+    title: "Celeste",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/celeste.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/celeste.html",
+    isNew: true
+  },
+    {
+    id: 823,
+    title: "Mindwave",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mindwave.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mindwave.html",
+    isNew: true
+  },
+    {
+    id: 824,
+    title: "Newgrounds Rumble",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/newgroundsrumble.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/newgroundsrumble.html",
+    isNew: true
+  },
+    {
+    id: 825,
+    title: "Oneshot",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/oneshot.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/oneshot.html",
+    isNew: true
+  },
+    {
+    id: 826,
+    title: "Papa's Pastaria",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papaspastaria.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papaspastaria.html",
+    isNew: true
+  },
+    {
+    id: 827,
+    title: "Pico's School",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/picoschool.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/picoschool.html",
+    isNew: true
+  },
+    {
+    id: 828,
+    title: "Madness Combat: Project Nexus",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/projectnexus.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/projectnexus.html",
+    isNew: true
+  },
+{
+    id: 829,
+    title: "Plants vs. Zombies 2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pvz2.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pvz2.html",
+    isNew: true
+  },
+   {
+    id: 830,
+    title: "Slime Rancher",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/slimerancher.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/slimerancher.html",
+    isNew: true
+  }, 
+    {
+    id: 831,
+    title: "Steal Brainrot Online",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stealbrainrot.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stealbrainrot.html",
+    isNew: true
+  },
+    {
+    id: 832,
+    title: "WebFishing",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/webfishing.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/webfishing.html",
+    isNew: true
+  },
+    {
+    id: 833,
+    title: "BFDI Branches",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bfdibranches.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bfdibranches.html",
     isNew: true
   },
 ];
