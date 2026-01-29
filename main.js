@@ -22,9 +22,18 @@ function logToClicky() {
 function translateGameUrl(oldUrl) {
   if (!oldUrl) return '';
   
-  // Handle player.html?game= format
+  // Handle GBA games with special format
+  if (oldUrl.includes('/gba/player.html?game=')) {
+    const gameMatch = oldUrl.match(/player\.html\?game=([^&]+)/);
+    if (gameMatch && gameMatch[1]) {
+      const gameName = gameMatch[1];
+      // Create URL to the GBA player with game parameter
+      return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/gba/player.html?game=${gameName}`;
+    }
+  }
+  
+  // Handle other player.html?game= format
   if (oldUrl.includes('player.html?game=')) {
-    // Extract the actual game URL
     const urlMatch = oldUrl.match(/player\.html\?game=(.+)/);
     if (urlMatch && urlMatch[1]) {
       const gameUrl = decodeURIComponent(urlMatch[1]);
@@ -53,18 +62,19 @@ function extractGamePath(fullUrl) {
   // Remove trailing slash
   path = path.replace(/\/$/, '');
   
-  // Extract the folder structure (e.g., "whatver/vex2" or "livediesmos/vex2")
+  // Extract the folder structure
   const parts = path.split('/');
-  if (parts.length < 1) return ''; // Changed from < 2 to handle single part URLs
+  if (parts.length < 1) return '';
   
+  // Special case: GBA games (already handled in translateGameUrl)
   // Special case: Single domain link like "bdfi26"
   if (parts.length === 1) {
     const gameName = parts[0];
     return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/waycrosspublicmedia/${gameName}.html`;
   }
   
-  const urlPath = parts.slice(0, -1).join('/'); // Get everything except the last part
-  const gameName = parts.pop(); // Get the last part (game name)
+  const urlPath = parts.slice(0, -1).join('/');
+  const gameName = parts.pop();
   
   // Construct the new URL
   return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/${urlPath}/${gameName}.html`;
@@ -426,154 +436,154 @@ const games = [
     id: 52,
     title: "Mario Party Advance",
     image: "https://chicken.parmacitieschools.org/images/marioparty.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#marioparty",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=marioparty",
     isNew: false
   },
   {
     id: 53,
     title: "WarioWare, Inc.",
     image: "https://chicken.parmacitieschools.org/images/wario_ware.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#wario_ware",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=wario_ware",
     isNew: false
   },
   {
     id: 54,
     title: "The Legend of Zelda: A Link to the Past",
     image: "https://chicken.parmacitieschools.org/images/zelda_past.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#zelda_past",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=zelda_past",
     isNew: false
   },
   {
     id: 55,
     title: "Final Fantasy 1 & 2 Advance",
     image: "https://chicken.parmacitieschools.org/images/ff1and2.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#ff1and2",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=ff1and2",
     isNew: false
   },
   {
     id: 56,
     title: "Final Fantasy IV Advance (Sound Restoration Mod)",
     image: "https://chicken.parmacitieschools.org/images/ff4S.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#ff4S",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=ff4S",
     isNew: false
   },
   {
     id: 57,
     title: "Final Fantasy VI Advance",
     image: "https://chicken.parmacitieschools.org/images/ff6.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#ff6",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=ff6",
     isNew: false
   },
   {
     id: 58,
     title: "Final Fantasy Tactics Advance",
     image: "https://chicken.parmacitieschools.org/images/final_fantasy_tactics.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#final_fantasy_tactics",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=final_fantasy_tactics",
     isNew: false
   },
   {
     id: 59,
     title: "Fire Emblem",
     image: "https://chicken.parmacitieschools.org/images/fire_emblem.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#fire_emblem",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=fire_emblem",
     isNew: false
   },
   {
     id: 60,
     title: "Digimon Racing",
     image: "https://chicken.parmacitieschools.org/images/digimon_racing.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#digimon_racing",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=digimon_racing",
     isNew: false
   },
   {
     id: 61,
     title: "The Legend of Zelda: The Minish Cap",
     image: "https://chicken.parmacitieschools.org/images/zelda_minish.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#zelda_minish",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=zelda_minish",
     isNew: false
   },
   {
     id: 62,
     title: "Bomberman Max 2 - Blue Advance",
     image: "https://chicken.parmacitieschools.org/images/bomberman_max2blue.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#bomberman_max2blue",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=bomberman_max2blue",
     isNew: false
   },
   {
     id: 63,
     title: "Bomberman Tournament",
     image: "https://chicken.parmacitieschools.org/images/bomberman_tournament.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#bomberman_tournament",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=bomberman_tournament",
     isNew: false
   },
   {
     id: 64,
     title: "Bubble Bobble: Old and New",
     image: "https://chicken.parmacitieschools.org/images/bubblebobble.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#bubblebobble",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=bubblebobble",
     isNew: false
   },
   {
     id: 65,
     title: "F-Zero - GP Legend",
     image: "https://chicken.parmacitieschools.org/images/fzero_gp.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#fzero_gp",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=fzero_gp",
     isNew: false
   },
   {
     id: 66,
     title: "F-Zero - Maximum Velocity",
     image: "https://chicken.parmacitieschools.org/images/fzero_max.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#fzero_max",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=fzero_max",
     isNew: false
   },
   {
     id: 67,
     title: "Game & Watch Gallery 4",
     image: "https://chicken.parmacitieschools.org/images/gamewatch4.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#gamewatch4",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=gamewatch4",
     isNew: false
   },
   {
     id: 68,
     title: "Golden Sun",
     image: "https://chicken.parmacitieschools.org/images/goldensun.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#goldensun",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=goldensun",
     isNew: false
   },
   {
     id: 69,
     title: "Gunstar Super Heroes",
     image: "https://chicken.parmacitieschools.org/images/gunstar_super_heroes.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#gunstar_super_heroes",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=gunstar_super_heroes",
     isNew: false
   },
   {
     id: 70,
     title: "Hamtaro - Ham-Ham Heartbreak",
     image: "https://chicken.parmacitieschools.org/images/hamtaro_heartbreak.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#hamtaro_heartbreak",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=hamtaro_heartbreak",
     isNew: false
   },
   {
     id: 71,
     title: "Iridion 3D",
     image: "https://chicken.parmacitieschools.org/images/iridion.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#iridion",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=iridion",
     isNew: false
   },
   {
     id: 72,
     title: "Kirby & The Amazing Mirror",
     image: "https://chicken.parmacitieschools.org/images/kirbymirror.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#kirbymirror",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=kirbymirror",
     isNew: false
   },
   {
     id: 73,
     title: "Kirby: Nightmare in Dream Land",
     image: "https://chicken.parmacitieschools.org/images/kirbynightmare.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#kirbynightmare",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=kirbynightmare",
     isNew: false
   },
   {
@@ -3875,7 +3885,7 @@ const games = [
   },
   {
     id: 548,
-    title: "Celeste",
+    title: "Celeste (PICO 8)",
     image: "https://chicken.parmacitieschools.org/images/celeste.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/whatver/celeste/",
     isNew: false
@@ -4374,8 +4384,8 @@ const games = [
     id: 619,
     title: "Cookie Clicker Classic",
     image: "https://chicken.parmacitieschools.org/images/Cookie-Clicker-Classic-main.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/Cookie-Clicker-Classic-main/",
-    isNew: false
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cookieclicker.html",
+    isNew: true
   },
   {
     id: 620,
@@ -4878,14 +4888,14 @@ const games = [
     id: 692,
     title: "Mario and Luigi: Superstar Saga",
     image: "https://chicken.parmacitieschools.org/images/player#superstar.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#superstar",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=superstar",
     isNew: false
   },
   {
     id: 693,
     title: "Mario Kart: Super Circuit",
     image: "https://chicken.parmacitieschools.org/images/player#mariokart.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#mariokart",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=mariokart",
     isNew: false
   },
   {
@@ -4925,17 +4935,17 @@ const games = [
   },
   {
     id: 699,
-    title: "Minecraft 1.12(buggy and laggy)",
-    image: "https://chicken.parmacitieschools.org/images/mine.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/mine/",
-    isNew: false
+    title: "Minecraft 1.12.2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mc112.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mc112.html",
+    isNew: true
   },
   {
     id: 700,
-    title: "Minecraft 1.11.2",
-    image: "https://chicken.parmacitieschools.org/images/mine.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/mine/",
-    isNew: false
+    title: "Minecraft 1.21.4",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mc121.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mc121.html",
+    isNew: true
   },
   {
     id: 701,
@@ -4949,28 +4959,28 @@ const games = [
     title: "Motox3m",
     image: "https://chicken.parmacitieschools.org/images/motox3m.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/motox3m/",
-    isNew: false
+    isNew: true
   },
   {
     id: 704,
     title: "Motox3m 2",
     image: "https://chicken.parmacitieschools.org/images/moto-x3m-2.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/moto-x3m-2/",
-    isNew: false
+    isNew: true
   },
   {
     id: 705,
     title: "Motox3m Pool Party",
     image: "https://chicken.parmacitieschools.org/images/moto-x3m-pool-party.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/moto-x3m-pool-party/",
-    isNew: false
+    isNew: true
   },
   {
     id: 706,
     title: "Motox3m Spooky",
     image: "https://chicken.parmacitieschools.org/images/motox3m-spooky.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/motox3m-spooky/",
-    isNew: false
+    isNew: true
   },
   {
     id: 707,
@@ -5095,14 +5105,14 @@ const games = [
     id: 724,
     title: "Pokemon: FireRed",
     image: "https://chicken.parmacitieschools.org/images/pokemonred.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#pokemonred",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=pokemonred",
     isNew: false
   },
   {
     id: 725,
     title: "Pokemon: LeafGreen",
     image: "https://chicken.parmacitieschools.org/images/pokemongreen.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#pokemongreen",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=pokemongreen",
     isNew: false
   },
   {
@@ -5256,21 +5266,21 @@ const games = [
     id: 747,
     title: "Sonic Advance",
     image: "https://chicken.parmacitieschools.org/images/sonic_advance.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#sonic_advance",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=sonic_advance",
     isNew: false
   },
   {
     id: 748,
     title: "Sonic Advance 2",
     image: "https://chicken.parmacitieschools.org/images/sonic_advance2.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#sonic_advance2",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=sonic_advance2",
     isNew: false
   },
   {
     id: 749,
     title: "Sonic Advance 3",
     image: "https://chicken.parmacitieschools.org/images/sonic_advance3.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#sonic_advance3",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=sonic_advance3",
     isNew: false
   },
   {
@@ -5368,28 +5378,28 @@ const games = [
     id: 763,
     title: "Super Mario Advance",
     image: "https://chicken.parmacitieschools.org/images/supermarioadvance.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#supermarioadvance",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=supermarioadvance",
     isNew: false
   },
   {
     id: 764,
     title: "Super Mario Advance 2",
     image: "https://chicken.parmacitieschools.org/images/supermarioadvance2.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#supermarioadvance2",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=supermarioadvance2",
     isNew: false
   },
   {
     id: 765,
     title: "Super Mario Advance 3",
     image: "https://chicken.parmacitieschools.org/images/supermarioadvance3.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#supermarioadvance3",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=supermarioadvance3",
     isNew: false
   },
   {
     id: 766,
     title: "Super Mario Advance 4",
     image: "https://chicken.parmacitieschools.org/images/supermarioadvance4.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#supermarioadvance4",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=supermarioadvance4",
     isNew: false
   },
   {
@@ -5494,7 +5504,7 @@ const games = [
     id: 781,
     title: "The Simpsons: Road Rage",
     image: "https://chicken.parmacitieschools.org/images/simpsons.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player#simpsons",
+    url: "https://chicken.parmacitieschools.org/gba/player.html?game=simpsons",
     isNew: false
   },
   {
@@ -5747,6 +5757,118 @@ const games = [
     title: "Get Yoked",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/getyoked.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/getyoked.html",
+    isNew: true
+  },
+    {
+    id: 818,
+    title: "Going Balls",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/goingballs.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/goingballs.html",
+    isNew: true
+  },
+    {
+    id: 819,
+    title: "Growden.io",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/growdenio.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/growdenio.html",
+    isNew: true
+  },
+    {
+    id: 820,
+    title: "Gorilla Tag",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gtag.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gtag.html",
+    isNew: true
+  },
+    {
+    id: 821,
+    title: "Milk Inside a Bag of Milk inside a Bag of Milk",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/milkinside.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/milkinside.html",
+    isNew: true
+  },
+    {
+    id: 822,
+    title: "Celeste",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/celeste.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/celeste.html",
+    isNew: true
+  },
+    {
+    id: 823,
+    title: "Mindwave",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mindwave.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mindwave.html",
+    isNew: true
+  },
+    {
+    id: 824,
+    title: "Newgrounds Rumble",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/newgroundsrumble.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/newgroundsrumble.html",
+    isNew: true
+  },
+    {
+    id: 825,
+    title: "Oneshot",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/oneshot.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/oneshot.html",
+    isNew: true
+  },
+    {
+    id: 826,
+    title: "Papa's Pastaria",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papaspastaria.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papaspastaria.html",
+    isNew: true
+  },
+    {
+    id: 827,
+    title: "Pico's School",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/picoschool.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/picoschool.html",
+    isNew: true
+  },
+    {
+    id: 828,
+    title: "Madness Combat: Project Nexus",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/projectnexus.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/projectnexus.html",
+    isNew: true
+  },
+{
+    id: 829,
+    title: "Plants vs. Zombies 2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pvz2.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pvz2.html",
+    isNew: true
+  },
+   {
+    id: 830,
+    title: "Slime Rancher",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/slimerancher.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/slimerancher.html",
+    isNew: true
+  }, 
+    {
+    id: 831,
+    title: "Steal Brainrot Online",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stealbrainrot.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stealbrainrot.html",
+    isNew: true
+  },
+    {
+    id: 832,
+    title: "WebFishing",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/webfishing.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/webfishing.html",
+    isNew: true
+  },
+    {
+    id: 833,
+    title: "BFDI Branches",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bfdibranches.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bfdibranches.html",
     isNew: true
   },
 ];
@@ -6206,6 +6328,7 @@ function toggleFullscreen(element) {
 
 // Function to load game using Blob URL trick
 // Function to load game using Blob URL trick
+// Updated loadGameInIframe function with GBA special handling
 async function loadGameInIframe(gameUrl, gameTitle) {
   try {
     hideError();
@@ -6231,78 +6354,150 @@ async function loadGameInIframe(gameUrl, gameTitle) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
 
-      const htmlContent = await response.text();
+      let htmlContent = await response.text();
 
-      /* ===============================
-         🚨 GITHUB 50MB PACKAGE DETECTOR
-         =============================== */
-      if (
-        htmlContent.includes('Package size exceeded the configured limit') ||
-        htmlContent.includes('Try https://github.com/') ||
-        htmlContent.includes('50 MB file size limit')
-      ) {
+      // 🎮 SPECIAL HANDLING FOR GBA GAMES
+      if (gameUrl.includes('/gba/player.html')) {
+        // Extract game parameter from the original URL
+        const urlObj = new URL(gameUrl, window.location.origin);
+        const gameParam = urlObj.searchParams.get('game');
+        
+        if (gameParam) {
+          console.log(`Injecting game parameter for GBA: ${gameParam}`);
+          
+          // Inject JavaScript to set the game parameter before the page loads
+          const injectScript = `
+            <script>
+              // Inject game parameter before original script runs
+              (function() {
+                // Override getGameFromURL to return our game
+                window.getGameFromURL = function() {
+                  return "${gameParam}";
+                };
+                
+                // Also set it in URLSearchParams for compatibility
+                const url = new URL(window.location);
+                url.searchParams.set('game', "${gameParam}");
+                window.history.replaceState({}, '', url);
+                
+                // Set in sessionStorage
+                sessionStorage.setItem('gba_current_game', "${gameParam}");
+                
+                console.log('[GBA INJECTOR] Game parameter injected:', "${gameParam}");
+              })();
+            </script>
+          `;
+          
+          // Find the head or body tag and inject our script
+          const headIndex = htmlContent.indexOf('<head>');
+          if (headIndex !== -1) {
+            const insertPos = headIndex + 6; // After <head>
+            htmlContent = htmlContent.slice(0, insertPos) + injectScript + htmlContent.slice(insertPos);
+          } else {
+            // If no head tag, add it at the beginning
+            htmlContent = injectScript + htmlContent;
+          }
+          
+          // Also modify the onload function to ensure game loads
+          const onloadIndex = htmlContent.indexOf('window.onload = function()');
+          if (onloadIndex !== -1) {
+            // Replace the onload function with one that loads our game
+            const onloadEnd = htmlContent.indexOf('}', onloadIndex);
+            const newOnload = `
+              window.onload = function() {
+                // First run the original code
+                //Populate settings:
+                registerDefaultSettings();
+                //Initialize Iodine:
+                registerIodineHandler();
+                //Initialize the timer:
+                calculateTiming();
+                //Initialize the graphics:
+                registerBlitterHandler();
+                //Initialize the audio:
+                registerAudioHandler();
+                //Register the save handler callbacks:
+                registerSaveHandlers();
+                //Register the GUI controls.
+                registerGUIEvents();
+                //Register GUI settings.
+                registerGUISettings();
+                
+                // FORCE LOAD THE GAME
+                var gameID = "${gameParam}";
+                var gameName = games[gameID];
+                
+                if (gameID && gameName) {
+                  console.log(\`[FORCE LOAD] Game: \${gameName} [\${gameID}]\`);
+                  document.title = \`\${gameName} on GBA Online\`;
+                  
+                  var t = document.createElement("p");
+                  t.innerHTML = "Loaded \\"" + gameName + "\\"";
+                  t.id = "loadedGameMsg";
+                  document.body.appendChild(t);
+                  
+                  setTimeout(function () {
+                    $("#loadedGameMsg").fadeOut();
+                    setTimeout(function () {
+                      $("#loadedGameMsg").remove();
+                    }, 3000);
+                  }, 3000);
+                  
+                  // Download the BIOS and ROM
+                  downloadBIOS();
+                } else {
+                  console.log("Game not found:", "${gameParam}");
+                  document.title = defaultTitle;
+                }
+              };
+            `;
+            htmlContent = htmlContent.slice(0, onloadIndex) + newOnload + htmlContent.slice(onloadEnd + 1);
+          }
+        }
+      }
+
+      // Check for GitHub 50MB limit
+      if (htmlContent.includes('Package size exceeded the configured limit') ||
+          htmlContent.includes('Try https://github.com/') ||
+          htmlContent.includes('50 MB file size limit')) {
         hideLoading();
-        gameIframe.src = 'about:blank'; // Keep iframe blank
-
+        gameIframe.src = 'about:blank';
         showError(
           'This game cannot be loaded. 💔',
-          `
-The game HTML file does not exist or exceeds GitHub's 50 MB file limit.
-
-This usually means:
-• The HTML file was never uploaded
-• The game is too large for GitHub Pages
-• Only the folder exists, not the compiled HTML
-
-Suggested action:
-Open the repository folder directly and verify the HTML file exists.
-          `.trim()
+          'The game HTML file does not exist or exceeds GitHub\'s 50 MB file limit.'
         );
-
-        // Store this as the last error to prevent auto-clearing
         lastError = 'github_50mb_limit';
         return false;
       }
 
-      /* ===============================
-         ❌ INVALID / EMPTY HTML CHECK
-         =============================== */
-      if (
-        !htmlContent.includes('<html') &&
-        !htmlContent.includes('<!DOCTYPE') &&
-        htmlContent.length < 100 // Also check for very short responses
-      ) {
+      // Check for invalid HTML
+      if (!htmlContent.includes('<html') &&
+          !htmlContent.includes('<!DOCTYPE') &&
+          htmlContent.length < 100) {
         hideLoading();
         gameIframe.src = 'about:blank';
-        
         showError(
           'Invalid HTML content. 💔',
-          `
-The server returned content that doesn't look like valid HTML.
-
-Response length: ${htmlContent.length} characters
-First 100 chars: ${htmlContent.substring(0, 100)}...
-          `.trim()
+          'The server returned content that doesn\'t look like valid HTML.'
         );
-        
         lastError = 'invalid_html';
         return false;
       }
 
-      /* ===============================
-         ✅ NORMAL LOAD PATH
-         =============================== */
+      // Create blob with modified content
       const blob = new Blob([htmlContent], { type: 'text/html' });
       const blobUrl = URL.createObjectURL(blob);
-
+      
+      // Set iframe source
       gameIframe.src = blobUrl;
-
+      
+      // Clean up previous blob URL
       if (window.previousBlobUrl) {
         URL.revokeObjectURL(window.previousBlobUrl);
       }
       window.previousBlobUrl = blobUrl;
-
-      // Reset error state since we successfully loaded
+      
+      // Reset error state
       lastError = null;
       return true;
 
@@ -6310,22 +6505,10 @@ First 100 chars: ${htmlContent.substring(0, 100)}...
       clearTimeout(timeoutId);
       hideLoading();
       gameIframe.src = 'about:blank';
-
       showError(
         'The game failed to load. 💔',
-        `
-Fetch failed or was blocked.
-
-Reason:
-${fetchError.message}
-
-This may be caused by:
-• CORS restrictions
-• Missing HTML file
-• Network interruption
-        `.trim()
+        `Fetch failed or was blocked. Reason: ${fetchError.message}`
       );
-
       lastError = 'fetch_error';
       return false;
     }
@@ -6333,22 +6516,14 @@ This may be caused by:
   } catch (fatalError) {
     hideLoading();
     gameIframe.src = 'about:blank';
-
     showError(
       'Unexpected loader error. 💔',
-      `
-A fatal error occurred while preparing the game.
-
-Details:
-${fatalError.message}
-      `.trim()
+      `A fatal error occurred while preparing the game. Details: ${fatalError.message}`
     );
-
     lastError = 'fatal_error';
     return false;
   }
 }
-
 
 // Show/hide loading/error states - FIXED: Better error handling
 function showLoading() {
