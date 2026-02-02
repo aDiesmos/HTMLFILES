@@ -5372,7 +5372,7 @@ const games = [
     title: "Super Mario 64",
     image: "https://chicken.parmacitieschools.org/images/sm64.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sm64.html",
-    isNew: true
+    isNew: false
   },
   {
     id: 763,
@@ -5876,281 +5876,519 @@ const games = [
     title: "We Become What We Behold",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/behold.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/behold.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 837,
     title: "Slow Roads",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/slowroads.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/slowroads.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 838,
     title: "Phoenix Wright: Ace Attorney",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/aceattorney.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/aceattorney.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 839,
     title: "Phoenix Wright: Justice for All",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/phoenixjusticeforall.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/phoenixjusticeforall.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 840,
     title: "Phoenix Wright: Trials and Tribulations",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/phoenixtrials.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/phoenixtrials.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 841,
     title: "Mario & Luigi: Partners in Time",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/partnersintime.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/partnersintime.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 842,
     title: "Mario & Luigi: Bowser's Inside Story",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/insidestory.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/insidestory.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 843,
     title: "Super Mario Bros",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermariobros.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermariobros.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 844,
     title: "Super Mario Bros 2",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermariobros2.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermariobros2.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 845,
     title: "Super Mario Bros 3",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermariobros3.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermariobros3.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 846,
     title: "Scooby-Doo! Mystery Mayhem",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/scoobydoogba.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/scoobydoogba.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 847,
     title: "The SpongeBob Squarepants Movie",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sbmoviegba.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sbmoviegba.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 848,
     title: "Subway Surfers Berlin",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/subwaysurfers.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/subwaysurfersberlin.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 849,
     title: "Subway Surfers London",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/subwaysurfers.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/subwaysurferslondon.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 850,
     title: "Subway Surfers Mexico",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/subwaysurfers.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/subwaysurfersmexico.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 851,
     title: "Subway Surfers Beijing",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/subwaysurfers.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/subwaysurfersbeijing.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 852,
     title: "Super Mario All-Stars",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermarioallstars.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermarioallstars.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 853,
     title: "Super Mario RPG",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermariorpg.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermariorpg.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 854,
     title: "Sonic Mega Mix",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicmegamix.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicmegamix.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 855,
     title: "Sonic Classic Heroes",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicclassicheroes.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicclassicheroes.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 856,
     title: "Sonic Spinball",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicspinball.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicspinball.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 857,
     title: "Super Punch-Out!!",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/superpunchout.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/superpunchout.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 858,
     title: "Big Ice Tower Tiny Square",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bigicetowertinysquare.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bigicetowertinysquare.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 859,
     title: "Big Neon Tower Tiny Square",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bigneontowertinysquare.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bigneontowertinysquare.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 860,
     title: "Big Tower Tiny Square 2",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bigtowertinysquare2.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bigtowertinysquare2.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 861,
     title: "FIFA 10",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fifa10.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fifa10.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 862,
     title: "FIFA 11",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fifa11.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fifa11.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 863,
     title: "Big City Battle",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bigcitybattle.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bigcitybattle.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 864,
     title: "Bergentruck 201X",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bergentruck201x.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bergentruck201x.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 865,
     title: "Puyo Pop Fever",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/puyopuyofever.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/puyopuyofever.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 866,
     title: "Goat Guardian",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/goatguardian.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/goatguardian.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 867,
     title: "Sprunki",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sprunki.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sprunki.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 868,
     title: "Sprunki Clicker",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sprunkiclicker.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sprunkiclicker.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 869,
     title: "You vs 100 Skibidi Toilets",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/youvs100skibidi.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/youvs100skibidi.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 870,
     title: "Whack the Creeps",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/whackthecreeps.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/whackthecreeps.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 871,
     title: "Whack Your Boss",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/whackyourboss.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/whackyourboss.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 872,
     title: "Whack Your Computer",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/whackyourcomputer.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/whackyourcomputer.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 873,
     title: "Whack Your Ex",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/whackyourex.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/whackyourex.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 874,
     title: "Housebroken Hero",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/housebrokenhero.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/housebrokenhero.html",
-    isNew: true
+    isNew: false
 },
     {
     id: 875,
     title: "FNF: CITYFUNK",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cityfunk.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cityfunk.html",
+    isNew: false
+},
+    {
+    id: 875,
+    title: "Animal Crossing: Wild World",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/animalcrossingwildworld.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/animalcrossingwildworld.html",
     isNew: true
 },
+{
+    id: 876,
+    title: "Ant Buster",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/antbuster.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/antbuster.html",
+    isNew: true
+},
+{
+    id: 877,
+    title: "The Amazing World of Gumball: Blindfooled",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/blindfooled.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/blindfooled.html",
+    isNew: true
+},
+{
+    id: 878,
+    title: "SpongeBob Squarepants: Boo or Boom",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/booorboom.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/booorboom.html",
+    isNew: true
+},
+{
+    id: 879,
+    title: "BuildNow.gg",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/buildnowgg.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/buildnowgg.html",
+    isNew: true
+},
+{
+    id: 880,
+    title: "Capybara Clicker",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/capybaraclicker.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/capybaraclicker.html",
+    isNew: true
+},
+{
+    id: 882,
+    title: "SpongeBob Squarepants: Delivery Dilemma",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/deliverydilemma.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/deliverydilemma.html",
+    isNew: true
+},
+{
+    id: 883,
+    title: "Deltatraveler",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/deltatraveler.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/deltatraveler.html",
+    isNew: true
+},
+{
+    id: 884,
+    title: "Donkey Kong Country",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/donkeykongcountry.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/donkeykongcountry.html",
+    isNew: true
+},
+{
+    id: 885,
+    title: "Driven Wild",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/drivenwild.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/drivenwild.html",
+    isNew: true
+},
+{
+    id: 886,
+    title: "FortZone Battle Royale",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fortzonebattleroyale.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fortzonebattleroyale.html",
+    isNew: true
+},
+{
+    id: 887,
+    title: "Grand Action Simulator: New York",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/grandactionsimulatorny.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/grandactionsimulatorny.html",
+    isNew: true
+},
+{
+    id: 888,
+    title: "GTA: Vice City",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gtavicecity.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gtavicecity.html",
+    isNew: true
+},
+{
+    id: 889,
+    title: "Half-Life",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/halflife.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/halflife.html",
+    isNew: true
+},
+{
+    id: 890,
+    title: "Nickelodeon: Hardest Game Ever",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/hardestgameever.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/hardestgameever.html",
+    isNew: true
+},
+{
+    id: 891,
+    title: "Highway Racer",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/highwayracer.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/highwayracer.html",
+    isNew: true
+},
+{
+    id: 892,
+    title: "Kitty Toy",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/kittytoy.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/kittytoy.html",
+    isNew: true
+},
+{
+    id: 893,
+    title: "Look Outside",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/lookoutside.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/lookoutside.html",
+    isNew: true
+},
+{
+    id: 894,
+    title: "Mario Kart DS",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mariokartds.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mariokartds.html",
+    isNew: true
+},
+{
+    id: 895,
+    title: "Mario Party DS",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mariopartyds.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mariopartyds.html",
+    isNew: true
+},
+{
+    id: 896,
+    title: "Nintendogs: Labrador & Friends",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/nintendogslab.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/nintendogslab.html",
+    isNew: true
+},
+{
+    id: 897,
+    title: "Pizza Tower: Scoutdigo",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pizzatowerscoutdigo.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pizzatowerscoutdigo.html",
+    isNew: true
+},
+{
+    id: 898,
+    title: "SpongeBob Squarepants: Pyramid Peril",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pyramidperil.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pyramidperil.html",
+    isNew: true
+},
+{
+    id: 899,
+    title: "Sandtris",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sandtris.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sandtris.html",
+    isNew: true
+},
+{
+    id: 900,
+    title: "SpongeBob Squarepants: Sea Monster Smoosh",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/seamonstersmoosh.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/seamonstersmoosh.html",
+    isNew: true
+},
+{
+    id: 902,
+    title: "Sonic CD",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/soniccd.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/soniccd.html",
+    isNew: true
+},
+{
+    id: 903,
+    title: "Sonic Colors",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/soniccolors.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/soniccolors.html",
+    isNew: true
+},
+{
+    id: 904,
+    title: "Sonic.exe",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicexe.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicexe.html",
+    isNew: true
+},
+{
+    id: 905,
+    title: "Sonic Mania",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicmania.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicmania.html",
+    isNew: true
+},
+{
+    id: 906,
+    title: "Sonic Rush",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicrush.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicrush.html",
+    isNew: true
+},
+{
+    id: 907,
+    title: "Super Mario World",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermarioworld.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermarioworld.html",
+    isNew: true
+},
+{
+    id: 908,
+    title: "Super Mario World 2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermarioworld2.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermarioworld2.html",
+    isNew: true
+},
+{
+    id: 909,
+    title: "Super Princess Peach",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/superprincesspeach.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/superprincesspeach.html",
+    isNew: true
+},
+{
+    id: 910,
+    title: "Traffic Rider",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/trafficrider.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/trafficrider.html",
+    isNew: true
+}
 ];
 
 // DOM Elements
