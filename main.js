@@ -6388,7 +6388,14 @@ const games = [
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/trafficrider.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/trafficrider.html",
     isNew: true
-}
+},
+    {
+    id: 910,
+    title: "FNF: Jeffy's Infinite Irida (SHUCKS DEMO)",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/irida.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/irida.html",
+    isNew: true
+},
 ];
 
 // DOM Elements
