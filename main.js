@@ -6156,244 +6156,252 @@ const games = [
     title: "Animal Crossing: Wild World",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/animalcrossingwildworld.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/animalcrossingwildworld.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 876,
     title: "Ant Buster",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/antbuster.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/antbuster.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 877,
     title: "The Amazing World of Gumball: Blindfooled",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/blindfooled.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/blindfooled.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 878,
     title: "SpongeBob Squarepants: Boo or Boom",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/booorboom.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/booorboom.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 879,
     title: "BuildNow.gg",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/buildnowgg.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/buildnowgg.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 880,
     title: "Capybara Clicker",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/capybaraclicker.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/capybaraclicker.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 882,
     title: "SpongeBob Squarepants: Delivery Dilemma",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/deliverydilemma.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/deliverydilemma.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 883,
     title: "Deltatraveler",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/deltatraveler.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/deltatraveler.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 884,
     title: "Donkey Kong Country",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/donkeykongcountry.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/donkeykongcountry.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 885,
     title: "Driven Wild",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/drivenwild.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/drivenwild.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 886,
     title: "FortZone Battle Royale",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fortzonebattleroyale.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fortzonebattleroyale.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 887,
     title: "Grand Action Simulator: New York",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/grandactionsimulatorny.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/grandactionsimulatorny.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 888,
     title: "GTA: Vice City",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gtavicecity.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gtavicecity.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 889,
     title: "Half-Life",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/halflife.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/halflife.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 890,
     title: "Nickelodeon: Hardest Game Ever",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/hardestgameever.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/hardestgameever.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 891,
     title: "Highway Racer",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/highwayracer.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/highwayracer.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 892,
     title: "Kitty Toy",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/kittytoy.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/kittytoy.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 893,
     title: "Look Outside",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/lookoutside.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/lookoutside.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 894,
     title: "Mario Kart DS",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mariokartds.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mariokartds.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 895,
     title: "Mario Party DS",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mariopartyds.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mariopartyds.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 896,
     title: "Nintendogs: Labrador & Friends",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/nintendogslab.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/nintendogslab.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 897,
     title: "Pizza Tower: Scoutdigo",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pizzatowerscoutdigo.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pizzatowerscoutdigo.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 898,
     title: "SpongeBob Squarepants: Pyramid Peril",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pyramidperil.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pyramidperil.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 899,
     title: "Sandtris",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sandtris.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sandtris.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 900,
     title: "SpongeBob Squarepants: Sea Monster Smoosh",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/seamonstersmoosh.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/seamonstersmoosh.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 902,
     title: "Sonic CD",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/soniccd.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/soniccd.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 903,
     title: "Sonic Colors",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/soniccolors.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/soniccolors.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 904,
     title: "Sonic.exe",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicexe.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicexe.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 905,
     title: "Sonic Mania",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicmania.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicmania.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 906,
     title: "Sonic Rush",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicrush.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicrush.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 907,
     title: "Super Mario World",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermarioworld.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermarioworld.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 908,
     title: "Super Mario World 2",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermarioworld2.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermarioworld2.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 909,
     title: "Super Princess Peach",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/superprincesspeach.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/superprincesspeach.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 910,
     title: "Traffic Rider",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/trafficrider.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/trafficrider.html",
-    isNew: true
+    isNew: false
 },
     {
     id: 910,
     title: "FNF: Jeffy's Infinite Irida (SHUCKS DEMO)",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/irida.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/irida.html",
+    isNew: false
+},
+    },
+    {
+    id: 911,
+    title: "FNF: Sonic Dash And Spin",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicdashandspin.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/fnf/sonicdashandspin.html",
     isNew: true
 },
 ];
