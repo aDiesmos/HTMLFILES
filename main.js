@@ -5371,8 +5371,8 @@ const games = [
     id: 762,
     title: "Super Mario 64",
     image: "https://chicken.parmacitieschools.org/images/sm64.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/sm64/",
-    isNew: false
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sm64.html",
+    isNew: true
   },
   {
     id: 763,
@@ -6142,6 +6142,13 @@ const games = [
     title: "Housebroken Hero",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/housebrokenhero.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/housebrokenhero.html",
+    isNew: true
+},
+    {
+    id: 875,
+    title: "FNF: CITYFUNK",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cityfunk.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cityfunk.html",
     isNew: true
 },
 ];
