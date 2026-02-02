@@ -6404,6 +6404,20 @@ const games = [
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/fnf/sonicdashandspin.html",
     isNew: true
 },
+        {
+    id: 912,
+    title: "FNF: Tails Gets Trolled",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/fnf/tailstroll.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/fnf/tailstroll.html",
+    isNew: true
+},
+        {
+    id: 913,
+    title: "FNF: CN Lost Episodes",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/fnf/cnlost.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/fnf/cnlost.html",
+    isNew: true
+},
 ];
 
 // DOM Elements
