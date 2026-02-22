@@ -6406,13 +6406,6 @@ const games = [
 },
         {
     id: 912,
-    title: "FNF: Tails Gets Trolled",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/fnf/tailstroll.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/fnf/tailstroll.html",
-    isNew: true
-},
-        {
-    id: 913,
     title: "FNF: CN Lost Episodes",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/fnf/cnlost.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/fnf/cnlost.html",
@@ -7010,7 +7003,7 @@ async function loadGameInIframe(gameUrl, gameTitle) {
         hideLoading();
         gameIframe.src = 'about:blank';
         showError(
-          'This game cannot be loaded. 💔',
+          'We hit our limit sorry. 💔',
           'The game HTML file does not exist or exceeds GitHub\'s 50 MB file limit.'
         );
         lastError = 'github_50mb_limit';
@@ -7024,7 +7017,7 @@ async function loadGameInIframe(gameUrl, gameTitle) {
         hideLoading();
         gameIframe.src = 'about:blank';
         showError(
-          'Invalid HTML content. 💔',
+          'Um we cant find that. 💔',
           'The server returned content that doesn\'t look like valid HTML.'
         );
         lastError = 'invalid_html';
@@ -7053,7 +7046,7 @@ async function loadGameInIframe(gameUrl, gameTitle) {
       hideLoading();
       gameIframe.src = 'about:blank';
       showError(
-        'The game failed to load. 💔',
+        'Our fetch got rejected. 💔',
         `Fetch failed or was blocked. Reason: ${fetchError.message}`
       );
       lastError = 'fetch_error';
@@ -7064,7 +7057,7 @@ async function loadGameInIframe(gameUrl, gameTitle) {
     hideLoading();
     gameIframe.src = 'about:blank';
     showError(
-      'Unexpected loader error. 💔',
+      'Oh no this is not right. 💔',
       `A fatal error occurred while preparing the game. Details: ${fatalError.message}`
     );
     lastError = 'fatal_error';
@@ -7077,7 +7070,7 @@ function showLoading() {
   gameLoading.classList.add('active');
   gameLoading.innerHTML = `
     <div style="text-align: center;">
-      <div style="font-size: 2rem; margin-bottom: 1rem;">🎮💖</div>
+      <div style="font-size: 2rem; margin-bottom: 1rem;">🎮🍀</div>
       <div>Getting your game ready...</div>
       <small>This might take a moment! ⏳</small>
       <div style="margin-top: 1rem; font-size: 0.8rem; color: #ff66b2;">
@@ -7095,7 +7088,7 @@ function hideLoading() {
 function showError(userMessage, technicalReason = 'Unknown error') {
   gameError.innerHTML = `
     <div style="text-align:center;">
-      <div style="font-size:2rem;margin-bottom:0.5rem;">😔💔</div>
+      <div style="font-size:2rem;margin-bottom:0.5rem;">😔🍀</div>
 
       <div style="margin-bottom:0.75rem;">
         ${userMessage}
@@ -7218,7 +7211,7 @@ function closeGameOverlay() {
 // Download game as HTML file
 function downloadGame() {
   if (!currentGame) {
-    alert('No game loaded to download! 💔');
+    alert('No game loaded to download! 🍀');
     return;
   }
   
@@ -7261,7 +7254,7 @@ function downloadGame() {
               z-index: 9999;
               border: 1px solid rgba(255,102,178,0.5);
             ">
-              ${currentGame.title} - Downloaded from Diesmos 💖
+              ${currentGame.title} - Downloaded from Diesmos 🍀
             </div>
           `;
           modifiedHtml = modifiedHtml.slice(0, bodyEnd) + watermark + modifiedHtml.slice(bodyEnd);
@@ -7281,7 +7274,7 @@ function downloadGame() {
               z-index: 9999;
               border: 1px solid rgba(255,102,178,0.5);
             ">
-              ${currentGame.title} - Downloaded from Diesmos 💖
+              ${currentGame.title} - Downloaded from Diesmos 🍀
             </div>
           `;
         }
@@ -7351,7 +7344,7 @@ function downloadGame() {
             </head>
             <body>
               <div class="game-info">
-                ${currentGame.title} - Downloaded from Diesmos 💖
+                ${currentGame.title} - Downloaded from Diesmos 🍀
               </div>
               <iframe src="${gameUrl}" allowfullscreen></iframe>
             </body>
@@ -7405,7 +7398,7 @@ function renderFavorites() {
     favoritesGrid.innerHTML = `
       <div class="empty-favorites">
         <p>You haven't added any favorites yet. 💔</p>
-        <p>Click the ❤️ icon on games to add them here. 💝</p>
+        <p>Click the ❤️ icon on games to add them here. 🍀</p>
       </div>
     `;
     return;
@@ -7443,17 +7436,17 @@ function openSuggestions() {
 // Update greeting based on time of day
 function updateGreeting() {
   const hour = new Date().getHours();
-  let greeting = 'Have an awesome day! 💖';
-  if (hour < 12) greeting = 'Good morning! ☀️💝';
-  else if (hour < 18) greeting = 'Good afternoon! 🌤️💖';
-  else greeting = 'Good evening! 🌙💝';
+  let greeting = 'Have an awesome day! 🍀';
+  if (hour < 12) greeting = 'Good morning! ☀️🍀';
+  else if (hour < 18) greeting = 'Good afternoon! 🌤️🍀';
+  else greeting = 'Good evening! 🌙🍀';
   document.getElementById('greeting').textContent = greeting;
 }
 
 // Create floating hearts
 function createHearts() {
   const heartsContainer = document.getElementById('hearts');
-  const hearts = ['❤️', '💖', '💝', '💘', '💕', '💗', '💓', '💞'];
+  const hearts = ['🍀', '☘️', '🍃', '🌱', '🌻', '🏵️', '🌷', '🌸'];
   
   for (let i = 0; i < 15; i++) {
     const heart = document.createElement('div');
