@@ -6396,7 +6396,6 @@ const games = [
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/irida.html",
     isNew: false
 },
-    },
     {
     id: 911,
     title: "FNF: Sonic Dash And Spin",
