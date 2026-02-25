@@ -6431,6 +6431,27 @@ const games = [
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/chooseyourweapon3.html",
     isNew: true
 },
+        {
+    id: 915,
+    title: "Bad Ice Cream",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/bad-ice-cream.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/bad-ice-cream.html",
+    isNew: true
+},
+        {
+    id: 915,
+    title: "Bad Ice Cream 2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/bad-ice-cream-2.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/bad-ice-cream-2.html",
+    isNew: true
+},
+        {
+    id: 915,
+    title: "Bad Ice Cream 3",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/bad-ice-cream-3.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/bad-ice-cream-3.html",
+    isNew: true
+},
 ];
 // DOM Elements
 const gamesGrid = document.getElementById('gamesGrid');
