@@ -6401,17 +6401,37 @@ const games = [
     title: "FNF: Sonic Dash And Spin",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicdashandspin.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/fnf/sonicdashandspin.html",
-    isNew: true
+    isNew: false
 },
         {
     id: 912,
     title: "FNF: CN Lost Episodes",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/fnf/cnlost.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/fnf/cnlost.html",
+    isNew: false
+},
+        {
+    id: 913,
+    title: "Choose Your Weapon",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/chooseyourweapon.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/chooseyourweapon.html",
+    isNew: true
+},
+        {
+    id: 914,
+    title: "Choose Your Weapon 2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/chooseyourweapon2.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/chooseyourweapon2.html",
+    isNew: true
+},
+        {
+    id: 915,
+    title: "Choose Your Weapon 3",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/chooseyourweapon3.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/chooseyourweapon3.html",
     isNew: true
 },
 ];
-
 // DOM Elements
 const gamesGrid = document.getElementById('gamesGrid');
 const favoritesContainer = document.getElementById('favoritesContainer');
