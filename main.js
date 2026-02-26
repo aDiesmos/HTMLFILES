@@ -6415,20 +6415,26 @@ const games = [
     title: "Choose Your Weapon",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/chooseyourweapon.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/chooseyourweapon.html",
-    isNew: true
+    isNew: false
 },
         {
     id: 914,
     title: "Choose Your Weapon 2",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/chooseyourweapon2.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/chooseyourweapon2.html",
-    isNew: true
+    isNew: false
 },
         {
     id: 915,
     title: "Choose Your Weapon 3",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/chooseyourweapon3.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/whatver/chooseyourweapon3.html",
+    isNew: false
+ {
+    id: 915,
+    title: "FNF: Vs. Jeffy",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/images/jeffy.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/jeffy.html",
     isNew: true
 },
 ];
