@@ -4951,7 +4951,7 @@ const games = [
     id: 701,
     title: "Monster Tracks",
     image: "https://chicken.parmacitieschools.org/images/monstert.jpg",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/livediesmos/monstertracks.html/",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/livediesmos/monstertracks.html",
     isNew: false
   },
   {
