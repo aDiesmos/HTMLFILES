@@ -6434,7 +6434,7 @@ const games = [
          {
     id: 916,
     title: "FNF: Vs. Jeffy",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/images/jeffy.jpg",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/images@main/jeffy.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/jeffy.html",
     isNew: true
 },
