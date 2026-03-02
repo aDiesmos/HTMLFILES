@@ -1451,8 +1451,8 @@ const games = [
     id: 199,
     title: "Doki Doki Literature Club",
     image: "https://chicken.parmacitieschools.org/images/ddlc.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/gamepath/dokidoki/",
-    isNew: false
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/dokidokiliteratureclub.html",
+    isNew: true
   },
   {
     id: 200,
