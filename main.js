@@ -6501,6 +6501,20 @@ const games = [
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicrevert.html",
     isNew: true
 },
+     {
+    id: 926,
+    title: "Drive Mad",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/drivemad.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/drivemad.html",
+    isNew: true
+},
+     {
+    id: 927,
+    title: "Papers.io Mania",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papermania.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/paperiomania.html",
+    isNew: true
+},
 ];
 // DOM Elements
 const gamesGrid = document.getElementById('gamesGrid');
