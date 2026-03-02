@@ -6440,16 +6440,79 @@ const games = [
              },
          {
     id: 917,
-    title: "Purble Place",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/images@main/purble.jpg",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/purble.html",
+    title: "Wheely",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheel.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheely.html",
+    isNew: true
+             },
+       {
+    id: 918,
+    title: "Wheely 2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheel2.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheely2.html",
+    isNew: true
+             },
+       {
+    id: 919,
+    title: "Wheely 3",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheel3.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheely3.html",
+    isNew: true
+             },
+       {
+    id: 920,
+    title: "Wheely 4",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheel4.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheely4.html",
+    isNew: true
+             },
+       {
+    id: 921,
+    title: "Wheely 5",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheel5.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheely5.html",
+    isNew: true
+             },
+       {
+    id: 922,
+    title: "Wheely 6",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheel6.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheely6.html",
+    isNew: true
+             },
+       {
+    id: 923,
+    title: "Wheely 7",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheel7.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheely7.html",
+    isNew: true
+             },
+       {
+    id: 924,
+    title: "Wheely 8",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheel8.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wheely8.html",
     isNew: true
              },
          {
-    id: 918,
-    title: "Disney Princess",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/images@main/disney.jpg",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/disney.html",
+    id: 925,
+    title: "Sonic Revert",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/revert.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicrevert.html",
+    isNew: true
+},
+     {
+    id: 926,
+    title: "Drive Mad",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/drivemad.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/drivemad.html",
+    isNew: true
+},
+     {
+    id: 927,
+    title: "Papers.io Mania",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papermania.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/paperiomania.html",
     isNew: true
 },
 ];
