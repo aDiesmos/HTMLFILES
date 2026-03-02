@@ -6516,10 +6516,38 @@ const games = [
     isNew: true
 },
      {
-    id: 927,
+    id: 928,
     title: "Granny",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/granny.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/granny.html",
+    isNew: true
+},
+  {
+    id: 929,
+    title: "FNAF",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fnaf.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/FNAF.html",
+    isNew: true
+},
+  {
+    id: 930,
+    title: "FNAF 2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fnaf2.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/FNAF2.html",
+    isNew: true
+},
+  {
+    id: 931,
+    title: "FNAF 3",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fnaf3.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/FNAF3.html",
+    isNew: true
+},
+  {
+    id: 932,
+    title: "FNAF 4",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fnaf4.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/FNAF4.html",
     isNew: true
 },
 ];
