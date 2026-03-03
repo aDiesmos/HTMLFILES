@@ -4,7 +4,7 @@ function translateImageUrl(oldUrl) {
     return oldUrl;
   }
   if (!oldUrl) return '';
-   logToClicky(game.title);
+  
 function logToClicky(gameName) {
   if (typeof clicky !== "undefined") {
     clicky.log(gameName, "game_click");
@@ -7277,10 +7277,10 @@ async function loadGameInIframe(gameUrl, gameTitle) {
                 const url = new URL(window.location);
                 url.searchParams.set('game', "${gameParam}");
                 window.history.replaceState({}, '', url);
-              
-              logToClicky(game.title); 
-              window.location.href = translateGameUrl(game.url);    
-              sessionStorage.setItem('gba_current_game', "${gameParam}");
+                logToClicky(game.title);
+                window.location.href = translateGameUrl(game.url);
+                
+                sessionStorage.setItem('gba_current_game', "${gameParam}");
                 
                 console.log('[GBA INJECTOR] Game parameter injected:', "${gameParam}");
               })();
