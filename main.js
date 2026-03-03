@@ -3947,27 +3947,6 @@ const games = [
     isNew: false
   },
   {
-    id: 557,
-    title: "FNAF 2",
-    image: "https://chicken.parmacitieschools.org/images/FNAF2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/FNAF2/",
-    isNew: false
-  },
-  {
-    id: 558,
-    title: "FNAF 3",
-    image: "https://chicken.parmacitieschools.org/images/FNAF3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/FNAF3/",
-    isNew: false
-  },
-  {
-    id: 559,
-    title: "FNAF 4",
-    image: "https://chicken.parmacitieschools.org/images/FNAF4.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/FNAF4/",
-    isNew: false
-  },
-  {
     id: 560,
     title: "Brave Explorers",
     image: "https://chicken.parmacitieschools.org/images/brave-explorers.jpg",
@@ -4651,13 +4630,6 @@ const games = [
     title: "Fluidsim",
     image: "https://chicken.parmacitieschools.org/images/fluidsim.jpg",
     url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/fluidsim/",
-    isNew: false
-  },
-  {
-    id: 659,
-    title: "FNAF",
-    image: "https://chicken.parmacitieschools.org/images/fnaf.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/fnaf/",
     isNew: false
   },
   {
@@ -6146,13 +6118,6 @@ const games = [
 },
     {
     id: 875,
-    title: "FNF: CITYFUNK",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cityfunk.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cityfunk.html",
-    isNew: false
-},
-    {
-    id: 875,
     title: "Animal Crossing: Wild World",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/animalcrossingwildworld.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/animalcrossingwildworld.html",
@@ -6390,13 +6355,6 @@ const games = [
     isNew: false
 },
     {
-    id: 910,
-    title: "FNF: Jeffy's Infinite Irida (SHUCKS DEMO)",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/irida.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/irida.html",
-    isNew: false
-},
-    {
     id: 911,
     title: "FNF: Sonic Dash And Spin",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicdashandspin.png",
@@ -6569,6 +6527,27 @@ const games = [
     title: "Room Clicker",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/room.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/roomclicker.html",
+    isNew: true
+},
+{
+    id: 936
+    title: "Minecraft Pocket Edition 0.6.1",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mcpe.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mcpe.html",
+    isNew: true
+},
+     {
+    id: 937,
+    title: "FNF: CITYFUNK",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cityfunk.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cityfunk.html",
+    isNew: true
+},
+             {
+    id: 938,
+    title: "FNF: Jeffy's Infinite Irida (SHUCKS DEMO)",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/irida.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/irida.html",
     isNew: true
 },
 ];
