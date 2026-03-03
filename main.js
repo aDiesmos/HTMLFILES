@@ -5,9 +5,10 @@ function translateImageUrl(oldUrl) {
   }
   if (!oldUrl) return '';
   
-function logToClicky() {
-  const url = "https://in.getclicky.com/in.php?site_id=101481770&type=pageview&title=Ping";
-  UrlFetchApp.fetch(url);
+function logToClicky(gameName) {
+  if (typeof clicky !== "undefined") {
+    clicky.log(gameName, "game_click");
+  }
 }
 
   
@@ -6831,7 +6832,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function openSiteInNewTab() {
   // Open a new blank tab
   const newTab = window.open('about:blank', '_blank');
-
   if (!newTab) {
     alert('Popup blocked 😢 Please allow popups for this site.');
     return;
@@ -7277,6 +7277,8 @@ async function loadGameInIframe(gameUrl, gameTitle) {
                 const url = new URL(window.location);
                 url.searchParams.set('game', "${gameParam}");
                 window.history.replaceState({}, '', url);
+                logToClicky(game.title);
+                window.location.href = translateGameUrl(game.url);
                 
                 sessionStorage.setItem('gba_current_game', "${gameParam}");
                 
