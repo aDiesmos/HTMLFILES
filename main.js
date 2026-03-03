@@ -6759,6 +6759,13 @@ const games = [
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/undertalelastbreath.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/undertalelastbreath.html",
     isNew: true
+},
+{
+    id: 970,
+    title: "Balatro",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/balatro.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/balatro.html",
+    isNew: true
 }
 ];
 // DOM Elements
