@@ -6768,7 +6768,7 @@ const games = [
     isNew: true
 },
 {
-    id: 971
+    id: 971,
     title: "A Random Bee Swarm Simulator Knockoff",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bee.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bee.html",
