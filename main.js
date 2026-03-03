@@ -6668,7 +6668,14 @@ const games = [
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/rottensmoothie.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/rottensmoothie.html",
     isNew: true
-},  
+},
+{
+    id: 956,
+    title: "awesome calculator",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/awesomecalculator.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/awesomecalculator.html",
+    isNew: true
+},
 ];
 // DOM Elements
 const gamesGrid = document.getElementById('gamesGrid');
