@@ -6550,6 +6550,76 @@ const games = [
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/irida.html",
     isNew: true
 },
+{
+    id: 939,
+    title: "Antonblast",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/antonblast.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/antonblast.html",
+    isNew: true
+},
+{
+    id: 940,
+    title: "Jumbo Mario",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/jumbomario.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/jumbomario.html",
+    isNew: true
+},
+{
+    id: 941,
+    title: "Needy Streamer Overload",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/needystreameroverload.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/needystreameroverload.html",
+    isNew: true
+},
+{
+    id: 942,
+    title: "Bart Blast",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bartblast.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bartblast.html",
+    isNew: true
+},
+{
+    id: 943,
+    title: "Kirby ~ Soft and Wet",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/kirbysoftandwet.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/kirbysoftandwet.html",
+    isNew: true
+},
+{
+    id: 944,
+    title: "Tetris",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/tetris.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/tetris.html",
+    isNew: true
+},
+{
+    id: 945,
+    title: "Five Nights at Epstein's",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fivenightsatepsteins.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fivenightsatepsteins.html",
+    isNew: true
+},
+{
+    id: 946,
+    title: "Survivor.io",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/survivorio.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/survivorio.html",
+    isNew: true
+},
+{
+    id: 947,
+    title: "FNF: Vs. Rewrite: Round 2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/rewriteround2.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/rewriteround2.html",
+    isNew: true
+},
+{
+    id: 948,
+    title: "In Stars and Time",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/instarsandtime.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/instarsandtime.html",
+    isNew: true
+},
 ];
 // DOM Elements
 const gamesGrid = document.getElementById('gamesGrid');
