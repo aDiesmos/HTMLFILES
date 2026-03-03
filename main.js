@@ -7133,6 +7133,7 @@ function toggleFullscreen(element) {
 // Function to load game using Blob URL trick
 // Function to load game using Blob URL trick
 // Updated loadGameInIframe function with GBA special handling
+// Updated loadGameInIframe function with pointer lock support
 async function loadGameInIframe(gameUrl, gameTitle) {
   try {
     hideError();
@@ -7162,29 +7163,23 @@ async function loadGameInIframe(gameUrl, gameTitle) {
 
       // 🎮 SPECIAL HANDLING FOR GBA GAMES
       if (gameUrl.includes('/gba/player.html')) {
-        // Extract game parameter from the original URL
         const urlObj = new URL(gameUrl, window.location.origin);
         const gameParam = urlObj.searchParams.get('game');
         
         if (gameParam) {
           console.log(`Injecting game parameter for GBA: ${gameParam}`);
           
-          // Inject JavaScript to set the game parameter before the page loads
           const injectScript = `
             <script>
-              // Inject game parameter before original script runs
               (function() {
-                // Override getGameFromURL to return our game
                 window.getGameFromURL = function() {
                   return "${gameParam}";
                 };
                 
-                // Also set it in URLSearchParams for compatibility
                 const url = new URL(window.location);
                 url.searchParams.set('game', "${gameParam}");
                 window.history.replaceState({}, '', url);
                 
-                // Set in sessionStorage
                 sessionStorage.setItem('gba_current_game', "${gameParam}");
                 
                 console.log('[GBA INJECTOR] Game parameter injected:', "${gameParam}");
@@ -7192,42 +7187,28 @@ async function loadGameInIframe(gameUrl, gameTitle) {
             </script>
           `;
           
-          // Find the head or body tag and inject our script
           const headIndex = htmlContent.indexOf('<head>');
           if (headIndex !== -1) {
-            const insertPos = headIndex + 6; // After <head>
+            const insertPos = headIndex + 6;
             htmlContent = htmlContent.slice(0, insertPos) + injectScript + htmlContent.slice(insertPos);
           } else {
-            // If no head tag, add it at the beginning
             htmlContent = injectScript + htmlContent;
           }
           
-          // Also modify the onload function to ensure game loads
           const onloadIndex = htmlContent.indexOf('window.onload = function()');
           if (onloadIndex !== -1) {
-            // Replace the onload function with one that loads our game
             const onloadEnd = htmlContent.indexOf('}', onloadIndex);
             const newOnload = `
               window.onload = function() {
-                // First run the original code
-                //Populate settings:
                 registerDefaultSettings();
-                //Initialize Iodine:
                 registerIodineHandler();
-                //Initialize the timer:
                 calculateTiming();
-                //Initialize the graphics:
                 registerBlitterHandler();
-                //Initialize the audio:
                 registerAudioHandler();
-                //Register the save handler callbacks:
                 registerSaveHandlers();
-                //Register the GUI controls.
                 registerGUIEvents();
-                //Register GUI settings.
                 registerGUISettings();
                 
-                // FORCE LOAD THE GAME
                 var gameID = "${gameParam}";
                 var gameName = games[gameID];
                 
@@ -7247,7 +7228,6 @@ async function loadGameInIframe(gameUrl, gameTitle) {
                     }, 3000);
                   }, 3000);
                   
-                  // Download the BIOS and ROM
                   downloadBIOS();
                 } else {
                   console.log("Game not found:", "${gameParam}");
@@ -7288,9 +7268,63 @@ async function loadGameInIframe(gameUrl, gameTitle) {
         return false;
       }
 
+      // Inject a helper script for pointer lock if needed
+      if (htmlContent.includes('requestPointerLock') || htmlContent.includes('pointerlock')) {
+        const pointerLockHelper = `
+          <script>
+            // Helper for pointer lock across iframe boundaries
+            (function() {
+              // Make sure pointer lock works in iframe
+              document.addEventListener('click', function() {
+                // This helps with some games that need user interaction first
+                console.log('Pointer lock helper active');
+              });
+              
+              // Override requestPointerLock to work better in iframe
+              const originalRequest = Element.prototype.requestPointerLock;
+              Element.prototype.requestPointerLock = function() {
+                console.log('Pointer lock requested');
+                try {
+                  originalRequest.call(this);
+                } catch (e) {
+                  console.error('Pointer lock failed:', e);
+                }
+              };
+              
+              // Handle pointer lock change events
+              document.addEventListener('pointerlockchange', function() {
+                console.log('Pointer lock state changed:', !!document.pointerLockElement);
+              });
+              
+              document.addEventListener('pointerlockerror', function(e) {
+                console.error('Pointer lock error:', e);
+              });
+            })();
+          </script>
+        `;
+        
+        // Inject helper at the end of head or beginning of body
+        const headEnd = htmlContent.indexOf('</head>');
+        if (headEnd !== -1) {
+          htmlContent = htmlContent.slice(0, headEnd) + pointerLockHelper + htmlContent.slice(headEnd);
+        } else {
+          const bodyStart = htmlContent.indexOf('<body');
+          if (bodyStart !== -1) {
+            const bodyEnd = htmlContent.indexOf('>', bodyStart) + 1;
+            htmlContent = htmlContent.slice(0, bodyEnd) + pointerLockHelper + htmlContent.slice(bodyEnd);
+          } else {
+            htmlContent = pointerLockHelper + htmlContent;
+          }
+        }
+      }
+
       // Create blob with modified content
       const blob = new Blob([htmlContent], { type: 'text/html' });
       const blobUrl = URL.createObjectURL(blob);
+      
+      // Set iframe attributes to allow pointer lock
+      gameIframe.setAttribute('allow', 'pointer-lock; fullscreen; autoplay');
+      gameIframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms allow-pointer-lock allow-downloads allow-modals');
       
       // Set iframe source
       gameIframe.src = blobUrl;
