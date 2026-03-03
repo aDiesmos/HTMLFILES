@@ -6676,6 +6676,14 @@ const games = [
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/awesomecalculator.html",
     isNew: true
 },
+{
+    id: 957,
+    title: "WORDLE TEST",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/awesomecalculator.png",
+    url: "https://www.nytimes.com/games/wordle/index.html",
+    isNew: true
+},
+    
 ];
 // DOM Elements
 const gamesGrid = document.getElementById('gamesGrid');
