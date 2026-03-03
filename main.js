@@ -5629,7 +5629,7 @@ const games = [
 {
     id: 803,
     title: "FNF: Heartbreak Havoc: Vs. Sky Redux",
-    image: "https://chicken.parmacitieschools.org/images/redux.jpg",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/skyredux.png",
     url: "player.html?game=https://chicken.parmacitieschools.org/fnf/redux/",
     isNew: false
   },
@@ -6676,14 +6676,90 @@ const games = [
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/awesomecalculator.html",
     isNew: true
 },
-{
+    {
     id: 957,
-    title: "WORDLE TEST",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/awesomecalculator.png",
-    url: "https://www.nytimes.com/games/wordle/index.html",
+    title: "Bloxorz",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloxorz.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloxorz.html",
     isNew: true
 },
-    
+{
+    id: 958,
+    title: "Crazy Chicken 3D",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/crazychicken3d.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/crazychicken3d.html",
+    isNew: true
+},
+{
+    id: 959,
+    title: "Crazy Kitty 3D",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/crazykitty3d.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/crazykitty3d.html",
+    isNew: true
+},
+{
+    id: 960,
+    title: "Getting Over It with Bennett Foddy",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gettingoverit.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gettingoverit.html",
+    isNew: true
+},
+{
+    id: 961,
+    title: "Hotline Miami",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/hotlinemiami.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/hotlinemiami.html",
+    isNew: true
+},
+{
+    id: 962,
+    title: "Minecraft 1.5.2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mc152.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mc152.html",
+    isNew: true
+},
+{
+    id: 963,
+    title: "Minecraft Alpha 1.2.6",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mcalpha126.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mcalpha126.html",
+    isNew: true
+},
+{
+    id: 964,
+    title: "Minecraft Beta 1.3",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mcbeta13.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mcbeta13.html",
+    isNew: true
+},
+{
+    id: 966,
+    title: "Tomb of the Mask",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/tombofthemask.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/tombofthemask.html",
+    isNew: true
+},
+{
+    id: 967,
+    title: "Toss the Turtle",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/tosstheturtle.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/tosstheturtle.html",
+    isNew: true
+},
+{
+    id: 968,
+    title: "Touhou: Luminous Strike",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/touhouluminousstrike.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/touhouluminousstrike.html",
+    isNew: true
+},
+{
+    id: 969,
+    title: "Undertale: Last Breath",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/undertalelastbreath.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/undertalelastbreath.html",
+    isNew: true
+}
 ];
 // DOM Elements
 const gamesGrid = document.getElementById('gamesGrid');
