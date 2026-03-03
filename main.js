@@ -6532,7 +6532,7 @@ const games = [
 {
     id: 936,
     title: "Minecraft Pocket Edition 0.6.1",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mcpe.jpg",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mcpe.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mcpe.html",
     isNew: true
 },
