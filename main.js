@@ -5629,7 +5629,7 @@ const games = [
 {
     id: 803,
     title: "FNF: Heartbreak Havoc: Vs. Sky Redux",
-    image: "https://chicken.parmacitieschools.org/images/redux.jpg",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/skyredux.png",
     url: "player.html?game=https://chicken.parmacitieschools.org/fnf/redux/",
     isNew: false
   },
