@@ -6773,7 +6773,7 @@ const games = [
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bee.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bee.html",
     isNew: true
-},
+}
 ];
 // DOM Elements
 const gamesGrid = document.getElementById('gamesGrid');
