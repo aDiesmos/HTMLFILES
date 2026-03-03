@@ -6509,28 +6509,28 @@ const games = [
     isNew: true
 },
 {
-    id: 933
+    id: 933,
     title: "Parappa The Rapper",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/parappa.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/parappatherapper.html",
     isNew: true
 },
 {
-    id: 934
+    id: 934,
     title: "Omega Nugget Clicker",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/omega.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/omeganuggetclicker.html",
     isNew: true
 },
 {
-    id: 935
+    id: 935,
     title: "Room Clicker",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/room.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/roomclicker.html",
     isNew: true
 },
 {
-    id: 936
+    id: 936,
     title: "Minecraft Pocket Edition 0.6.1",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mcpe.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mcpe.html",
