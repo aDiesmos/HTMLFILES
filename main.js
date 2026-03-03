@@ -2697,8 +2697,8 @@ const games = [
     id: 378,
     title: "FNF: FNF Weekly: Tweakmas",
     image: "https://chicken.parmacitieschools.org/images/tweakmas.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/tweakmas/",
-    isNew: false
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/tweakmas.html",
+    isNew: true
   },
   {
     id: 379,
@@ -6618,6 +6618,62 @@ const games = [
     title: "In Stars and Time",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/instarsandtime.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/instarsandtime.html",
+    isNew: true
+},
+{
+    id: 949,
+    title: "FNF: Vs. Impostor (2025): UPDOG",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/updog.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/updog.html",
+    isNew: true
+},
+{
+    id: 950,
+    title: "FNF: Vs Mouse: Rookies Edition (Disk 1)",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mouse-rookies.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/mouse-rookies.html",
+    isNew: true
+},
+{
+    id: 951,
+    title: "FNF: Anemaniac – Bendy vs Ollie",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/anemaniac.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/anemaniac.html",
+    isNew: true
+},  
+{
+    id: 952,
+    title: "FNF: Sky: REBORN",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/skyreborn.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/skyreborn.html",
+    isNew: true
+},  
+{
+    id: 953,
+    title: "FNF: Funkin’ on the Heights!",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/funkinheights.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/funkinheights.html",
+    isNew: true
+}, 
+{
+    id: 954,
+    title: "FNF: DOCAD: 2-shot Demo",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/docad.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/docad.html",
+    isNew: true
+},  
+{
+    id: 955,
+    title: "FNF: Annoying Orange: The Amazing Grace V2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/rottensmoothie.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/rottensmoothie.html",
+    isNew: true
+},
+{
+    id: 956,
+    title: "awesome calculator",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/awesomecalculator.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/awesomecalculator.html",
     isNew: true
 },
 ];
