@@ -5,9 +5,10 @@ function translateImageUrl(oldUrl) {
   }
   if (!oldUrl) return '';
   
-function logToClicky() {
-  const url = "https://in.getclicky.com/in.php?site_id=101481770&type=pageview&title=Ping";
-  UrlFetchApp.fetch(url);
+function logToClicky(gameName) {
+  if (typeof clicky !== "undefined") {
+    clicky.log(gameName, "game_click");
+  }
 }
 
   
@@ -6759,6 +6760,20 @@ const games = [
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/undertalelastbreath.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/undertalelastbreath.html",
     isNew: true
+},
+{
+    id: 970,
+    title: "Balatro",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/balatro.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/balatro.html",
+    isNew: true
+},
+{
+    id: 971,
+    title: "A Random Bee Swarm Simulator Knockoff",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bee.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bee.html",
+    isNew: true
 }
 ];
 // DOM Elements
@@ -6817,7 +6832,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function openSiteInNewTab() {
   // Open a new blank tab
   const newTab = window.open('about:blank', '_blank');
-
   if (!newTab) {
     alert('Popup blocked 😢 Please allow popups for this site.');
     return;
@@ -7263,6 +7277,8 @@ async function loadGameInIframe(gameUrl, gameTitle) {
                 const url = new URL(window.location);
                 url.searchParams.set('game', "${gameParam}");
                 window.history.replaceState({}, '', url);
+                logToClicky(game.title);
+                window.location.href = translateGameUrl(game.url);
                 
                 sessionStorage.setItem('gba_current_game', "${gameParam}");
                 
