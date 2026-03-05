@@ -6780,314 +6780,342 @@ const games = [
     title: "Baseball Bros",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/baseballbros.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/baseballbros.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 973,
     title: "Big Flappy Tower Tiny Square",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bigflappytowertinysquare.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bigflappytowertinysquare.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 974,
     title: "Bloons 2",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloons2.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloons2.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 975,
     title: "Bloons Tower Defense 3",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonsTD3.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonsTD3.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 976,
     title: "Bloons Tower Defense 4",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonsTD4.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonsTD4.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 977,
     title: "Bloons Tower Defense 5",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonsTD5.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonsTD5.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 978,
     title: "Bloons Player Pack 1",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonspp1.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonspp1.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 979,
     title: "Bloons Player Pack 2",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonspp2.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonspp2.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 980,
     title: "Bloons Player Pack 3",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonspp3.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonspp3.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 981,
     title: "Bloons Player Pack 4",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonspp4.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonspp4.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 982,
     title: "Bloons Player Pack 5",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonspp5.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonspp5.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 983,
     title: "Bowmasters",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bowmasters.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bowmasters.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 984,
     title: "Candy Crush",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/candycrush.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/candycrush.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 985,
     title: "Drift Cup Racing",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/driftcupracing.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/driftcupracing.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 986,
     title: "Jacksmith",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/jacksmith.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/jacksmith.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 987,
     title: "Jungle Bubble",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/junglebubble.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/junglebubble.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 988,
     title: "Memo Matcher",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/memomatcher.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/memomatcher.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 989,
     title: "Papa's Bakeria",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papasbakeria.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papasbakeria.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 990,
     title: "Papa's Cheeseria",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papascheeseria.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papascheeseria.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 991,
     title: "Papa's Donuteria",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papasdonuteria.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papasdonuteria.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 992,
     title: "Papa's Scooperia",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papasscooperia.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papasscooperia.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 993,
     title: "Papa's Taco Mia",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papastacomia.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/papastacomia.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 994,
     title: "Potatoman Seeks the Troof",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/potatomanseeksthetroof.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/potatomanseeksthetroof.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 995,
     title: "Riddle School",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddleschool.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddleschool.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 996,
     title: "Riddle School 2",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddleschool2.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddleschool2.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 997,
     title: "Riddle School 3",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddleschool3.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddleschool3.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 998,
     title: "Riddle School 4",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddleschool4.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddleschool4.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 999,
     title: "Riddle School 5",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddleschool5.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddleschool5.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1000,
     title: "Riddle Transfer",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddletransfer.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddletransfer.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1001,
     title: "Riddle Transfer 2",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddletransfer2.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/riddletransfer2.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1002,
     title: "Solar Smash",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/solarsmash.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/solarsmash.html",
-    isNew: true
+    isNew: false
 },
       {
     id: 1003,
     title: "Awesome Tanks",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/awesometanks.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/awesometanks.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1004,
     title: "Awesome Tanks 2",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/awesometanks2.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/awesometanks2.html",
-    isNew: true
+    isNew: false
 },
     {
     id: 1005,
     title: "Among Rampage",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/amongrampage.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/amongrampage.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1006,
     title: "Doom",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/doom.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/doom.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1007,
     title: "Doom II",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/doom2.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/doom2.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1008,
     title: "Doom III",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/doom3.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/doom3.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1009,
     title: "Dumb Ways to Die",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/dumbwaystodie.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/dumbwaystodie.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1010,
     title: "Fallout",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fallout.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fallout.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1011,
     title: "Kindergarten",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/kindergarten.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/kindergarten.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1012,
     title: "Kindergarten 2",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/kindergarten2.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/kindergarten2.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1013,
     title: "Kindergarten 3",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/kindergarten3.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/kindergarten3.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1014,
     title: "OFF",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/off.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/off.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1015,
     title: "Touhou Mother",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/touhoumother.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/touhoumother.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1016,
     title: "Trivia Crack",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/triviacrack.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/triviacrack.html",
+    isNew: false
+},
+{
+    id: 1017,
+    title: "Gacha Life",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gachalife.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gachalife.html",
+    isNew: true
+},
+{
+    id: 1018,
+    title: "Gachaverse",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gachaverse.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gachaverse.html",
+    isNew: true
+},
+{
+    id: 1019,
+    title: "FNF: Vs Forsaken: DEMO",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/forsaken.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/forsaken.html",
+    isNew: true
+},
+{
+    id: 1020,
+    title: "FNF: Throwback",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/throwback.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/throwback.html",
     isNew: true
 },
 ];
