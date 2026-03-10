@@ -7095,27 +7095,167 @@ const games = [
     title: "Gacha Life",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gachalife.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gachalife.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1018,
     title: "Gachaverse",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gachaverse.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gachaverse.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1019,
     title: "FNF: Vs Forsaken: DEMO",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/forsaken.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/forsaken.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1020,
     title: "FNF: Throwback",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/throwback.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/throwback.html",
+    isNew: false
+},
+{
+    id: 1021,
+    title: "Ace Attorney Investigations",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/aceattorneyinvestigations.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/aceattorneyinvestigations.html",
+    isNew: true
+},
+{
+    id: 1022,
+    title: "Bloons Insanity Pack",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonsinsanitypack.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/bloonsinsanitypack.html",
+    isNew: true
+},
+{
+    id: 1023,
+    title: "Dad n' Me",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/dadnme.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/dadnme.html",
+    isNew: true
+},
+{
+    id: 1024,
+    title: "Gravity Duck",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gravityduck.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gravityduck.html",
+    isNew: true
+},
+{
+    id: 1025,
+    title: "Gravity Duck 2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gravityduck2.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gravityduck2.html",
+    isNew: true
+},
+{
+    id: 1026,
+    title: "Halloween Jam",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/halloweenjam.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/halloweenjam.html",
+    isNew: true
+},
+{
+    id: 1027,
+    title: "NG's Finest",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/ngsfinest.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/ngsfinest.html",
+    isNew: true
+},
+{
+    id: 1028,
+    title: "Nyan Cat Lost in Space",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/nyancatlostinspace.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/nyancatlostinspace.html",
+    isNew: true
+},
+{
+    id: 1029,
+    title: "Patapon Beat Camp",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pataponbeatcamp.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pataponbeatcamp.html",
+    isNew: true
+},
+{
+    id: 1030,
+    title: "Pet Zombie",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/petzombie.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/petzombie.html",
+    isNew: true
+},
+{
+    id: 1031,
+    title: "Pico's School: Love Conquers All",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/picosschoolloveconquersall.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/picosschoolloveconquersall.html",
+    isNew: true
+},
+{
+    id: 1032,
+    title: "Pocket Emo",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pocketemo.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/pocketemo.html",
+    isNew: true
+},
+{
+    id: 1033,
+    title: "Stick Figure Badminton",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stickfigurebadminton.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stickfigurebadminton.html",
+    isNew: true
+},
+{
+    id: 1034,
+    title: "Stick Figure Badminton 2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stickfigurebadminton2.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stickfigurebadminton2.html",
+    isNew: true
+},
+{
+    id: 1035,
+    title: "Stick Figure Badminton 3",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stickfigurebadminton3.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stickfigurebadminton3.html",
+    isNew: true
+},
+{
+    id: 1036,
+    title: "Strike Force Kitty",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/strikeforcekitty.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/strikeforcekitty.html",
+    isNew: true
+},
+{
+    id: 1037,
+    title: "Strike Force Kitty 2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/strikeforcekitty2.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/strikeforcekitty2.html",
+    isNew: true
+},
+{
+    id: 1038,
+    title: "Strike Force Kitty Last Stand",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/strikeforcekittylaststand.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/strikeforcekittylaststand.html",
+    isNew: true
+},
+{
+    id: 1039,
+    title: "Super Monkey Ball 1/2",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermonkeyball12.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/supermonkeyball12.html",
+    isNew: true
+},
+{
+    id: 1040,
+    title: "SpongeBob SquarePants: Trail of the Snail",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/trailofthesnail.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/trailofthesnail.html",
     isNew: true
 },
 ];
