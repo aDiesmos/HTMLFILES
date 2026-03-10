@@ -7258,6 +7258,48 @@ const games = [
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/trailofthesnail.html",
     isNew: true
 },
+    {
+    id: 1041,
+    title: "Geometry Dash: Subzero",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gdsubzero.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gdsubzero.html",
+    isNew: true
+},
+{
+    id: 1042,
+    title: "Hill Climb Racing Lite",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/hillclimbracinglite.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/hillclimbracinglite.html",
+    isNew: true
+},
+{
+    id: 1043,
+    title: "Huggy Wuggy Pixel Nights",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/huggywuggypixelnights.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/huggywuggypixelnights.html",
+    isNew: true
+},
+{
+    id: 1044,
+    title: "RocketGoal.io",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/rocketgoalio.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/rocketgoalio.html",
+    isNew: true
+},
+{
+    id: 1045,
+    title: "Stick With It",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stickwithit.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stickwithit.html",
+    isNew: true
+},
+{
+    id: 1046,
+    title: "Wolfenstein 3D",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wolfenstein.png",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/wolfenstein.html",
+    isNew: true
+},
 ];
 // DOM Elements
 const gamesGrid = document.getElementById('gamesGrid');
