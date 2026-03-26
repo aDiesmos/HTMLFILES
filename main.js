@@ -5828,7 +5828,7 @@ const games = [
     title: "Steal Brainrot Online",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stealbrainrot.png",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/stealbrainrot.html",
-    isNew: false
+    isNew: true
   },
     {
     id: 832,
