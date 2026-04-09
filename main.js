@@ -82,7 +82,9 @@ function extractGamePath(fullUrl) {
 }
 
 // Sample game data
-const games = [
+if (!window.games) {
+  window.games = [
+
    {
     id: 1,
     title: "Anti Terrorist Rush",
