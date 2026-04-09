@@ -8308,16 +8308,17 @@ function downloadGame() {
 // Toggle favorite status
 function toggleFavorite(gameId) {
   const index = favorites.indexOf(gameId);
-  
+
   if (index === -1) {
     favorites.push(gameId);
   } else {
     favorites.splice(index, 1);
   }
-  
+
   localStorage.setItem('favorites', JSON.stringify(favorites));
+
+  renderGames();
   renderFavorites();
-  renderGames(); // Re-render to update heart icons
 }
 
 // Render favorites section
