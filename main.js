@@ -7589,9 +7589,18 @@ function setupEventListeners() {
   
   // Favorite buttons (delegated event listener)
   document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('favorite-btn')) {
-      toggleFavorite(parseInt(e.target.dataset.id));
-    }
+  const btn = e.target.closest('.favorite-btn');
+  if (btn) {
+    toggleFavorite(parseInt(btn.dataset.id));
+    return;
+  }
+
+  const card = e.target.closest('.game-card');
+  if (card) {
+    const gameId = card.getAttribute('data-game-id');
+    if (gameId) openGame(parseInt(gameId));
+  }
+});
     
     // Game card click (either the card itself or the title)
     const gameCard = e.target.closest('.gameCard');
