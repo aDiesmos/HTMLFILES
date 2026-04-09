@@ -7544,12 +7544,12 @@ function updateGameCount() {
   const totalGames = games.length;
   const newGames = games.filter(game => game.isNew).length;
   
-  let countText = `Total Stuff: ${totalGames} 💖`;
+  let countText = `Total Games: ${totalGames} `;
   
   if (currentFilter === 'new') {
-    countText = `New Stuff: ${newGames} 💝`;
+    countText = `New Games: ${newGames} `;
   } else if (searchQuery) {
-    countText = `Found: ${totalFilteredGames} games 💖`;
+    countText = `Found: ${totalFilteredGames} games `;
   }
   
   if (totalFilteredGames > GAMES_PER_PAGE) {
@@ -7573,233 +7573,67 @@ function setupEventListeners() {
       updateGameCount();
     });
   });
-  
-  // Search functionality
+
+  // Search
   searchBar.addEventListener('input', (e) => {
     searchQuery = e.target.value;
     filterAndSortGames();
     renderGames();
     updateGameCount();
   });
-  
+
   // Mobile menu
   mobileMenuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
-  
-  // Favorite buttons (delegated event listener)
-  document.addEventListener('click', (e) => {
-  const btn = e.target.closest('.favorite-btn');
-  if (btn) {
-    toggleFavorite(parseInt(btn.dataset.id));
-    return;
-  }
 
-  const card = e.target.closest('.game-card');
-  if (card) {
-    const gameId = card.getAttribute('data-game-id');
-    if (gameId) openGame(parseInt(gameId));
-  }
-});
-    
-    // Game card click (either the card itself or the title)
-    const gameCard = e.target.closest('.gameCard');
-    const gameTitle = e.target.closest('.game-title');
-    
-    if (gameCard || gameTitle) {
-      const gameId = (gameCard || gameTitle).getAttribute('data-game-id');
-      if (gameId) {
-        openGame(parseInt(gameId));
-      }
+  // ✅ FIXED CLICK HANDLER (hearts + game open)
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.favorite-btn');
+    if (btn) {
+      toggleFavorite(parseInt(btn.dataset.id));
+      return;
+    }
+
+    const card = e.target.closest('.game-card');
+    if (card) {
+      const gameId = card.getAttribute('data-game-id');
+      if (gameId) openGame(parseInt(gameId));
     }
   });
-  
+
   // Overlay buttons
   closeOverlayBtn.addEventListener('click', closeGameOverlay);
   retryBtn.addEventListener('click', retryGameLoad);
   downloadGameBtn.addEventListener('click', downloadGame);
-  
-  // Fullscreen button
+
+  // Fullscreen
   fullscreenBtn.addEventListener('click', () => {
     toggleFullscreen(iframeContainer);
   });
-  
-  // Close overlay with Escape key
+
+  // Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       if (gameOverlay.classList.contains('active')) {
         closeGameOverlay();
         e.preventDefault();
       } else {
-        // Panic button functionality
         window.location.href = 'https://www.google.com';
       }
     }
   });
-  
-  // Handle fullscreen change events
+
+  // Fullscreen change
   document.addEventListener('fullscreenchange', handleFullscreenChange);
   document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
   document.addEventListener('mozfullscreenchange', handleFullscreenChange);
   document.addEventListener('MSFullscreenChange', handleFullscreenChange);
-  
-  // Iframe load events
+
+  // Iframe events
   gameIframe.addEventListener('load', handleIframeLoad);
   gameIframe.addEventListener('error', handleIframeError);
 }
-
-// Handle iframe load - FIXED: Delayed error checking
-// Handle iframe load (FIXED: delayed + multi-check validation)
-// Handle iframe load - FIXED: Check for existing errors first
-function handleIframeLoad() {
-  // If we already showed a custom error (like GitHub 50MB), don't hide it
-  if (lastError) {
-    // Don't hide the error - keep it visible
-    return;
-  }
-  
-  hideLoading();
-  hideError(); // Only hide error if we didn't already show one
-}
-
-// Handle iframe error - FIXED: Check for existing errors first
-function handleIframeError() {
-  // If we already showed a custom error, don't override it
-  if (lastError) {
-    return;
-  }
-  
-  setTimeout(() => {
-    // If iframe is still blank after delay → real error
-    if (!gameIframe.src || gameIframe.src === 'about:blank') {
-      hideLoading();
-      showError(
-        'The game failed to load.',
-        'The iframe did not receive any content. This is usually caused by a network error, a blocked request, or the game URL returning an invalid response.'
-      );
-    }
-  }, 1200);
-}
-
-
-// Handle iframe error - FIXED: Delayed error display
-// Handle iframe error (FIXED: delayed confirmation)
-function handleIframeError() {
-  setTimeout(() => {
-    // If iframe is still blank after delay → real error
-    if (!gameIframe.src || gameIframe.src === 'about:blank') {
-      hideLoading();
-      showError(
-        'The game failed to load.',
-        'The iframe did not receive any content. This is usually caused by a network error, a blocked request, or the game URL returning an invalid response.'
-      );
-    }
-  }, 1200);
-}
-
-
-// Handle fullscreen changes
-function handleFullscreenChange() {
-  const isFullscreen = document.fullscreenElement || 
-                      document.webkitFullscreenElement || 
-                      document.mozFullScreenElement || 
-                      document.msFullscreenElement;
-  
-  const btnText = fullscreenBtn.querySelector('.btn-text');
-  const btnIcon = fullscreenBtn.querySelector('.btn-icon');
-  
-  if (isFullscreen) {
-    btnText.textContent = 'Exit Fullscreen';
-    btnIcon.textContent = '🔳';
-  } else {
-    btnText.textContent = 'Fullscreen';
-    btnIcon.textContent = '🔲';
-  }
-}
-
-function setupBeforeUnloadWarning() {
-  let gameIsOpen = false;
-  
-  // Listen for overlay open/close
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (mutation.attributeName === 'class') {
-        gameIsOpen = gameOverlay.classList.contains('active');
-      }
-    });
-  });
-  
-  observer.observe(gameOverlay, { attributes: true });
-  
-  // Add the beforeunload event listener
-  window.addEventListener('beforeunload', (e) => {
-    if (gameIsOpen) {
-      // Modern browsers require both of these
-      e.preventDefault();
-      e.returnValue = ''; // An empty string is required
-      
-      // Return any string (though modern browsers ignore it)
-      return '';
-    }
-  });
-}
-
-// Toggle fullscreen
-function toggleFullscreen(element) {
-  if (!document.fullscreenElement) {
-    if (element.requestFullscreen) {
-      element.requestFullscreen();
-    } else if (element.webkitRequestFullscreen) {
-      element.webkitRequestFullscreen();
-    } else if (element.mozRequestFullScreen) {
-      element.mozRequestFullScreen();
-    } else if (element.msRequestFullscreen) {
-      element.msRequestfullscreen();
-    }
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.msExitFullscreen) {
-      document.msExitFullscreen();
-    }
-  }
-}
-
-// Function to load game using Blob URL trick
-// Function to load game using Blob URL trick
-// Updated loadGameInIframe function with GBA special handling
-// Updated loadGameInIframe function with pointer lock support
-async function loadGameInIframe(gameUrl, gameTitle) {
-  try {
-    hideError();
-    showLoading();
-
-    currentGameUrl = gameUrl;
-    gameIframe.src = 'about:blank';
-
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 20000);
-
-    try {
-      const response = await fetch(gameUrl, {
-        signal: controller.signal,
-        mode: 'cors',
-        credentials: 'omit',
-        headers: { 'Accept': 'text/html' }
-      });
-
-      clearTimeout(timeoutId);
-
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
-
-      let htmlContent = await response.text();
-
       // 🎮 SPECIAL HANDLING FOR GBA GAMES
       if (gameUrl.includes('/gba/player.html')) {
         const urlObj = new URL(gameUrl, window.location.origin);
