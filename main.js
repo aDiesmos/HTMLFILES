@@ -7519,7 +7519,7 @@ function renderGames() {
   
   pageGames.forEach(game => {
     const gameCard = document.createElement('div');
-    gameCard.className = `game-card ${game.isNew ? 'new' : ''}`;
+    gameCard.className = `gameCard ${game.isNew ? 'new' : ''}`;
     gameCard.setAttribute('data-game-id', game.id);
     gameCard.innerHTML = `
       <img src="${game.translatedImage || game.image}" alt="${game.title}" class="game-image" loading="lazy" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/waycrosspublicmedia/whatver@main/wip.jpg';">
@@ -7594,7 +7594,7 @@ function setupEventListeners() {
     }
     
     // Game card click (either the card itself or the title)
-    const gameCard = e.target.closest('.game-card');
+    const gameCard = e.target.closest('.gameCard');
     const gameTitle = e.target.closest('.game-title');
     
     if (gameCard || gameTitle) {
@@ -8340,7 +8340,7 @@ function renderFavorites() {
   
   favoriteGames.forEach(game => {
     const gameCard = document.createElement('div');
-    gameCard.className = `game-card ${game.isNew ? 'new' : ''}`;
+    gameCard.className = `gameCard ${game.isNew ? 'new' : ''}`;
     gameCard.setAttribute('data-game-id', game.id);
     gameCard.innerHTML = `
       <img src="${game.translatedImage || game.image}" alt="${game.title}" class="game-image" loading="lazy" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/waycrosspublicmedia/images@main/wip.jpg';">
