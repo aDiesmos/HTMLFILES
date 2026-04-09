@@ -7633,7 +7633,7 @@ function setupEventListeners() {
   // Iframe events
   gameIframe.addEventListener('load', handleIframeLoad);
   gameIframe.addEventListener('error', handleIframeError);
-}
+
       // 🎮 SPECIAL HANDLING FOR GBA GAMES
       if (gameUrl.includes('/gba/player.html')) {
         const urlObj = new URL(gameUrl, window.location.origin);
