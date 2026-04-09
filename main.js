@@ -8322,36 +8322,37 @@ function toggleFavorite(gameId) {
 
 // Render favorites section
 function renderFavorites() {
-  const favoritesGrid = document.getElementById('favoritesContainer');
-  
+  const container = document.getElementById('favoritesContainer');
+  if (!container) return;
+
   if (favorites.length === 0) {
-    favoritesGrid.innerHTML = `
+    container.innerHTML = `
       <div class="empty-favorites">
-        <p>You haven't added any favorites yet. 💔</p>
-        <p>Click the ❤️ icon on games to add them here. 🍀</p>
+        <p>You haven't added any favorites yet.</p>
+        <p>Click the ❤️ icon on games to add them here. </p>
       </div>
     `;
     return;
   }
-  
-  favoritesGrid.innerHTML = '';
-  
+
+  container.innerHTML = '';
+
   const favoriteGames = games.filter(game => favorites.includes(game.id));
-  
+
   favoriteGames.forEach(game => {
     const gameCard = document.createElement('div');
-    gameCard.className = `gameCard ${game.isNew ? 'new' : ''}`;
+    gameCard.className = `game-card ${game.isNew ? 'new' : ''}`;
     gameCard.setAttribute('data-game-id', game.id);
+
     gameCard.innerHTML = `
-      <img src="${game.translatedImage || game.image}" alt="${game.title}" class="game-image" loading="lazy" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/waycrosspublicmedia/images@main/wip.jpg';">
+      <img src="${game.translatedImage || game.image}" class="game-image">
       <div class="game-info">
-        <div class="game-title" data-game-id="${game.id}">${game.title}</div>
-        <div class="game-actions">
-          <button class="favorite-btn favorited" data-id="${game.id}">❤️</button>
-        </div>
+        <div class="game-title">${game.title}</div>
+        <button class="favorite-btn favorited" data-id="${game.id}">❤️</button>
       </div>
     `;
-    favoritesGrid.appendChild(gameCard);
+
+    container.appendChild(gameCard);
   });
 }
 
