@@ -1,39 +1,38 @@
-// URL Translation Functions with improved extraction
+
 function translateImageUrl(oldUrl) {
-    if (oldUrl.includes('https://cdn.jsdelivr.net/gh/')) {
+  if (!oldUrl) return '';
+
+  if (oldUrl.includes('https://cdn.jsdelivr.net/gh/')) {
     return oldUrl;
   }
-  if (!oldUrl) return '';
+
   
+  const filename = oldUrl.split('/').pop();
+
+  
+  return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/images@main/${filename}`;
+}
+
 function logToClicky(gameName) {
   if (typeof clicky !== "undefined") {
     clicky.log(gameName, "game_click");
   }
 }
 
-  
-  // Extract filename from any path
-  const filename = oldUrl.split('/').pop();
-
-  
-  // Always use the new image CDN
-  return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/images@main/${filename}`;
-}
-
 function translateGameUrl(oldUrl) {
   if (!oldUrl) return '';
   
-  // Handle GBA games with special format
+  
   if (oldUrl.includes('/gba/player.html?game=')) {
     const gameMatch = oldUrl.match(/player\.html\?game=([^&]+)/);
     if (gameMatch && gameMatch[1]) {
       const gameName = gameMatch[1];
-      // Create URL to the GBA player with game parameter
+      
       return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/gba/player.html?game=${gameName}`;
     }
   }
   
-  // Handle other player.html?game= format
+  
   if (oldUrl.includes('player.html?game=')) {
     const urlMatch = oldUrl.match(/player\.html\?game=(.+)/);
     if (urlMatch && urlMatch[1]) {
@@ -42,33 +41,32 @@ function translateGameUrl(oldUrl) {
     }
   }
   
-  // Handle direct URLs
+  
   return extractGamePath(oldUrl);
 }
 
 function extractGamePath(fullUrl) {
-  // If the URL is already a jsDelivr URL, return it as-is
+ 
   if (fullUrl.includes('https://cdn.jsdelivr.net/gh/')) {
     return fullUrl;
   }
   
-  // Remove protocol and domain to get the path
+  
   let path = fullUrl;
   
-  // Remove https://chicken.parmacitieschools.org/
+  
   if (path.includes('https://chicken.parmacitieschools.org/')) {
     path = path.replace('https://chicken.parmacitieschools.org/', '');
   }
   
-  // Remove trailing slash
+  
   path = path.replace(/\/$/, '');
   
-  // Extract the folder structure
+  
   const parts = path.split('/');
   if (parts.length < 1) return '';
   
-  // Special case: GBA games (already handled in translateGameUrl)
-  // Special case: Single domain link like "bdfi26"
+ 
   if (parts.length === 1) {
     const gameName = parts[0];
     return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/waycrosspublicmedia/${gameName}.html`;
@@ -77,11 +75,11 @@ function extractGamePath(fullUrl) {
   const urlPath = parts.slice(0, -1).join('/');
   const gameName = parts.pop();
   
-  // Construct the new URL
+  
   return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/${urlPath}/${gameName}.html`;
 }
 
-// Sample game data
+
 const games = [
    {
     id: 1,
@@ -7308,7 +7306,7 @@ const games = [
     isNew: true
 },
 ];
-// DOM Elements
+
 const gamesGrid = document.getElementById('gamesGrid');
 const favoritesContainer = document.getElementById('favoritesContainer');
 const gameCount = document.getElementById('gameCount');
@@ -7317,7 +7315,7 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
-// Overlay elements
+
 const gameOverlay = document.getElementById('gameOverlay');
 const gameIframe = document.getElementById('gameIframe');
 const iframeContainer = document.getElementById('gameIframeContainer');
@@ -7328,8 +7326,20 @@ const gameError = document.getElementById('gameError');
 const retryBtn = document.getElementById('retryBtn');
 const fullscreenBtn = document.getElementById('fullscreenBtn');
 const downloadGameBtn = document.getElementById('downloadGameBtn');
+const cookieFileInput = document.getElementById('cookieFileInput');
+const musicAudio = document.getElementById('musicAudio');
+const musicFilePicker = document.getElementById('musicFilePicker');
+const musicPlayPauseBtn = document.getElementById('musicPlayPauseBtn');
+const musicLoopBtn = document.getElementById('musicLoopBtn');
+const musicUploadBtn = document.getElementById('musicUploadBtn');
+const musicTrackLabel = document.getElementById('musicTrackLabel');
+const musicArtistLabel = document.getElementById('musicArtistLabel');
+const musicAlbumLabel = document.getElementById('musicAlbumLabel');
+const musicDetailsLabel = document.getElementById('musicDetailsLabel');
+const musicStatus = document.getElementById('musicStatus');
+const visualizerCanvas = document.getElementById('visualizerCanvas');
 
-// State
+
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 let currentFilter = 'all';
 let searchQuery = '';
@@ -7340,64 +7350,71 @@ const GAMES_PER_PAGE = 100;
 let filteredGames = [];
 let errorTimeout = null;
 let lastError = null;
+let iframeLoadTimeout = null;
+let previousBlobUrl = null;
+let overlayCloseTimeout = null;
+let activeTiltCard = null;
+let musicAudioContext = null;
+let musicAnalyser = null;
+let musicSourceNode = null;
+let visualizerFrame = null;
+let currentMusicUrl = null;
+let currentMusicMeta = null;
 
-// Initialize the page
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Translate URLs for all games
+  
   translateAllGameUrls();
   
-  // Sort games alphabetically
+  
   sortGamesAlphabetically();
   
-  // Render everything
-  filterAndSortGames();
-  renderGames();
-  updateGameCount();
-  renderFavorites();
+  refreshGameViews();
   setupEventListeners();
   updateGreeting();
   createHearts();
   setupPagination();
-  setupBeforeUnloadWarning();
+  setupMusicPlayer();
+  refreshGameViews();
 });
 
 function openSiteInNewTab() {
-  // Open a new blank tab
+  
   const newTab = window.open('about:blank', '_blank');
   if (!newTab) {
-    alert('Popup blocked 😢 Please allow popups for this site.');
+    alert('Popup blocked  Please allow popups for this site.');
     return;
   }
 
-  // Get full HTML of current page
+  
   const fullHtml = `
 <!DOCTYPE html>
 ${document.documentElement.outerHTML}
   `;
 
-  // Write the page into the new tab
+  
   newTab.document.open();
   newTab.document.write(fullHtml);
   newTab.document.close();
 }
 
-// Translate all game URLs on load
+
 function translateAllGameUrls() {
   games.forEach(game => {
-    // Translate image URL
+    
     game.translatedImage = translateImageUrl(game.image);
     
-    // Translate game URL
+    
     game.translatedUrl = translateGameUrl(game.url);
   });
 }
 
-// Sort games alphabetically
+
 function sortGamesAlphabetically() {
   games.sort((a, b) => a.title.localeCompare(b.title));
 }
 
-// Filter and sort games based on current filter and search
+
 function filterAndSortGames() {
   filteredGames = games.filter(game => {
     const matchesFilter = currentFilter === 'all' || 
@@ -7408,38 +7425,87 @@ function filterAndSortGames() {
     return matchesFilter && matchesSearch;
   });
   
-  // Reset to page 1 when filtering
+  
   currentPage = 1;
 }
 
-// Get games for current page
+function refreshGameViews(options = {}) {
+  const { preservePage = false } = options;
+  const previousPage = currentPage;
+
+  favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+  filterAndSortGames();
+
+  if (preservePage) {
+    currentPage = Math.min(previousPage, Math.max(getTotalPages(), 1));
+  }
+
+  renderGames();
+  updateGameCount();
+  renderFavorites();
+}
+
+
 function getGamesForCurrentPage() {
   const startIndex = (currentPage - 1) * GAMES_PER_PAGE;
   const endIndex = startIndex + GAMES_PER_PAGE;
   return filteredGames.slice(startIndex, endIndex);
 }
 
-// Get total pages
+
 function getTotalPages() {
   return Math.ceil(filteredGames.length / GAMES_PER_PAGE);
 }
 
-// Setup pagination controls
-function setupPagination() {
+function createPaginationControls(extraClass = '') {
   const paginationContainer = document.createElement('div');
-  paginationContainer.className = 'pagination';
-  paginationContainer.style.cssText = `
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-  `;
-  
-  gamesGrid.parentNode.appendChild(paginationContainer);
-  
-  // Create pagination elements
+  paginationContainer.className = `pagination ${extraClass}`.trim();
+
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'filter-btn';
+  prevBtn.innerHTML = '&larr; Previous';
+  prevBtn.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
+      renderGames();
+      updatePagination();
+    }
+  });
+
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'filter-btn';
+  nextBtn.innerHTML = 'Next &rarr;';
+  nextBtn.addEventListener('click', () => {
+    if (currentPage < getTotalPages()) {
+      currentPage++;
+      renderGames();
+      updatePagination();
+    }
+  });
+
+  const pageInfo = document.createElement('span');
+  pageInfo.className = 'page-info';
+
+  paginationContainer.appendChild(prevBtn);
+  paginationContainer.appendChild(pageInfo);
+  paginationContainer.appendChild(nextBtn);
+
+  return { container: paginationContainer, prevBtn, nextBtn, pageInfo };
+}
+
+
+function setupPagination() {
+  const topHost = document.getElementById('topPagination');
+  const topControls = createPaginationControls('pagination-top');
+  const bottomControls = createPaginationControls();
+
+  if (topHost) {
+    topHost.innerHTML = '';
+    topHost.appendChild(topControls.container);
+  }
+
+  gamesGrid.parentNode.appendChild(bottomControls.container);
+  /*
   const prevBtn = document.createElement('button');
   prevBtn.className = 'filter-btn';
   prevBtn.innerHTML = '← Previous';
@@ -7474,34 +7540,31 @@ function setupPagination() {
   paginationContainer.appendChild(prevBtn);
   paginationContainer.appendChild(pageInfo);
   paginationContainer.appendChild(nextBtn);
-  
-  // Store references for updates
+  */
+
   window.paginationElements = {
-    container: paginationContainer,
-    prevBtn,
-    nextBtn,
-    pageInfo
+    groups: [topControls, bottomControls]
   };
   
   updatePagination();
 }
 
-// Update pagination display
+
 function updatePagination() {
   if (!window.paginationElements) return;
-  
-  const { prevBtn, nextBtn, pageInfo } = window.paginationElements;
   const totalPages = getTotalPages();
-  
-  pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
-  prevBtn.disabled = currentPage === 1;
-  nextBtn.disabled = currentPage === totalPages || totalPages === 0;
-  
-  prevBtn.style.opacity = prevBtn.disabled ? '0.5' : '1';
-  nextBtn.style.opacity = nextBtn.disabled ? '0.5' : '1';
+
+  window.paginationElements.groups.forEach(({ prevBtn, nextBtn, pageInfo, container }) => {
+    pageInfo.textContent = `Page ${currentPage} of ${totalPages || 1}`;
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages || totalPages === 0;
+    prevBtn.style.opacity = prevBtn.disabled ? '0.5' : '1';
+    nextBtn.style.opacity = nextBtn.disabled ? '0.5' : '1';
+    container.style.display = 'flex';
+  });
 }
 
-// Render games based on current page
+
 function renderGames() {
   gamesGrid.innerHTML = '';
   
@@ -7510,7 +7573,7 @@ function renderGames() {
   if (pageGames.length === 0) {
     gamesGrid.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 2rem; color: var(--text-muted);">
-        <p>No games found matching your search. 💔</p>
+        <p>No games found matching your search. </p>
         <p style="margin-top: 1rem;">Try a different search or check the next page!</p>
       </div>
     `;
@@ -7519,9 +7582,10 @@ function renderGames() {
   
   pageGames.forEach(game => {
     const gameCard = document.createElement('div');
-    gameCard.className = `gameCard ${game.isNew ? 'new' : ''}`;
+    gameCard.className = `game-card ${game.isNew ? 'new' : ''}`;
     gameCard.setAttribute('data-game-id', game.id);
     gameCard.innerHTML = `
+      <div class="game-card-visual">
       <img src="${game.translatedImage || game.image}" alt="${game.title}" class="game-image" loading="lazy" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/waycrosspublicmedia/whatver@main/wip.jpg';">
       <div class="game-info">
         <div class="game-title" data-game-id="${game.id}">${game.title}</div>
@@ -7531,6 +7595,7 @@ function renderGames() {
           </button>
         </div>
       </div>
+      </div>
     `;
     gamesGrid.appendChild(gameCard);
   });
@@ -7538,7 +7603,7 @@ function renderGames() {
   updatePagination();
 }
 
-// Update game count display
+
 function updateGameCount() {
   const totalFilteredGames = filteredGames.length;
   const totalGames = games.length;
@@ -7560,34 +7625,31 @@ function updateGameCount() {
   gameCount.textContent = countText;
 }
 
-// Setup event listeners
+
 function setupEventListeners() {
-  // Filter buttons
+  
   filterButtons.forEach(button => {
+    if (!button.dataset.filter) return;
     button.addEventListener('click', () => {
       filterButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
       currentFilter = button.dataset.filter;
-      filterAndSortGames();
-      renderGames();
-      updateGameCount();
+      refreshGameViews();
     });
   });
 
-  // Search
-  searchBar.addEventListener('input', (e) => {
+  
+  if (searchBar) searchBar.addEventListener('input', (e) => {
     searchQuery = e.target.value;
-    filterAndSortGames();
-    renderGames();
-    updateGameCount();
+    refreshGameViews();
   });
 
-  // Mobile menu
-  mobileMenuBtn.addEventListener('click', () => {
+  
+  if (mobileMenuBtn && navLinks) mobileMenuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
 
-  // ✅ FIXED CLICK HANDLER (hearts + game open)
+  
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('.favorite-btn');
     if (btn) {
@@ -7602,39 +7664,116 @@ function setupEventListeners() {
     }
   });
 
-  // Overlay buttons
-  closeOverlayBtn.addEventListener('click', closeGameOverlay);
-  retryBtn.addEventListener('click', retryGameLoad);
-  downloadGameBtn.addEventListener('click', downloadGame);
+  document.addEventListener('pointerenter', (e) => {
+    const card = e.target.closest('.game-card');
+    if (!card) return;
+    activeTiltCard = card;
+  }, true);
 
-  // Fullscreen
-  fullscreenBtn.addEventListener('click', () => {
-    toggleFullscreen(iframeContainer);
+  document.addEventListener('pointermove', (e) => {
+    const card = e.target.closest('.game-card');
+    if (!card) {
+      resetCardTilt(activeTiltCard);
+      activeTiltCard = null;
+      return;
+    }
+
+    if (activeTiltCard && activeTiltCard !== card) {
+      resetCardTilt(activeTiltCard);
+    }
+
+    activeTiltCard = card;
+
+    const visual = card.querySelector('.game-card-visual');
+    const image = card.querySelector('.game-image');
+    const rect = card.getBoundingClientRect();
+    const offsetX = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
+    const offsetY = Math.max(0, Math.min(e.clientY - rect.top, rect.height));
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateY = ((offsetX - centerX) / centerX) * 7;
+    const rotateX = ((centerY - offsetY) / centerY) * 7;
+
+    if (visual) {
+      visual.style.setProperty('--card-rotate-x', `${rotateX.toFixed(2)}deg`);
+      visual.style.setProperty('--card-rotate-y', `${rotateY.toFixed(2)}deg`);
+    }
+
+    if (image) {
+      image.style.setProperty('--image-rotate-x', `${(rotateX * 0.55).toFixed(2)}deg`);
+      image.style.setProperty('--image-rotate-y', `${(rotateY * 0.55).toFixed(2)}deg`);
+    }
   });
 
-  // Escape key
+  document.addEventListener('pointerleave', (e) => {
+    const card = e.target.closest('.game-card');
+    if (!card) return;
+
+    resetCardTilt(card);
+    if (activeTiltCard === card) {
+      activeTiltCard = null;
+    }
+  }, true);
+
+  
+  if (closeOverlayBtn) closeOverlayBtn.addEventListener('click', closeGameOverlay);
+  if (retryBtn) retryBtn.addEventListener('click', retryGameLoad);
+  if (downloadGameBtn) downloadGameBtn.addEventListener('click', downloadGame);
+
+  
+  if (fullscreenBtn && iframeContainer) {
+    fullscreenBtn.addEventListener('click', () => {
+      toggleFullscreen(iframeContainer);
+    });
+  }
+
+  
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
+    if (e.key === 'Escape' && gameOverlay) {
       if (gameOverlay.classList.contains('active')) {
         closeGameOverlay();
         e.preventDefault();
-      } else {
-        window.location.href = 'https://www.google.com';
       }
     }
   });
 
-  // Fullscreen change
+ 
   document.addEventListener('fullscreenchange', handleFullscreenChange);
   document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
   document.addEventListener('mozfullscreenchange', handleFullscreenChange);
   document.addEventListener('MSFullscreenChange', handleFullscreenChange);
 
-  // Iframe events
-  gameIframe.addEventListener('load', handleIframeLoad);
-  gameIframe.addEventListener('error', handleIframeError);
+  
+  if (gameIframe) {
+    gameIframe.addEventListener('load', handleIframeLoad);
+    gameIframe.addEventListener('error', handleIframeError);
+  }
 
-      // 🎮 SPECIAL HANDLING FOR GBA GAMES
+  if (cookieFileInput) {
+    cookieFileInput.addEventListener('change', handleCookieUpload);
+  }
+
+  window.addEventListener('storage', (event) => {
+    if (event.key === 'favorites') {
+      refreshGameViews({ preservePage: true });
+    }
+  });
+
+  window.addEventListener('focus', () => {
+    refreshGameViews({ preservePage: true });
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+      refreshGameViews({ preservePage: true });
+    }
+  });
+
+  return;
+}
+/*
+
+     
       if (gameUrl.includes('/gba/player.html')) {
         const urlObj = new URL(gameUrl, window.location.origin);
         const gameParam = urlObj.searchParams.get('game');
@@ -7715,47 +7854,47 @@ function setupEventListeners() {
         }
       }
 
-      // Check for GitHub 50MB limit
+      
       if (htmlContent.includes('Package size exceeded the configured limit') ||
           htmlContent.includes('Try https://github.com/') ||
           htmlContent.includes('50 MB file size limit')) {
         hideLoading();
         gameIframe.src = 'about:blank';
         showError(
-          'We hit our limit sorry. 💔',
+          'We hit our limit sorry. ',
           'The game HTML file does not exist or exceeds GitHub\'s 50 MB file limit.'
         );
         lastError = 'github_50mb_limit';
         return false;
       }
 
-      // Check for invalid HTML
+      
       if (!htmlContent.includes('<html') &&
           !htmlContent.includes('<!DOCTYPE') &&
           htmlContent.length < 100) {
         hideLoading();
         gameIframe.src = 'about:blank';
         showError(
-          'Um we cant find that. 💔',
+          'Um we cant find that. ',
           'The server returned content that doesn\'t look like valid HTML.'
         );
         lastError = 'invalid_html';
         return false;
       }
 
-      // Inject a helper script for pointer lock if needed
+      
       if (htmlContent.includes('requestPointerLock') || htmlContent.includes('pointerlock')) {
         const pointerLockHelper = `
           <script>
-            // Helper for pointer lock across iframe boundaries
+            
             (function() {
-              // Make sure pointer lock works in iframe
+              
               document.addEventListener('click', function() {
-                // This helps with some games that need user interaction first
+                
                 console.log('Pointer lock helper active');
               });
               
-              // Override requestPointerLock to work better in iframe
+              
               const originalRequest = Element.prototype.requestPointerLock;
               Element.prototype.requestPointerLock = function() {
                 console.log('Pointer lock requested');
@@ -7766,7 +7905,7 @@ function setupEventListeners() {
                 }
               };
               
-              // Handle pointer lock change events
+              
               document.addEventListener('pointerlockchange', function() {
                 console.log('Pointer lock state changed:', !!document.pointerLockElement);
               });
@@ -7778,7 +7917,7 @@ function setupEventListeners() {
           </script>
         `;
         
-        // Inject helper at the end of head or beginning of body
+        
         const headEnd = htmlContent.indexOf('</head>');
         if (headEnd !== -1) {
           htmlContent = htmlContent.slice(0, headEnd) + pointerLockHelper + htmlContent.slice(headEnd);
@@ -7793,24 +7932,24 @@ function setupEventListeners() {
         }
       }
 
-      // Create blob with modified content
+      
       const blob = new Blob([htmlContent], { type: 'text/html' });
       const blobUrl = URL.createObjectURL(blob);
       
-      // Set iframe attributes to allow pointer lock
+      
       gameIframe.setAttribute('allow', 'pointer-lock; fullscreen; autoplay');
       gameIframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms allow-pointer-lock allow-downloads allow-modals');
       
-      // Set iframe source
+      
       gameIframe.src = blobUrl;
       
-      // Clean up previous blob URL
+     
       if (window.previousBlobUrl) {
         URL.revokeObjectURL(window.previousBlobUrl);
       }
       window.previousBlobUrl = blobUrl;
       
-      // Reset error state
+      
       lastError = null;
       return true;
 
@@ -7819,7 +7958,7 @@ function setupEventListeners() {
       hideLoading();
       gameIframe.src = 'about:blank';
       showError(
-        'Our fetch got rejected. 💔',
+        'Our fetch got rejected. ',
         `Fetch failed or was blocked. Reason: ${fetchError.message}`
       );
       lastError = 'fetch_error';
@@ -7830,7 +7969,7 @@ function setupEventListeners() {
     hideLoading();
     gameIframe.src = 'about:blank';
     showError(
-      'Oh no this is not right. 💔',
+      'Oh no this is not right. ',
       `A fatal error occurred while preparing the game. Details: ${fatalError.message}`
     );
     lastError = 'fatal_error';
@@ -7838,12 +7977,144 @@ function setupEventListeners() {
   }
 }
 
-// Show/hide loading/error states - FIXED: Better error handling
+*/
+async function loadGameInIframe(gameUrl, gameTitle = 'this game') {
+  if (!gameIframe) return false;
+
+  try {
+    currentGameUrl = gameUrl;
+    currentGame = currentGame || null;
+    hideError();
+    showLoading();
+    clearIframeLoadTimeout();
+    gameIframe.src = 'about:blank';
+    gameIframe.removeAttribute('srcdoc');
+    iframeLoadTimeout = window.setTimeout(() => {
+      hideLoading();
+      showError(
+        `Still trying to open ${gameTitle}.`,
+        'The game took too long to load in the iframe. It may block embedding or just be slow.'
+      );
+      lastError = 'iframe_timeout';
+    }, 12000);
+
+    const response = await fetch(gameUrl);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const html = await response.text();
+    if (!html.trim()) {
+      throw new Error('The game response was empty.');
+    }
+
+    const blob = new Blob([html], { type: 'text/html' });
+    const blobUrl = URL.createObjectURL(blob);
+
+    if (previousBlobUrl) {
+      URL.revokeObjectURL(previousBlobUrl);
+    }
+
+    previousBlobUrl = blobUrl;
+    gameIframe.src = blobUrl;
+    lastError = null;
+    return true;
+  } catch (error) {
+    clearIframeLoadTimeout();
+    hideLoading();
+    gameIframe.src = 'about:blank';
+    showError(`Could not open ${gameTitle}.`, error.message);
+    lastError = 'fatal_error';
+    return false;
+  }
+}
+
+function handleIframeLoad() {
+  clearIframeLoadTimeout();
+  hideLoading();
+  hideError();
+}
+
+function handleIframeError() {
+  clearIframeLoadTimeout();
+  hideLoading();
+  showError('The game did not load.', currentGameUrl || 'Unknown game URL');
+  lastError = 'iframe_error';
+}
+
+function clearIframeLoadTimeout() {
+  if (iframeLoadTimeout) {
+    clearTimeout(iframeLoadTimeout);
+    iframeLoadTimeout = null;
+  }
+}
+
+function toggleFullscreen(element) {
+  if (!element) return;
+
+  const isFullscreen = document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    document.mozFullScreenElement ||
+    document.msFullscreenElement;
+
+  if (!isFullscreen) {
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+    } else if (element.msRequestFullscreen) {
+      element.msRequestFullscreen();
+    }
+    return;
+  }
+
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
+}
+
+function handleFullscreenChange() {
+  if (!fullscreenBtn) return;
+
+  const isFullscreen = document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    document.mozFullScreenElement ||
+    document.msFullscreenElement;
+
+  fullscreenBtn.textContent = isFullscreen ? 'Exit Fullscreen' : 'Fullscreen';
+}
+
+function resetCardTilt(card) {
+  if (!card) return;
+
+  const visual = card.querySelector('.game-card-visual');
+  const image = card.querySelector('.game-image');
+  if (visual) {
+    visual.style.setProperty('--card-rotate-x', '0deg');
+    visual.style.setProperty('--card-rotate-y', '0deg');
+  }
+
+  if (image) {
+    image.style.setProperty('--image-rotate-x', '0deg');
+    image.style.setProperty('--image-rotate-y', '0deg');
+  }
+}
+
+
 function showLoading() {
+  if (!gameLoading) return;
   gameLoading.classList.add('active');
   gameLoading.innerHTML = `
     <div style="text-align: center;">
-      <div style="font-size: 2rem; margin-bottom: 1rem;">🎮🍀</div>
+      <div style="font-size: 2rem; margin-bottom: 1rem;"></div>
       <div>Getting your game ready...</div>
       <small>This might take a moment! ⏳</small>
       <div style="margin-top: 1rem; font-size: 0.8rem; color: #ff66b2;">
@@ -7854,14 +8125,16 @@ function showLoading() {
 }
 
 function hideLoading() {
+  if (!gameLoading) return;
   gameLoading.classList.remove('active');
 }
 
-// Show error with advanced crash details
+
 function showError(userMessage, technicalReason = 'Unknown error') {
+  if (!gameError) return;
   gameError.innerHTML = `
     <div style="text-align:center;">
-      <div style="font-size:2rem;margin-bottom:0.5rem;">😔🍀</div>
+      <div style="font-size:2rem;margin-bottom:0.5rem;"></div>
 
       <div style="margin-bottom:0.75rem;">
         ${userMessage}
@@ -7900,6 +8173,7 @@ function showError(userMessage, technicalReason = 'Unknown error') {
 
 
 function hideError() {
+  if (!gameError) return;
   gameError.classList.remove('active');
   if (errorTimeout) {
     clearTimeout(errorTimeout);
@@ -7907,64 +8181,70 @@ function hideError() {
   }
 }
 
-// Retry loading the game
+
 function retryGameLoad() {
   if (currentGame && currentGameUrl) {
     hideError();
-    showLoading();
-    
-    // Add a small delay before retrying
-    setTimeout(() => {
-      gameIframe.src = currentGameUrl;
-    }, 500);
+    loadGameInIframe(currentGameUrl, currentGame.title || 'this game');
   }
 }
 
-// Open game in overlay
+
 function openGame(gameId) {
   const game = games.find(g => g.id === gameId);
   if (!game) return;
+  logToClicky(game.title);
   
+  if (overlayCloseTimeout) {
+    clearTimeout(overlayCloseTimeout);
+    overlayCloseTimeout = null;
+  }
+
   currentGame = game;
-  overlayGameTitle.textContent = `Playing: ${game.title} 🎮`;
+  overlayGameTitle.textContent = `Playing: ${game.title} `;
   
-  // Show overlay
+  
+  gameOverlay.classList.remove('closing');
   gameOverlay.classList.add('active');
   document.body.style.overflow = 'hidden';
   
-  // Load the game
+  
   const gameUrl = game.translatedUrl || game.url;
   
   loadGameInIframe(gameUrl, game.title);
 }
 
-// Close game overlay with proper cleanup
+
 function closeGameOverlay() {
-  // Hide overlay
+  if (!gameOverlay || !gameOverlay.classList.contains('active')) return;
+
+  gameOverlay.classList.add('closing');
   gameOverlay.classList.remove('active');
-  
-  // Reset states
-  hideLoading();
-  hideError();
-  
-  // Clear iframe content safely
-  gameIframe.src = 'about:blank';
-  
-  // Clean up blob URLs
-  if (window.previousBlobUrl) {
-    URL.revokeObjectURL(window.previousBlobUrl);
-    window.previousBlobUrl = null;
+
+  clearIframeLoadTimeout();
+
+  if (overlayCloseTimeout) {
+    clearTimeout(overlayCloseTimeout);
   }
-  
-  // Reset current game and error state
-  currentGame = null;
-  currentGameUrl = '';
-  lastError = null; // Reset error state
-  
-  // Restore body scroll
-  document.body.style.overflow = '';
-  
-  // Exit fullscreen if active
+
+  overlayCloseTimeout = window.setTimeout(() => {
+    hideLoading();
+    hideError();
+    gameIframe.src = 'about:blank';
+
+    if (previousBlobUrl) {
+      URL.revokeObjectURL(previousBlobUrl);
+      previousBlobUrl = null;
+    }
+
+    currentGame = null;
+    currentGameUrl = '';
+    lastError = null;
+    document.body.style.overflow = '';
+    gameOverlay.classList.remove('closing');
+    overlayCloseTimeout = null;
+  }, 220);
+
   if (document.fullscreenElement || 
       document.webkitFullscreenElement || 
       document.mozFullScreenElement || 
@@ -7981,18 +8261,18 @@ function closeGameOverlay() {
   }
 }
 
-// Download game as HTML file
+
 function downloadGame() {
   if (!currentGame) {
-    alert('No game loaded to download! 🍀');
+    alert('No game loaded to download! ');
     return;
   }
   
   try {
-    // Create a simple HTML file with the game embedded
+    
     const gameUrl = currentGame.translatedUrl || currentGame.url;
     
-    // First, try to fetch the actual game HTML
+    
     fetch(gameUrl)
       .then(response => {
         if (!response.ok) {
@@ -8001,15 +8281,15 @@ function downloadGame() {
         return response.text();
       })
       .then(gameHtml => {
-        // Check if we got valid HTML
+        
         if (!gameHtml.includes('<html') && !gameHtml.includes('<!DOCTYPE')) {
           throw new Error('Not valid HTML');
         }
         
-        // Add watermark to the HTML
+        
         let modifiedHtml = gameHtml;
         
-        // Try to add watermark at the beginning of body
+       
         const bodyStart = modifiedHtml.indexOf('<body');
         if (bodyStart !== -1) {
           const bodyEnd = modifiedHtml.indexOf('>', bodyStart) + 1;
@@ -8027,12 +8307,12 @@ function downloadGame() {
               z-index: 9999;
               border: 1px solid rgba(255,102,178,0.5);
             ">
-              ${currentGame.title} - Downloaded from Diesmos 🍀
+              ${currentGame.title} - Downloaded from Diesmos 
             </div>
           `;
           modifiedHtml = modifiedHtml.slice(0, bodyEnd) + watermark + modifiedHtml.slice(bodyEnd);
         } else {
-          // If no body tag, add it at the end
+         
           modifiedHtml += `
             <div style="
               position: fixed;
@@ -8047,30 +8327,30 @@ function downloadGame() {
               z-index: 9999;
               border: 1px solid rgba(255,102,178,0.5);
             ">
-              ${currentGame.title} - Downloaded from Diesmos 🍀
+              ${currentGame.title} - Downloaded from Diesmos 
             </div>
           `;
         }
         
-        // Create a blob with the modified HTML content
+        
         const blob = new Blob([modifiedHtml], { type: 'text/html' });
         
-        // Create a download link
+        
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         
-        // Clean up filename
+        
         const cleanTitle = currentGame.title.replace(/[^a-z0-9]/gi, '_').toLowerCase();
         const filename = `diesmos_${cleanTitle}.html`;
         
         a.href = url;
         a.download = filename;
         
-        // Trigger download
+        
         document.body.appendChild(a);
         a.click();
         
-        // Clean up
+        
         setTimeout(() => {
           document.body.removeChild(a);
           URL.revokeObjectURL(url);
@@ -8078,7 +8358,7 @@ function downloadGame() {
         
       })
       .catch(error => {
-        // Fallback: create HTML file with iframe if fetch fails
+        
         const fallbackHtml = `
           <!DOCTYPE html>
           <html>
@@ -8117,7 +8397,7 @@ function downloadGame() {
             </head>
             <body>
               <div class="game-info">
-                ${currentGame.title} - Downloaded from Diesmos 🍀
+                ${currentGame.title} - Downloaded from Diesmos 
               </div>
               <iframe src="${gameUrl}" allowfullscreen></iframe>
             </body>
@@ -8144,27 +8424,28 @@ function downloadGame() {
       });
     
   } catch (error) {
-    alert('Oops! Could not download the game 😢\nTry loading it first, then download!');
+    alert('Oops! Could not download the game \nTry loading it first, then download!');
   }
 }
 
-// Toggle favorite status
+
 function toggleFavorite(gameId) {
   const index = favorites.indexOf(gameId);
+  const game = games.find(g => g.id === gameId);
 
   if (index === -1) {
     favorites.push(gameId);
+    if (game) logToClicky(`${game.title} favorite_add`);
   } else {
     favorites.splice(index, 1);
+    if (game) logToClicky(`${game.title} favorite_remove`);
   }
 
   localStorage.setItem('favorites', JSON.stringify(favorites));
-
-  renderGames();
-  renderFavorites();
+  refreshGameViews({ preservePage: true });
 }
 
-// Render favorites section
+
 function renderFavorites() {
   const container = document.getElementById('favoritesContainer');
   if (!container) return;
@@ -8189,10 +8470,12 @@ function renderFavorites() {
     gameCard.setAttribute('data-game-id', game.id);
 
     gameCard.innerHTML = `
-      <img src="${game.translatedImage || game.image}" class="game-image">
-      <div class="game-info">
-        <div class="game-title">${game.title}</div>
-        <button class="favorite-btn favorited" data-id="${game.id}">❤️</button>
+      <div class="game-card-visual">
+        <img src="${game.translatedImage || game.image}" class="game-image">
+        <div class="game-info">
+          <div class="game-title">${game.title}</div>
+          <button class="favorite-btn favorited" data-id="${game.id}">❤️</button>
+        </div>
       </div>
     `;
 
@@ -8200,7 +8483,7 @@ function renderFavorites() {
   });
 }
 
-// Open suggestions form
+
 function openSuggestions() {
   window.open(
     "https://docs.google.com/forms/d/e/1FAIpQLSfqTJRoaUQJ3YgpZALPIE85umsW12IBXtv6BaI9Y0fdB_XqzQ/viewform?fbzx=492301836448601508&pli=1",
@@ -8208,20 +8491,443 @@ function openSuggestions() {
   );
 }
 
-// Update greeting based on time of day
-function updateGreeting() {
-  const hour = new Date().getHours();
-  let greeting = 'Have an awesome day! 🍀';
-  if (hour < 12) greeting = 'Good morning! ☀️🍀';
-  else if (hour < 18) greeting = 'Good afternoon! 🌤️🍀';
-  else greeting = 'Good evening! 🌙🍀';
-  document.getElementById('greeting').textContent = greeting;
+function setupMusicPlayer() {
+  if (!musicAudio || !visualizerCanvas) return;
+
+  const resizeCanvas = () => {
+    const ratio = window.devicePixelRatio || 1;
+    visualizerCanvas.width = Math.floor(window.innerWidth * ratio);
+    visualizerCanvas.height = Math.floor(window.innerHeight * ratio);
+    const ctx = visualizerCanvas.getContext('2d');
+    if (ctx) {
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    }
+  };
+
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  if (musicUploadBtn) {
+    musicUploadBtn.addEventListener('click', () => {
+      if (musicFilePicker) {
+        musicFilePicker.value = '';
+        musicFilePicker.click();
+      }
+    });
+  }
+
+  if (musicFilePicker) {
+    musicFilePicker.addEventListener('change', handleMusicFileSelect);
+  }
+
+  if (musicPlayPauseBtn) {
+    musicPlayPauseBtn.addEventListener('click', async () => {
+      if (!musicAudio.src) {
+        if (musicFilePicker) musicFilePicker.click();
+        return;
+      }
+
+      if (musicAudio.paused) {
+        await startMusicPlayback();
+      } else {
+        musicAudio.pause();
+      }
+    });
+  }
+
+  if (musicLoopBtn) {
+    musicLoopBtn.addEventListener('click', () => {
+      musicAudio.loop = !musicAudio.loop;
+      updateMusicUi();
+    });
+  }
+
+  musicAudio.addEventListener('play', async () => {
+    await ensureVisualizerGraph();
+    updateMusicUi();
+    startVisualizer();
+  });
+
+  musicAudio.addEventListener('pause', () => {
+    updateMusicUi();
+  });
+
+  musicAudio.addEventListener('ended', () => {
+    updateMusicUi();
+  });
+
+  musicAudio.addEventListener('loadedmetadata', () => {
+    updateMusicUi();
+  });
+
+  updateMusicUi();
+  drawVisualizerFrame();
 }
 
-// Create floating hearts
+async function handleMusicFileSelect(event) {
+  const file = event.target.files && event.target.files[0];
+  if (!file || !musicAudio) return;
+
+  if (currentMusicUrl) {
+    URL.revokeObjectURL(currentMusicUrl);
+  }
+
+  currentMusicUrl = URL.createObjectURL(file);
+  musicAudio.src = currentMusicUrl;
+  currentMusicMeta = await extractAudioMetadata(file);
+  applyMusicMetadata(currentMusicMeta);
+  updateMusicUi();
+  await startMusicPlayback();
+}
+
+async function startMusicPlayback() {
+  if (!musicAudio) return;
+
+  await ensureVisualizerGraph();
+  await musicAudio.play();
+  updateMusicUi();
+}
+
+async function ensureVisualizerGraph() {
+  if (!musicAudio) return;
+
+  if (!musicAudioContext) {
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextClass) {
+      musicStatus.textContent = 'Visualizer not supported in this browser.';
+      return;
+    }
+
+    musicAudioContext = new AudioContextClass();
+    musicAnalyser = musicAudioContext.createAnalyser();
+    musicAnalyser.fftSize = 128;
+    musicAnalyser.smoothingTimeConstant = 0.82;
+    musicSourceNode = musicAudioContext.createMediaElementSource(musicAudio);
+    musicSourceNode.connect(musicAnalyser);
+    musicAnalyser.connect(musicAudioContext.destination);
+  }
+
+  if (musicAudioContext.state === 'suspended') {
+    await musicAudioContext.resume();
+  }
+}
+
+function updateMusicUi() {
+  if (!musicAudio || !musicPlayPauseBtn || !musicStatus) return;
+
+  musicPlayPauseBtn.textContent = musicAudio.paused ? 'Play' : 'Pause';
+  if (musicLoopBtn) {
+    musicLoopBtn.textContent = musicAudio.loop ? 'Loop On' : 'Loop Off';
+    musicLoopBtn.classList.toggle('active', musicAudio.loop);
+  }
+
+  if (!currentMusicMeta) {
+    applyMusicMetadata(null);
+  } else {
+    applyMusicMetadata(currentMusicMeta);
+  }
+
+  if (!musicAudio.src) {
+    musicStatus.textContent = 'Choose a song to start the visualizer.';
+  } else if (musicAudio.paused) {
+    musicStatus.textContent = 'Paused.';
+  } else {
+    musicStatus.textContent = 'Now playing.';
+  }
+}
+
+function startVisualizer() {
+  if (visualizerFrame) return;
+  visualizerFrame = requestAnimationFrame(drawVisualizerFrame);
+}
+
+function drawVisualizerFrame() {
+  const ctx = visualizerCanvas && visualizerCanvas.getContext('2d');
+  if (!ctx || !visualizerCanvas) return;
+
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  ctx.clearRect(0, 0, width, height);
+
+  const gradient = ctx.createLinearGradient(0, 0, width, height);
+  gradient.addColorStop(0, 'rgba(111, 188, 111, 0.10)');
+  gradient.addColorStop(1, 'rgba(79, 166, 79, 0.02)');
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, width, height);
+
+  if (musicAnalyser) {
+    const data = new Uint8Array(musicAnalyser.frequencyBinCount);
+    musicAnalyser.getByteFrequencyData(data);
+
+    const barWidth = Math.max(10, width / data.length);
+    data.forEach((value, index) => {
+      const barHeight = (value / 255) * height * 0.42;
+      const x = index * barWidth;
+      const y = height - barHeight;
+      const hue = 110 + index * 0.9;
+      ctx.fillStyle = `hsla(${hue}, 70%, 55%, 0.18)`;
+      ctx.fillRect(x + 1, y, barWidth - 6, barHeight);
+    });
+  }
+
+  visualizerFrame = requestAnimationFrame(drawVisualizerFrame);
+}
+
+function applyMusicMetadata(meta) {
+  const fallbackMeta = meta || getEmptyMusicMetadata();
+  const durationText = Number.isFinite(musicAudio.duration) ? formatDuration(musicAudio.duration) : fallbackMeta.durationText;
+  const detailsParts = [fallbackMeta.fileType, fallbackMeta.fileSize, durationText].filter(Boolean);
+
+  if (musicTrackLabel) {
+    musicTrackLabel.textContent = fallbackMeta.title || 'No track loaded';
+  }
+
+  if (musicArtistLabel) {
+    musicArtistLabel.textContent = fallbackMeta.artist || 'Unknown';
+  }
+
+  if (musicAlbumLabel) {
+    musicAlbumLabel.textContent = fallbackMeta.album || 'Unknown';
+  }
+
+  if (musicDetailsLabel) {
+    musicDetailsLabel.textContent = detailsParts.length ? detailsParts.join(' - ') : 'No file loaded';
+  }
+}
+
+function getEmptyMusicMetadata() {
+  return {
+    title: '',
+    artist: '',
+    album: '',
+    fileType: '',
+    fileSize: '',
+    durationText: ''
+  };
+}
+
+async function extractAudioMetadata(file) {
+  const fallback = buildFallbackMusicMetadata(file);
+
+  try {
+    if (file.type === 'audio/mpeg' || /\.mp3$/i.test(file.name)) {
+      const id3Meta = await parseId3Metadata(file);
+      return { ...fallback, ...id3Meta };
+    }
+  } catch (error) {
+    console.warn('Could not read audio metadata:', error);
+  }
+
+  return fallback;
+}
+
+function buildFallbackMusicMetadata(file) {
+  const baseName = file.name.replace(/\.[^.]+$/, '');
+  const parts = baseName.split(/\s+-\s+/);
+  const artist = parts.length > 1 ? parts.shift().trim() : '';
+  const title = parts.length > 0 ? parts.join(' - ').trim() : baseName;
+
+  return {
+    title: title || 'Unknown Track',
+    artist,
+    album: '',
+    fileType: (file.type || 'audio file').replace(/^audio\//i, '').toUpperCase(),
+    fileSize: formatFileSize(file.size),
+    durationText: ''
+  };
+}
+
+async function parseId3Metadata(file) {
+  const buffer = await file.arrayBuffer();
+  const bytes = new Uint8Array(buffer);
+
+  if (bytes.length < 10 || readAscii(bytes, 0, 3) !== 'ID3') {
+    return {};
+  }
+
+  const versionMajor = bytes[3];
+  const tagSize = readSyncSafeInteger(bytes, 6);
+  const metadata = {};
+  let offset = 10;
+  const tagEnd = Math.min(bytes.length, 10 + tagSize);
+
+  while (offset + 10 <= tagEnd) {
+    const frameId = readAscii(bytes, offset, 4);
+    if (!frameId.trim() || frameId === '\u0000\u0000\u0000\u0000') {
+      break;
+    }
+
+    const frameSize = versionMajor === 4
+      ? readSyncSafeInteger(bytes, offset + 4)
+      : readBigEndianInteger(bytes, offset + 4, 4);
+
+    if (!frameSize || offset + 10 + frameSize > tagEnd) {
+      break;
+    }
+
+    const frameData = bytes.slice(offset + 10, offset + 10 + frameSize);
+    const decoded = decodeId3TextFrame(frameData);
+
+    if (decoded) {
+      if (frameId === 'TIT2') metadata.title = decoded;
+      if (frameId === 'TPE1') metadata.artist = decoded;
+      if (frameId === 'TALB') metadata.album = decoded;
+    }
+
+    offset += 10 + frameSize;
+  }
+
+  return metadata;
+}
+
+function decodeId3TextFrame(frameData) {
+  if (!frameData || frameData.length < 2) return '';
+
+  const encoding = frameData[0];
+  const content = frameData.slice(1);
+
+  try {
+    if (encoding === 0) {
+      return new TextDecoder('iso-8859-1').decode(content).replace(/\u0000/g, '').trim();
+    }
+
+    if (encoding === 1 || encoding === 2) {
+      const textBytes = content.length % 2 === 0 ? content : content.slice(0, -1);
+      return new TextDecoder('utf-16').decode(textBytes).replace(/\u0000/g, '').trim();
+    }
+
+    if (encoding === 3) {
+      return new TextDecoder('utf-8').decode(content).replace(/\u0000/g, '').trim();
+    }
+  } catch (error) {
+    return '';
+  }
+
+  return '';
+}
+
+function readAscii(bytes, start, length) {
+  let value = '';
+  for (let i = 0; i < length; i++) {
+    value += String.fromCharCode(bytes[start + i] || 0);
+  }
+  return value;
+}
+
+function readSyncSafeInteger(bytes, start) {
+  return ((bytes[start] & 0x7f) << 21) |
+         ((bytes[start + 1] & 0x7f) << 14) |
+         ((bytes[start + 2] & 0x7f) << 7) |
+         (bytes[start + 3] & 0x7f);
+}
+
+function readBigEndianInteger(bytes, start, length) {
+  let value = 0;
+  for (let i = 0; i < length; i++) {
+    value = (value << 8) | (bytes[start + i] || 0);
+  }
+  return value;
+}
+
+function formatFileSize(size) {
+  if (!Number.isFinite(size) || size <= 0) return '';
+  const units = ['B', 'KB', 'MB', 'GB'];
+  let value = size;
+  let unitIndex = 0;
+
+  while (value >= 1024 && unitIndex < units.length - 1) {
+    value /= 1024;
+    unitIndex++;
+  }
+
+  const decimals = unitIndex === 0 ? 0 : 1;
+  return `${value.toFixed(decimals)} ${units[unitIndex]}`;
+}
+
+function formatDuration(seconds) {
+  if (!Number.isFinite(seconds) || seconds < 0) return '';
+  const totalSeconds = Math.round(seconds);
+  const minutes = Math.floor(totalSeconds / 60);
+  const remainingSeconds = totalSeconds % 60;
+  return `${minutes}:${String(remainingSeconds).padStart(2, '0')}`;
+}
+
+function exportCookies() {
+  const payload = {
+    exportedAt: new Date().toISOString(),
+    cookies: document.cookie,
+    favorites: JSON.parse(localStorage.getItem('favorites') || '[]')
+  };
+
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'diesmos-cookies.json';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+}
+
+function importCookies() {
+  if (!cookieFileInput) return;
+  cookieFileInput.value = '';
+  cookieFileInput.click();
+}
+
+function handleCookieUpload(event) {
+  const file = event.target.files && event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const payload = JSON.parse(reader.result);
+
+      if (typeof payload.cookies === 'string' && payload.cookies.trim()) {
+        payload.cookies.split(';').forEach(cookiePart => {
+          const cookie = cookiePart.trim();
+          if (cookie) {
+            document.cookie = `${cookie}; path=/`;
+          }
+        });
+      }
+
+      if (Array.isArray(payload.favorites)) {
+        localStorage.setItem('favorites', JSON.stringify(payload.favorites));
+        favorites = payload.favorites;
+        refreshGameViews({ preservePage: true });
+      }
+
+      alert('Cookies imported.');
+    } catch (error) {
+      alert(`Could not import cookies: ${error.message}`);
+    }
+  };
+
+  reader.readAsText(file);
+}
+
+
+function updateGreeting() {
+  const hour = new Date().getHours();
+  let greeting = 'Have an awesome day! ';
+  if (hour < 12) greeting = 'Good morning! ';
+  else if (hour < 18) greeting = 'Good afternoon! ';
+  else greeting = 'Good evening! ';
+  const greetingElement = document.getElementById('greeting');
+  if (greetingElement) {
+    greetingElement.textContent = greeting;
+  }
+}
+
+
 function createHearts() {
   const heartsContainer = document.getElementById('hearts');
-  const hearts = ['🍀', '☘️', '🍃', '🌱', '🌻', '🏵️', '🌷', '🌸'];
+  if (!heartsContainer) return;
+
+  const hearts = ['', '', '', '', '', '', '', ''];
   
   for (let i = 0; i < 15; i++) {
     const heart = document.createElement('div');
