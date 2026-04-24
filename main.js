@@ -7303,6 +7303,48 @@ const games = [
     title: "A Random Clicker By Jalen",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/arandomclicker.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/arandomclicker.html",
+    isNew: false
+},
+{
+    id: 1048,
+    title: "Sonic Mania Plus",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicmaniaplus.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicmaniaplus.html",
+    isNew: true
+},
+{
+    id: 1049,
+    title: "FNF: Remnants",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fnfremnants.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fnfremnants.html",
+    isNew: true
+},
+{
+    id: 1050,
+    title: "Jelly Mario",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/jellymario.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/jellymario.html",
+    isNew: true
+},
+{
+    id: 1051,
+    title: "School Boy Runaway",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/schoolboyrunaway.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/schoolboyrunaway.html",
+    isNew: true
+},
+{
+    id: 1052,
+    title: "Epsteins Education And Learning",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/baldiepstein.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/baldiepstein.html",
+    isNew: true
+},
+{
+    id: 1053,
+    title: "CaseOhs Education And Learning",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/baldicaseoh.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/baldicaseoh.html",
     isNew: true
 },
 ];
