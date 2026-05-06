@@ -7310,21 +7310,21 @@ const games = [
     title: "Sonic Mania Plus",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicmaniaplus.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/sonicmaniaplus.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1049,
     title: "FNF: Remnants",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fnfremnants.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fnfremnants.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1050,
     title: "Jelly Mario",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/jellymario.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/jellymario.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1051,
@@ -7338,13 +7338,20 @@ const games = [
     title: "Epsteins Education And Learning",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/baldiepstein.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/baldiepstein.html",
-    isNew: true
+    isNew: false
 },
 {
     id: 1053,
     title: "CaseOhs Education And Learning",
     image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/baldicaseoh.jpg",
     url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/baldicaseoh.html",
+    isNew: false
+},
+{
+    id: 1054,
+    title: "FNF: Hazier River",
+    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/hazier.jpg",
+    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/hazier.html",
     isNew: true
 },
 ];
