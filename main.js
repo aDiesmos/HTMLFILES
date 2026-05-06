@@ -7554,7 +7554,6 @@ function setupPagination() {
   }
 
   gamesGrid.parentNode.appendChild(bottomControls.container);
-  /*
   const prevBtn = document.createElement('button');
   prevBtn.className = 'filter-btn';
   prevBtn.innerHTML = '← Previous';
@@ -7589,7 +7588,6 @@ function setupPagination() {
   paginationContainer.appendChild(prevBtn);
   paginationContainer.appendChild(pageInfo);
   paginationContainer.appendChild(nextBtn);
-  */
 
   window.paginationElements = {
     groups: [topControls, bottomControls]
@@ -7820,7 +7818,6 @@ function setupEventListeners() {
 
   return;
 }
-/*
 
      
       if (gameUrl.includes('/gba/player.html')) {
@@ -8026,7 +8023,6 @@ function setupEventListeners() {
   }
 }
 
-*/
 async function loadGameInIframe(gameUrl, gameTitle = 'this game') {
   if (!gameIframe) return false;
 
