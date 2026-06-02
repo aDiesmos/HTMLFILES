@@ -10,7 +10,7 @@ function translateImageUrl(oldUrl) {
   const filename = oldUrl.split('/').pop();
 
   
-  return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/images@main/${filename}`;
+  return `https://cdn.jsdelivr.net/gh/aDiesmos/images@main/${filename}`;
 }
 
 function logToClicky(gameName) {
@@ -28,7 +28,7 @@ function translateGameUrl(oldUrl) {
     if (gameMatch && gameMatch[1]) {
       const gameName = gameMatch[1];
       
-      return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/gba/player.html?game=${gameName}`;
+      return `https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/gba/player.html?game=${gameName}`;
     }
   }
   
@@ -69,14 +69,14 @@ function extractGamePath(fullUrl) {
  
   if (parts.length === 1) {
     const gameName = parts[0];
-    return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/waycrosspublicmedia/${gameName}.html`;
+    return `https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/aDiesmos/${gameName}.html`;
   }
   
   const urlPath = parts.slice(0, -1).join('/');
   const gameName = parts.pop();
   
   
-  return `https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/${urlPath}/${gameName}.html`;
+  return `https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/${urlPath}/${gameName}.html`;
 }
 
 
@@ -5628,99 +5628,99 @@ const games = [
 {
     id: 803,
     title: "FNF: Heartbreak Havoc: Vs. Sky Redux",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/skyredux.png",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/skyredux.png",
     url: "player.html?game=https://chicken.parmacitieschools.org/fnf/redux/",
     isNew: false
   },
     {
     id: 804,
     title: "1v1.lol",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/1v1lol.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/1v1lol.html",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/1v1lol.png",
+    url: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/1v1lol.html",
     isNew: false
   },
     {
     id: 805,
     title: "Cave Story",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cavestory.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cavestory.html",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/cavestory.png",
+    url: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/cavestory.html",
     isNew: false
   },
     {
     id: 806,
     title: "Peggle",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/Peggle.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/Peggle.html",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/Peggle.png",
+    url: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/Peggle.html",
     isNew: false
   },
     {
     id: 807,
     title: "Cooking Mama 2",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cookingmama2.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cookingmama2.html",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/cookingmama2.png",
+    url: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/cookingmama2.html",
     isNew: false
   },
     {
     id: 808,
     title: "Cooking Mama 3",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cookingmama3.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/cookingmama3.html",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/cookingmama3.png",
+    url: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/cookingmama3.html",
     isNew: false
   },
     {
     id: 809,
     title: "Crazy Cattle 3D",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/crazycattle3d.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/crazycattle3d.html",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/crazycattle3d.png",
+    url: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/crazycattle3d.html",
     isNew: false
   },
     {
     id: 810,
     title: "Dan the Man",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/dantheman.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/dantheman.html",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/dantheman.png",
+    url: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/dantheman.html",
     isNew: false
   },
   {
     id: 811,
     title: "DEAD PLATE",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/deadplate.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/deadplate.html",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/deadplate.png",
+    url: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/deadplate.html",
     isNew: false
   },
   {
     id: 812,
     title: "Duck Life 8",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/ducklife8.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/ducklife8.html",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/ducklife8.png",
+    url: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/ducklife8.html",
     isNew: false
   },
   {
     id: 813,
     title: "Endroll",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/endroll.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/endroll.html",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/endroll.png",
+    url: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/endroll.html",
     isNew: false
   },
   {
     id: 814,
     title: "Gladihoppers",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gladihoppers.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/gladihoppers.html",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/gladihoppers.png",
+    url: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/gladihoppers.html",
     isNew: false
   },
   {
     id: 815,
     title: "Fancy Pants Adventure 4 Part 1",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fancypants4p1.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fancypants4p1.html",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/fancypants4p1.png",
+    url: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/fancypants4p1.html",
     isNew: false
   },
     {
     id: 816,
     title: "Fancy Pants Adventure 4 Part 2",
-    image: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fancypants4p2.png",
-    url: "https://cdn.jsdelivr.net/gh/waycrosspublicmedia/HTMLFILES@main/2026uploads/fancypants4p2.html",
+    image: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/fancypants4p2.png",
+    url: "https://cdn.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/fancypants4p2.html",
     isNew: false
   },
   {
