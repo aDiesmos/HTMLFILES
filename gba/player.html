@@ -8,7 +8,7 @@ Licensed under the MIT License (view LICENSE.md for more information)
 
 <!DOCTYPE html>
 <html>
-<base href="https://cdn.statically.io/gh/aDiesmos/gba@main/player/">
+<base href="https://fastly.jsdelivr.net/gh/aDiesmos/gba@main/player/">
 <head>
     <title>Diesmos Games</title>
     <meta charset="UTF-8">
@@ -227,7 +227,7 @@ Licensed under the MIT License (view LICENSE.md for more information)
         // Wait for emulator to initialize
         setTimeout(() => {
             // Construct game URL
-            const gameUrl = `https://cdn.statically.io/gh/aDiesmos/gba@main/binaries/${game}.gba`;
+            const gameUrl = `https://fastly.jsdelivr.net/gh/aDiesmos/gba@main/binaries/${game}.gba`;
             
             // Create a fake file input event
             fetch(gameUrl)
