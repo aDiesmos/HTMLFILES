@@ -10,7 +10,7 @@ function translateImageUrl(oldUrl) {
   const filename = oldUrl.split('/').pop();
 
   
-  return `https://fastly.jsdelivr.net/gh/aDiesmos/images@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/${filename}`;
+  return `https://fastly.jsdelivr.net/gh/aDiesmos/images@main/${filename}`;
 }
 
 function logToClicky(gameName) {
@@ -69,14 +69,14 @@ function extractGamePath(fullUrl) {
  
   if (parts.length === 1) {
     const gameName = parts[0];
-    return `https://fastly.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/aDiesmos/${gameName}.html`;
+    return `https://fastly.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/aDiesmos/${gameName}.html`;
   }
   
   const urlPath = parts.slice(0, -1).join('/');
   const gameName = parts.pop();
   
   
-  return `https://fastly.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/${urlPath}/${gameName}.html`;
+  return `https://fastly.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/${urlPath}/${gameName}.html`;
 }
 
 
