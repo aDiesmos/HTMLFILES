@@ -5587,49 +5587,49 @@ const games = [
     id: 797,
     title: "Worlds Hardest Game",
     image: "https://chicken.parmacitieschools.org/images/worlds-hardest-game.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/worlds-hardest-game/",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/livediesmos/worlds-hardest-game.html",
     isNew: false
   },
   {
     id: 798,
     title: "Worlds Hardest Game 2",
     image: "https://chicken.parmacitieschools.org/images/worlds-hardest-game-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/worlds-hardest-game-2/",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/livediesmos/worlds-hardest-game-2.html",
     isNew: false
   },
   {
     id: 799,
     title: "xx142-b2exe",
-    image: "https://chicken.parmacitieschools.org/images/xx142-b2exe.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/xx142-b2exe/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/images/xx142-b2exe.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/livediesmos/xx142-b2exe.html",
     isNew: false
   },
   {
     id: 800,
     title: "Zombocalypse",
-    image: "https://chicken.parmacitieschools.org/images/zombocalypse.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/zombocalypse/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/livediesmos/zombocalypse.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/livediesmos/zombocalypse.html",
     isNew: false
   },
   {
     id: 801,
     title: "Zombotron",
-    image: "https://chicken.parmacitieschools.org/images/zombotron.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/zombotron/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/images/zombotron.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/whatver/zombotron.html",
     isNew: false
   },
   {
     id: 802,
     title: "Zombotron 2",
-    image: "https://chicken.parmacitieschools.org/images/zombotron2.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/zombotron2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/images/zombotron2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/whatver/zombotron2.html",
     isNew: false
   },
 {
     id: 803,
     title: "FNF: Heartbreak Havoc: Vs. Sky Redux",
     image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/2026uploads/skyredux.png",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/redux/",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@main/fnf/redux.html",
     isNew: false
   },
     {
