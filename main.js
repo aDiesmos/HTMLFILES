@@ -10,7 +10,11 @@ function translateImageUrl(oldUrl) {
   const filename = oldUrl.split('/').pop();
 
   
-  return `https://testingcf.jsdelivr.net/gh/aDiesmos/images@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/${filename}`;
+<<<<<<< Local Changes
+  return `https://testingcf.jsdelivr.net/gh/aDiesmos/images/${filename}`;
+=======
+  return `https://testingcf.jsdelivr.net/gh/aDiesmos/images/${filename}`;
+>>>>>>> External Changes
 }
 
 function logToClicky(gameName) {
@@ -28,7 +32,11 @@ function translateGameUrl(oldUrl) {
     if (gameMatch && gameMatch[1]) {
       const gameName = gameMatch[1];
       
-      return `https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/gba/player.html?game=${gameName}`;
+<<<<<<< Local Changes
+      return `https://testingcf.jsdelivr.net/gh/aDiesmos/gba/player.html?game=${gameName}`;
+=======
+      return `https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/player.html?game=${gameName}`;
+>>>>>>> External Changes
     }
   }
   
@@ -69,14 +77,22 @@ function extractGamePath(fullUrl) {
  
   if (parts.length === 1) {
     const gameName = parts[0];
-    return `https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/aDiesmos/${gameName}.html`;
+<<<<<<< Local Changes
+    return `https://testingcf.jsdelivr.net/gh/aDiesmos//${gameName}.html`;
+=======
+    return `https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/aDiesmos/${gameName}.html`;
+>>>>>>> External Changes
   }
   
   const urlPath = parts.slice(0, -1).join('/');
   const gameName = parts.pop();
   
   
-  return `https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/${urlPath}/${gameName}.html`;
+<<<<<<< Local Changes
+  return `https://testingcf.jsdelivr.net/gh/aDiesmos/${urlPath}/${gameName}.html`;
+=======
+  return `https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/${urlPath}/${gameName}.html`;
+>>>>>>> External Changes
 }
 
 
@@ -1450,7 +1466,7 @@ const games = [
     id: 199,
     title: "Doki Doki Literature Club",
     image: "https://chicken.parmacitieschools.org/images/ddlc.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/dokidokiliteratureclub.html",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/dokidokiliteratureclub.html",
     isNew: false
   },
   {
@@ -2696,7 +2712,7 @@ const games = [
     id: 378,
     title: "FNF: FNF Weekly: Tweakmas",
     image: "https://chicken.parmacitieschools.org/images/tweakmas.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/tweakmas.html",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/tweakmas.html",
     isNew: false
   },
   {
@@ -4362,14 +4378,14 @@ const games = [
     id: 619,
     title: "Cookie Clicker Classic",
     image: "https://chicken.parmacitieschools.org/images/Cookie-Clicker-Classic-main.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/cookieclicker.html",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/cookieclicker.html",
     isNew: false
   },
   {
     id: 620,
     title: "Cooking Mama",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/cookingmama.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/cookingmama.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/cookingmama.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/cookingmama.html",
     isNew: false
   },
   {
@@ -4907,22 +4923,22 @@ const games = [
   {
     id: 699,
     title: "Minecraft 1.12.2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mc112.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mc112.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mc112.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mc112.html",
     isNew: false
   },
   {
     id: 700,
     title: "Minecraft 1.21.4",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mc121.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mc121.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mc121.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mc121.html",
     isNew: false
   },
   {
     id: 701,
     title: "Monster Tracks",
     image: "https://chicken.parmacitieschools.org/images/monstert.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/livediesmos/monstertracks.html",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/monstertracks.html",
     isNew: false
   },
   {
@@ -5342,7 +5358,7 @@ const games = [
     id: 762,
     title: "Super Mario 64",
     image: "https://chicken.parmacitieschools.org/images/sm64.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sm64.html",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sm64.html",
     isNew: false
   },
   {
@@ -5628,1730 +5644,1730 @@ const games = [
 {
     id: 803,
     title: "FNF: Heartbreak Havoc: Vs. Sky Redux",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/skyredux.png",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/skyredux.png",
     url: "player.html?game=https://chicken.parmacitieschools.org/fnf/redux/",
     isNew: false
   },
     {
     id: 804,
     title: "1v1.lol",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/1v1lol.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/1v1lol.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/1v1lol.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/1v1lol.html",
     isNew: false
   },
     {
     id: 805,
     title: "Cave Story",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/cavestory.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/cavestory.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/cavestory.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/cavestory.html",
     isNew: false
   },
     {
     id: 806,
     title: "Peggle",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/Peggle.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/Peggle.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/Peggle.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/Peggle.html",
     isNew: false
   },
     {
     id: 807,
     title: "Cooking Mama 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/cookingmama2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/cookingmama2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/cookingmama2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/cookingmama2.html",
     isNew: false
   },
     {
     id: 808,
     title: "Cooking Mama 3",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/cookingmama3.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/cookingmama3.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/cookingmama3.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/cookingmama3.html",
     isNew: false
   },
     {
     id: 809,
     title: "Crazy Cattle 3D",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/crazycattle3d.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/crazycattle3d.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/crazycattle3d.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/crazycattle3d.html",
     isNew: false
   },
     {
     id: 810,
     title: "Dan the Man",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/dantheman.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/dantheman.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/dantheman.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/dantheman.html",
     isNew: false
   },
   {
     id: 811,
     title: "DEAD PLATE",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/deadplate.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/deadplate.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/deadplate.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/deadplate.html",
     isNew: false
   },
   {
     id: 812,
     title: "Duck Life 8",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/ducklife8.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/ducklife8.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/ducklife8.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/ducklife8.html",
     isNew: false
   },
   {
     id: 813,
     title: "Endroll",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/endroll.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/endroll.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/endroll.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/endroll.html",
     isNew: false
   },
   {
     id: 814,
     title: "Gladihoppers",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gladihoppers.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gladihoppers.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gladihoppers.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gladihoppers.html",
     isNew: false
   },
   {
     id: 815,
     title: "Fancy Pants Adventure 4 Part 1",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fancypants4p1.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fancypants4p1.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fancypants4p1.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fancypants4p1.html",
     isNew: false
   },
     {
     id: 816,
     title: "Fancy Pants Adventure 4 Part 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fancypants4p2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fancypants4p2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fancypants4p2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fancypants4p2.html",
     isNew: false
   },
   {
     id: 817,
     title: "Get Yoked",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/getyoked.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/getyoked.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/getyoked.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/getyoked.html",
     isNew: false
   },
     {
     id: 818,
     title: "Going Balls",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/goingballs.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/goingballs.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/goingballs.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/goingballs.html",
     isNew: false
   },
     {
     id: 819,
     title: "Growden.io",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/growdenio.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/growdenio.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/growdenio.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/growdenio.html",
     isNew: false
   },
     {
     id: 820,
     title: "Gorilla Tag",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gtag.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gtag.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gtag.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gtag.html",
     isNew: false
   },
     {
     id: 821,
     title: "Milk Inside a Bag of Milk inside a Bag of Milk",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/milkinside.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/milkinside.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/milkinside.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/milkinside.html",
     isNew: false
   },
     {
     id: 822,
     title: "Celeste",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/celeste.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/celeste.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/celeste.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/celeste.html",
     isNew: false
   },
     {
     id: 823,
     title: "Mindwave",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mindwave.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mindwave.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mindwave.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mindwave.html",
     isNew: false
   },
     {
     id: 824,
     title: "Newgrounds Rumble",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/newgroundsrumble.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/newgroundsrumble.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/newgroundsrumble.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/newgroundsrumble.html",
     isNew: false
   },
     {
     id: 825,
     title: "Oneshot",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/oneshot.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/oneshot.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/oneshot.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/oneshot.html",
     isNew: false
   },
     {
     id: 826,
     title: "Papa's Pastaria",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/papaspastaria.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/papaspastaria.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/papaspastaria.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/papaspastaria.html",
     isNew: false
   },
     {
     id: 827,
     title: "Pico's School",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/picoschool.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/picoschool.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/picoschool.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/picoschool.html",
     isNew: false
   },
     {
     id: 828,
     title: "Madness Combat: Project Nexus",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/projectnexus.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/projectnexus.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/projectnexus.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/projectnexus.html",
     isNew: false
   },
 {
     id: 829,
     title: "Plants vs. Zombies 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/pvz2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/pvz2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/pvz2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/pvz2.html",
     isNew: false
   },
    {
     id: 830,
     title: "Slime Rancher",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/slimerancher.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/slimerancher.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/slimerancher.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/slimerancher.html",
     isNew: false
   }, 
     {
     id: 831,
     title: "Steal Brainrot Online",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/stealbrainrot.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/stealbrainrot.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stealbrainrot.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stealbrainrot.html",
     isNew: true
   },
     {
     id: 832,
     title: "WebFishing",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/webfishing.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/webfishing.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/webfishing.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/webfishing.html",
     isNew: false
   },
     {
     id: 833,
     title: "BFDI Branches",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bfdibranches.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bfdibranches.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bfdibranches.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bfdibranches.html",
     isNew: false
   },
     {
     id: 834,
     title: "We Become What We Behold",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/behold.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/behold.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/behold.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/behold.html",
     isNew: false
 },
 {
     id: 837,
     title: "Slow Roads",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/slowroads.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/slowroads.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/slowroads.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/slowroads.html",
     isNew: false
 },
 {
     id: 838,
     title: "Phoenix Wright: Ace Attorney",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/aceattorney.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/aceattorney.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/aceattorney.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/aceattorney.html",
     isNew: false
 },
 {
     id: 839,
     title: "Phoenix Wright: Justice for All",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/phoenixjusticeforall.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/phoenixjusticeforall.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/phoenixjusticeforall.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/phoenixjusticeforall.html",
     isNew: false
 },
 {
     id: 840,
     title: "Phoenix Wright: Trials and Tribulations",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/phoenixtrials.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/phoenixtrials.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/phoenixtrials.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/phoenixtrials.html",
     isNew: false
 },
 {
     id: 841,
     title: "Mario & Luigi: Partners in Time",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/partnersintime.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/partnersintime.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/partnersintime.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/partnersintime.html",
     isNew: false
 },
 {
     id: 842,
     title: "Mario & Luigi: Bowser's Inside Story",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/insidestory.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/insidestory.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/insidestory.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/insidestory.html",
     isNew: false
 },
 {
     id: 843,
     title: "Super Mario Bros",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermariobros.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermariobros.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermariobros.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermariobros.html",
     isNew: false
 },
 {
     id: 844,
     title: "Super Mario Bros 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermariobros2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermariobros2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermariobros2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermariobros2.html",
     isNew: false
 },
 {
     id: 845,
     title: "Super Mario Bros 3",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermariobros3.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermariobros3.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermariobros3.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermariobros3.html",
     isNew: false
 },
 {
     id: 846,
     title: "Scooby-Doo! Mystery Mayhem",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/scoobydoogba.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/scoobydoogba.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/scoobydoogba.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/scoobydoogba.html",
     isNew: false
 },
 {
     id: 847,
     title: "The SpongeBob Squarepants Movie",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sbmoviegba.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sbmoviegba.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sbmoviegba.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sbmoviegba.html",
     isNew: false
 },
 {
     id: 848,
     title: "Subway Surfers Berlin",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/subwaysurfers.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/subwaysurfersberlin.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/subwaysurfers.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/subwaysurfersberlin.html",
     isNew: false
 },
 {
     id: 849,
     title: "Subway Surfers London",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/subwaysurfers.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/subwaysurferslondon.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/subwaysurfers.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/subwaysurferslondon.html",
     isNew: false
 },
 {
     id: 850,
     title: "Subway Surfers Mexico",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/subwaysurfers.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/subwaysurfersmexico.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/subwaysurfers.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/subwaysurfersmexico.html",
     isNew: false
 },
 {
     id: 851,
     title: "Subway Surfers Beijing",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/subwaysurfers.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/subwaysurfersbeijing.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/subwaysurfers.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/subwaysurfersbeijing.html",
     isNew: false
 },
 {
     id: 852,
     title: "Super Mario All-Stars",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermarioallstars.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermarioallstars.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermarioallstars.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermarioallstars.html",
     isNew: false
 },
 {
     id: 853,
     title: "Super Mario RPG",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermariorpg.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermariorpg.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermariorpg.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermariorpg.html",
     isNew: false
 },
 {
     id: 854,
     title: "Sonic Mega Mix",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicmegamix.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicmegamix.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicmegamix.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicmegamix.html",
     isNew: false
 },
 {
     id: 855,
     title: "Sonic Classic Heroes",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicclassicheroes.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicclassicheroes.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicclassicheroes.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicclassicheroes.html",
     isNew: false
 },
 {
     id: 856,
     title: "Sonic Spinball",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicspinball.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicspinball.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicspinball.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicspinball.html",
     isNew: false
 },
 {
     id: 857,
     title: "Super Punch-Out!!",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/superpunchout.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/superpunchout.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/superpunchout.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/superpunchout.html",
     isNew: false
 },
 {
     id: 858,
     title: "Big Ice Tower Tiny Square",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bigicetowertinysquare.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bigicetowertinysquare.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bigicetowertinysquare.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bigicetowertinysquare.html",
     isNew: false
 },
 {
     id: 859,
     title: "Big Neon Tower Tiny Square",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bigneontowertinysquare.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bigneontowertinysquare.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bigneontowertinysquare.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bigneontowertinysquare.html",
     isNew: false
 },
 {
     id: 860,
     title: "Big Tower Tiny Square 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bigtowertinysquare2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bigtowertinysquare2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bigtowertinysquare2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bigtowertinysquare2.html",
     isNew: false
 },
 {
     id: 861,
     title: "FIFA 10",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fifa10.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fifa10.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fifa10.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fifa10.html",
     isNew: false
 },
 {
     id: 862,
     title: "FIFA 11",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fifa11.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fifa11.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fifa11.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fifa11.html",
     isNew: false
 },
 {
     id: 863,
     title: "Big City Battle",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bigcitybattle.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bigcitybattle.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bigcitybattle.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bigcitybattle.html",
     isNew: false
 },
 {
     id: 864,
     title: "Bergentruck 201X",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bergentruck201x.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bergentruck201x.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bergentruck201x.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bergentruck201x.html",
     isNew: false
 },
 {
     id: 865,
     title: "Puyo Pop Fever",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/puyopuyofever.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/puyopuyofever.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/puyopuyofever.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/puyopuyofever.html",
     isNew: false
 },
 {
     id: 866,
     title: "Goat Guardian",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/goatguardian.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/goatguardian.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/goatguardian.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/goatguardian.html",
     isNew: false
 },
 {
     id: 867,
     title: "Sprunki",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sprunki.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sprunki.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sprunki.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sprunki.html",
     isNew: false
 },
 {
     id: 868,
     title: "Sprunki Clicker",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sprunkiclicker.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sprunkiclicker.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sprunkiclicker.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sprunkiclicker.html",
     isNew: false
 },
 {
     id: 869,
     title: "You vs 100 Skibidi Toilets",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/youvs100skibidi.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/youvs100skibidi.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/youvs100skibidi.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/youvs100skibidi.html",
     isNew: false
 },
 {
     id: 870,
     title: "Whack the Creeps",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/whackthecreeps.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/whackthecreeps.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/whackthecreeps.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/whackthecreeps.html",
     isNew: false
 },
 {
     id: 871,
     title: "Whack Your Boss",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/whackyourboss.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/whackyourboss.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/whackyourboss.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/whackyourboss.html",
     isNew: false
 },
 {
     id: 872,
     title: "Whack Your Computer",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/whackyourcomputer.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/whackyourcomputer.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/whackyourcomputer.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/whackyourcomputer.html",
     isNew: false
 },
 {
     id: 873,
     title: "Whack Your Ex",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/whackyourex.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/whackyourex.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/whackyourex.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/whackyourex.html",
     isNew: false
 },
 {
     id: 874,
     title: "Housebroken Hero",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/housebrokenhero.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/housebrokenhero.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/housebrokenhero.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/housebrokenhero.html",
     isNew: false
 },
     {
     id: 875,
     title: "Animal Crossing: Wild World",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/animalcrossingwildworld.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/animalcrossingwildworld.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/animalcrossingwildworld.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/animalcrossingwildworld.html",
     isNew: false
 },
 {
     id: 876,
     title: "Ant Buster",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/antbuster.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/antbuster.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/antbuster.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/antbuster.html",
     isNew: false
 },
 {
     id: 877,
     title: "The Amazing World of Gumball: Blindfooled",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/blindfooled.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/blindfooled.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/blindfooled.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/blindfooled.html",
     isNew: false
 },
 {
     id: 878,
     title: "SpongeBob Squarepants: Boo or Boom",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/booorboom.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/booorboom.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/booorboom.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/booorboom.html",
     isNew: false
 },
 {
     id: 879,
     title: "BuildNow.gg",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/buildnowgg.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/buildnowgg.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/buildnowgg.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/buildnowgg.html",
     isNew: false
 },
 {
     id: 880,
     title: "Capybara Clicker",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/capybaraclicker.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/capybaraclicker.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/capybaraclicker.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/capybaraclicker.html",
     isNew: false
 },
 {
     id: 882,
     title: "SpongeBob Squarepants: Delivery Dilemma",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/deliverydilemma.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/deliverydilemma.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/deliverydilemma.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/deliverydilemma.html",
     isNew: false
 },
 {
     id: 883,
     title: "Deltatraveler",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/deltatraveler.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/deltatraveler.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/deltatraveler.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/deltatraveler.html",
     isNew: false
 },
 {
     id: 884,
     title: "Donkey Kong Country",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/donkeykongcountry.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/donkeykongcountry.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/donkeykongcountry.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/donkeykongcountry.html",
     isNew: false
 },
 {
     id: 885,
     title: "Driven Wild",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/drivenwild.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/drivenwild.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/drivenwild.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/drivenwild.html",
     isNew: false
 },
 {
     id: 886,
     title: "FortZone Battle Royale",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fortzonebattleroyale.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fortzonebattleroyale.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fortzonebattleroyale.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fortzonebattleroyale.html",
     isNew: false
 },
 {
     id: 887,
     title: "Grand Action Simulator: New York",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/grandactionsimulatorny.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/grandactionsimulatorny.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/grandactionsimulatorny.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/grandactionsimulatorny.html",
     isNew: false
 },
 {
     id: 888,
     title: "GTA: Vice City",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gtavicecity.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gtavicecity.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gtavicecity.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gtavicecity.html",
     isNew: false
 },
 {
     id: 889,
     title: "Half-Life",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/halflife.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/halflife.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/halflife.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/halflife.html",
     isNew: false
 },
 {
     id: 890,
     title: "Nickelodeon: Hardest Game Ever",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/hardestgameever.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/hardestgameever.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/hardestgameever.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/hardestgameever.html",
     isNew: false
 },
 {
     id: 891,
     title: "Highway Racer",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/highwayracer.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/highwayracer.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/highwayracer.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/highwayracer.html",
     isNew: false
 },
 {
     id: 892,
     title: "Kitty Toy",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/kittytoy.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/kittytoy.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/kittytoy.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/kittytoy.html",
     isNew: false
 },
 {
     id: 893,
     title: "Look Outside",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/lookoutside.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/lookoutside.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/lookoutside.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/lookoutside.html",
     isNew: false
 },
 {
     id: 894,
     title: "Mario Kart DS",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mariokartds.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mariokartds.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mariokartds.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mariokartds.html",
     isNew: false
 },
 {
     id: 895,
     title: "Mario Party DS",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mariopartyds.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mariopartyds.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mariopartyds.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mariopartyds.html",
     isNew: false
 },
 {
     id: 896,
     title: "Nintendogs: Labrador & Friends",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/nintendogslab.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/nintendogslab.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/nintendogslab.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/nintendogslab.html",
     isNew: false
 },
 {
     id: 897,
     title: "Pizza Tower: Scoutdigo",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/pizzatowerscoutdigo.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/pizzatowerscoutdigo.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/pizzatowerscoutdigo.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/pizzatowerscoutdigo.html",
     isNew: false
 },
 {
     id: 898,
     title: "SpongeBob Squarepants: Pyramid Peril",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/pyramidperil.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/pyramidperil.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/pyramidperil.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/pyramidperil.html",
     isNew: false
 },
 {
     id: 899,
     title: "Sandtris",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sandtris.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sandtris.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sandtris.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sandtris.html",
     isNew: false
 },
 {
     id: 900,
     title: "SpongeBob Squarepants: Sea Monster Smoosh",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/seamonstersmoosh.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/seamonstersmoosh.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/seamonstersmoosh.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/seamonstersmoosh.html",
     isNew: false
 },
 {
     id: 902,
     title: "Sonic CD",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/soniccd.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/soniccd.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/soniccd.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/soniccd.html",
     isNew: false
 },
 {
     id: 903,
     title: "Sonic Colors",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/soniccolors.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/soniccolors.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/soniccolors.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/soniccolors.html",
     isNew: false
 },
 {
     id: 904,
     title: "Sonic.exe",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicexe.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicexe.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicexe.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicexe.html",
     isNew: false
 },
 {
     id: 905,
     title: "Sonic Mania",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicmania.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicmania.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicmania.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicmania.html",
     isNew: false
 },
 {
     id: 906,
     title: "Sonic Rush",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicrush.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicrush.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicrush.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicrush.html",
     isNew: false
 },
 {
     id: 907,
     title: "Super Mario World",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermarioworld.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermarioworld.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermarioworld.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermarioworld.html",
     isNew: false
 },
 {
     id: 908,
     title: "Super Mario World 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermarioworld2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermarioworld2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermarioworld2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermarioworld2.html",
     isNew: false
 },
 {
     id: 909,
     title: "Super Princess Peach",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/superprincesspeach.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/superprincesspeach.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/superprincesspeach.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/superprincesspeach.html",
     isNew: false
 },
 {
     id: 910,
     title: "Traffic Rider",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/trafficrider.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/trafficrider.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/trafficrider.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/trafficrider.html",
     isNew: false
 },
     {
     id: 911,
     title: "FNF: Sonic Dash And Spin",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicdashandspin.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/fnf/sonicdashandspin.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicdashandspin.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/sonicdashandspin.html",
     isNew: false
 },
         {
     id: 912,
     title: "FNF: CN Lost Episodes",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/fnf/cnlost.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/fnf/cnlost.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/cnlost.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/cnlost.html",
     isNew: false
 },
         {
     id: 913,
     title: "Choose Your Weapon",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/whatver/chooseyourweapon.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/whatver/chooseyourweapon.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/chooseyourweapon.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/chooseyourweapon.html",
     isNew: false
 },
         {
     id: 914,
     title: "Choose Your Weapon 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/whatver/chooseyourweapon2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/whatver/chooseyourweapon2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/chooseyourweapon2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/chooseyourweapon2.html",
     isNew: false
 },
         {
     id: 915,
     title: "Choose Your Weapon 3",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/whatver/chooseyourweapon3.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/whatver/chooseyourweapon3.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/chooseyourweapon3.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/chooseyourweapon3.html",
     isNew: false
 },
          {
     id: 916,
     title: "FNF: Vs. Jeffy",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/images@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/jeffy.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/jeffy.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/images/jeffy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/jeffy.html",
     isNew: false
              },
          {
     id: 917,
     title: "Wheely",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheel.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheely.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheel.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheely.html",
     isNew: false
              },
        {
     id: 918,
     title: "Wheely 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheel2.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheely2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheel2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheely2.html",
     isNew: false
              },
        {
     id: 919,
     title: "Wheely 3",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheel3.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheely3.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheel3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheely3.html",
     isNew: false
              },
        {
     id: 920,
     title: "Wheely 4",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheel4.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheely4.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheel4.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheely4.html",
     isNew: false
              },
        {
     id: 921,
     title: "Wheely 5",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheel5.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheely5.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheel5.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheely5.html",
     isNew: false
              },
        {
     id: 922,
     title: "Wheely 6",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheel6.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheely6.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheel6.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheely6.html",
     isNew: false
              },
        {
     id: 923,
     title: "Wheely 7",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheel7.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheely7.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheel7.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheely7.html",
     isNew: false
              },
        {
     id: 924,
     title: "Wheely 8",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheel8.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wheely8.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheel8.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wheely8.html",
     isNew: false
              },
          {
     id: 925,
     title: "Sonic Revert",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/revert.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicrevert.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/revert.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicrevert.html",
     isNew: false
 },
      {
     id: 926,
     title: "Drive Mad",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/drivemad.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/drivemad.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/drivemad.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/drivemad.html",
     isNew: false
 },
      {
     id: 927,
     title: "Papers.io Mania",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/papermania.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/paperiomania.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/papermania.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/paperiomania.html",
     isNew: false
 },
      {
     id: 928,
     title: "Granny",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/granny.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/granny.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/granny.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/granny.html",
     isNew: false
 },
   {
     id: 929,
     title: "FNAF",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fnaf.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/FNAF.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fnaf.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/FNAF.html",
     isNew: false
 },
   {
     id: 930,
     title: "FNAF 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fnaf2.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/FNAF2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fnaf2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/FNAF2.html",
     isNew: false
 },
   {
     id: 931,
     title: "FNAF 3",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fnaf3.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/FNAF3.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fnaf3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/FNAF3.html",
     isNew: false
 },
   {
     id: 932,
     title: "FNAF 4",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fnaf4.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/FNAF4.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fnaf4.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/FNAF4.html",
     isNew: false
 },
 {
     id: 933,
     title: "Parappa The Rapper",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/parappa.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/parappatherapper.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/parappa.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/parappatherapper.html",
     isNew: false
 },
 {
     id: 934,
     title: "Omega Nugget Clicker",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/omega.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/omeganuggetclicker.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/omega.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/omeganuggetclicker.html",
     isNew: false
 },
 {
     id: 935,
     title: "Room Clicker",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/room.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/roomclicker.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/room.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/roomclicker.html",
     isNew: false
 },
 {
     id: 936,
     title: "Minecraft Pocket Edition 0.6.1",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mcpe.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mcpe.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mcpe.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mcpe.html",
     isNew: false
 },
      {
     id: 937,
     title: "FNF: CITYFUNK",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/cityfunk.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/cityfunk.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/cityfunk.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/cityfunk.html",
     isNew: false
 },
              {
     id: 938,
     title: "FNF: Jeffy's Infinite Irida (SHUCKS DEMO)",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/irida.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/irida.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/irida.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/irida.html",
     isNew: false
 },
 {
     id: 939,
     title: "Antonblast",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/antonblast.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/antonblast.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/antonblast.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/antonblast.html",
     isNew: false
 },
 {
     id: 940,
     title: "Jumbo Mario",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/jumbomario.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/jumbomario.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/jumbomario.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/jumbomario.html",
     isNew: false
 },
 {
     id: 941,
     title: "Needy Streamer Overload",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/needystreameroverload.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/needystreameroverload.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/needystreameroverload.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/needystreameroverload.html",
     isNew: false
 },
 {
     id: 942,
     title: "Bart Blast",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bartblast.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bartblast.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bartblast.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bartblast.html",
     isNew: false
 },
 {
     id: 943,
     title: "Kirby ~ Soft and Wet",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/kirbysoftandwet.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/kirbysoftandwet.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/kirbysoftandwet.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/kirbysoftandwet.html",
     isNew: false
 },
 {
     id: 944,
     title: "Tetris",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/tetris.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/tetris.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/tetris.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/tetris.html",
     isNew: false
 },
 {
     id: 945,
     title: "Five Nights at Epstein's",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fivenightsatepsteins.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fivenightsatepsteins.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fivenightsatepsteins.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fivenightsatepsteins.html",
     isNew: false
 },
 {
     id: 946,
     title: "Survivor.io",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/survivorio.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/survivorio.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/survivorio.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/survivorio.html",
     isNew: false
 },
 {
     id: 947,
     title: "FNF: Vs. Rewrite: Round 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/rewriteround2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/rewriteround2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/rewriteround2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/rewriteround2.html",
     isNew: false
 },
 {
     id: 948,
     title: "In Stars and Time",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/instarsandtime.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/instarsandtime.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/instarsandtime.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/instarsandtime.html",
     isNew: false
 },
 {
     id: 949,
     title: "FNF: Vs. Impostor (2025): UPDOG",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/updog.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/updog.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/updog.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/updog.html",
     isNew: false
 },
 {
     id: 950,
     title: "FNF: Vs Mouse: Rookies Edition (Disk 1)",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mouse-rookies.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mouse-rookies.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mouse-rookies.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mouse-rookies.html",
     isNew: false
 },
 {
     id: 951,
     title: "FNF: Anemaniac – Bendy vs Ollie",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/anemaniac.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/anemaniac.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/anemaniac.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/anemaniac.html",
     isNew: false
 },  
 {
     id: 952,
     title: "FNF: Sky: REBORN",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/skyreborn.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/skyreborn.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/skyreborn.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/skyreborn.html",
     isNew: false
 },  
 {
     id: 953,
     title: "FNF: Funkin’ on the Heights!",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/funkinheights.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/funkinheights.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/funkinheights.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/funkinheights.html",
     isNew: false
 }, 
 {
     id: 954,
     title: "FNF: DOCAD: 2-shot Demo",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/docad.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/docad.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/docad.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/docad.html",
     isNew: false
 },  
 {
     id: 955,
     title: "FNF: Annoying Orange: The Amazing Grace V2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/rottensmoothie.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/rottensmoothie.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/rottensmoothie.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/rottensmoothie.html",
     isNew: false
 },
 {
     id: 956,
     title: "awesome calculator",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/awesomecalculator.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/awesomecalculator.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/awesomecalculator.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/awesomecalculator.html",
     isNew: false
 },
     {
     id: 957,
     title: "Bloxorz",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloxorz.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloxorz.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloxorz.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloxorz.html",
     isNew: false
 },
 {
     id: 958,
     title: "Crazy Chicken 3D",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/crazychicken3d.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/crazychicken3d.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/crazychicken3d.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/crazychicken3d.html",
     isNew: false
 },
 {
     id: 959,
     title: "Crazy Kitty 3D",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/crazykitty3d.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/crazykitty3d.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/crazykitty3d.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/crazykitty3d.html",
     isNew: false
 },
 {
     id: 960,
     title: "Getting Over It with Bennett Foddy",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gettingoverit.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gettingoverit.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gettingoverit.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gettingoverit.html",
     isNew: false
 },
 {
     id: 961,
     title: "Hotline Miami",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/hotlinemiami.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/hotlinemiami.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/hotlinemiami.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/hotlinemiami.html",
     isNew: false
 },
 {
     id: 962,
     title: "Minecraft 1.5.2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mc152.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mc152.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mc152.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mc152.html",
     isNew: false
 },
 {
     id: 963,
     title: "Minecraft Alpha 1.2.6",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mcalpha126.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mcalpha126.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mcalpha126.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mcalpha126.html",
     isNew: false
 },
 {
     id: 964,
     title: "Minecraft Beta 1.3",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mcbeta13.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/mcbeta13.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mcbeta13.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/mcbeta13.html",
     isNew: false
 },
 {
     id: 966,
     title: "Tomb of the Mask",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/tombofthemask.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/tombofthemask.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/tombofthemask.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/tombofthemask.html",
     isNew: false
 },
 {
     id: 967,
     title: "Toss the Turtle",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/tosstheturtle.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/tosstheturtle.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/tosstheturtle.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/tosstheturtle.html",
     isNew: false
 },
 {
     id: 968,
     title: "Touhou: Luminous Strike",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/touhouluminousstrike.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/touhouluminousstrike.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/touhouluminousstrike.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/touhouluminousstrike.html",
     isNew: false
 },
 {
     id: 969,
     title: "Undertale: Last Breath",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/undertalelastbreath.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/undertalelastbreath.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/undertalelastbreath.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/undertalelastbreath.html",
     isNew: false
 },
 {
     id: 970,
     title: "Balatro",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/balatro.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/balatro.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/balatro.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/balatro.html",
     isNew: false
 },
 {
     id: 971,
     title: "A Random Bee Swarm Simulator Knockoff",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bee.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bee.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bee.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bee.html",
     isNew: false
 },
 {
     id: 972,
     title: "Baseball Bros",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/baseballbros.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/baseballbros.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/baseballbros.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/baseballbros.html",
     isNew: false
 },
 {
     id: 973,
     title: "Big Flappy Tower Tiny Square",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bigflappytowertinysquare.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bigflappytowertinysquare.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bigflappytowertinysquare.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bigflappytowertinysquare.html",
     isNew: false
 },
 {
     id: 974,
     title: "Bloons 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloons2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloons2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloons2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloons2.html",
     isNew: false
 },
 {
     id: 975,
     title: "Bloons Tower Defense 3",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonsTD3.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonsTD3.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonsTD3.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonsTD3.html",
     isNew: false
 },
 {
     id: 976,
     title: "Bloons Tower Defense 4",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonsTD4.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonsTD4.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonsTD4.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonsTD4.html",
     isNew: false
 },
 {
     id: 977,
     title: "Bloons Tower Defense 5",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonsTD5.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonsTD5.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonsTD5.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonsTD5.html",
     isNew: false
 },
 {
     id: 978,
     title: "Bloons Player Pack 1",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonspp1.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonspp1.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonspp1.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonspp1.html",
     isNew: false
 },
 {
     id: 979,
     title: "Bloons Player Pack 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonspp2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonspp2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonspp2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonspp2.html",
     isNew: false
 },
 {
     id: 980,
     title: "Bloons Player Pack 3",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonspp3.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonspp3.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonspp3.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonspp3.html",
     isNew: false
 },
 {
     id: 981,
     title: "Bloons Player Pack 4",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonspp4.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonspp4.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonspp4.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonspp4.html",
     isNew: false
 },
 {
     id: 982,
     title: "Bloons Player Pack 5",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonspp5.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonspp5.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonspp5.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonspp5.html",
     isNew: false
 },
 {
     id: 983,
     title: "Bowmasters",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bowmasters.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bowmasters.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bowmasters.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bowmasters.html",
     isNew: false
 },
 {
     id: 984,
     title: "Candy Crush",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/candycrush.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/candycrush.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/candycrush.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/candycrush.html",
     isNew: false
 },
 {
     id: 985,
     title: "Drift Cup Racing",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/driftcupracing.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/driftcupracing.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/driftcupracing.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/driftcupracing.html",
     isNew: false
 },
 {
     id: 986,
     title: "Jacksmith",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/jacksmith.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/jacksmith.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/jacksmith.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/jacksmith.html",
     isNew: false
 },
 {
     id: 987,
     title: "Jungle Bubble",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/junglebubble.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/junglebubble.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/junglebubble.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/junglebubble.html",
     isNew: false
 },
 {
     id: 988,
     title: "Memo Matcher",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/memomatcher.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/memomatcher.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/memomatcher.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/memomatcher.html",
     isNew: false
 },
 {
     id: 989,
     title: "Papa's Bakeria",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/papasbakeria.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/papasbakeria.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/papasbakeria.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/papasbakeria.html",
     isNew: false
 },
 {
     id: 990,
     title: "Papa's Cheeseria",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/papascheeseria.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/papascheeseria.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/papascheeseria.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/papascheeseria.html",
     isNew: false
 },
 {
     id: 991,
     title: "Papa's Donuteria",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/papasdonuteria.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/papasdonuteria.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/papasdonuteria.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/papasdonuteria.html",
     isNew: false
 },
 {
     id: 992,
     title: "Papa's Scooperia",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/papasscooperia.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/papasscooperia.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/papasscooperia.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/papasscooperia.html",
     isNew: false
 },
 {
     id: 993,
     title: "Papa's Taco Mia",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/papastacomia.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/papastacomia.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/papastacomia.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/papastacomia.html",
     isNew: false
 },
 {
     id: 994,
     title: "Potatoman Seeks the Troof",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/potatomanseeksthetroof.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/potatomanseeksthetroof.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/potatomanseeksthetroof.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/potatomanseeksthetroof.html",
     isNew: false
 },
 {
     id: 995,
     title: "Riddle School",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddleschool.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddleschool.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddleschool.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddleschool.html",
     isNew: false
 },
 {
     id: 996,
     title: "Riddle School 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddleschool2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddleschool2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddleschool2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddleschool2.html",
     isNew: false
 },
 {
     id: 997,
     title: "Riddle School 3",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddleschool3.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddleschool3.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddleschool3.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddleschool3.html",
     isNew: false
 },
 {
     id: 998,
     title: "Riddle School 4",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddleschool4.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddleschool4.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddleschool4.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddleschool4.html",
     isNew: false
 },
 {
     id: 999,
     title: "Riddle School 5",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddleschool5.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddleschool5.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddleschool5.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddleschool5.html",
     isNew: false
 },
 {
     id: 1000,
     title: "Riddle Transfer",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddletransfer.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddletransfer.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddletransfer.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddletransfer.html",
     isNew: false
 },
 {
     id: 1001,
     title: "Riddle Transfer 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddletransfer2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/riddletransfer2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddletransfer2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/riddletransfer2.html",
     isNew: false
 },
 {
     id: 1002,
     title: "Solar Smash",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/solarsmash.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/solarsmash.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/solarsmash.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/solarsmash.html",
     isNew: false
 },
       {
     id: 1003,
     title: "Awesome Tanks",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/awesometanks.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/awesometanks.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/awesometanks.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/awesometanks.html",
     isNew: false
 },
 {
     id: 1004,
     title: "Awesome Tanks 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/awesometanks2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/awesometanks2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/awesometanks2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/awesometanks2.html",
     isNew: false
 },
     {
     id: 1005,
     title: "Among Rampage",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/amongrampage.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/amongrampage.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/amongrampage.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/amongrampage.html",
     isNew: false
 },
 {
     id: 1006,
     title: "Doom",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/doom.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/doom.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/doom.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/doom.html",
     isNew: false
 },
 {
     id: 1007,
     title: "Doom II",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/doom2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/doom2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/doom2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/doom2.html",
     isNew: false
 },
 {
     id: 1008,
     title: "Doom III",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/doom3.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/doom3.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/doom3.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/doom3.html",
     isNew: false
 },
 {
     id: 1009,
     title: "Dumb Ways to Die",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/dumbwaystodie.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/dumbwaystodie.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/dumbwaystodie.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/dumbwaystodie.html",
     isNew: false
 },
 {
     id: 1010,
     title: "Fallout",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fallout.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fallout.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fallout.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fallout.html",
     isNew: false
 },
 {
     id: 1011,
     title: "Kindergarten",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/kindergarten.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/kindergarten.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/kindergarten.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/kindergarten.html",
     isNew: false
 },
 {
     id: 1012,
     title: "Kindergarten 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/kindergarten2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/kindergarten2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/kindergarten2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/kindergarten2.html",
     isNew: false
 },
 {
     id: 1013,
     title: "Kindergarten 3",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/kindergarten3.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/kindergarten3.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/kindergarten3.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/kindergarten3.html",
     isNew: false
 },
 {
     id: 1014,
     title: "OFF",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/off.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/off.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/off.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/off.html",
     isNew: false
 },
 {
     id: 1015,
     title: "Touhou Mother",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/touhoumother.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/touhoumother.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/touhoumother.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/touhoumother.html",
     isNew: false
 },
 {
     id: 1016,
     title: "Trivia Crack",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/triviacrack.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/triviacrack.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/triviacrack.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/triviacrack.html",
     isNew: false
 },
 {
     id: 1017,
     title: "Gacha Life",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gachalife.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gachalife.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gachalife.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gachalife.html",
     isNew: false
 },
 {
     id: 1018,
     title: "Gachaverse",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gachaverse.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gachaverse.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gachaverse.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gachaverse.html",
     isNew: false
 },
 {
     id: 1019,
     title: "FNF: Vs Forsaken: DEMO",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/forsaken.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/forsaken.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/forsaken.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/forsaken.html",
     isNew: false
 },
 {
     id: 1020,
     title: "FNF: Throwback",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/throwback.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/throwback.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/throwback.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/throwback.html",
     isNew: false
 },
 {
     id: 1021,
     title: "Ace Attorney Investigations",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/aceattorneyinvestigations.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/aceattorneyinvestigations.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/aceattorneyinvestigations.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/aceattorneyinvestigations.html",
     isNew: false
 },
 {
     id: 1022,
     title: "Bloons Insanity Pack",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonsinsanitypack.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/bloonsinsanitypack.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonsinsanitypack.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/bloonsinsanitypack.html",
     isNew: false
 },
 {
     id: 1023,
     title: "Dad n' Me",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/dadnme.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/dadnme.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/dadnme.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/dadnme.html",
     isNew: false
 },
 {
     id: 1024,
     title: "Gravity Duck",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gravityduck.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gravityduck.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gravityduck.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gravityduck.html",
     isNew: false
 },
 {
     id: 1025,
     title: "Gravity Duck 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gravityduck2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gravityduck2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gravityduck2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gravityduck2.html",
     isNew: false
 },
 {
     id: 1026,
     title: "Halloween Jam",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/halloweenjam.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/halloweenjam.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/halloweenjam.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/halloweenjam.html",
     isNew: false
 },
 {
     id: 1027,
     title: "NG's Finest",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/ngsfinest.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/ngsfinest.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/ngsfinest.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/ngsfinest.html",
     isNew: false
 },
 {
     id: 1028,
     title: "Nyan Cat Lost in Space",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/nyancatlostinspace.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/nyancatlostinspace.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/nyancatlostinspace.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/nyancatlostinspace.html",
     isNew: false
 },
 {
     id: 1029,
     title: "Patapon Beat Camp",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/pataponbeatcamp.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/pataponbeatcamp.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/pataponbeatcamp.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/pataponbeatcamp.html",
     isNew: false
 },
 {
     id: 1030,
     title: "Pet Zombie",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/petzombie.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/petzombie.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/petzombie.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/petzombie.html",
     isNew: false
 },
 {
     id: 1031,
     title: "Pico's School: Love Conquers All",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/picosschoolloveconquersall.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/picosschoolloveconquersall.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/picosschoolloveconquersall.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/picosschoolloveconquersall.html",
     isNew: false
 },
 {
     id: 1032,
     title: "Pocket Emo",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/pocketemo.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/pocketemo.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/pocketemo.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/pocketemo.html",
     isNew: false
 },
 {
     id: 1033,
     title: "Stick Figure Badminton",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/stickfigurebadminton.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/stickfigurebadminton.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickfigurebadminton.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickfigurebadminton.html",
     isNew: false
 },
 {
     id: 1034,
     title: "Stick Figure Badminton 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/stickfigurebadminton2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/stickfigurebadminton2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickfigurebadminton2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickfigurebadminton2.html",
     isNew: false
 },
 {
     id: 1035,
     title: "Stick Figure Badminton 3",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/stickfigurebadminton3.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/stickfigurebadminton3.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickfigurebadminton3.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickfigurebadminton3.html",
     isNew: false
 },
 {
     id: 1036,
     title: "Strike Force Kitty",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/strikeforcekitty.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/strikeforcekitty.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/strikeforcekitty.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/strikeforcekitty.html",
     isNew: false
 },
 {
     id: 1037,
     title: "Strike Force Kitty 2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/strikeforcekitty2.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/strikeforcekitty2.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/strikeforcekitty2.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/strikeforcekitty2.html",
     isNew: false
 },
 {
     id: 1038,
     title: "Strike Force Kitty Last Stand",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/strikeforcekittylaststand.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/strikeforcekittylaststand.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/strikeforcekittylaststand.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/strikeforcekittylaststand.html",
     isNew: false
 },
 {
     id: 1039,
     title: "Super Monkey Ball 1/2",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermonkeyball12.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/supermonkeyball12.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermonkeyball12.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/supermonkeyball12.html",
     isNew: false
 },
 {
     id: 1040,
     title: "SpongeBob SquarePants: Trail of the Snail",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/trailofthesnail.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/trailofthesnail.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/trailofthesnail.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/trailofthesnail.html",
     isNew: false
 },
     {
     id: 1041,
     title: "Geometry Dash: Subzero",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gdsubzero.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/gdsubzero.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gdsubzero.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/gdsubzero.html",
     isNew: false
 },
 {
     id: 1042,
     title: "Hill Climb Racing Lite",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/hillclimbracinglite.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/hillclimbracinglite.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/hillclimbracinglite.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/hillclimbracinglite.html",
     isNew: false
 },
 {
     id: 1043,
     title: "Huggy Wuggy Pixel Nights",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/huggywuggypixelnights.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/huggywuggypixelnights.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/huggywuggypixelnights.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/huggywuggypixelnights.html",
     isNew: false
 },
 {
     id: 1044,
     title: "RocketGoal.io",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/rocketgoalio.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/rocketgoalio.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/rocketgoalio.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/rocketgoalio.html",
     isNew: false
 },
 {
     id: 1045,
     title: "Stick With It",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/stickwithit.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/stickwithit.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickwithit.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickwithit.html",
     isNew: false
 },
 {
     id: 1046,
     title: "Wolfenstein 3D",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wolfenstein.png",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/wolfenstein.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wolfenstein.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/wolfenstein.html",
     isNew: false
 },
 {
     id: 1047,
     title: "A Random Clicker By Jalen",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/arandomclicker.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/arandomclicker.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/arandomclicker.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/arandomclicker.html",
     isNew: false
 },
 {
     id: 1048,
     title: "Sonic Mania Plus",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicmaniaplus.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/sonicmaniaplus.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicmaniaplus.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sonicmaniaplus.html",
     isNew: false
 },
 {
     id: 1049,
     title: "FNF: Remnants",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fnfremnants.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/fnfremnants.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fnfremnants.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/fnfremnants.html",
     isNew: false
 },
 {
     id: 1050,
     title: "Jelly Mario",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/jellymario.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/jellymario.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/jellymario.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/jellymario.html",
     isNew: false
 },
 {
     id: 1051,
     title: "School Boy Runaway",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/schoolboyrunaway.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/schoolboyrunaway.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/schoolboyrunaway.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/schoolboyrunaway.html",
     isNew: true
 },
 {
     id: 1052,
     title: "Epsteins Education And Learning",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/baldiepstein.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/baldiepstein.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/baldiepstein.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/baldiepstein.html",
     isNew: false
 },
 {
     id: 1053,
     title: "CaseOhs Education And Learning",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/baldicaseoh.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/baldicaseoh.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/baldicaseoh.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/baldicaseoh.html",
     isNew: false
 },
 {
     id: 1054,
     title: "FNF: Hazier River",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/hazier.jpg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/2026uploads/hazier.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/hazier.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/hazier.html",
     isNew: true
 },
 ];
@@ -7633,7 +7649,7 @@ function renderGames() {
     gameCard.setAttribute('data-game-id', game.id);
     gameCard.innerHTML = `
       <div class="game-card-visual">
-      <img src="${game.translatedImage || game.image}" alt="${game.title}" class="game-image" loading="lazy" onerror="this.onerror=null;this.src='https://testingcf.jsdelivr.net/gh/aDiesmos/whatver@beb263a7da1c968fd4d64b9bcd55a070c6ea7d17/wip.jpg';">
+      <img src="${game.translatedImage || game.image}" alt="${game.title}" class="game-image" loading="lazy" onerror="this.onerror=null;this.src='https://testingcf.jsdelivr.net/gh/aDiesmos/whatver/wip.jpg';">
       <div class="game-info">
         <div class="game-title" data-game-id="${game.id}">${game.title}</div>
         <div class="game-actions">
