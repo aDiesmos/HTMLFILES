@@ -10,11 +10,9 @@ function translateImageUrl(oldUrl) {
   const filename = oldUrl.split('/').pop();
 
   
-<<<<<<< Local Changes
   return `https://testingcf.jsdelivr.net/gh/aDiesmos/images/${filename}`;
-=======
+  
   return `https://testingcf.jsdelivr.net/gh/aDiesmos/images/${filename}`;
->>>>>>> External Changes
 }
 
 function logToClicky(gameName) {
@@ -32,11 +30,8 @@ function translateGameUrl(oldUrl) {
     if (gameMatch && gameMatch[1]) {
       const gameName = gameMatch[1];
       
-<<<<<<< Local Changes
       return `https://testingcf.jsdelivr.net/gh/aDiesmos/gba/${gameName}`;
-=======
       return `https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/${gameName}`;
->>>>>>> External Changes
     }
   }
   
@@ -77,22 +72,16 @@ function extractGamePath(fullUrl) {
  
   if (parts.length === 1) {
     const gameName = parts[0];
-<<<<<<< Local Changes
     return `https://testingcf.jsdelivr.net/gh/aDiesmos//${gameName}.html`;
-=======
     return `https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/aDiesmos/${gameName}.html`;
->>>>>>> External Changes
   }
   
   const urlPath = parts.slice(0, -1).join('/');
   const gameName = parts.pop();
   
   
-<<<<<<< Local Changes
   return `https://testingcf.jsdelivr.net/gh/aDiesmos/${urlPath}/${gameName}.html`;
-=======
   return `https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/${urlPath}/${gameName}.html`;
->>>>>>> External Changes
 }
 
 
