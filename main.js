@@ -27,21 +27,21 @@ function translateGameUrl(oldUrl) {
   if (!oldUrl) return '';
   
   
-  if (oldUrl.includes('/gba/player.html?game=')) {
+  if (oldUrl.includes('/gba/')) {
     const gameMatch = oldUrl.match(/player\.html\?game=([^&]+)/);
     if (gameMatch && gameMatch[1]) {
       const gameName = gameMatch[1];
       
 <<<<<<< Local Changes
-      return `https://testingcf.jsdelivr.net/gh/aDiesmos/gba/player.html?game=${gameName}`;
+      return `https://testingcf.jsdelivr.net/gh/aDiesmos/gba/${gameName}`;
 =======
-      return `https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/player.html?game=${gameName}`;
+      return `https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/${gameName}`;
 >>>>>>> External Changes
     }
   }
   
   
-  if (oldUrl.includes('player.html?game=')) {
+  if (oldUrl.includes('')) {
     const urlMatch = oldUrl.match(/player\.html\?game=(.+)/);
     if (urlMatch && urlMatch[1]) {
       const gameUrl = decodeURIComponent(urlMatch[1]);
@@ -63,8 +63,8 @@ function extractGamePath(fullUrl) {
   let path = fullUrl;
   
   
-  if (path.includes('https://chicken.parmacitieschools.org/')) {
-    path = path.replace('https://chicken.parmacitieschools.org/', '');
+  if (path.includes('https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/')) {
+    path = path.replace('https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/', '');
   }
   
   
@@ -100,4284 +100,4284 @@ const games = [
    {
     id: 1,
     title: "Anti Terrorist Rush",
-    image: "https://chicken.parmacitieschools.org/images/anti-terrorist-rush.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/anti-terrorist-rush/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/anti-terrorist-rush.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/anti-terrorist-rush.html",
     isNew: false
   },
   {
     id: 2,
     title: "Bad Ice Cream 2",
-    image: "https://chicken.parmacitieschools.org/images/bad-ice-cream-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bad-ice-cream-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bad-ice-cream-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/bad-ice-cream-2.html",
     isNew: false
   },
   {
     id: 3,
     title: "Bad Ice Cream 3",
-    image: "https://chicken.parmacitieschools.org/images/bad-ice-cream-3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bad-ice-cream-3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bad-ice-cream-3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/bad-ice-cream-3.html",
     isNew: false
   },
   {
     id: 4,
     title: "Bad Ice Cream",
-    image: "https://chicken.parmacitieschools.org/images/bad-ice-cream.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bad-ice-cream/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bad-ice-cream.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/bad-ice-cream.html",
     isNew: false
   },
   {
     id: 6,
     title: "Cat Connection",
-    image: "https://chicken.parmacitieschools.org/images/catconnection.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/catconnection/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/catconnection.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/catconnection.html",
     isNew: false
   },
   {
     id: 7,
     title: "Douchebag Workout 2",
-    image: "https://chicken.parmacitieschools.org/images/douchebag-workout-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/douchebag-workout-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/douchebag-workout-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/douchebag-workout-2.html",
     isNew: false
   },
   {
     id: 8,
     title: "Froggys Battle",
-    image: "https://chicken.parmacitieschools.org/images/froggys-battle.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/froggys-battle/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/froggys-battle.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/froggys-battle.html",
     isNew: false
   },
   {
     id: 9,
     title: "Gimme The Airpod",
-    image: "https://chicken.parmacitieschools.org/images/gimme-the-airpod.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/gimme-the-airpod/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gimme-the-airpod.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/gimme-the-airpod.html",
     isNew: false
   },
   {
     id: 10,
     title: "an average day at the cat cafe",
-    image: "https://chicken.parmacitieschools.org/images/catcafe.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/catcafe/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/catcafe.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/catcafe.html",
     isNew: false
   },
   {
     id: 11,
     title: "Helios",
-    image: "https://chicken.parmacitieschools.org/images/helios.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/helios/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/helios.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/helios.html",
     isNew: false
   },
   {
     id: 12,
     title: "Matrix Rampage",
-    image: "https://chicken.parmacitieschools.org/images/matrixrampage.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/matrixrampage/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/matrixrampage.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/matrixrampage.html",
     isNew: false
   },
   {
     id: 13,
     title: "SpongeBob SquarePants: Bubble Blast",
-    image: "https://chicken.parmacitieschools.org/images/bubble-blast.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/bubble-blast/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bubble-blast.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/bubble-blast.html",
     isNew: false
   },
   {
     id: 14,
     title: "2048 Merge Run",
-    image: "https://chicken.parmacitieschools.org/images/2048-merge-run.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/2048-merge-run/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/2048-merge-run.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/2048-merge-run.html",
     isNew: false
   },
   {
     id: 15,
     title: "Build a Big Army",
-    image: "https://chicken.parmacitieschools.org/images/build-a-big-army.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/build-a-big-army/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/build-a-big-army.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/build-a-big-army.html",
     isNew: false
   },
   {
     id: 16,
     title: "1010 Deluxe",
-    image: "https://chicken.parmacitieschools.org/images/1010deluxe.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/schol/1010deluxe/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/1010deluxe.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/schol/1010deluxe.html",
     isNew: false
   },
   {
     id: 17,
     title: "3 Pandas",
-    image: "https://chicken.parmacitieschools.org/images/build-a-big-army.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/schol/3pandas/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/build-a-big-army.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/schol/3pandas.html",
     isNew: false
   },
   {
     id: 18,
     title: "Hoop Royale",
-    image: "https://chicken.parmacitieschools.org/images/HoopRoyale-gh-pages.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/schol/HoopRoyale-gh-pages/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/HoopRoyale-gh-pages.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/schol/HoopRoyale-gh-pages.html",
     isNew: false
   },
   {
     id: 19,
     title: "Boxing Random",
-    image: "https://chicken.parmacitieschools.org/images/boxingrandom.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/schol/boxingrandom/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/boxingrandom.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/schol/boxingrandom.html",
     isNew: false
   },
   {
     id: 20,
     title: "Bubble Tower 3d",
-    image: "https://chicken.parmacitieschools.org/images/bubbletower3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/schol/bubbletower3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bubbletower3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/schol/bubbletower3d.html",
     isNew: false
   },
   {
     id: 21,
     title: "Build a Plane",
-    image: "https://chicken.parmacitieschools.org/images/build-a-plane.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/build-a-plane/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/build-a-plane.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/build-a-plane.html",
     isNew: false
   },
   {
     id: 22,
     title: "Camouflage and Sniper",
-    image: "https://chicken.parmacitieschools.org/images/camouflage-and-sniper.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/camouflage-and-sniper/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/camouflage-and-sniper.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/camouflage-and-sniper.html",
     isNew: false
   },
   {
     id: 23,
     title: "Car Survival 3D",
-    image: "https://chicken.parmacitieschools.org/images/car-survival-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/car-survival-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/car-survival-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/car-survival-3d.html",
     isNew: false
   },
   {
     id: 24,
     title: "City Defense",
-    image: "https://chicken.parmacitieschools.org/images/city-defense.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/city-defense/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/city-defense.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/city-defense.html",
     isNew: false
   },
   {
     id: 25,
     title: "Clothing Shop 3D",
-    image: "https://chicken.parmacitieschools.org/images/clothing-shop-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/clothing-shop-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/clothing-shop-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/clothing-shop-3d.html",
     isNew: false
   },
   {
     id: 26,
     title: "Cool Cars Run 3D",
-    image: "https://chicken.parmacitieschools.org/images/cool-cars-run-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/cool-cars-run-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cool-cars-run-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/cool-cars-run-3d.html",
     isNew: false
   },
   {
     id: 27,
     title: "Crush Cars 3D",
-    image: "https://chicken.parmacitieschools.org/images/crush-cars-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/crush-cars-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/crush-cars-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/crush-cars-3d.html",
     isNew: false
   },
   {
     id: 28,
     title: "Scarlet Shift",
-    image: "https://chicken.parmacitieschools.org/images/scarletshift.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/schol/scarletshift/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/scarletshift.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/schol/scarletshift.html",
     isNew: false
   },
   {
     id: 29,
     title: "The Final Cat",
-    image: "https://chicken.parmacitieschools.org/images/finalcat.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/schol/finalcat/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/finalcat.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/schol/finalcat.html",
     isNew: false
   },
   {
     id: 30,
     title: "Renegade Rally",
-    image: "https://chicken.parmacitieschools.org/images/renegaderally.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/schol/renegaderally/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/renegaderally.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/schol/renegaderally.html",
     isNew: false
   },
   {
     id: 31,
     title: "Destroy the Car 3D",
-    image: "https://chicken.parmacitieschools.org/images/destroy-the-car-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/destroy-the-car-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/destroy-the-car-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/destroy-the-car-3d.html",
     isNew: false
   },
   {
     id: 32,
     title: "Wild Kratts: Archerfish Bug Rush",
-    image: "https://chicken.parmacitieschools.org/images/archerfish-bug-rush.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/archerfish-bug-rush/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/archerfish-bug-rush.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/archerfish-bug-rush.html",
     isNew: false
   },
   {
     id: 33,
     title: "Wild Kratts: Creature Mobile",
-    image: "https://chicken.parmacitieschools.org/images/creature-mobile.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/creature-mobile/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/creature-mobile.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/creature-mobile.html",
     isNew: false
   },
   {
     id: 34,
     title: "Bendy and the Ink Machine",
-    image: "https://chicken.parmacitieschools.org/images/bendy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/vendors/bendy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bendy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/vendors/bendy.html",
     isNew: false
   },
   {
     id: 35,
     title: "Yandere Simulator",
-    image: "https://chicken.parmacitieschools.org/images/yandere-simulator.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/yandere-simulator/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/yandere-simulator.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/yandere-simulator.html",
     isNew: false
   },
   {
     id: 36,
     title: "FNF: CN Lost Episodes",
-    image: "https://chicken.parmacitieschools.org/images/cnlost.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/cnlost/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cnlost.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/cnlost.html",
     isNew: false
   },
   {
     id: 37,
     title: "FNF: Sweet Licorice",
-    image: "https://chicken.parmacitieschools.org/images/licorice.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/licorice/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/licorice.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/licorice.html",
     isNew: false
   },
   {
     id: 38,
     title: "FNF: Porifera Atoll",
-    image: "https://chicken.parmacitieschools.org/images/porifera.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/porifera/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/porifera.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/porifera.html",
     isNew: false
   },
   {
     id: 39,
     title: "FNF: Tails Gets Trolled",
-    image: "https://chicken.parmacitieschools.org/images/tailstroll.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/tailstroll/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tailstroll.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/tailstroll.html",
     isNew: false
   },
   {
     id: 40,
     title: "FNF: ATROCITY 2025",
-    image: "https://chicken.parmacitieschools.org/images/atrocity.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/atrocity/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/atrocity.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/atrocity.html",
     isNew: false
   },
   {
     id: 41,
     title: "FNF: Chev (V-Slice One Shot)",
-    image: "https://chicken.parmacitieschools.org/images/chev.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/chev/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/chev.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/chev.html",
     isNew: false
   },
   {
     id: 42,
     title: "Wild Kratts: Monkey Mayhem",
-    image: "https://chicken.parmacitieschools.org/images/monkey-mayhem.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/monkey-mayhem/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/monkey-mayhem.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/monkey-mayhem.html",
     isNew: false
   },
   {
     id: 43,
     title: "Wild Kratts: Amazin' Amazon Adventure",
-    image: "https://chicken.parmacitieschools.org/images/amazin-amazon-adventure.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/amazin-amazon-adventure/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/amazin-amazon-adventure.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/amazin-amazon-adventure.html",
     isNew: false
   },
   {
     id: 44,
     title: "Super Mario Micro Land",
-    image: "https://chicken.parmacitieschools.org/images/super-mario-micro-land.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/super-mario-micro-land/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/super-mario-micro-land.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/super-mario-micro-land.html",
     isNew: false
   },
   {
     id: 45,
     title: "Diamond Seeker",
-    image: "https://chicken.parmacitieschools.org/images/diamond-seeker.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/diamond-seeker/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/diamond-seeker.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/diamond-seeker.html",
     isNew: false
   },
   {
     id: 46,
     title: "Draw Joust",
-    image: "https://chicken.parmacitieschools.org/images/draw-joust.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/draw-joust/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/draw-joust.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/draw-joust.html",
     isNew: false
   },
   {
     id: 47,
     title: "Evolving Bombs 3D",
-    image: "https://chicken.parmacitieschools.org/images/evolving-bombs-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/evolving-bombs-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/evolving-bombs-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/evolving-bombs-3d.html",
     isNew: false
   },
   {
     id: 48,
     title: "Fire and Frost Master",
-    image: "https://chicken.parmacitieschools.org/images/fire-and-frost-master.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/fire-and-frost-master/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fire-and-frost-master.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/fire-and-frost-master.html",
     isNew: false
   },
   {
     id: 49,
     title: "Fitness Empire",
-    image: "https://chicken.parmacitieschools.org/images/fitness-empire.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/fitness-empire/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fitness-empire.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/fitness-empire.html",
     isNew: false
   },
   {
     id: 50,
     title: "SpongeBob SquarePants: Land Ho!",
-    image: "https://chicken.parmacitieschools.org/images/spongebob-landho.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/spongebob-landho/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spongebob-landho.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/spongebob-landho.html",
     isNew: false
   },
   {
     id: 51,
     title: "SpongeBob SquarePants: SpongeBob Run",
-    image: "https://chicken.parmacitieschools.org/images/spongebob-run.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/spongebob-run/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spongebob-run.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/spongebob-run/.html",
     isNew: false
   },
   {
     id: 52,
     title: "Mario Party Advance",
-    image: "https://chicken.parmacitieschools.org/images/marioparty.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=marioparty",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/marioparty.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/marioparty.html",
     isNew: false
   },
   {
     id: 53,
     title: "WarioWare, Inc.",
-    image: "https://chicken.parmacitieschools.org/images/wario_ware.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=wario_ware",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/wario_ware.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/wario_ware.html",
     isNew: false
   },
   {
     id: 54,
     title: "The Legend of Zelda: A Link to the Past",
-    image: "https://chicken.parmacitieschools.org/images/zelda_past.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=zelda_past",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/zelda_past.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/zelda_past.html",
     isNew: false
   },
   {
     id: 55,
     title: "Final Fantasy 1 & 2 Advance",
-    image: "https://chicken.parmacitieschools.org/images/ff1and2.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=ff1and2",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ff1and2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/ff1and2.html",
     isNew: false
   },
   {
     id: 56,
     title: "Final Fantasy IV Advance (Sound Restoration Mod)",
-    image: "https://chicken.parmacitieschools.org/images/ff4S.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=ff4S",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ff4S.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/ff4S.html",
     isNew: false
   },
   {
     id: 57,
     title: "Final Fantasy VI Advance",
-    image: "https://chicken.parmacitieschools.org/images/ff6.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=ff6",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ff6.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/ff6.html",
     isNew: false
   },
   {
     id: 58,
     title: "Final Fantasy Tactics Advance",
-    image: "https://chicken.parmacitieschools.org/images/final_fantasy_tactics.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=final_fantasy_tactics",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/final_fantasy_tactics.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/final_fantasy_tactics.html",
     isNew: false
   },
   {
     id: 59,
     title: "Fire Emblem",
-    image: "https://chicken.parmacitieschools.org/images/fire_emblem.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=fire_emblem",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fire_emblem.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/fire_emblem.html",
     isNew: false
   },
   {
     id: 60,
     title: "Digimon Racing",
-    image: "https://chicken.parmacitieschools.org/images/digimon_racing.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=digimon_racing",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/digimon_racing.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/digimon_racing.html",
     isNew: false
   },
   {
     id: 61,
     title: "The Legend of Zelda: The Minish Cap",
-    image: "https://chicken.parmacitieschools.org/images/zelda_minish.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=zelda_minish",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/zelda_minish.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/zelda_minish.html",
     isNew: false
   },
   {
     id: 62,
     title: "Bomberman Max 2 - Blue Advance",
-    image: "https://chicken.parmacitieschools.org/images/bomberman_max2blue.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=bomberman_max2blue",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bomberman_max2blue.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/bomberman_max2blue.html",
     isNew: false
   },
   {
     id: 63,
     title: "Bomberman Tournament",
-    image: "https://chicken.parmacitieschools.org/images/bomberman_tournament.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=bomberman_tournament",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bomberman_tournament.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/bomberman_tournament.html",
     isNew: false
   },
   {
     id: 64,
     title: "Bubble Bobble: Old and New",
-    image: "https://chicken.parmacitieschools.org/images/bubblebobble.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=bubblebobble",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bubblebobble.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/bubblebobble.html",
     isNew: false
   },
   {
     id: 65,
     title: "F-Zero - GP Legend",
-    image: "https://chicken.parmacitieschools.org/images/fzero_gp.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=fzero_gp",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fzero_gp.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/fzero_gp.html",
     isNew: false
   },
   {
     id: 66,
     title: "F-Zero - Maximum Velocity",
-    image: "https://chicken.parmacitieschools.org/images/fzero_max.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=fzero_max",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fzero_max.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/fzero_max.html",
     isNew: false
   },
   {
     id: 67,
     title: "Game & Watch Gallery 4",
-    image: "https://chicken.parmacitieschools.org/images/gamewatch4.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=gamewatch4",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gamewatch4.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/gamewatch4.html",
     isNew: false
   },
   {
     id: 68,
     title: "Golden Sun",
-    image: "https://chicken.parmacitieschools.org/images/goldensun.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=goldensun",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/goldensun.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/goldensun.html",
     isNew: false
   },
   {
     id: 69,
     title: "Gunstar Super Heroes",
-    image: "https://chicken.parmacitieschools.org/images/gunstar_super_heroes.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=gunstar_super_heroes",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gunstar_super_heroes.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/gunstar_super_heroes.html",
     isNew: false
   },
   {
     id: 70,
     title: "Hamtaro - Ham-Ham Heartbreak",
-    image: "https://chicken.parmacitieschools.org/images/hamtaro_heartbreak.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=hamtaro_heartbreak",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hamtaro_heartbreak.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/hamtaro_heartbreak.html",
     isNew: false
   },
   {
     id: 71,
     title: "Iridion 3D",
-    image: "https://chicken.parmacitieschools.org/images/iridion.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=iridion",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/iridion.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/iridion.html",
     isNew: false
   },
   {
     id: 72,
     title: "Kirby & The Amazing Mirror",
-    image: "https://chicken.parmacitieschools.org/images/kirbymirror.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=kirbymirror",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/kirbymirror.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/kirbymirror.html",
     isNew: false
   },
   {
     id: 73,
     title: "Kirby: Nightmare in Dream Land",
-    image: "https://chicken.parmacitieschools.org/images/kirbynightmare.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=kirbynightmare",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/kirbynightmare.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/kirbynightmare.html",
     isNew: false
   },
   {
     id: 74,
     title: "The Amazing World of Gumball: Disc Duel",
-    image: "https://chicken.parmacitieschools.org/images/discduel.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/discduel/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/discduel.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/discduel.html",
     isNew: false
   },
   {
     id: 75,
     title: "The Amazing World of Gumball: Swing Out",
-    image: "https://chicken.parmacitieschools.org/images/swingout.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/swingout/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/swingout.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/swingout.html",
     isNew: false
   },
   {
     id: 76,
     title: "The Amazing World of Gumball: Remote Fu",
-    image: "https://chicken.parmacitieschools.org/images/remotefu.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/remotefu/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/remotefu.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/remotefu.html",
     isNew: false
   },
   {
     id: 77,
     title: "The Amazing World of Gumball: Snow Stoppers",
-    image: "https://chicken.parmacitieschools.org/images/snowstoppers.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/snowstoppers/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/snowstoppers.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/snowstoppers.html",
     isNew: false
   },
   {
     id: 78,
     title: "The Amazing World of Gumball: Water Sons",
-    image: "https://chicken.parmacitieschools.org/images/watersons.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/watersons/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/watersons.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/watersons.html",
     isNew: false
   },
   {
     id: 79,
     title: "SpongeBob SquarePants: Squidward's Sizzlin' Scare",
-    image: "https://chicken.parmacitieschools.org/images/spongebob-sizzle.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/spongebob-sizzle/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spongebob-sizzle.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/spongebob-sizzle.html",
     isNew: false
   },
   {
     id: 80,
     title: "SpongeBob SquarePants: Sandy's Sponge Stacker",
-    image: "https://chicken.parmacitieschools.org/images/spongebob-stacker.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/spongebob-stacker/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spongebob-stacker.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/spongebob-stacker.html",
     isNew: false
   },
   {
     id: 81,
     title: "SpongeBob SquarePants: Tasty Pastry Party",
-    image: "https://chicken.parmacitieschools.org/images/spongebob-tasty.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/spongebob-tasty/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spongebob-tasty.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/spongebob-tasty.html",
     isNew: false
   },
   {
     id: 82,
     title: "SpongeBob SquarePants: The Kah-Ray-Tay Squid",
-    image: "https://chicken.parmacitieschools.org/images/spongebob-thekahrahtaysquid.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/spongebob-thekahrahtaysquid/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spongebob-thekahrahtaysquid.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/spongebob-thekahrahtaysquid.html",
     isNew: false
   },
   {
     id: 83,
     title: "HACHAMECHA MARCHEN",
-    image: "https://chicken.parmacitieschools.org/images/hachamecha.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/hachamecha/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hachamecha.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/hachamecha.html",
     isNew: false
   },
   {
     id: 84,
     title: "PortaBoy",
-    image: "https://chicken.parmacitieschools.org/images/portaboy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/portaboy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/portaboy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/portaboy.html",
     isNew: false
   },
   {
     id: 85,
     title: "Oshi Oshi Punch!",
-    image: "https://chicken.parmacitieschools.org/images/oshi-oshi-punch.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/oshi-oshi-punch/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/oshi-oshi-punch.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/oshi-oshi-punch.html",
     isNew: false
   },
   {
     id: 86,
     title: "Bad Monday Simulator",
-    image: "https://chicken.parmacitieschools.org/images/bad-monday-simulator.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/bad-monday-simulator/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bad-monday-simulator.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/bad-monday-simulator.html",
     isNew: false
   },
   {
     id: 87,
     title: "Human Expenditure Program (BLOODMONEY! 2)",
-    image: "https://chicken.parmacitieschools.org/images/human-expenditure-program.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/human-expenditure-program/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/human-expenditure-program.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/human-expenditure-program.html",
     isNew: false
   },
   {
     id: 88,
     title: "DOKI BOOM DASH!",
-    image: "https://chicken.parmacitieschools.org/images/dokiboomdash.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/dokiboomdash/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/dokiboomdash.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/dokiboomdash.html",
     isNew: false
   },
   {
     id: 89,
     title: "kana.exe",
-    image: "https://chicken.parmacitieschools.org/images/kanaexe.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/kanaexe/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/kanaexe.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/kanaexe.html",
     isNew: false
   },
   {
     id: 90,
     title: "Neo Malta",
-    image: "https://chicken.parmacitieschools.org/images/neomalta.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/neomalta/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/neomalta.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/neomalta.html",
     isNew: false
   },
   {
     id: 91,
     title: "let's hide the body!♡ (tee-hee~)",
-    image: "https://chicken.parmacitieschools.org/images/hidethebody.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/hidethebody/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hidethebody.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/hidethebody.html",
     isNew: false
   },
   {
     id: 92,
     title: "SpongeBob SquarePants: WereSquirrel",
-    image: "https://chicken.parmacitieschools.org/images/spongebob-weresquirrel.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/spongebob-weresquirrel/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spongebob-weresquirrel.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/spongebob-weresquirrel.html",
     isNew: false
   },
   {
     id: 93,
     title: "SpongeBob SquarePants: Krabby Katch",
-    image: "https://chicken.parmacitieschools.org/images/krabbykatch.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/krabbykatch/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/krabbykatch.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/krabbykatch.html",
     isNew: false
   },
   {
     id: 94,
     title: "Flick Goal",
-    image: "https://chicken.parmacitieschools.org/images/flick-goal.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/flick-goal/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/flick-goal.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/flick-goal.html",
     isNew: false
   },
   {
     id: 95,
     title: "Flip Master",
-    image: "https://chicken.parmacitieschools.org/images/flip-master.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/flip-master/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/flip-master.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/flip-master.html",
     isNew: false
   },
   {
     id: 96,
     title: "Giant Wanted",
-    image: "https://chicken.parmacitieschools.org/images/giant-wanted.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/giant-wanted/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/giant-wanted.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/giant-wanted.html",
     isNew: false
   },
   {
     id: 97,
     title: "Gun Clone",
-    image: "https://chicken.parmacitieschools.org/images/gun-clone.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/gun-clone/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gun-clone.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/gun-clone.html",
     isNew: false
   },
   {
     id: 98,
     title: "Gun Runner",
-    image: "https://chicken.parmacitieschools.org/images/gun-runner.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/gun-runner/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gun-runner.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/gun-runner.html",
     isNew: false
   },
   {
     id: 99,
     title: "High Heels",
-    image: "https://chicken.parmacitieschools.org/images/high-heels.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/high-heels/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/high-heels.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/high-heels.html",
     isNew: false
   },
   {
     id: 100,
     title: "Kaji Run",
-    image: "https://chicken.parmacitieschools.org/images/kaji-run.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/kaji-run/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/kaji-run.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/kaji-run.html",
     isNew: false
   },
   {
     id: 101,
     title: "Make a Superboat",
-    image: "https://chicken.parmacitieschools.org/images/make-a-superboat.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/make-a-superboat/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/make-a-superboat.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/make-a-superboat.html",
     isNew: false
   },
   {
     id: 102,
     title: "Makeover Run",
-    image: "https://chicken.parmacitieschools.org/images/makeover-run.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/makeover-run/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/makeover-run.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/makeover-run.html",
     isNew: false
   },
   {
     id: 103,
     title: "Mega Car Jumps",
-    image: "https://chicken.parmacitieschools.org/images/mega-car-jumps.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/mega-car-jumps/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/mega-car-jumps.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/mega-car-jumps.html",
     isNew: false
   },
   {
     id: 104,
     title: "Money Rush",
-    image: "https://chicken.parmacitieschools.org/images/money-rush.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/money-rush/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/money-rush.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/money-rush.html",
     isNew: false
   },
   {
     id: 105,
     title: "Monster Box 3D",
-    image: "https://chicken.parmacitieschools.org/images/monster-box-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/monster-box-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/monster-box-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/monster-box-3d.html",
     isNew: false
   },
   {
     id: 106,
     title: "Office Fight",
-    image: "https://chicken.parmacitieschools.org/images/office-fight.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/office-fight/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/office-fight.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/office-fight.html",
     isNew: false
   },
   {
     id: 107,
     title: "Robot Invasion",
-    image: "https://chicken.parmacitieschools.org/images/robot-invasion.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/robot-invasion/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/robot-invasion.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/robot-invasion.html",
     isNew: false
   },
   {
     id: 108,
     title: "Run Rich 3D",
-    image: "https://chicken.parmacitieschools.org/images/run-rich-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/run-rich-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/run-rich-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/run-rich-3d.html",
     isNew: false
   },
   {
     id: 109,
     title: "Save P Diddy From Prison",
-    image: "https://chicken.parmacitieschools.org/images/save-p-diddy-from-prison.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/save-p-diddy-from-prison/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/save-p-diddy-from-prison.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/save-p-diddy-from-prison.html",
     isNew: false
   },
   {
     id: 110,
     title: "Seat Jam 3D",
-    image: "https://chicken.parmacitieschools.org/images/seat-jam-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/seat-jam-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/seat-jam-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/seat-jam-3d.html",
     isNew: false
   },
   {
     id: 111,
     title: "Shooting Master",
-    image: "https://chicken.parmacitieschools.org/images/shooting-master.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/shooting-master/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/shooting-master.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/shooting-master.html",
     isNew: false
   },
   {
     id: 112,
     title: "Supermarket 3D",
-    image: "https://chicken.parmacitieschools.org/images/supermarket-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/supermarket-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/supermarket-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/supermarket-3d.html",
     isNew: false
   },
   {
     id: 113,
     title: "Survive to Victory",
-    image: "https://chicken.parmacitieschools.org/images/survive-to-victory.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/survive-to-victory/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/survive-to-victory.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/survive-to-victory.html",
     isNew: false
   },
   {
     id: 114,
     title: "Telekinesis Attack",
-    image: "https://chicken.parmacitieschools.org/images/telekinesis-attack.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/telekinesis-attack/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/telekinesis-attack.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/telekinesis-attack.html",
     isNew: false
   },
   {
     id: 115,
     title: "Telekinesis Car",
-    image: "https://chicken.parmacitieschools.org/images/telekinesis-car.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/telekinesis-car/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/telekinesis-car.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/telekinesis-car.html",
     isNew: false
   },
   {
     id: 116,
     title: "Telekinesis Drive",
-    image: "https://chicken.parmacitieschools.org/images/telekinesis-drive.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/telekinesis-drive/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/telekinesis-drive.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/telekinesis-drive.html",
     isNew: false
   },
   {
     id: 117,
     title: "Telekinesis",
-    image: "https://chicken.parmacitieschools.org/images/telekinesis.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/telekinesis/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/telekinesis.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/telekinesis.html",
     isNew: false
   },
   {
     id: 118,
     title: "Triple Match 3D",
-    image: "https://chicken.parmacitieschools.org/images/triple-match-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/triple-match-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/triple-match-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/triple-match-3d.html",
     isNew: false
   },
   {
     id: 119,
     title: "Tug of War With Cars",
-    image: "https://chicken.parmacitieschools.org/images/tug-of-war-with-cars.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/tug-of-war-with-cars/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tug-of-war-with-cars.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/tug-of-war-with-cars.html",
     isNew: false
   },
   {
     id: 120,
     title: "Twerk Race 3D",
-    image: "https://chicken.parmacitieschools.org/images/twerk-race-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/twerk-race-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/twerk-race-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/twerk-race-3d.html",
     isNew: false
   },
   {
     id: 121,
     title: "Twisted Rope 3D",
-    image: "https://chicken.parmacitieschools.org/images/twisted-rope-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/twisted-rope-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/twisted-rope-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/twisted-rope-3d.html",
     isNew: false
   },
   {
     id: 122,
     title: "Wall Crawler",
-    image: "https://chicken.parmacitieschools.org/images/wall-crawler.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/wall-crawler/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/wall-crawler.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/wall-crawler.html",
     isNew: false
   },
   {
     id: 123,
     title: "War Regions",
-    image: "https://chicken.parmacitieschools.org/images/war-regions.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/war-regions/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/war-regions.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/war-regions.html",
     isNew: false
   },
   {
     id: 124,
     title: "Weapon Craft Run",
-    image: "https://chicken.parmacitieschools.org/images/weapon-craft-run.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/weapon-craft-run/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/weapon-craft-run.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/weapon-craft-run.html",
     isNew: false
   },
   {
     id: 125,
     title: "Weapon Upgrade Rush",
-    image: "https://chicken.parmacitieschools.org/images/weapon-upgrade-rush.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/weapon-upgrade-rush/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/weapon-upgrade-rush.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/weapon-upgrade-rush.html",
     isNew: false
   },
   {
     id: 126,
     title: "Wheel Scale",
-    image: "https://chicken.parmacitieschools.org/images/wheel-scale.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/brainrot/wheel-scale/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/wheel-scale.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/brainrot/wheel-scale.html",
     isNew: false
   },
   {
     id: 127,
     title: "Class of '09: The Re-Up",
-    image: "https://chicken.parmacitieschools.org/images/re-up.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/gamepath/re-up/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/re-up.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gamepath/re-up.html",
     isNew: false
   },
   {
     id: 128,
     title: "Pixel Cave",
-    image: "https://chicken.parmacitieschools.org/images/pixel-cave.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/pixel-cave/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pixel-cave.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/pixel-cave.html",
     isNew: false
   },
   {
     id: 129,
     title: "Push The Square",
-    image: "https://chicken.parmacitieschools.org/images/push-the-square.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/push-the-square/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/push-the-square.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/push-the-square.html",
     isNew: false
   },
   {
     id: 130,
     title: "Slope Ball",
-    image: "https://chicken.parmacitieschools.org/images/slope-ball.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/slope-ball/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/slope-ball.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/slope-ball.html",
     isNew: false
   },
   {
     id: 131,
     title: "Slope 2",
-    image: "https://chicken.parmacitieschools.org/images/slope2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/slope2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/slope2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/slope2.html",
     isNew: false
   },
   {
     id: 132,
     title: "Jelly Well",
-    image: "https://chicken.parmacitieschools.org/images/jelly-well.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/jellywell/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/jelly-well.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/jellywell.html",
     isNew: false
   },
   {
     id: 133,
     title: "SpongeBob SquarePants: Marble Bash",
-    image: "https://chicken.parmacitieschools.org/images/marble-bash.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/marble-bash/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/marble-bash.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/marble-bash.html",
     isNew: false
   },
   {
     id: 134,
     title: "Sonic The Hedgehog 2: Community's Cut",
-    image: "https://chicken.parmacitieschools.org/images/sonic2.jpg",
-    url: "https://chicken.parmacitieschools.org/assets/sonic2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sonic2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/sonic2.html",
     isNew: false
   },
   {
     id: 135,
     title: "Sonic The Hedgehog 3: Angel Island Revisited",
-    image: "https://chicken.parmacitieschools.org/images/sonic3.jpg",
-    url: "https://chicken.parmacitieschools.org/assets/sonic3/sonic3air_web.html",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sonic3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/sonic3/sonic3air_web.html",
     isNew: false
   },
   {
     id: 136,
     title: "SpongeBob SquarePants: Monster Island",
-    image: "https://chicken.parmacitieschools.org/images/spongebob-monster-island.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/spongebob-monster-island/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spongebob-monster-island.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/spongebob-monster-island.html",
     isNew: false
   },
   {
     id: 137,
     title: "SpongeBob SquarePants: Cardbored",
-    image: "https://chicken.parmacitieschools.org/images/spongebob-squarepants-cardbored.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/assets/spongebob-squarepants-cardbored/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spongebob-squarepants-cardbored.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/assets/spongebob-squarepants-cardbored.html",
     isNew: false
   },
   {
     id: 138,
     title: "Packabunchas",
-    image: "https://chicken.parmacitieschools.org/images/packabunchas.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/packabunchas/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/packabunchas.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/packabunchas.html",
     isNew: false
   },
   {
     id: 139,
     title: "Papas Sushiria",
-    image: "https://chicken.parmacitieschools.org/images/papas-sushiria.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/papas-sushiria/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/papas-sushiria.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/papas-sushiria.html",
     isNew: false
   },
   {
     id: 140,
     title: "Infernae",
-    image: "https://chicken.parmacitieschools.org/images/infernae.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/infernae/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/infernae.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/infernae.html",
     isNew: false
   },
   {
     id: 141,
     title: "Kart Kingdom Racing",
-    image: "https://chicken.parmacitieschools.org/images/kartkingdom.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/kartkingdom/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/kartkingdom.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/kartkingdom.html",
     isNew: false
   },
   {
     id: 142,
     title: "I woke up next to you again.",
-    image: "https://chicken.parmacitieschools.org/images/nextyou.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/nextyou/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/nextyou.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/nextyou.html",
     isNew: false
   },
   {
     id: 143,
     title: "Pinball Mania",
-    image: "https://chicken.parmacitieschools.org/images/pinballmania.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/pinballmania/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pinballmania.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/pinballmania.html",
     isNew: false
   },
   {
     id: 144,
     title: "Super Zombies Again",
-    image: "https://chicken.parmacitieschools.org/images/superzombie.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/superzombie/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/superzombie.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/superzombie.html",
     isNew: false
   },
   {
     id: 145,
     title: "UNDERWHEELS",
-    image: "https://chicken.parmacitieschools.org/images/underwheels.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/underwheels/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/underwheels.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/underwheels.html",
     isNew: false
   },
   {
     id: 146,
     title: "Squid Gun Fest",
-    image: "https://chicken.parmacitieschools.org/images/SquidGunFest.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/SquidGunFest/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/SquidGunFest.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/SquidGunFest.html",
     isNew: false
   },
   {
     id: 147,
     title: "Space Company",
-    image: "https://chicken.parmacitieschools.org/images/space-company.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/space-company/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/space-company.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/space-company.html",
     isNew: false
   },
   {
     id: 148,
     title: "Space Garden",
-    image: "https://chicken.parmacitieschools.org/images/spacegarden.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/spacegarden/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spacegarden.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/spacegarden.html",
     isNew: false
   },
   {
     id: 149,
     title: "Stickman Epic Battle",
-    image: "https://chicken.parmacitieschools.org/images/stickman-epic-battle.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/stickman-epic-battle/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/stickman-epic-battle.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/stickman-epic-battlev",
     isNew: false
   },
   {
     id: 150,
     title: "Storm The House2",
-    image: "https://chicken.parmacitieschools.org/images/stormthehouse2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/stormthehouse2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/stormthehouse2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/stormthehouse2.html",
     isNew: false
   },
   {
     id: 151,
     title: "Tanuki Sunset",
-    image: "https://chicken.parmacitieschools.org/images/tanuki-sunset.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/tanuki-sunset/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tanuki-sunset.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/tanuki-sunset.html",
     isNew: false
   },
   {
     id: 153,
     title: "Go! Go! K.O.!",
-    image: "https://chicken.parmacitieschools.org/images/gogoko.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/gogoko/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gogoko.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/gogoko.html",
     isNew: false
   },
   {
     id: 154,
     title: "groon groon, babey!",
-    image: "https://chicken.parmacitieschools.org/images/groongroon.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/groongroon/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/groongroon.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/groongroon.html",
     isNew: false
   },
   {
     id: 155,
     title: "RigBMX",
-    image: "https://chicken.parmacitieschools.org/images/rigbmx.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/rigbmx/rigbmx-en-290817/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rigbmx.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/rigbmx/rigbmx-en-290817.html",
     isNew: false
   },
   {
     id: 156,
     title: "RigBMX 2",
-    image: "https://chicken.parmacitieschools.org/images/rigbmx2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/rigbmx2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rigbmx2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/rigbmx2.html",
     isNew: false
   },
   {
     id: 157,
     title: "Slither.io Online",
-    image: "https://chicken.parmacitieschools.org/images/slitherio.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/slitherio/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/slitherio.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/slitherio.html",
     isNew: false
   },
   {
     id: 158,
     title: "The Race",
-    image: "https://chicken.parmacitieschools.org/images/therace.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/therace/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/therace.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/therace.html",
     isNew: false
   },
   {
     id: 159,
     title: "Tricolor",
-    image: "https://chicken.parmacitieschools.org/images/tricolor.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/tricolor/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tricolor.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/tricolor.html",
     isNew: false
   },
   {
     id: 160,
     title: "Jump Jousts",
-    image: "https://chicken.parmacitieschools.org/images/jumpjousts.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/jumpjousts/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/jumpjousts.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/jumpjousts.html",
     isNew: false
   },
   {
     id: 161,
     title: "Jump Jousts 2",
-    image: "https://chicken.parmacitieschools.org/images/jumpjousts2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/jumpjousts2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/jumpjousts2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/jumpjousts2.html",
     isNew: false
   },
   {
     id: 162,
     title: "Love Letters",
-    image: "https://chicken.parmacitieschools.org/images/love-letters.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/love-letters/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/love-letters.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/love-letters.html",
     isNew: false
   },
   {
     id: 163,
     title: "Parking Lot Wars",
-    image: "https://chicken.parmacitieschools.org/images/parkinglotwars.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/parkinglotwars/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/parkinglotwars.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/parkinglotwars.html",
     isNew: false
   },
   {
     id: 164,
     title: "Police Getaway",
-    image: "https://chicken.parmacitieschools.org/images/police.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/police/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/police.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/police.html",
     isNew: false
   },
   {
     id: 165,
     title: "Go! Slimey Go!",
-    image: "https://chicken.parmacitieschools.org/images/slimey.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/slimey/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/slimey.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/slimey.html",
     isNew: false
   },
   {
     id: 166,
     title: "Your Turn To Die",
-    image: "https://chicken.parmacitieschools.org/images/yttd.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/yttd/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/yttd.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/yttd.html",
     isNew: false
   },
   {
     id: 167,
     title: "FNF: Kick Kick Funk!",
-    image: "https://chicken.parmacitieschools.org/images/kick.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/kick/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/kick.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/kick.html",
     isNew: false
   },
   {
     id: 168,
     title: "Dont Drop The White Ball 2",
-    image: "https://chicken.parmacitieschools.org/images/dont-drop-the-white-ball-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/dont-drop-the-white-ball-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/dont-drop-the-white-ball-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/dont-drop-the-white-ball-2.html",
     isNew: false
   },
   {
     id: 169,
     title: "Generic Fishing Game",
-    image: "https://chicken.parmacitieschools.org/images/generic-fishing-game.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/generic-fishing-game/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/generic-fishing-game.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/generic-fishing-game.html",
     isNew: false
   },
   {
     id: 170,
     title: "Geometry Jump Sketchy",
-    image: "https://chicken.parmacitieschools.org/images/geometry_jump_sketchy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/geometry_jump_sketchy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/geometry_jump_sketchy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/geometry_jump_sketchy.html",
     isNew: false
   },
   {
     id: 171,
     title: "Icy's Purple Head",
-    image: "https://chicken.parmacitieschools.org/images/icys-purple-head.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/icys-purple-head/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/icys-purple-head.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/icys-purple-head.html",
     isNew: false
   },
   {
     id: 172,
     title: "Interactive Buddy",
-    image: "https://chicken.parmacitieschools.org/images/interactivebuddy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/interactivebuddy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/interactivebuddy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/interactivebuddy.html",
     isNew: false
   },
   {
     id: 173,
     title: "Jimothy Piggerton",
-    image: "https://chicken.parmacitieschools.org/images/jimothy-piggerton.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/jimothy-piggerton/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/jimothy-piggerton.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/jimothy-piggerton.html",
     isNew: false
   },
   {
     id: 175,
     title: "Swordfight",
-    image: "https://chicken.parmacitieschools.org/images/swordfight.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/swordfight/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/swordfight.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/swordfight.html",
     isNew: false
   },
   {
     id: 176,
     title: "Dude Theft Auto",
-    image: "https://chicken.parmacitieschools.org/images/dudetheft.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/dudetheft/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/dudetheft.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/dudetheft.html",
     isNew: false
   },
   {
     id: 177,
     title: "Labubu Clicker",
-    image: "https://chicken.parmacitieschools.org/images/labubu.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/labubu/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/labubu.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/labubu.html",
     isNew: false
   },
   {
     id: 178,
     title: "Class of 09'",
-    image: "https://chicken.parmacitieschools.org/images/class09.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/class-of-09/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/class09.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/class-of-09.html",
     isNew: false
   },
   {
     id: 179,
     title: "Ultrakill",
-    image: "https://chicken.parmacitieschools.org/images/ultrakill.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/ultrakill/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ultrakill.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/ultrakill.html",
     isNew: false
   },
   {
     id: 180,
     title: "BLOODMONEY!",
-    image: "https://chicken.parmacitieschools.org/images/bmoney.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bmoney/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bmoney.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/bmoney.html",
     isNew: false
   },
   {
     id: 181,
     title: "Infinite Mario",
-    image: "https://chicken.parmacitieschools.org/images/infmar.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/infmar/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/infmar.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/infmar.html",
     isNew: false
   },
   {
     id: 182,
     title: "Hextris",
-    image: "https://chicken.parmacitieschools.org/images/hxtrs.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/hxtrs/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hxtrs.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/hxtrs.html",
     isNew: false
   },
   {
     id: 183,
     title: "Chiikawa Puzzle",
-    image: "https://chicken.parmacitieschools.org/images/chiipuz.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/chiipuz/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/chiipuz.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/chiipuz.html",
     isNew: false
   },
   {
     id: 184,
     title: "Ovo 2",
-    image: "https://chicken.parmacitieschools.org/images/ovo2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/ovo2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ovo2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/ovo2.html",
     isNew: false
   },
   {
     id: 185,
     title: "Bubble Pop Adventures",
-    image: "https://chicken.parmacitieschools.org/images/bubblepopadventures.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bubblepopadventures/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bubblepopadventures.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/bubblepopadventures.html",
     isNew: false
   },
   {
     id: 186,
     title: "Head Soccer 2023",
-    image: "https://chicken.parmacitieschools.org/images/headsoccer2023.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/headsoccer2023/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/headsoccer2023.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/headsoccer2023.html",
     isNew: false
   },
   {
     id: 187,
     title: "3D Bowling",
-    image: "https://chicken.parmacitieschools.org/images/3dbowling.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/3dbowling/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/3dbowling.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/3dbowling.html",
     isNew: false
   },
   {
     id: 188,
     title: "Basket and Ball",
-    image: "https://chicken.parmacitieschools.org/images/basketandball.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/basketandball/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/basketandball.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/basketandball.html",
     isNew: false
   },
   {
     id: 189,
     title: "Block the Pig",
-    image: "https://chicken.parmacitieschools.org/images/blockthepig.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/blockthepig/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/blockthepig.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/blockthepig.html",
     isNew: false
   },
   {
     id: 190,
     title: "FNAF: Sister Location",
-    image: "https://chicken.parmacitieschools.org/images/fnaf5.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/fnaf5/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fnaf5.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/fnaf5.html",
     isNew: false
   },
   {
     id: 191,
     title: "Neon Leap",
-    image: "https://chicken.parmacitieschools.org/images/neon-leap.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/neon-leap/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/neon-leap.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/neon-leap.html",
     isNew: false
   },
   {
     id: 192,
     title: "Temple Run 2",
-    image: "https://chicken.parmacitieschools.org/images/temple-run-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/temple-run-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/temple-run-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/temple-run-2.html",
     isNew: false
   },
   {
     id: 193,
     title: "Winter Clash 3D",
-    image: "https://chicken.parmacitieschools.org/images/winter-clash-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/winter-clash-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/winter-clash-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/winter-clash-3d.html",
     isNew: false
   },
   {
     id: 194,
     title: "Color Pencil Run",
-    image: "https://chicken.parmacitieschools.org/images/color-pencil-run.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/color-pencil-run/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/color-pencil-run.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/color-pencil-run.html",
     isNew: false
   },
   {
     id: 195,
     title: "People Playground",
-    image: "https://chicken.parmacitieschools.org/images/peopleplayground.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/gamepath/people-playground/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/peopleplayground.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gamepath/people-playground.html",
     isNew: false
   },
   {
     id: 196,
     title: "Yume Nikki",
-    image: "https://chicken.parmacitieschools.org/images/yumenikki.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/gamepath/yume-nikki/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/yumenikki.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gamepath/yume-nikki.html",
     isNew: false
   },
   {
     id: 197,
     title: "Pure CSS Stack",
-    image: "https://chicken.parmacitieschools.org/images/stck.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/stck/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/stck.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/stck.html",
     isNew: false
   },
   {
     id: 198,
     title: "Phineas and Ferb Tetris",
-    image: "https://chicken.parmacitieschools.org/images/pftet.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/bestgameevermadefrfrong/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pftet.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/bestgameevermadefrfrong.html",
     isNew: false
   },
   {
     id: 199,
     title: "Doki Doki Literature Club",
-    image: "https://chicken.parmacitieschools.org/images/ddlc.jpg",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ddlc.jpg",
     url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/dokidokiliteratureclub.html",
     isNew: false
   },
   {
     id: 200,
     title: "Undertale",
-    image: "https://chicken.parmacitieschools.org/images/undertalereal.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/gamepath/undertale/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/undertalereal.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gamepath/undertale.html",
     isNew: false
   },
   {
     id: 201,
     title: "Deltarune",
-    image: "https://chicken.parmacitieschools.org/images/deltarune.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/gamepath/deltarune/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/deltarune.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gamepath/deltarune.html",
     isNew: false
   },
   {
     id: 202,
     title: "FNF: an FNF Bocchi the Rock! mod (DEMO)",
-    image: "https://chicken.parmacitieschools.org/images/bocchi.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/bocchi/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bocchi.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/bocchi.html",
     isNew: false
   },
   {
     id: 203,
     title: "FNF: Weekend 1: Girlfriend Mix",
-    image: "https://chicken.parmacitieschools.org/images/gfmixes.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/gfmix/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gfmixes.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/gfmix.html",
     isNew: false
   },
   {
     id: 204,
     title: "Lacey's Flash Games",
-    image: "https://chicken.parmacitieschools.org/images/lacey.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/gamepath/lacysflashgames/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/lacey.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gamepath/lacysflashgames.html",
     isNew: false
   },
   {
     id: 205,
     title: "Do NOT Take This Cat Home",
-    image: "https://chicken.parmacitieschools.org/images/dontcat.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/gamepath/donottakethiscathome/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/dontcat.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gamepath/donottakethiscathome.html",
     isNew: false
   },
   {
     id: 206,
     title: "Papa louie",
-    image: "https://chicken.parmacitieschools.org/images/papalouie.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/papalouie/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/papalouie.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/papalouie.html",
     isNew: false
   },
   {
     id: 207,
     title: "Papa louie 2",
-    image: "https://chicken.parmacitieschools.org/images/papalouie2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/papalouie2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/papalouie2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/papalouie2.html",
     isNew: false
   },
   {
     id: 208,
     title: "Papa louie 3",
-    image: "https://chicken.parmacitieschools.org/images/papalouie3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/papalouie3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/papalouie3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/papalouie3.html",
     isNew: false
   },
   {
     id: 209,
     title: "Quest For Bacon",
-    image: "https://chicken.parmacitieschools.org/images/bacon.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bacon/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bacon.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/bacon.html",
     isNew: false
   },
   {
     id: 210,
     title: "Get To The Top Although There Is No Top BFDI",
-    image: "https://chicken.parmacitieschools.org/images/gettotopbfdi.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/gettotopbfdi/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gettotopbfdi.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/gettotopbfdi.html",
     isNew: false
   },
   {
     id: 211,
     title: "Not So Special Stage",
-    image: "https://chicken.parmacitieschools.org/images/notsospecialstage.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/notsospecialstage/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/notsospecialstage.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/notsospecialstage.html",
     isNew: false
   },
   {
     id: 212,
     title: "100ng",
-    image: "https://chicken.parmacitieschools.org/images/100ng.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/100ng/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/100ng.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/100ng.html",
     isNew: false
   },
   {
     id: 213,
     title: "8Ball Billards Classic",
-    image: "https://chicken.parmacitieschools.org/images/8ball-billards-classic.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/8ball-billards-classic/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/8ball-billards-classic.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/8ball-billards-classic.html",
     isNew: false
   },
   {
     id: 214,
     title: "Snake",
-    image: "https://chicken.parmacitieschools.org/images/google-snake.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/google-snake/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/google-snake.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/google-snake.html",
     isNew: false
   },
   {
     id: 215,
     title: "Solitaire",
-    image: "https://chicken.parmacitieschools.org/images/google-solitaire.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/google-solitaire/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/google-solitaire.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/google-solitaire.html",
     isNew: false
   },
   {
     id: 216,
     title: "Arcade Wizard",
-    image: "https://chicken.parmacitieschools.org/images/arcade-wizard.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/arcade-wizard/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/arcade-wizard.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/arcade-wizard.html",
     isNew: false
   },
   {
     id: 217,
     title: "Black Hole Square",
-    image: "https://chicken.parmacitieschools.org/images/blackholesquare.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/blackholesquare/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/blackholesquare.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/blackholesquare.html",
     isNew: false
   },
   {
     id: 218,
     title: "Black Knight",
-    image: "https://chicken.parmacitieschools.org/images/blackknight.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/blackknight/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/blackknight.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/blackknight.html",
     isNew: false
   },
   {
     id: 219,
     title: "Bloons Tower Defense",
-    image: "https://chicken.parmacitieschools.org/images/bloonstd.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bloonstd/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bloonstd.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/bloonstd.html",
     isNew: false
   },
   {
     id: 220,
     title: "Bloons Tower Defense 2",
-    image: "https://chicken.parmacitieschools.org/images/bloonstd2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bloonstd2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bloonstd2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/bloonstd2.html",
     isNew: false
   },
   {
     id: 221,
     title: "Among Us",
-    image: "https://chicken.parmacitieschools.org/images/among-us.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/among-us/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/among-us.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/among-us.html",
     isNew: false
   },
   {
     id: 222,
     title: "Ascii Space",
-    image: "https://chicken.parmacitieschools.org/images/asciispace.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/asciispace/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/asciispace.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/asciispace.html",
     isNew: false
   },
   {
     id: 223,
     title: "Aspiring Artist",
-    image: "https://chicken.parmacitieschools.org/images/aspiring-artist.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/aspiring-artist/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/aspiring-artist.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/aspiring-artist.html",
     isNew: false
   },
   {
     id: 224,
     title: "Cannon Basketball 4",
-    image: "https://chicken.parmacitieschools.org/images/cannon-basketball-4.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/cannon-basketball-4/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cannon-basketball-4.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/cannon-basketball-4.html",
     isNew: false
   },
   {
     id: 225,
     title: "Crowd City 2",
-    image: "https://chicken.parmacitieschools.org/images/crowd-city-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/crowd-city-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/crowd-city-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/crowd-city-2.html",
     isNew: false
   },
   {
     id: 226,
     title: "Defend The Tank",
-    image: "https://chicken.parmacitieschools.org/images/defend-the-tank.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/defend-the-tank/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/defend-the-tank.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/defend-the-tank.html",
     isNew: false
   },
   {
     id: 227,
     title: "Doctor Acorn 2",
-    image: "https://chicken.parmacitieschools.org/images/doctor-acorn2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/doctor-acorn2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/doctor-acorn2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/doctor-acorn2.html",
     isNew: false
   },
   {
     id: 228,
     title: "Double Wires",
-    image: "https://chicken.parmacitieschools.org/images/doublewires.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/doublewires/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/doublewires.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/doublewires.html",
     isNew: false
   },
   {
     id: 229,
     title: "Dragon Vs Bricks",
-    image: "https://chicken.parmacitieschools.org/images/dragon-vs-bricks.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/dragon-vs-bricks/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/dragon-vs-bricks.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/dragon-vs-bricks.html",
     isNew: false
   },
   {
     id: 230,
     title: "Grey Box Testing",
-    image: "https://chicken.parmacitieschools.org/images/greybox.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/greybox/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/greybox.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/greybox.html",
     isNew: false
   },
   {
     id: 231,
     title: "Protektor",
-    image: "https://chicken.parmacitieschools.org/images/protektor.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/protektor/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/protektor.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/protektor.html",
     isNew: false
   },
   {
     id: 232,
     title: "Rocking Sky Trip",
-    image: "https://chicken.parmacitieschools.org/images/rocking-sky-trip.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/rocking-sky-trip/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rocking-sky-trip.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/rocking-sky-trip.html",
     isNew: false
   },
   {
     id: 233,
     title: "Smoking Barrels",
-    image: "https://chicken.parmacitieschools.org/images/smokingbarrels.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/smokingbarrels/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/smokingbarrels.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/smokingbarrels.html",
     isNew: false
   },
   {
     id: 234,
     title: "Winter Falling Price",
-    image: "https://chicken.parmacitieschools.org/images/winter-falling-price.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/winter-falling-price/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/winter-falling-price.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/winter-falling-price.html",
     isNew: false
   },
   {
     id: 235,
     title: "Battle For Gondor",
-    image: "https://chicken.parmacitieschools.org/images/battleforgondor.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/battleforgondor/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/battleforgondor.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/battleforgondor.html",
     isNew: false
   },
   {
     id: 236,
     title: "Connect 3",
-    image: "https://chicken.parmacitieschools.org/images/connect3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/connect3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/connect3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/connect3.html",
     isNew: false
   },
   {
     id: 237,
     title: "Craft Mine",
-    image: "https://chicken.parmacitieschools.org/images/craftmine.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/craftmine/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/craftmine.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/craftmine.html",
     isNew: false
   },
   {
     id: 238,
     title: "Doge Mining Simulator",
-    image: "https://chicken.parmacitieschools.org/images/doge-mining-simulator.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/doge-mining-simulator/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/doge-mining-simulator.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/doge-mining-simulator.html",
     isNew: false
   },
   {
     id: 239,
     title: "Flappy 2048",
-    image: "https://chicken.parmacitieschools.org/images/flappy-2048.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/flappy-2048/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/flappy-2048.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/flappy-2048.html",
     isNew: false
   },
   {
     id: 240,
     title: "Flappy Defense",
-    image: "https://chicken.parmacitieschools.org/images/flappy-defense.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/flappy-defense/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/flappy-defense.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/flappy-defense.html",
     isNew: false
   },
   {
     id: 241,
     title: "A Game Inside A Game",
-    image: "https://chicken.parmacitieschools.org/images/game-inside.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/game-inside/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/game-inside.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/game-inside.html",
     isNew: false
   },
   {
     id: 242,
     title: "Evil Glitch",
-    image: "https://chicken.parmacitieschools.org/images/evil-glitch.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/evil-glitch/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/evil-glitch.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/evil-glitch.html",
     isNew: false
   },
   {
     id: 243,
     title: "Hobo",
-    image: "https://chicken.parmacitieschools.org/images/hobo.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/hobo/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hobo.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/hobo.html",
     isNew: false
   },
   {
     id: 244,
     title: "Hobo 2",
-    image: "https://chicken.parmacitieschools.org/images/hobo2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/hobo2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hobo2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/hobo2.html",
     isNew: false
   },
   {
     id: 245,
     title: "Hobo 3",
-    image: "https://chicken.parmacitieschools.org/images/hobo3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/hobo3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hobo3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/hobo3.html",
     isNew: false
   },
   {
     id: 246,
     title: "Hobo 4",
-    image: "https://chicken.parmacitieschools.org/images/hobo4.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/hobo4/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hobo4.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/hobo4.html",
     isNew: false
   },
   {
     id: 247,
     title: "Hobo 5",
-    image: "https://chicken.parmacitieschools.org/images/hobo5.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/hobo5/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hobo5.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/hobo5.html",
     isNew: false
   },
   {
     id: 248,
     title: "Hobo 6",
-    image: "https://chicken.parmacitieschools.org/images/hobo6.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/hobo6/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hobo6.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/hobo6.html",
     isNew: false
   },
   {
     id: 249,
     title: "Hobo 7",
-    image: "https://chicken.parmacitieschools.org/images/hobo7.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/hobo7/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hobo7.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/hobo7.html",
     isNew: false
   },
   {
     id: 250,
     title: "Rolling Forests",
-    image: "https://chicken.parmacitieschools.org/images/rolling-forests.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/rolling-forests/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rolling-forests.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/rolling-forests.html",
     isNew: false
   },
   {
     id: 251,
     title: "Shards",
-    image: "https://chicken.parmacitieschools.org/images/shards.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/shards/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/shards.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/shards.html",
     isNew: false
   },
   {
     id: 252,
     title: "Doge 2048",
-    image: "https://chicken.parmacitieschools.org/images/doge2048.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/doge2048/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/doge2048.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/doge2048.html",
     isNew: false
   },
   {
     id: 253,
     title: "Make It Meme",
-    image: "https://chicken.parmacitieschools.org/images/makeitmeme.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/makeitmeme/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/makeitmeme.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/makeitmeme.html",
     isNew: false
   },
   {
     id: 254,
     title: "Klocki",
-    image: "https://chicken.parmacitieschools.org/images/klocki.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/klocki/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/klocki.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/klocki.html",
     isNew: false
   },
   {
     id: 255,
     title: "Poly Branch",
-    image: "https://chicken.parmacitieschools.org/images/polybranch.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/polybranch/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/polybranch.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/polybranch.html",
     isNew: false
   },
   {
     id: 256,
     title: "Retro Haunt",
-    image: "https://chicken.parmacitieschools.org/images/retrohaunt.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/retrohaunt/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/retrohaunt.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/retrohaunt.html",
     isNew: false
   },
   {
     id: 257,
     title: "Backrooms",
-    image: "https://chicken.parmacitieschools.org/images/backrooms.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/backrooms/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/backrooms.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/backrooms.html",
     isNew: false
   },
   {
     id: 258,
     title: "Bounce Back",
-    image: "https://chicken.parmacitieschools.org/images/bounceback.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bounceback/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bounceback.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/bounceback.html",
     isNew: false
   },
   {
     id: 259,
     title: "Color Switch 2 Challenges",
-    image: "https://chicken.parmacitieschools.org/images/color-switch-2-challenges.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/color-switch-2-challenges/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/color-switch-2-challenges.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/color-switch-2-challenges.html",
     isNew: false
   },
   {
     id: 260,
     title: "Gun Spin",
-    image: "https://chicken.parmacitieschools.org/images/gunspin.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/gunspin/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gunspin.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/gunspin.html",
     isNew: false
   },
   {
     id: 261,
     title: "Shift Flash",
-    image: "https://chicken.parmacitieschools.org/images/shift-flash.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/shift-flash/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/shift-flash.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/shift-flash.html",
     isNew: false
   },
   {
     id: 262,
     title: "Shift Flash 2",
-    image: "https://chicken.parmacitieschools.org/images/shift-flash-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/shift-flash-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/shift-flash-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/shift-flash-2.html",
     isNew: false
   },
   {
     id: 263,
     title: "Sort The Court",
-    image: "https://chicken.parmacitieschools.org/images/sort-the-court.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/sort-the-court/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sort-the-court.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/sort-the-court.html",
     isNew: false
   },
   {
     id: 264,
     title: "Soundboard",
-    image: "https://chicken.parmacitieschools.org/images/soundboard.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/soundboard/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/soundboard.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/soundboard.html",
     isNew: false
   },
   {
     id: 265,
     title: "Space Huggers",
-    image: "https://chicken.parmacitieschools.org/images/spacehuggers.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/spacehuggers/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spacehuggers.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/spacehuggers.html",
     isNew: false
   },
   {
     id: 267,
     title: "Tiny Fragments",
-    image: "https://chicken.parmacitieschools.org/images/tiny-fragments.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/tiny-fragments/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tiny-fragments.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/tiny-fragments.html",
     isNew: false
   },
   {
     id: 268,
     title: "Tough Growth",
-    image: "https://chicken.parmacitieschools.org/images/tough-growth.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/tough-growth/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tough-growth.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/tough-growth.html",
     isNew: false
   },
   {
     id: 269,
     title: "Yoshi's Fabrication",
-    image: "https://chicken.parmacitieschools.org/images/yoshifabrication.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/yoshifabrication/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/yoshifabrication.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/yoshifabrication.html",
     isNew: false
   },
   {
     id: 270,
     title: "You Are Bezos",
-    image: "https://chicken.parmacitieschools.org/images/you-are-bezos.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/you-are-bezos/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/you-are-bezos.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/you-are-bezos.html",
     isNew: false
   },
   {
     id: 271,
     title: "Rolly Vortex",
-    image: "https://chicken.parmacitieschools.org/images/rolly-vortex.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/rolly-vortex/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rolly-vortex.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/rolly-vortex.html",
     isNew: false
   },
   {
     id: 272,
     title: "The little Giant",
-    image: "https://chicken.parmacitieschools.org/images/the-little-giant.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/the-little-giant/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/the-little-giant.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/the-little-giant.html",
     isNew: false
   },
   {
     id: 273,
     title: "Tiny Fishing",
-    image: "https://chicken.parmacitieschools.org/images/tiny-fishing.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/tiny-fishing/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tiny-fishing.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/tiny-fishing.html",
     isNew: false
   },
   {
     id: 274,
     title: "Boxel Rebound",
-    image: "https://chicken.parmacitieschools.org/images/boxel-rebound.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/boxel-rebound/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/boxel-rebound.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/boxel-rebound.html",
     isNew: false
   },
   {
     id: 275,
     title: "Canyon Defense",
-    image: "https://chicken.parmacitieschools.org/images/canyondefense.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/canyondefense/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/canyondefense.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/canyondefense.html",
     isNew: false
   },
   {
     id: 276,
     title: "Captain Callisto",
-    image: "https://chicken.parmacitieschools.org/images/captaincallisto.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/captaincallisto/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/captaincallisto.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/captaincallisto.html",
     isNew: false
   },
   {
     id: 277,
     title: "Duke Dashington Remastered",
-    image: "https://chicken.parmacitieschools.org/images/duke-dashington-remastered.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/duke-dashington-remastered/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/duke-dashington-remastered.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/duke-dashington-remastered.html",
     isNew: false
   },
   {
     id: 278,
     title: "Gravity Soccer",
-    image: "https://chicken.parmacitieschools.org/images/gravity-soccer.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/gravity-soccer/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gravity-soccer.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/gravity-soccer.html",
     isNew: false
   },
   {
     id: 279,
     title: "GrindCraft",
-    image: "https://chicken.parmacitieschools.org/images/grindcraft.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/grindcraft/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/grindcraft.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/grindcraft.html",
     isNew: false
   },
   {
     id: 280,
     title: "Big Tower Tiny Square",
-    image: "https://chicken.parmacitieschools.org/images/bigtowertinysquare.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bigtowertinysquare/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bigtowertinysquare.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/bigtowertinysquare.html",
     isNew: false
   },
   {
     id: 281,
     title: "Cupcake 2048",
-    image: "https://chicken.parmacitieschools.org/images/cupcake2048.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/cupcake2048",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cupcake2048.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/cupcake2048",
     isNew: false
   },
   {
     id: 282,
     title: "Gopher",
-    image: "https://chicken.parmacitieschools.org/images/gopher.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/gopher/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gopher.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/gopher.html",
     isNew: false
   },
   {
     id: 283,
     title: "Kitchen Gun Game",
-    image: "https://chicken.parmacitieschools.org/images/kitchen-gun-game.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/kitchen-gun-game/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/kitchen-gun-game.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/kitchen-gun-game.html",
     isNew: false
   },
   {
     id: 284,
     title: "Kitten Cannon",
-    image: "https://chicken.parmacitieschools.org/images/kittencannon.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/kittencannon/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/kittencannon.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/kittencannon.html",
     isNew: false
   },
   {
     id: 285,
     title: "Basket Bros 2025",
-    image: "https://chicken.parmacitieschools.org/images/basket-bros-io.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/basket-bros-io/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/basket-bros-io.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/basket-bros-io.html",
     isNew: false
   },
   {
     id: 286,
     title: "Basketball Legends 2020",
-    image: "https://chicken.parmacitieschools.org/images/basketball-legends-2020.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/basketball-legends-2020/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/basketball-legends-2020.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/basketball-legends-2020.html",
     isNew: false
   },
   {
     id: 287,
     title: "Meme 2048",
-    image: "https://chicken.parmacitieschools.org/images/meme2048.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/meme2048",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/meme2048.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/meme2048",
     isNew: false
   },
   {
     id: 288,
     title: "Green",
-    image: "https://chicken.parmacitieschools.org/images/green.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/green/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/green.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/green.html",
     isNew: false
   },
   {
     id: 289,
     title: "Hex Empire",
-    image: "https://chicken.parmacitieschools.org/images/hexempire.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/hexempire/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hexempire.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/hexempire.html",
     isNew: false
   },
   {
     id: 290,
     title: "Minesweeper",
-    image: "https://chicken.parmacitieschools.org/images/minesweeper.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/minesweeper/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/minesweeper.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/minesweeper.html",
     isNew: false
   },
   {
     id: 291,
     title: "Ultimate Custom Night",
-    image: "https://chicken.parmacitieschools.org/images/UCN-main.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/UCN/UCN-main",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/UCN-main.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/UCN/UCN-main",
     isNew: false
   },
   {
     id: 292,
     title: "Marvin Spectrum",
-    image: "https://chicken.parmacitieschools.org/images/marvinspectrum.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/marvinspectrum/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/marvinspectrum.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/marvinspectrum.html",
     isNew: false
   },
   {
     id: 293,
     title: "Pandemic 2",
-    image: "https://chicken.parmacitieschools.org/images/pandemic2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/pandemic2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pandemic2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/pandemic2.html",
     isNew: false
   },
   {
     id: 294,
     title: "Papas Freezeria",
-    image: "https://chicken.parmacitieschools.org/images/papas-freezeria.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/papas-freezeria",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/papas-freezeria.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/papas-freezeria",
     isNew: false
   },
   {
     id: 295,
     title: "Papas Hot Doggeria",
-    image: "https://chicken.parmacitieschools.org/images/papas-hot-doggeria.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/papas-hot-doggeria/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/papas-hot-doggeria.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/papas-hot-doggeria.html",
     isNew: false
   },
   {
     id: 296,
     title: "Nitro Me Must Die",
-    image: "https://chicken.parmacitieschools.org/images/nitromemustdie.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/nitromemustdie/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/nitromemustdie.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/nitromemustdie.html",
     isNew: false
   },
   {
     id: 297,
     title: "Golden Axe",
-    image: "https://chicken.parmacitieschools.org/images/goldenaxe.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/goldenaxe/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/goldenaxe.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/goldenaxe.html",
     isNew: false
   },
   {
     id: 298,
     title: "Cubefield",
-    image: "https://chicken.parmacitieschools.org/images/cubefield.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/cubefield/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cubefield.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/cubefield.html",
     isNew: false
   },
   {
     id: 299,
     title: "Cave Chaos",
-    image: "https://chicken.parmacitieschools.org/images/cavechaos.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/cavechaos/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cavechaos.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/cavechaos.html",
     isNew: false
   },
   {
     id: 300,
     title: "Cactus McCoy",
-    image: "https://chicken.parmacitieschools.org/images/cactusmccoy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/cactusmccoy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cactusmccoy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/cactusmccoy.html",
     isNew: false
   },
   {
     id: 301,
     title: "Cactus McCoy 2",
-    image: "https://chicken.parmacitieschools.org/images/cactusmccoy2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/cactusmccoy2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cactusmccoy2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/cactusmccoy2.html",
     isNew: false
   },
   {
     id: 302,
     title: "Control Craft 2",
-    image: "https://chicken.parmacitieschools.org/images/controlcraft2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/controlcraft2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/controlcraft2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/controlcraft2.html",
     isNew: false
   },
   {
     id: 303,
     title: "Jetpack Joyride",
-    image: "https://chicken.parmacitieschools.org/images/jetpack.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/jetpack/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/jetpack.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/jetpack.html",
     isNew: false
   },
   {
     id: 304,
     title: "Epic Battle Fantasy",
-    image: "https://chicken.parmacitieschools.org/images/epicbattlefantasy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/epicbattlefantasy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/epicbattlefantasy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/epicbattlefantasy.html",
     isNew: false
   },
   {
     id: 305,
     title: "Epic Battle Fantasy 2",
-    image: "https://chicken.parmacitieschools.org/images/epicbattlefantasy2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/epicbattlefantasy2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/epicbattlefantasy2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/epicbattlefantasy2.html",
     isNew: false
   },
   {
     id: 306,
     title: "Epic Battle Fantasy 3",
-    image: "https://chicken.parmacitieschools.org/images/epicbattlefantasy3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/epicbattlefantasy3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/epicbattlefantasy3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/epicbattlefantasy3.html",
     isNew: false
   },
   {
     id: 307,
     title: "Pickcrafter",
-    image: "https://chicken.parmacitieschools.org/images/pickcrafter.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/pickcrafter/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pickcrafter.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/pickcrafter.html",
     isNew: false
   },
   {
     id: 308,
     title: "Townscaper",
-    image: "https://chicken.parmacitieschools.org/images/townscaper.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/townscaper/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/townscaper.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/townscaper.html",
     isNew: false
   },
   {
     id: 309,
     title: "Watermelon Game",
-    image: "https://chicken.parmacitieschools.org/images/watermelongame.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/watermelongame/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/watermelongame.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/watermelongame.html",
     isNew: false
   },
   {
     id: 310,
     title: "Wordle",
-    image: "https://chicken.parmacitieschools.org/images/wordle.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/wordle/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/wordle.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/wordle.html",
     isNew: false
   },
   {
     id: 311,
     title: "Mariokart 64",
-    image: "https://chicken.parmacitieschools.org/images/mariokart64.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/mariokart64/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/mariokart64.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/mariokart64.html",
     isNew: false
   },
   {
     id: 312,
     title: "Adventure Capitalist",
-    image: "https://chicken.parmacitieschools.org/images/adventure-capitalist.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/adventure-capitalist/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/adventure-capitalist.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/adventure-capitalist.html",
     isNew: false
   },
   {
     id: 313,
     title: "Feed Me",
-    image: "https://chicken.parmacitieschools.org/images/feedme.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/feedme/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/feedme.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/feedme.html",
     isNew: false
   },
   {
     id: 314,
     title: "Multitask",
-    image: "https://chicken.parmacitieschools.org/images/multitask.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/multitask/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/multitask.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/multitask.html",
     isNew: false
   },
   {
     id: 315,
     title: "Oodle Gobs",
-    image: "https://chicken.parmacitieschools.org/images/oodlegobs.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/oodlegobs/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/oodlegobs.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/oodlegobs.html",
     isNew: false
   },
   {
     id: 316,
     title: "Pako Highway",
-    image: "https://chicken.parmacitieschools.org/images/pakohighway.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/pakohighway/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pakohighway.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/pakohighway.html",
     isNew: false
   },
   {
     id: 317,
     title: "Super Hero Drop",
-    image: "https://chicken.parmacitieschools.org/images/superherodrop.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/superherodrop/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/superherodrop.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/superherodrop.html",
     isNew: false
   },
   {
     id: 318,
     title: "Water Works",
-    image: "https://chicken.parmacitieschools.org/images/waterworks.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/waterworks/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/waterworks.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/waterworks.html",
     isNew: false
   },
   {
     id: 319,
     title: "Chime Clicker",
-    image: "https://chicken.parmacitieschools.org/images/chime.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/chime/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/chime.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/chime.html",
     isNew: false
   },
   {
     id: 320,
     title: "60s Burger Run",
-    image: "https://chicken.parmacitieschools.org/images/60sburgerrun.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/60sburgerrun/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/60sburgerrun.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/60sburgerrun.html",
     isNew: false
   },
   {
     id: 321,
     title: "FNF: Friday Night Funkin'",
-    image: "https://chicken.parmacitieschools.org/images/0.6.0.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfspag/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/0.6.0.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfspag.html",
     isNew: false
   },
   {
     id: 322,
     title: "FNF: Friday Night Funkin' Girlfriend Mode",
-    image: "https://chicken.parmacitieschools.org/images/gfmode.jpg",
-    url: "player.html?game=https://reading.yoylefake.org/gfmode/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gfmode.jpg",
+    url: "https://reading.yoylefake.org/gfmode.html",
     isNew: false
   },
   {
     id: 323,
     title: "FNF: Friday Night Funkin' Spooky Mix️",
-    image: "https://chicken.parmacitieschools.org/images/spooky.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/spooky/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spooky.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/spooky.html",
     isNew: false
   },
   {
     id: 324,
     title: "FNF: Friday Night Funkin' Child's Play Remake",
-    image: "https://chicken.parmacitieschools.org/images/child.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/child/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/child.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/child.html",
     isNew: false
   },
   {
     id: 325,
     title: "FNF: Friday Night Funkin' HD",
-    image: "https://chicken.parmacitieschools.org/images/fnfhd.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/fnfhd/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fnfhd.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/fnfhd.html",
     isNew: false
   },
   {
     id: 326,
     title: "FNF: Friday Night Funkin' RTX On",
-    image: "https://chicken.parmacitieschools.org/images/rtx.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/rtx/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rtx.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/rtx.html",
     isNew: false
   },
   {
     id: 327,
     title: "FNF: Friday Night Funkin' Funkadelix",
-    image: "https://chicken.parmacitieschools.org/images/funkadelix.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/funkadelix/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/funkadelix.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/funkadelix.html",
     isNew: false
   },
   {
     id: 328,
     title: "FNF: Friday Night Funkin' 3x3 Remixed",
-    image: "https://chicken.parmacitieschools.org/images/3x3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/3x3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/3x3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/3x3.html",
     isNew: false
   },
   {
     id: 329,
     title: "FNF: Friday Night Funkin' B-Sides",
-    image: "https://chicken.parmacitieschools.org/images/bsides.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/bsides/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bsides.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/bsides.html",
     isNew: false
   },
   {
     id: 330,
     title: "FNF: Friday Night Funkin' From The Top!",
-    image: "https://chicken.parmacitieschools.org/images/ftt.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/ftt/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ftt.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/ftt.html",
     isNew: false
   },
   {
     id: 331,
     title: "FNF: Get Digging - Fries vs. Needle",
-    image: "https://chicken.parmacitieschools.org/images/digging.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/digging/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/digging.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/digging.html",
     isNew: false
   },
   {
     id: 332,
     title: "FNF: Let There Be Light",
-    image: "https://chicken.parmacitieschools.org/images/ltbl.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/ltbl/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ltbl.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/ltbl.html",
     isNew: false
   },
   {
     id: 333,
     title: "FNF: FNF x Steven Universe Mod - Gem Jam",
-    image: "https://chicken.parmacitieschools.org/images/gem.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/gem/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gem.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/gem.html",
     isNew: false
   },
   {
     id: 334,
     title: "FNF: Mistful Crimson Morning Reboot",
-    image: "https://chicken.parmacitieschools.org/images/mcm.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/mcm/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/mcm.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/mcm.html",
     isNew: false
   },
   {
     id: 335,
     title: "FNF: Untitled Femtanyl Mod",
-    image: "https://chicken.parmacitieschools.org/images/femtanyl.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/femtanyl/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/femtanyl.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/femtanyl.html",
     isNew: false
   },
   {
     id: 336,
     title: "FNF: SUPXR",
-    image: "https://chicken.parmacitieschools.org/images/supxr.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/supxr/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/supxr.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/supxr.html",
     isNew: false
   },
   {
     id: 337,
     title: "FNF: Vs. Momo: Ubume",
-    image: "https://chicken.parmacitieschools.org/images/ubume.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/ubume/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ubume.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/ubume.html",
     isNew: false
   },
   {
     id: 338,
     title: "FNF: Spookyboo!",
-    image: "https://chicken.parmacitieschools.org/images/spookyboo.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/spookyboo/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spookyboo.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/spookyboo.html",
     isNew: false
   },
   {
     id: 339,
     title: "FNF: Fancy Funking",
-    image: "https://chicken.parmacitieschools.org/images/fancy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/fancy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fancy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/fancy.html",
     isNew: false
   },
   {
     id: 340,
     title: "FNF: Tetonic - Vs. Teto",
-    image: "https://chicken.parmacitieschools.org/images/tetonic.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/tetonic/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tetonic.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/tetonic.html",
     isNew: false
   },
   {
     id: 341,
     title: "FNF: NONACCEPTANCE",
-    image: "https://chicken.parmacitieschools.org/images/nonacceptance.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/nonacceptance/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/nonacceptance.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/nonacceptance.html",
     isNew: false
   },
   {
     id: 342,
     title: "FNF: Darkwing Funkin'",
-    image: "https://chicken.parmacitieschools.org/images/darkwing.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/darkwing/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/darkwing.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/darkwing.html",
     isNew: false
   },
   {
     id: 343,
     title: "FNF: Cool Pokemon Mod",
-    image: "https://chicken.parmacitieschools.org/images/pokemon.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/pokemon/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pokemon.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/pokemon.html",
     isNew: false
   },
   {
     id: 344,
     title: "FNF: AKAGE",
-    image: "https://chicken.parmacitieschools.org/images/akage.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/akage/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/akage.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/akage.html",
     isNew: false
   },
   {
     id: 345,
     title: "FNF: Tabi Revival",
-    image: "https://chicken.parmacitieschools.org/images/tabi.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/tabi/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tabi.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/tabi.html",
     isNew: false
   },
   {
     id: 346,
     title: "FNF: Creepypasta JP",
-    image: "https://chicken.parmacitieschools.org/images/yokai.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/yokai/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/yokai.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/yokai.html",
     isNew: false
   },
   {
     id: 347,
     title: "FNF: EVIL NOOB",
-    image: "https://chicken.parmacitieschools.org/images/noob.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/noob/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/noob.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/noob.html",
     isNew: false
   },
   {
     id: 348,
     title: "FNF: Blueballed V2",
-    image: "https://chicken.parmacitieschools.org/images/blueball.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/blueball/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/blueball.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/blueball.html",
     isNew: false
   },
   {
     id: 349,
     title: "FNF: Friday Night Dashin'",
-    image: "https://chicken.parmacitieschools.org/images/Dashin.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/Dashin/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/Dashin.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/Dashin.html",
     isNew: false
   },
   {
     id: 350,
     title: "FNF: Plants Vs Rappers",
-    image: "https://chicken.parmacitieschools.org/images/plants.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/plants/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/plants.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/plants.html",
     isNew: false
   },
   {
     id: 351,
     title: "FNF: Mokey",
-    image: "https://chicken.parmacitieschools.org/images/mokey.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/mokey/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/mokey.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/mokey.html",
     isNew: false
   },
   {
     id: 352,
     title: "FNF: Pacman.exe",
-    image: "https://chicken.parmacitieschools.org/images/PACKILL.jpg",
-    url: "player.html?game=https://scientific.yoylefake.org/PACKILL/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/PACKILL.jpg",
+    url: "https://scientific.yoylefake.org/PACKILL.html",
     isNew: false
   },
   {
     id: 353,
     title: "FNF:Fake Jordans",
-    image: "https://chicken.parmacitieschools.org/images/fakejs.jpg",
-    url: "player.html?game=https://scientific.yoylefake.org/fakejs/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fakejs.jpg",
+    url: "https://scientific.yoylefake.org/fakejs.html",
     isNew: false
   },
   {
     id: 354,
     title: "FNF: Friday Night Funkin' Lovewrec'd",
-    image: "https://chicken.parmacitieschools.org/images/lovewrecd.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/lovewrecd/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/lovewrecd.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/lovewrecd.html",
     isNew: false
   },
   {
     id: 355,
     title: "FNF: Friday Night Funkin' D-Sides",
-    image: "https://chicken.parmacitieschools.org/images/dsides.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/dsides",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/dsides.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/dsides",
     isNew: false
   },
   {
     id: 356,
     title: "FNF: Friday Night Funkin' Neo",
-    image: "https://chicken.parmacitieschools.org/images/neo.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/neo/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/neo.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/neo.html",
     isNew: false
   },
   {
     id: 357,
     title: "FNF: Friday Night Funkin' Upside",
-    image: "https://chicken.parmacitieschools.org/images/upside.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/upside",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/upside.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/upside",
     isNew: false
   },
   {
     id: 358,
     title: "FNF: Friday Night Funkin' Beatstreets",
-    image: "https://chicken.parmacitieschools.org/images/beat.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/beat/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/beat.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/beat.html",
     isNew: false
   },
   {
     id: 359,
     title: "FNF: Friday Night Funkin' But Bad",
-    image: "https://chicken.parmacitieschools.org/images/badfnf.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/badfnf/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/badfnf.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/badfnf.html",
     isNew: false
   },
   {
     id: 360,
     title: "FNF: Friday Night Funkin' Gooey Mix",
-    image: "https://chicken.parmacitieschools.org/images/gooey.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/gooey/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gooey.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gooey.html",
     isNew: false
   },
   {
     id: 361,
     title: "FNF: Friday Night Funkin': Notice Me Senpai!",
-    image: "https://chicken.parmacitieschools.org/images/cloud.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/cloud/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cloud.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/cloud.html",
     isNew: false
   },
   {
     id: 362,
     title: "FNF: Friday Night Funkin' Deep-Sea Date",
-    image: "https://chicken.parmacitieschools.org/images/seadate.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/seadate/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/seadate.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/seadate.html",
     isNew: false
   },
   {
     id: 363,
     title: "FNF: Friday Night Funkin' Hellbeats",
-    image: "https://chicken.parmacitieschools.org/images/hell.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/hell",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hell.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/hell",
     isNew: false
   },
   {
     id: 364,
     title: "FNF: Friday Night Funkin' Soft v1",
-    image: "https://chicken.parmacitieschools.org/images/soft.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/soft/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/soft.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/soft.html",
     isNew: false
   },
   {
     id: 365,
     title: "Friday Night Funkin' Starcatcher",
-    image: "https://chicken.parmacitieschools.org/images/starcatcher.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/starcatcher",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/starcatcher.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/starcatcher",
     isNew: false
   },
   {
     id: 366,
     title: "Friday Night Funkin' Starlight Mayhem",
-    image: "https://chicken.parmacitieschools.org/images/strlight.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/strlight",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/strlight.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/strlight",
     isNew: false
   },
   {
     id: 367,
     title: "FNF: Friday Night Funkin' FT. The Ex",
-    image: "https://chicken.parmacitieschools.org/images/ex.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/ex/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ex.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/ex.html",
     isNew: false
   },
   {
     id: 368,
     title: "FNF: Friday Night Funkin' Cheater",
-    image: "https://chicken.parmacitieschools.org/images/cheater.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/cheater/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cheater.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/cheater.html",
     isNew: false
   },
   {
     id: 369,
     title: "FNF: Friday Night Funkin' Hotline 024",
-    image: "https://chicken.parmacitieschools.org/images/hotline.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/hotline/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hotline.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/hotline.html",
     isNew: false
   },
   {
     id: 370,
     title: "FNF: Friday Night Funkin' CG5 Edition",
-    image: "https://chicken.parmacitieschools.org/images/cg5.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/cg5/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cg5.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/cg5.html",
     isNew: false
   },
   {
     id: 371,
     title: "FNF: Friday Night Funkin' Baddies",
-    image: "https://chicken.parmacitieschools.org/images/baddies.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/baddies/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/baddies.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/baddies.html",
     isNew: false
   },
   {
     id: 372,
     title: "FNF: Friday Night Funkin' Kero",
-    image: "https://chicken.parmacitieschools.org/images/Kero.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/Kero/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/Kero.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/Kero.html",
     isNew: false
   },
   {
     id: 373,
     title: "FNF: Friday Night Funkin': Cyber Sensation",
-    image: "https://chicken.parmacitieschools.org/images/cyber.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/cyber/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cyber.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/cyber.html",
     isNew: false
   },
   {
     id: 374,
     title: "FNF: Friday Night Funkin' Dusttale",
-    image: "https://chicken.parmacitieschools.org/images/dust.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/dust/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/dust.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/dust.html",
     isNew: false
   },
   {
     id: 375,
     title: "FNF: Friday Night Funkin' Lullaby",
-    image: "https://chicken.parmacitieschools.org/images/lullaby.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/lullaby/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/lullaby.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/lullaby.html",
     isNew: false
   },
   {
     id: 376,
     title: "FNF: Friday Night Fever",
-    image: "https://chicken.parmacitieschools.org/images/fever.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/fever/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fever.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/fever.html",
     isNew: false
   },
   {
     id: 377,
     title: "FNF: Friday Night Fever: Skelly Story",
-    image: "https://chicken.parmacitieschools.org/images/fevers.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fevers/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fevers.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fevers.html",
     isNew: false
   },
   {
     id: 378,
     title: "FNF: FNF Weekly: Tweakmas",
-    image: "https://chicken.parmacitieschools.org/images/tweakmas.jpg",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tweakmas.jpg",
     url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/tweakmas.html",
     isNew: false
   },
   {
     id: 379,
     title: "FNF: Holo Night Funkin'",
-    image: "https://chicken.parmacitieschools.org/images/holo.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/holo/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/holo.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/holo.html",
     isNew: false
   },
   {
     id: 380,
     title: "FNF: Viernes Night Funkin'",
-    image: "https://chicken.parmacitieschools.org/images/viernes.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/viernes/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/viernes.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/viernes.html",
     isNew: false
   },
   {
     id: 381,
     title: "FNF: Another Friday Night",
-    image: "https://chicken.parmacitieschools.org/images/another.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/another/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/another.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/another.html",
     isNew: false
   },
   {
     id: 382,
     title: "FNF: Funkin' Aside",
-    image: "https://chicken.parmacitieschools.org/images/funkinaside.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/funkinaside/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/funkinaside.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/funkinaside.html",
     isNew: false
   },
   {
     id: 383,
     title: "FNF: Lite Funkin'",
-    image: "https://chicken.parmacitieschools.org/images/lite.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/lite/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/lite.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/lite.html",
     isNew: false
   },
   {
     id: 384,
     title: "FNF: Arrow Funk",
-    image: "https://chicken.parmacitieschools.org/images/arrow.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/arrow/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/arrow.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/arrow.html",
     isNew: false
   },
   {
     id: 385,
     title: "FNF: VS. Whitty",
-    image: "https://chicken.parmacitieschools.org/images/whitty.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/whitty",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/whitty.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/whitty",
     isNew: false
   },
   {
     id: 386,
     title: "FNF: VS. Whitty Erect",
-    image: "https://chicken.parmacitieschools.org/images/whittyerect.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whitty/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/whittyerect.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whitty.html",
     isNew: false
   },
   {
     id: 387,
     title: "FNF: VS. Claire",
-    image: "https://chicken.parmacitieschools.org/images/claire.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/claire/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/claire.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/claire.html",
     isNew: false
   },
   {
     id: 388,
     title: "FNF: Pico Night Punkin",
-    image: "https://chicken.parmacitieschools.org/images/test.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/test/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/test.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/test.html",
     isNew: false
   },
   {
     id: 389,
     title: "FNF: VS. Neo Whitty",
-    image: "https://chicken.parmacitieschools.org/images/neowhitty.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/neowhitty/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/neowhitty.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/neowhitty.html",
     isNew: false
   },
   {
     id: 390,
     title: "FNF: VS. Agoti",
-    image: "https://chicken.parmacitieschools.org/images/agoti.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/agoti/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/agoti.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/agoti.html",
     isNew: false
   },
   {
     id: 391,
     title: "FNF: VS. QT: Rewired",
-    image: "https://chicken.parmacitieschools.org/images/qtrewired.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/qtrewired/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/qtrewired.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/qtrewired.html",
     isNew: false
   },
   {
     id: 392,
     title: "FNF: VS. Mami ️",
-    image: "https://chicken.parmacitieschools.org/images/mami.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/mami/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/mami.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/mami.html",
     isNew: false
   },
   {
     id: 393,
     title: "FNF: VS. Virus R",
-    image: "https://chicken.parmacitieschools.org/images/virusr.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/virusr/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/virusr.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/virusr.html",
     isNew: false
   },
   {
     id: 394,
     title: "FNF: VS. Pico",
-    image: "https://chicken.parmacitieschools.org/images/pico.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/pico/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pico.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/pico.html",
     isNew: false
   },
   {
     id: 395,
     title: "FNF: VS. Carol",
-    image: "https://chicken.parmacitieschools.org/images/mami.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/mami/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/mami.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/mami.html",
     isNew: false
   },
   {
     id: 396,
     title: "FNF: VS. Retrospecter️",
-    image: "https://chicken.parmacitieschools.org/images/retro.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/retro/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/retro.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/retro.html",
     isNew: false
   },
   {
     id: 397,
     title: "FNF: VS. Darwi V2",
-    image: "https://chicken.parmacitieschools.org/images/darwi.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/darwi/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/darwi.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/darwi.html",
     isNew: false
   },
   {
     id: 398,
     title: "FNF: VS. Agoti Mic'd Up Engine",
-    image: "https://chicken.parmacitieschools.org/images/agotitest.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/agotitest/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/agotitest.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/agotitest.html",
     isNew: false
   },
   {
     id: 399,
     title: "FNF: VS.Peppino",
-    image: "https://chicken.parmacitieschools.org/images/pizzatown.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/pizzatown/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pizzatown.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/pizzatown.html",
     isNew: false
   },
   {
     id: 400,
     title: "FNF: VS.Maddness Erect",
-    image: "https://chicken.parmacitieschools.org/images/trickyerect.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/trickyerect/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/trickyerect.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/trickyerect.html",
     isNew: false
   },
   {
     id: 401,
     title: "FNF: Sunday Night Suicide V2",
-    image: "https://chicken.parmacitieschools.org/images/smouse.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/smouse/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/smouse.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/smouse.html",
     isNew: false
   },
   {
     id: 402,
     title: "FNF: VS.Black Betrayal",
-    image: "https://chicken.parmacitieschools.org/images/blackb.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/blackb/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/blackb.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/blackb.html",
     isNew: false
   },
   {
     id: 403,
     title: "FNF: VS.Cheeky v3",
-    image: "https://chicken.parmacitieschools.org/images/cheeky.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/cheeky/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cheeky.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/cheeky.html",
     isNew: false
   },
   {
     id: 404,
     title: "FNF: VS.Trollge V2",
-    image: "https://chicken.parmacitieschools.org/images/physics.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/physics/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/physics.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/physics.html",
     isNew: false
   },
   {
     id: 405,
     title: "FNF: Doki Doki Bad Ending",
-    image: "https://chicken.parmacitieschools.org/images/badending.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/badending/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/badending.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/badending.html",
     isNew: false
   },
   {
     id: 406,
     title: "FNF: CN Takeover",
-    image: "https://chicken.parmacitieschools.org/images/cntakeover.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/cntakeover/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cntakeover.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/cntakeover.html",
     isNew: false
   },
   {
     id: 407,
     title: "FNF: VS. Impostor",
-    image: "https://chicken.parmacitieschools.org/images/impo.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/impo",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/impo.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/impo.html",
     isNew: false
   },
   {
     id: 408,
     title: "FNF: VS. Big Brother",
-    image: "https://chicken.parmacitieschools.org/images/bigbro.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/bigbro",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bigbro.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/bigbro.html",
     isNew: false
   },
   {
     id: 409,
     title: "FNF: VS. Camellia",
-    image: "https://chicken.parmacitieschools.org/images/camellia.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/camellia",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/camellia.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/camellia.html",
     isNew: false
   },
   {
     id: 410,
     title: "FNF: VS. Accelerant Hank, but all bullets",
-    image: "https://chicken.parmacitieschools.org/images/hankgoeshard.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/hankgoeshard/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hankgoeshard.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/hankgoeshard.html",
     isNew: false
   },
   {
     id: 411,
     title: "FNF: VS. Annie",
-    image: "https://chicken.parmacitieschools.org/images/annie.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/annie/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/annie.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/annie.html",
     isNew: false
   },
   {
     id: 412,
     title: "FNF: VS. Hatsune Miku",
-    image: "https://chicken.parmacitieschools.org/images/miku.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/miku",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/miku.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/miku.html",
     isNew: false
   },
   {
     id: 413,
     title: "FNF: VS. Chara",
-    image: "https://chicken.parmacitieschools.org/images/chara.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/chara",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/chara.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/chara.html",
     isNew: false
   },
   {
     id: 414,
     title: "FNF: VS. K.K. Slider",
-    image: "https://chicken.parmacitieschools.org/images/vskk.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/vskk",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/vskk.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/vskk.html",
     isNew: false
   },
   {
     id: 415,
     title: "FNF: VS. Super Idol",
-    image: "https://chicken.parmacitieschools.org/images/idol.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/idol",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/idol.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/idol.html",
     isNew: false
   },
   {
     id: 416,
     title: "FNF: VS. FNAF 3 ️",
-    image: "https://chicken.parmacitieschools.org/images/FNAF.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/FNAF/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/FNAF.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/FNAF.html",
     isNew: false
   },
   {
     id: 417,
     title: "FNF: VS. Sky",
-    image: "https://chicken.parmacitieschools.org/images/sky.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/sky/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sky.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/sky.html",
     isNew: false
   },
   {
     id: 418,
     title: "FNF: VS. 'FNF Kid'",
-    image: "https://chicken.parmacitieschools.org/images/kid.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/kid/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/kid.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/kid.html",
     isNew: false
   },
   {
     id: 419,
     title: "FNF: VS. Lime Green Imposter (Imposter v5 April Fools Week)",
-    image: "https://chicken.parmacitieschools.org/images/lime.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/lime/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/lime.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/lime.html",
     isNew: false
   },
   {
     id: 420,
     title: "FNF: VS. Sonic.exe ️",
-    image: "https://chicken.parmacitieschools.org/images/sonic.exe.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/sonic.exe/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sonic.exe.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/sonic.exe.html",
     isNew: false
   },
   {
     id: 421,
     title: "FNF: VS. Nero",
-    image: "https://chicken.parmacitieschools.org/images/nero.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/nero/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/nero.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/nero.html",
     isNew: false
   },
   {
     id: 422,
     title: "FNF: VS. Ron  ️",
-    image: "https://chicken.parmacitieschools.org/images/Ron.3.0.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/Ron.3.0/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/Ron.3.0.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/Ron.3.0.html",
     isNew: false
   },
   {
     id: 423,
     title: "FNF: VS. Rika",
-    image: "https://chicken.parmacitieschools.org/images/rika.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/rika/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rika.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/rika.html",
     isNew: false
   },
   {
     id: 424,
     title: "FNF: VS. Speedrunner Mario",
-    image: "https://chicken.parmacitieschools.org/images/yas.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/yas/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/yas.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/yas.html",
     isNew: false
   },
   {
     id: 425,
     title: "FNF: VS. King",
-    image: "https://chicken.parmacitieschools.org/images/king.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/king/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/king.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/king.html",
     isNew: false
   },
   {
     id: 426,
     title: "FNF: VS. Hex",
-    image: "https://chicken.parmacitieschools.org/images/hex.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/hex/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hex.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/hex.html",
     isNew: false
   },
   {
     id: 427,
     title: "FNF: VS. Slenderman",
-    image: "https://chicken.parmacitieschools.org/images/slenderman.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/slenderman/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/slenderman.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/slenderman.html",
     isNew: false
   },
   {
     id: 428,
     title: "FNF: VS. Sunday",
-    image: "https://chicken.parmacitieschools.org/images/sunday.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/sunday/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sunday.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/sunday.html",
     isNew: false
   },
   {
     id: 429,
     title: "FNF: VS. Corrupted Tankman",
-    image: "https://chicken.parmacitieschools.org/images/cn.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/cn/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cn.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/cn.html",
     isNew: false
   },
   {
     id: 430,
     title: "FNF: VS. Shaggy",
-    image: "https://chicken.parmacitieschools.org/images/shaggy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/shaggy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/shaggy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/shaggy.html",
     isNew: false
   },
   {
     id: 431,
     title: "FNF: VS. Nonsense",
-    image: "https://chicken.parmacitieschools.org/images/nonsence.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/nonsence/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/nonsence.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/nonsence.html",
     isNew: false
   },
   {
     id: 432,
     title: "FNF: VS. Spong",
-    image: "https://chicken.parmacitieschools.org/images/spong.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/spong/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spong.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/spong.html",
     isNew: false
   },
   {
     id: 433,
     title: "FNF: VS. Timmy",
-    image: "https://chicken.parmacitieschools.org/images/pwrhr.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/pwrhr/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pwrhr.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/pwrhr.html",
     isNew: false
   },
   {
     id: 434,
     title: "FNF: VS. Tord",
-    image: "https://chicken.parmacitieschools.org/images/tord.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/tord/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tord.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/tord.html",
     isNew: false
   },
   {
     id: 435,
     title: "FNF: VS. Tabi",
-    image: "https://chicken.parmacitieschools.org/images/tabi.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/tabi/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tabi.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/tabi.html",
     isNew: false
   },
   {
     id: 436,
     title: "FNF: VS. QT",
-    image: "https://chicken.parmacitieschools.org/images/qt.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/qt/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/qt.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/qt.html",
     isNew: false
   },
   {
     id: 437,
     title: "FNF: VS. Doxxie",
-    image: "https://chicken.parmacitieschools.org/images/doxxie.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/doxxie/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/doxxie.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/doxxie.html",
     isNew: false
   },
   {
     id: 438,
     title: "FNF: VS. Zardy",
-    image: "https://chicken.parmacitieschools.org/images/zardyupdate.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/zardyupdate/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/zardyupdate.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/zardyupdate.html",
     isNew: false
   },
   {
     id: 439,
     title: "FNF: CORROSION",
-    image: "https://chicken.parmacitieschools.org/images/corrosion.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/corrosion/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/corrosion.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/corrosion.html",
     isNew: false
   },
   {
     id: 440,
     title: "FNF: CORROSION V2",
-    image: "https://chicken.parmacitieschools.org/images/corrosion.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/corrosion/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/corrosion.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/corrosion.html",
     isNew: false
   },
   {
     id: 441,
     title: "FNF: Twiddlefinger",
-    image: "https://chicken.parmacitieschools.org/images/twiddlefinger.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/twiddlefinger/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/twiddlefinger.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/twiddlefinger.html",
     isNew: false
   },
   {
     id: 442,
     title: "FNF: ANOTHERBROTHER",
-    image: "https://chicken.parmacitieschools.org/images/anotherbrother.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/anotherbrother/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/anotherbrother.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/anotherbrother.html",
     isNew: false
   },
   {
     id: 443,
     title: "FNF: HORKGLORPGLOOP",
-    image: "https://chicken.parmacitieschools.org/images/hork.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/hork/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hork.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/hork.html",
     isNew: false
   },
   {
     id: 444,
     title: "FNF: Konton Boogie ️",
-    image: "https://chicken.parmacitieschools.org/images/konton.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/konton/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/konton.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/konton.html",
     isNew: false
   },
   {
     id: 445,
     title: "FNF: Bob and Bosip: The EX Update",
-    image: "https://chicken.parmacitieschools.org/images/bob.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/bob",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bob.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/bob",
     isNew: false
   },
   {
     id: 446,
     title: "FNF: Dave and Bambi Golden Apple ️",
-    image: "https://chicken.parmacitieschools.org/images/GoldenApple.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnfmods/GoldenApple/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/GoldenApple.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/GoldenApple.html",
     isNew: false
   },
   {
     id: 447,
     title: "FNF: Nyaw Erect",
-    image: "https://chicken.parmacitieschools.org/images/nyaw.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/nyaw/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/nyaw.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/nyaw.html",
     isNew: false
   },
   {
     id: 448,
     title: "FNF: VS. Tabi: Pico Mix",
-    image: "https://chicken.parmacitieschools.org/images/tabip.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/tabip/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tabip.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/tabip.html",
     isNew: false
   },
   {
     id: 449,
     title: "FNF: Silly Funkin'",
-    image: "https://chicken.parmacitieschools.org/images/silly.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/silly/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/silly.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/silly.html",
     isNew: false
   },
   {
     id: 450,
     title: "FNF: Strident Crisis",
-    image: "https://chicken.parmacitieschools.org/images/strident.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/strident/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/strident.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/strident.html",
     isNew: false
   },
   {
     id: 451,
     title: "FNF: Spookys Saturday Scare",
-    image: "https://chicken.parmacitieschools.org/images/spookyscare.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/spookyscare/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spookyscare.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/spookyscare.html",
     isNew: false
   },
   {
     id: 452,
     title: "FNF: Scratch Cat",
-    image: "https://chicken.parmacitieschools.org/images/scratch.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/scratch/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/scratch.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/scratch.html",
     isNew: false
   },
   {
     id: 453,
     title: "FNF: Aflac Remaster",
-    image: "https://chicken.parmacitieschools.org/images/aflac.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/aflac/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/aflac.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/aflac.html",
     isNew: false
   },
   {
     id: 454,
     title: "FNF: Mario's Madness V2 ️",
-    image: "https://chicken.parmacitieschools.org/images/MM.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/MM/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/MM.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/MM.html",
     isNew: false
   },
   {
     id: 455,
     title: "FNF: Voiid Chronicles ️",
-    image: "https://chicken.parmacitieschools.org/images/void.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/void/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/void.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/void.html",
     isNew: false
   },
   {
     id: 456,
     title: "FNF: Yeah! - Internet Oneshot",
-    image: "https://chicken.parmacitieschools.org/images/yeah.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/yeah/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/yeah.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/yeah.html",
     isNew: false
   },
   {
     id: 457,
     title: "FNF: Madness Incident: 0201A",
-    image: "https://chicken.parmacitieschools.org/images/madness.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/madness/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/madness.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/madness.html",
     isNew: false
   },
   {
     id: 458,
     title: "FNF: Nusky",
-    image: "https://chicken.parmacitieschools.org/images/nusky.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/nusky/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/nusky.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/nusky.html",
     isNew: false
   },
   {
     id: 459,
     title: "FNF: Grafitti Groovin'",
-    image: "https://chicken.parmacitieschools.org/images/grafitti.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/grafitti/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/grafitti.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/grafitti.html",
     isNew: false
   },
   {
     id: 460,
     title: "FNF: The Full-Ass Tricky Mod ️",
-    image: "https://chicken.parmacitieschools.org/images/tricky.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/tricky",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tricky.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/tricky",
     isNew: false
   },
   {
     id: 461,
     title: "FNF: 17Bucks",
-    image: "https://chicken.parmacitieschools.org/images/17bucks.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/17bucks/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/17bucks.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/17bucks.html",
     isNew: false
   },
   {
     id: 462,
     title: "FNF: Indie Cross ️",
-    image: "https://chicken.parmacitieschools.org/images/indie.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/indie",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/indie.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/indie",
     isNew: false
   },
   {
     id: 463,
     title: "FNF: 2Hot: Freestyle",
-    image: "https://chicken.parmacitieschools.org/images/2hot.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/2hot/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/2hot.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2hot.html",
     isNew: false
   },
   {
     id: 464,
     title: "FNF: 2Hot: BF Mix",
-    image: "https://chicken.parmacitieschools.org/images/2hotbf.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/2hotbf/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/2hotbf.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/2hotbf.html",
     isNew: false
   },
   {
     id: 465,
     title: "FNF: Spongebob's Classic Showdown",
-    image: "https://chicken.parmacitieschools.org/images/spongebob.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/spongebob/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spongebob.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/spongebob.html",
     isNew: false
   },
   {
     id: 466,
     title: "FNF: Next Out of Robloxia",
-    image: "https://chicken.parmacitieschools.org/images/roadblocks.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/roadblocks/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/roadblocks.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/roadblocks.html",
     isNew: false
   },
   {
     id: 467,
     title: "FNF: Hatsune Miku: Project Funkin'",
-    image: "https://chicken.parmacitieschools.org/images/project.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/project/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/project.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/project.html",
     isNew: false
   },
   {
     id: 468,
     title: "FNF: Bopcity",
-    image: "https://chicken.parmacitieschools.org/images/bop.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/bop/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bop.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/bop.html",
     isNew: false
   },
   {
     id: 469,
     title: "FNF: Arcade Showdown",
-    image: "https://chicken.parmacitieschools.org/images/kapi.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/kapi/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/kapi.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/kapi.html",
     isNew: false
   },
   {
     id: 470,
     title: "FNF: Beats and Treats",
-    image: "https://chicken.parmacitieschools.org/images/beatstreats.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/beatstreats/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/beatstreats.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/beatstreats.html",
     isNew: false
   },
   {
     id: 471,
     title: "FNF: Pibby Corrupted ️",
-    image: "https://chicken.parmacitieschools.org/images/pibby.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/pibby/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pibby.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/pibby.html",
     isNew: false
   },
   {
     id: 472,
     title: "FNF: Jeffy's Endless Aethos",
-    image: "https://chicken.parmacitieschools.org/images/aethos.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/aethos/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/aethos.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/aethos.html",
     isNew: false
   },
   {
     id: 473,
     title: "FNF: Shucks v2",
-    image: "https://chicken.parmacitieschools.org/images/shucks.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/shucks/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/shucks.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/shucks.html",
     isNew: false
   },
   {
     id: 474,
     title: "FNF: Hazy River",
-    image: "https://chicken.parmacitieschools.org/images/hazy.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/hazy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hazy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/hazy.html",
     isNew: false
   },
   {
     id: 475,
     title: "FNF: Twinsomnia",
-    image: "https://chicken.parmacitieschools.org/images/twin.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/twin/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/twin.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/twin.html",
     isNew: false
   },
   {
     id: 476,
     title: "FNF: Breaking Point",
-    image: "https://chicken.parmacitieschools.org/images/jaiden.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/jaiden/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/jaiden.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/jaiden.html",
     isNew: false
   },
   {
     id: 477,
     title: "FNF: Mid Fight Masses",
-    image: "https://chicken.parmacitieschools.org/images/mfm.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/mfm/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/mfm.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/mfm.html",
     isNew: false
   },
   {
     id: 478,
     title: "FNF: Tales from the Treehouse",
-    image: "https://chicken.parmacitieschools.org/images/tree.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/tree/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tree.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/tree.html",
     isNew: false
   },
   {
     id: 479,
     title: "FNF: Sideline Blitz",
-    image: "https://chicken.parmacitieschools.org/images/sideline.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/sideline/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sideline.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/sideline.html",
     isNew: false
   },
   {
     id: 480,
     title: "FNF: The Date Week",
-    image: "https://chicken.parmacitieschools.org/images/date.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/date/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/date.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/date.html",
     isNew: false
   },
   {
     id: 481,
     title: "FNF: Yeahman!",
-    image: "https://chicken.parmacitieschools.org/images/yeahman.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/yeahman/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/yeahman.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/yeahman.html",
     isNew: false
   },
   {
     id: 482,
     title: "FNF: Steven Universe Mini Mod Pack",
-    image: "https://chicken.parmacitieschools.org/images/steven.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/steven/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/steven.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/steven.html",
     isNew: false
   },
   {
     id: 483,
     title: "FNF: Roastin' on a Cartoon Cartoon Friday",
-    image: "https://chicken.parmacitieschools.org/images/roastin.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/roastin/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/roastin.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/roastin.html",
     isNew: false
   },
   {
     id: 484,
     title: "FNF: Beach Party",
-    image: "https://chicken.parmacitieschools.org/images/beach.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/beach/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/beach.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/beach.html",
     isNew: false
   },
   {
     id: 485,
     title: "FNF: Chaos Nightmare",
-    image: "https://chicken.parmacitieschools.org/images/phantasm.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/phantasm/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/phantasm.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/phantasm.html",
     isNew: false
   },
   {
     id: 486,
     title: "FNF: Sprunkin'",
-    image: "https://chicken.parmacitieschools.org/images/sprunki.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/sprunki/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sprunki.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/sprunki.html",
     isNew: false
   },
   {
     id: 487,
     title: "FNF: Funkin' for Hire",
-    image: "https://chicken.parmacitieschools.org/images/hire.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/hire/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hire.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/hire.html",
     isNew: false
   },
   {
     id: 488,
     title: "FNF: Funkin' Peanuts",
-    image: "https://chicken.parmacitieschools.org/images/snoopy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/snoopy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/snoopy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/snoopy.html",
     isNew: false
   },
   {
     id: 489,
     title: "FNF: Another Atrocity Fanmod",
-    image: "https://chicken.parmacitieschools.org/images/atrocity.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/atrocity/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/atrocity.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/atrocity.html",
     isNew: false
   },
   {
     id: 490,
     title: "FNF: Mistful Crimson Morning",
-    image: "https://chicken.parmacitieschools.org/images/MCM.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/MCM/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/MCM.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/MCM.html",
     isNew: false
   },
   {
     id: 491,
     title: "FNF: The X-Event",
-    image: "https://chicken.parmacitieschools.org/images/x-event.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/x-event/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/x-event.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/x-event.html",
     isNew: false
   },
   {
     id: 492,
     title: "FNF: Starving Artist",
-    image: "https://chicken.parmacitieschools.org/images/starve.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/starve/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/starve.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/starve.html",
     isNew: false
   },
   {
     id: 493,
     title: "FNF: Flavor Rave",
-    image: "https://chicken.parmacitieschools.org/images/flavor.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/flavor/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/flavor.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/flavor.html",
     isNew: false
   },
   {
     id: 494,
     title: "FNF: RoFNF Funkin'",
-    image: "https://chicken.parmacitieschools.org/images/rofnf.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/rofnf/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rofnf.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/rofnf.html",
     isNew: false
   },
   {
     id: 495,
     title: "FNF: Baldi's Basics in Funkin'",
-    image: "https://chicken.parmacitieschools.org/images/baldi.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/baldi/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/baldi.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/baldi.html",
     isNew: false
   },
   {
     id: 496,
     title: "FNF: Deb8",
-    image: "https://chicken.parmacitieschools.org/images/deb8.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/deb8/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/deb8.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/deb8.html",
     isNew: false
   },
   {
     id: 497,
     title: "FNF: Killshot",
-    image: "https://chicken.parmacitieschools.org/images/killshot.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/killshot/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/killshot.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/killshot.html",
     isNew: false
   },
   {
     id: 498,
     title: "FNF: 13th Night Funk Blood️",
-    image: "https://chicken.parmacitieschools.org/images/funkblood.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/funkblood/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/funkblood.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/funkblood.html",
     isNew: false
   },
   {
     id: 499,
     title: "FNF: Lobotomy Dash Funkin' ️",
-    image: "https://chicken.parmacitieschools.org/images/lobotomy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/lobotomy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/lobotomy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/lobotomy.html",
     isNew: false
   },
   {
     id: 500,
     title: "FNF: Gamblecore",
-    image: "https://chicken.parmacitieschools.org/images/gamblecore.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/gamblecore/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gamblecore.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/gamblecore.html",
     isNew: false
   },
   {
     id: 501,
     title: "FNF: Parkpass",
-    image: "https://chicken.parmacitieschools.org/images/parkpass.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/parkpass/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/parkpass.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/parkpass.html",
     isNew: false
   },
   {
     id: 502,
     title: "FNF: OK K.O.! Let's Get Funky!",
-    image: "https://chicken.parmacitieschools.org/images/K.O.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/K.O/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/K.O.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/K.O.html",
     isNew: false
   },
   {
     id: 503,
     title: "FNF: Hell Allany",
-    image: "https://chicken.parmacitieschools.org/images/alany.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/alany/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/alany.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/alany.html",
     isNew: false
   },
   {
     id: 504,
     title: "FNF: Darkness Takeover vs Pibby Family Guy",
-    image: "https://chicken.parmacitieschools.org/images/darkness-takeover.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/darkness-takeover/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/darkness-takeover.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/darkness-takeover.html",
     isNew: false
   },
   {
     id: 505,
     title: "FNF: SMW: Power Star Melody",
-    image: "https://chicken.parmacitieschools.org/images/smw.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/smw/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/smw.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/smw.html",
     isNew: false
   },
   {
     id: 506,
     title: "FNF: COME OUT TO PLAY - Vs. MC-X",
-    image: "https://chicken.parmacitieschools.org/images/mc-x.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/mc-x/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/mc-x.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/mc-x.html",
     isNew: false
   },
   {
     id: 507,
     title: "FNF: FNF Vs Bad Piggies (Ross V2)",
-    image: "https://chicken.parmacitieschools.org/images/bad-pig.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/bad-pig/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bad-pig.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/bad-pig.html",
     isNew: false
   },
   {
     id: 508,
     title: "FNF: Funkin' In The Galaxy",
-    image: "https://chicken.parmacitieschools.org/images/in-the-gal.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/in-the-gal/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/in-the-gal.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/in-the-gal.html",
     isNew: false
   },
   {
     id: 509,
     title: "FNF: Funkin'Herobrine Reborn",
-    image: "https://chicken.parmacitieschools.org/images/herob.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/herob/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/herob.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/herob.html",
     isNew: false
   },
   {
     id: 510,
     title: "FNF: Pibby Legacy",
-    image: "https://chicken.parmacitieschools.org/images/pibby-legacy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/pibby-legacy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pibby-legacy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/pibby-legacy.html",
     isNew: false
   },
   {
     id: 511,
     title: "FNF: Vs.Undertale",
-    image: "https://chicken.parmacitieschools.org/images/undertale.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/undertale/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/undertale.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/undertale.html",
     isNew: false
   },
   {
     id: 512,
     title: "FNF: BFDI 26",
-    image: "https://chicken.parmacitieschools.org/images/bdfi26.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/bdfi26/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bdfi26.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/bdfi26.html",
     isNew: false
   },
   {
     id: 513,
     title: "FNF: The Return Funkin' Whitty Demo",
-    image: "https://chicken.parmacitieschools.org/images/return.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/return/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/return.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/return.html",
     isNew: false
   },
   {
     id: 514,
     title: "FNF: Bob's Onslaught",
-    image: "https://chicken.parmacitieschools.org/images/bob.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/bob/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bob.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/bob.html",
     isNew: false
   },
   {
     id: 515,
     title: "FNF: SMB Funk Mix DX",
-    image: "https://chicken.parmacitieschools.org/images/funk-mix.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/funk-mix/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/funk-mix.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/funk-mix.html",
     isNew: false
   },
   {
     id: 516,
     title: "FNF: SMB Funk Mix DX Game Over",
-    image: "https://chicken.parmacitieschools.org/images/gameover.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/gameover/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gameover.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gameover.html",
     isNew: false
   },
   {
     id: 517,
     title: "FNF: Salty's Sunday Night",
-    image: "https://chicken.parmacitieschools.org/images/salty.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/salty",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/salty.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/salty",
     isNew: false
   },
   {
     id: 518,
     title: "FNF: Fuckin Funkin' with Koi",
-    image: "https://chicken.parmacitieschools.org/images/koi.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/koi/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/koi.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/koi.html",
     isNew: false
   },
   {
     id: 519,
     title: "FNF: Doki Doki Takeover Plus !",
-    image: "https://chicken.parmacitieschools.org/images/doki.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/doki/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/doki.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/doki.html",
     isNew: false
   },
   {
     id: 520,
     title: "FNF: MiFunkSide",
-    image: "https://chicken.parmacitieschools.org/images/mifunkside.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/mifunkside/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/mifunkside.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/mifunkside.html",
     isNew: false
   },
   {
     id: 521,
     title: "FNF: Cartoon Clash",
-    image: "https://chicken.parmacitieschools.org/images/clash.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/clash",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/clash.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/clash",
     isNew: false
   },
   {
     id: 522,
     title: "FNF: Silly Billy",
-    image: "https://chicken.parmacitieschools.org/images/billy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/billy",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/billy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/billy",
     isNew: false
   },
   {
     id: 523,
     title: "FNF: Secret Histories",
-    image: "https://chicken.parmacitieschools.org/images/secretSonic.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/secretSonic",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/secretSonic.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/secretSonic",
     isNew: false
   },
   {
     id: 524,
     title: "FNF: The Squidward Tricky Mod ️",
-    image: "https://chicken.parmacitieschools.org/images/squidtricky.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/squidtricky",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/squidtricky.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/squidtricky",
     isNew: false
   },
   {
     id: 525,
     title: "FNF: The Impossible Trio",
-    image: "https://chicken.parmacitieschools.org/images/IT.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/IT/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/IT.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/IT.html",
     isNew: false
   },
   {
     id: 526,
     title: "FNF: Doubling Down",
-    image: "https://chicken.parmacitieschools.org/images/doubleingdown.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/doubleingdown/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/doubleingdown.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/doubleingdown.html",
     isNew: false
   },
   {
     id: 527,
     title: "FNF: MOB MOD",
-    image: "https://chicken.parmacitieschools.org/images/mobmod.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/mobmod/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/mobmod.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/mobmod.html",
     isNew: false
   },
   {
     id: 528,
     title: "FNF: Digitalizing 2",
-    image: "https://chicken.parmacitieschools.org/images/digi.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/digi/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/digi.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/digi.html",
     isNew: false
   },
   {
     id: 529,
     title: "FNF: The Gacha Mod",
-    image: "https://chicken.parmacitieschools.org/images/gacha.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/gacha",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gacha.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/gacha",
     isNew: false
   },
   {
     id: 530,
     title: "FNF: Golf Minigame",
-    image: "https://chicken.parmacitieschools.org/images/golf.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/golf",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/golf.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/golf",
     isNew: false
   },
   {
     id: 531,
     title: "FNF: Funkin' for a BFDI",
-    image: "https://chicken.parmacitieschools.org/images/bfdi.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/bfdi/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bfdi.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/bfdi.html",
     isNew: false
   },
   {
     id: 532,
     title: "FNF: Smoke Em' Out Struggle",
-    image: "https://chicken.parmacitieschools.org/images/garcello.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/garcello/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/garcello.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/garcello.html",
     isNew: false
   },
   {
     id: 533,
     title: "FNF: Wii Funkin' REV-MIX",
-    image: "https://chicken.parmacitieschools.org/images/REV-MIX.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/REV-MIX/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/REV-MIX.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/REV-MIX.html",
     isNew: false
   },
   {
     id: 534,
     title: "FNF: Wii Funkin' B-Sides",
-    image: "https://chicken.parmacitieschools.org/images/mattbside.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/mattbside/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/mattbside.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/mattbside.html",
     isNew: false
   },
   {
     id: 535,
     title: "FNF: Wii Funkin' Wiik 3",
-    image: "https://chicken.parmacitieschools.org/images/matt3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/matt3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/matt3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/matt3.html",
     isNew: false
   },
   {
     id: 536,
     title: "FNF: Krusty Karoling",
-    image: "https://chicken.parmacitieschools.org/images/krusty.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/krusty/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/krusty.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/krusty.html",
     isNew: false
   },
   {
     id: 537,
     title: "FNF: Funk! Miss Nagatoro",
-    image: "https://chicken.parmacitieschools.org/images/funknaga.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/funknaga/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/funknaga.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/funknaga.html",
     isNew: false
   },
   {
     id: 538,
     title: "FNF: Pibby Apocalypse",
-    image: "https://chicken.parmacitieschools.org/images/pibby2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/maths/pibby2",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pibby2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/maths/pibby2",
     isNew: false
   },
   {
     id: 539,
     title: "FNF: Corruption Invasion",
-    image: "https://chicken.parmacitieschools.org/images/invadion.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/player.html?game=https://chicken.parmacitieschools.org/fnfmods/invadion/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/invadion.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnfmods/invadion.html",
     isNew: false
   },
   {
     id: 540,
     title: "Fancy Pants World 1 Remix",
-    image: "https://chicken.parmacitieschools.org/images/fancypantsadventuresremix.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/fancypantsadventuresremix/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fancypantsadventuresremix.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/fancypantsadventuresremix.html",
     isNew: false
   },
   {
     id: 541,
     title: "Tunnel Rush",
-    image: "https://chicken.parmacitieschools.org/images/tunnelrush.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/tunnelrush/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tunnelrush.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/tunnelrush.html",
     isNew: false
   },
   {
     id: 542,
     title: "3 line",
-    image: "https://chicken.parmacitieschools.org/images/3line.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/3line/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/3line.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/3line.html",
     isNew: false
   },
   {
     id: 543,
     title: "Balloon Run",
-    image: "https://chicken.parmacitieschools.org/images/balloonrun.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/balloonrun/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/balloonrun.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/balloonrun.html",
     isNew: false
   },
   {
     id: 544,
     title: "Big Red Button",
-    image: "https://chicken.parmacitieschools.org/images/bigredbutton.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bigredbutton/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bigredbutton.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/bigredbutton.html",
     isNew: false
   },
   {
     id: 545,
     title: "Bike Champ",
-    image: "https://chicken.parmacitieschools.org/images/bikechamp.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bikechamp/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bikechamp.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/bikechamp.html",
     isNew: false
   },
   {
     id: 546,
     title: "Bubble Spinner",
-    image: "https://chicken.parmacitieschools.org/images/bubblespinner.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/bubblespinner/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bubblespinner.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/bubblespinner.html",
     isNew: false
   },
   {
     id: 547,
     title: "Canopy",
-    image: "https://chicken.parmacitieschools.org/images/canopy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/canopy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/canopy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/canopy.html",
     isNew: false
   },
   {
     id: 548,
     title: "Celeste (PICO 8)",
-    image: "https://chicken.parmacitieschools.org/images/celeste.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/celeste/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/celeste.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/celeste.html",
     isNew: false
   },
   {
     id: 549,
     title: "Chisel",
-    image: "https://chicken.parmacitieschools.org/images/chisel.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/chisel/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/chisel.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/chisel.html",
     isNew: false
   },
   {
     id: 550,
     title: "Chisel 2",
-    image: "https://chicken.parmacitieschools.org/images/chisel2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/chisel2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/chisel2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/chisel2.html",
     isNew: false
   },
   {
     id: 551,
     title: "ABCya! Coin",
-    image: "https://chicken.parmacitieschools.org/images/coin.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/coin/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/coin.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/coin.html",
     isNew: false
   },
   {
     id: 552,
     title: "Burger And Frights",
-    image: "https://chicken.parmacitieschools.org/images/burgerandfrights.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/burgerandfrights/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/burgerandfrights.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/burgerandfrights.html",
     isNew: false
   },
   {
     id: 553,
     title: "Crash Bandicoot: The Wrath of Cortex",
-    image: "https://chicken.parmacitieschools.org/images/crash.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/crash/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/crash.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/crash.html",
     isNew: false
   },
   {
     id: 554,
     title: "Geometry Dash Lite",
-    image: "https://chicken.parmacitieschools.org/images/gdlite.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/gdlite/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gdlite.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/gdlite.html",
     isNew: false
   },
   {
     id: 555,
     title: "Geometry Dash (Fake)",
-    image: "https://chicken.parmacitieschools.org/images/geometrydash.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/geometrydash/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/geometrydash.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/geometrydash.html",
     isNew: false
   },
   {
     id: 556,
     title: "Geometry Rash",
-    image: "https://chicken.parmacitieschools.org/images/geometryrash.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/geometryrash/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/geometryrash.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/geometryrash.html",
     isNew: false
   },
   {
     id: 560,
     title: "Brave Explorers",
-    image: "https://chicken.parmacitieschools.org/images/brave-explorers.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/brave-explorers/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/brave-explorers.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/brave-explorers.html",
     isNew: false
   },
   {
     id: 561,
     title: "Glass City",
-    image: "https://chicken.parmacitieschools.org/images/glass-city.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/glass-city/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/glass-city.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/glass-city.html",
     isNew: false
   },
   {
     id: 562,
     title: "Go Ball",
-    image: "https://chicken.parmacitieschools.org/images/go-ball.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/go-ball/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/go-ball.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/go-ball.html",
     isNew: false
   },
   {
     id: 563,
     title: "Push Your Luck",
-    image: "https://chicken.parmacitieschools.org/images/push-your-luck.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/push-your-luck/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/push-your-luck.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/push-your-luck.html",
     isNew: false
   },
   {
     id: 564,
     title: "Scratch RPG By Jalen",
-    image: "https://chicken.parmacitieschools.org/images/scratchrpg.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/scratchrpg/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/scratchrpg.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/scratchrpg.html",
     isNew: false
   },
   {
     id: 565,
     title: "Spelunky",
-    image: "https://chicken.parmacitieschools.org/images/spelunky.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/spelunky/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spelunky.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/spelunky.html",
     isNew: false
   },
   {
     id: 566,
     title: "Swerve",
-    image: "https://chicken.parmacitieschools.org/images/swerve.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/swerve/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/swerve.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/swerve.html",
     isNew: false
   },
   {
     id: 567,
     title: "Synesthesia",
-    image: "https://chicken.parmacitieschools.org/images/synesthesia.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/synesthesia/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/synesthesia.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/synesthesia.html",
     isNew: false
   },
   {
     id: 568,
     title: "Tactical Assasin2",
-    image: "https://chicken.parmacitieschools.org/images/tacticalassasin2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/tacticalassasin2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tacticalassasin2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/tacticalassasin2.html",
     isNew: false
   },
   {
     id: 569,
     title: "Adrenaline Challenge",
-    image: "https://chicken.parmacitieschools.org/images/adrenalinechallenge.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/adrenalinechallenge/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/adrenalinechallenge.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/adrenalinechallenge.html",
     isNew: false
   },
   {
     id: 570,
     title: "Back Country",
-    image: "https://chicken.parmacitieschools.org/images/backcountry.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/backcountry/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/backcountry.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/backcountry.html",
     isNew: false
   },
   {
     id: 571,
     title: "Champion Archer",
-    image: "https://chicken.parmacitieschools.org/images/championarcher.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/championarcher/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/championarcher.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/championarcher.html",
     isNew: false
   },
   {
     id: 572,
     title: "Endless War 3",
-    image: "https://chicken.parmacitieschools.org/images/endlesswar3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/endlesswar3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/endlesswar3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/endlesswar3.html",
     isNew: false
   },
   {
     id: 573,
     title: "Finns Fantastic Food Machine",
-    image: "https://chicken.parmacitieschools.org/images/finns-fantastic-food-machine.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/finns-fantastic-food-machine/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/finns-fantastic-food-machine.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/finns-fantastic-food-machine.html",
     isNew: false
   },
   {
     id: 574,
     title: "10 Minutes Till Dawn",
-    image: "https://chicken.parmacitieschools.org/images/10-minutes-till-dawn.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/10-minutes-till-dawn/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/10-minutes-till-dawn.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/10-minutes-till-dawn.html",
     isNew: false
   },
   {
     id: 575,
     title: "2048",
-    image: "https://chicken.parmacitieschools.org/images/2048.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/2048/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/2048.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/2048.html",
     isNew: false
   },
   {
     id: 576,
     title: "2d rocket league",
-    image: "https://chicken.parmacitieschools.org/images/2drocketleague.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/2drocketleague/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/2drocketleague.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/2drocketleague.html",
     isNew: false
   },
   {
     id: 577,
     title: "A Dance Of Fire And Ice",
-    image: "https://chicken.parmacitieschools.org/images/adofai.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/adofai/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/adofai.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/adofai.html",
     isNew: false
   },
   {
     id: 578,
     title: "a dark room",
-    image: "https://chicken.parmacitieschools.org/images/adarkroom.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/adarkroom/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/adarkroom.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/adarkroom.html",
     isNew: false
   },
   {
     id: 579,
     title: "achievement unlocked",
-    image: "https://chicken.parmacitieschools.org/images/achievementunlocked.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/achievementunlocked/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/achievementunlocked.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/achievementunlocked.html",
     isNew: false
   },
   {
     id: 580,
     title: "age of war",
-    image: "https://chicken.parmacitieschools.org/images/ageofwar.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/ageofwar/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ageofwar.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/ageofwar.html",
     isNew: false
   },
   {
     id: 581,
     title: "Alien Hominid",
-    image: "https://chicken.parmacitieschools.org/images/alienhominid.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/alienhominid/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/alienhominid.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/alienhominid.html",
     isNew: false
   },
   {
     id: 582,
     title: "Amazing Rope Police",
-    image: "https://chicken.parmacitieschools.org/images/amazing-rope-police.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/amazing-rope-police/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/amazing-rope-police.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/amazing-rope-police.html",
     isNew: false
   },
   {
     id: 583,
     title: "Amorphous",
-    image: "https://chicken.parmacitieschools.org/images/amorphous.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/amorphous/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/amorphous.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/amorphous.html",
     isNew: false
   },
   {
     id: 584,
     title: "Angry Birds",
-    image: "https://chicken.parmacitieschools.org/images/birds.jpg",
-    url: "https://chicken.parmacitieschools.org/livediesmos/birds/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/birds.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/birds.html",
     isNew: false
   },
   {
     id: 585,
     title: "Angry Birds Rio",
-    image: "https://chicken.parmacitieschools.org/images/rio.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/rio/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rio.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/rio.html",
     isNew: false
   },
   {
     id: 586,
     title: "Angry Birds Space",
-    image: "https://chicken.parmacitieschools.org/images/abspace.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/abspace/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/abspace.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/abspace.html",
     isNew: false
   },
   {
     id: 587,
     title: "Astray",
-    image: "https://chicken.parmacitieschools.org/images/astray.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/astray/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/astray.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/astray.html",
     isNew: false
   },
   {
     id: 588,
     title: "Avalanche",
-    image: "https://chicken.parmacitieschools.org/images/avalanche.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/avalanche/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/avalanche.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/avalanche.html",
     isNew: false
   },
   {
     id: 589,
     title: "Backflip Dive 3d",
-    image: "https://chicken.parmacitieschools.org/images/backflip-dive-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/backflip-dive-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/backflip-dive-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/backflip-dive-3d.html",
     isNew: false
   },
   {
     id: 590,
     title: "Bad Time Simulator",
-    image: "https://chicken.parmacitieschools.org/images/badtimesimulator.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/badtimesimulator/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/badtimesimulator.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/badtimesimulator.html",
     isNew: false
   },
   {
     id: 591,
     title: "Baldi's Basics",
-    image: "https://chicken.parmacitieschools.org/images/baldis-basics.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/baldis-basics/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/baldis-basics.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/baldis-basics.html",
     isNew: false
   },
   {
     id: 592,
     title: "Basket Bros",
-    image: "https://chicken.parmacitieschools.org/images/basketbros.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/basketbros/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/basketbros.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/basketbros.html",
     isNew: false
   },
   {
     id: 593,
     title: "Basket Random",
-    image: "https://chicken.parmacitieschools.org/images/basketrandom.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/basketrandom/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/basketrandom.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/basketrandom.html",
     isNew: false
   },
   {
     id: 594,
     title: "Basketball Stars",
-    image: "https://chicken.parmacitieschools.org/images/basketball-stars.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/basketball-stars/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/basketball-stars.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/basketball-stars.html",
     isNew: false
   },
   {
     id: 595,
     title: "BFDIA 5b",
-    image: "https://chicken.parmacitieschools.org/images/bfdia.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/bfdia/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bfdia.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/bfdia.html",
     isNew: false
   },
   {
     id: 596,
     title: "Binding Of Isaac",
-    image: "https://chicken.parmacitieschools.org/images/binding-of-isaac.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/binding-of-isaac/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/binding-of-isaac.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/binding-of-isaac.html",
     isNew: false
   },
   {
     id: 597,
     title: "Bit Planes",
-    image: "https://chicken.parmacitieschools.org/images/bit-planes.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/bit-planes/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bit-planes.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/bit-planes.html",
     isNew: false
   },
   {
     id: 598,
     title: "Bitlife",
-    image: "https://chicken.parmacitieschools.org/images/bitlife.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/bitlife/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bitlife.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/bitlife.html",
     isNew: false
   },
   {
     id: 599,
     title: "Block Blast",
-    image: "https://chicken.parmacitieschools.org/images/block.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/block/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/block.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/block.html",
     isNew: false
   },
   {
     id: 600,
     title: "Blood Tournament",
-    image: "https://chicken.parmacitieschools.org/images/bloodtournament.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/bloodtournament/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bloodtournament.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/bloodtournament.html",
     isNew: false
   },
   {
     id: 601,
     title: "Bloons",
-    image: "https://chicken.parmacitieschools.org/images/bloons.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/bloons/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bloons.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/bloons.html",
     isNew: false
   },
   {
     id: 602,
     title: "Bob The Robber 2",
-    image: "https://chicken.parmacitieschools.org/images/bobtherobber2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/bobtherobber2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bobtherobber2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/bobtherobber2.html",
     isNew: false
   },
   {
     id: 603,
     title: "Boxing Physics 2",
-    image: "https://chicken.parmacitieschools.org/images/boxingphysics2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/boxingphysics2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/boxingphysics2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/boxingphysics2.html",
     isNew: false
   },
   {
     id: 604,
     title: "Breaking The Bank",
-    image: "https://chicken.parmacitieschools.org/images/breakingthebank.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/breakingthebank/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/breakingthebank.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/breakingthebank.html",
     isNew: false
   },
   {
     id: 605,
     title: "Breaklock",
-    image: "https://chicken.parmacitieschools.org/images/breaklock.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/breaklock/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/breaklock.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/breaklock.html",
     isNew: false
   },
   {
     id: 606,
     title: "Breakout",
-    image: "https://chicken.parmacitieschools.org/images/breakout.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/breakout/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/breakout.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/breakout.html",
     isNew: false
   },
   {
     id: 607,
     title: "Candy Clicker By Jalen",
-    image: "https://chicken.parmacitieschools.org/images/candy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/candy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/candy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/candy.html",
     isNew: false
   },
   {
     id: 608,
     title: "FNF: GUMMIBAR!",
-    image: "https://chicken.parmacitieschools.org/images/gummi.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/gummi/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gummi.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/gummi.html",
     isNew: false
   },
   {
     id: 609,
     title: "Champion Island",
-    image: "https://chicken.parmacitieschools.org/images/championisland.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/championisland/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/championisland.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/championisland.html",
     isNew: false
   },
   {
     id: 610,
     title: "Chess",
-    image: "https://chicken.parmacitieschools.org/images/chess.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/chess/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/chess.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/chess.html",
     isNew: false
   },
   {
     id: 611,
     title: "Choose Your Weapon",
-    image: "https://chicken.parmacitieschools.org/images/chooseyourweapon.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/chooseyourweapon/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/chooseyourweapon.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/chooseyourweapon.html",
     isNew: false
   },
   {
     id: 612,
     title: "Choose Your Weapon 2",
-    image: "https://chicken.parmacitieschools.org/images/chooseyourweapon2.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/chooseyourweapon2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/chooseyourweapon2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/chooseyourweapon2.html",
     isNew: false
   },
   {
     id: 613,
     title: "Choose Your Weapon 3",
-    image: "https://chicken.parmacitieschools.org/images/chooseyourweapon3.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/chooseyourweapon3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/chooseyourweapon3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/chooseyourweapon3.html",
     isNew: false
   },
   {
     id: 614,
     title: "Chrome Dino",
-    image: "https://chicken.parmacitieschools.org/images/dino.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/dino/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/dino.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/dino.html",
     isNew: false
   },
   {
     id: 615,
     title: "Clicker Heroes",
-    image: "https://chicken.parmacitieschools.org/images/clickerheroes.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/clickerheroes/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/clickerheroes.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/clickerheroes.html",
     isNew: false
   },
   {
     id: 616,
     title: "Cluster Rush",
-    image: "https://chicken.parmacitieschools.org/images/cluster-rush.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/cluster-rush/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/cluster-rush.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/cluster-rush.html",
     isNew: false
   },
   {
     id: 617,
     title: "Color Switch",
-    image: "https://chicken.parmacitieschools.org/images/colorswitch.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/colorswitch/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/colorswitch.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/colorswitch.html",
     isNew: false
   },
   {
     id: 618,
     title: "Commodore Clicker",
-    image: "https://chicken.parmacitieschools.org/images/commodoreclicker.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/commodoreclicker/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/commodoreclicker.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/commodoreclicker.html",
     isNew: false
   },
   {
     id: 619,
     title: "Cookie Clicker Classic",
-    image: "https://chicken.parmacitieschools.org/images/Cookie-Clicker-Classic-main.jpg",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/Cookie-Clicker-Classic-main.jpg",
     url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/cookieclicker.html",
     isNew: false
   },
@@ -4391,533 +4391,533 @@ const games = [
   {
     id: 621,
     title: "Crazy Cars",
-    image: "https://chicken.parmacitieschools.org/images/CrazyCars.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/CrazyCars/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/CrazyCars.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/CrazyCars.html",
     isNew: false
   },
   {
     id: 622,
     title: "Creative Kill Chamber",
-    image: "https://chicken.parmacitieschools.org/images/creativekillchamber.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/creativekillchamber/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/creativekillchamber.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/creativekillchamber.html",
     isNew: false
   },
   {
     id: 623,
     title: "Crossy Road",
-    image: "https://chicken.parmacitieschools.org/images/crossy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/crossy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/crossy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/crossy.html",
     isNew: false
   },
   {
     id: 624,
     title: "CSGO Clicker",
-    image: "https://chicken.parmacitieschools.org/images/csgoclicker.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/csgoclicker/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/csgoclicker.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/csgoclicker.html",
     isNew: false
   },
   {
     id: 625,
     title: "Cut The Rope",
-    image: "https://chicken.parmacitieschools.org/images/rope.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/rope/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rope.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/rope.html",
     isNew: false
   },
   {
     id: 627,
     title: "Death Run 3D",
-    image: "https://chicken.parmacitieschools.org/images/death-run-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/death-run-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/death-run-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/death-run-3d.html",
     isNew: false
   },
   {
     id: 628,
     title: "Dirt Racers",
-    image: "https://chicken.parmacitieschools.org/images/dirt.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/dirt/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/dirt.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/dirt.html",
     isNew: false
   },
   {
     id: 629,
     title: "Doge Miner",
-    image: "https://chicken.parmacitieschools.org/images/DogeMiner.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/DogeMiner/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/DogeMiner.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/DogeMiner.html",
     isNew: false
   },
   {
     id: 630,
     title: "Doodle Jump",
-    image: "https://chicken.parmacitieschools.org/images/doodlejump.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/doodlejump/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/doodlejump.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/doodlejump.html",
     isNew: false
   },
   {
     id: 631,
     title: "DragonBall Devolution",
-    image: "https://chicken.parmacitieschools.org/images/dragonballdevolution.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/dragonballdevolution/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/dragonballdevolution.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/dragonballdevolution.html",
     isNew: false
   },
   {
     id: 632,
     title: "Draw The Hill",
-    image: "https://chicken.parmacitieschools.org/images/draw-the-hill.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/draw-the-hill/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/draw-the-hill.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/draw-the-hill.html",
     isNew: false
   },
   {
     id: 633,
     title: "Drift Boss",
-    image: "https://chicken.parmacitieschools.org/images/drift-boss.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/drift-boss/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/drift-boss.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/drift-boss.html",
     isNew: false
   },
   {
     id: 634,
     title: "Drift Hunters",
-    image: "https://chicken.parmacitieschools.org/images/drifthunters.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/drifthunters/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/drifthunters.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/drifthunters.html",
     isNew: false
   },
   {
     id: 635,
     title: "Duck life",
-    image: "https://chicken.parmacitieschools.org/images/ducklife.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/ducklife/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ducklife.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/ducklife.html",
     isNew: false
   },
   {
     id: 636,
     title: "Duck life 2",
-    image: "https://chicken.parmacitieschools.org/images/ducklife2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/ducklife2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ducklife2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/ducklife2.html",
     isNew: false
   },
   {
     id: 637,
     title: "Duck life 3",
-    image: "https://chicken.parmacitieschools.org/images/ducklife3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/ducklife3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ducklife3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/ducklife3.html",
     isNew: false
   },
   {
     id: 638,
     title: "Duck life 4",
-    image: "https://chicken.parmacitieschools.org/images/ducklife4.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/ducklife4/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ducklife4.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/ducklife4.html",
     isNew: false
   },
   {
     id: 639,
     title: "Duck life 5 Treasure Hunt",
-    image: "https://chicken.parmacitieschools.org/images/duck-life-treasurehunt.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/duck-life-treasurehunt/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/duck-life-treasurehunt.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/duck-life-treasurehunt.html",
     isNew: false
   },
   {
     id: 640,
     title: "Dungeon Craft",
-    image: "https://chicken.parmacitieschools.org/images/dungeon-craft.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/dungeon-craft/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/dungeon-craft.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/dungeon-craft.html",
     isNew: false
   },
   {
     id: 641,
     title: "Electricman 2",
-    image: "https://chicken.parmacitieschools.org/images/electricman2.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/electricman2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/electricman2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/electricman2.html",
     isNew: false
   },
   {
     id: 642,
     title: "Escaping The Prison",
-    image: "https://chicken.parmacitieschools.org/images/escapingtheprison.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/escapingtheprison/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/escapingtheprison.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/escapingtheprison.html",
     isNew: false
   },
   {
     id: 643,
     title: "Evolution",
-    image: "https://chicken.parmacitieschools.org/images/evolution.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/evolution/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/evolution.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/evolution.html",
     isNew: false
   },
   {
     id: 644,
     title: "Factory Balls",
-    image: "https://chicken.parmacitieschools.org/images/factoryballs.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/factoryballs/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/factoryballs.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/factoryballs.html",
     isNew: false
   },
   {
     id: 645,
     title: "Factory Balls Forever",
-    image: "https://chicken.parmacitieschools.org/images/factory-balls-forever.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/factory-balls-forever/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/factory-balls-forever.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/factory-balls-forever.html",
     isNew: false
   },
   {
     id: 646,
     title: "Fancy Pants Adventures",
-    image: "https://chicken.parmacitieschools.org/images/fancypantsadventures.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/fancypantsadventures/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fancypantsadventures.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/fancypantsadventures.html",
     isNew: false
   },
   {
     id: 647,
     title: "Fancy Pants Adventures 2",
-    image: "https://chicken.parmacitieschools.org/images/fancypantsadventures2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/fancypantsadventures2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fancypantsadventures2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/fancypantsadventures2.html",
     isNew: false
   },
   {
     id: 648,
     title: "Fancy Pants Adventures 3",
-    image: "https://chicken.parmacitieschools.org/images/fancypantsadvantures3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/fancypantsadvantures3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fancypantsadvantures3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/fancypantsadvantures3.html",
     isNew: false
   },
   {
     id: 649,
     title: "Fireboy and Watergirl",
-    image: "https://chicken.parmacitieschools.org/images/fireboywatergirl.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/fireboywatergirl/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fireboywatergirl.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/fireboywatergirl.html",
     isNew: false
   },
   {
     id: 650,
     title: "Fireboy and Watergirl 2",
-    image: "https://chicken.parmacitieschools.org/images/fireboywatergirl2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/fireboywatergirl2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fireboywatergirl2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/fireboywatergirl2.html",
     isNew: false
   },
   {
     id: 651,
     title: "Fireboy and Watergirl 3",
-    image: "https://chicken.parmacitieschools.org/images/fireboywatergirl3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/fireboywatergirl3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fireboywatergirl3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/fireboywatergirl3.html",
     isNew: false
   },
   {
     id: 652,
     title: "Fireboy and Watergirl 4",
-    image: "https://chicken.parmacitieschools.org/images/fireboywatergirl4.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/fireboywatergirl4/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fireboywatergirl4.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/fireboywatergirl4.html",
     isNew: false
   },
   {
     id: 653,
     title: "Flappy Bird",
-    image: "https://chicken.parmacitieschools.org/images/flappybird.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/flappybird/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/flappybird.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/flappybird.html",
     isNew: false
   },
   {
     id: 654,
     title: "fleeing The Complex",
-    image: "https://chicken.parmacitieschools.org/images/fleeingthecomplex.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/fleeingthecomplex/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fleeingthecomplex.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/fleeingthecomplex.html",
     isNew: false
   },
   {
     id: 655,
     title: "Flippy Fish",
-    image: "https://chicken.parmacitieschools.org/images/flippy-fish.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/flippy-fish/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/flippy-fish.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/flippy-fish.html",
     isNew: false
   },
   {
     id: 656,
     title: "Floodrunner 2",
-    image: "https://chicken.parmacitieschools.org/images/floodrunner2.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/floodrunner2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/floodrunner2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/floodrunner2.html",
     isNew: false
   },
   {
     id: 657,
     title: "Floodrunner 3",
-    image: "https://chicken.parmacitieschools.org/images/floodrunner3.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/floodrunner3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/floodrunner3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/floodrunner3.html",
     isNew: false
   },
   {
     id: 658,
     title: "Fluidsim",
-    image: "https://chicken.parmacitieschools.org/images/fluidsim.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/fluidsim/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fluidsim.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/fluidsim.html",
     isNew: false
   },
   {
     id: 660,
     title: "Free Rider 2",
-    image: "https://chicken.parmacitieschools.org/images/free-rider-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/free-rider-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/free-rider-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/free-rider-2.html",
     isNew: false
   },
   {
     id: 661,
     title: "Frost Bite",
-    image: "https://chicken.parmacitieschools.org/images/frostbite.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/frostbite/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/frostbite.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/frostbite.html",
     isNew: false
   },
   {
     id: 662,
     title: "Frost Bite 2",
-    image: "https://chicken.parmacitieschools.org/images/frostbite2.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/frostbite2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/frostbite2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/frostbite2.html",
     isNew: false
   },
   {
     id: 663,
     title: "Fruit Ninja",
-    image: "https://chicken.parmacitieschools.org/images/ninja.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/ninja/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ninja.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/ninja.html",
     isNew: false
   },
   {
     id: 664,
     title: "Funny Ball Game",
-    image: "https://chicken.parmacitieschools.org/images/funnyballgame.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/funnyballgame/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/funnyballgame.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/funnyballgame.html",
     isNew: false
   },
   {
     id: 665,
     title: "Funny Mad Racing",
-    image: "https://chicken.parmacitieschools.org/images/funnymadracing.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/funnymadracing/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/funnymadracing.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/funnymadracing.html",
     isNew: false
   },
   {
     id: 666,
     title: "Funny Shooter",
-    image: "https://chicken.parmacitieschools.org/images/funnyshooter.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/funnyshooter/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/funnyshooter.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/funnyshooter.html",
     isNew: false
   },
   {
     id: 667,
     title: "Funny Shooter 2",
-    image: "https://chicken.parmacitieschools.org/images/funnyshooter2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/funnyshooter2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/funnyshooter2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/funnyshooter2.html",
     isNew: false
   },
   {
     id: 668,
     title: "Game Maker",
-    image: "https://chicken.parmacitieschools.org/images/gamemaker.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/gamemaker/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gamemaker.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/gamemaker.html",
     isNew: false
   },
   {
     id: 669,
     title: "Getaway Shootout",
-    image: "https://chicken.parmacitieschools.org/images/getaway-shootout.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/getaway-shootout/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/getaway-shootout.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/getaway-shootout.html",
     isNew: false
   },
   {
     id: 670,
     title: "Gumball Splash Master",
-    image: "https://chicken.parmacitieschools.org/images/splash.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/splash/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/splash.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/splash.html",
     isNew: false
   },
   {
     id: 671,
     title: "Gun Mayhem",
-    image: "https://chicken.parmacitieschools.org/images/gunmayhem.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/gunmayhem/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gunmayhem.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/gunmayhem.html",
     isNew: false
   },
   {
     id: 672,
     title: "Gun Mayhem 2",
-    image: "https://chicken.parmacitieschools.org/images/gunmayhem2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/gunmayhem2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/gunmayhem2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/gunmayhem2.html",
     isNew: false
   },
   {
     id: 673,
     title: "Hacker Type",
-    image: "https://chicken.parmacitieschools.org/images/hackertype.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/hackertype/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/hackertype.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/hackertype.html",
     isNew: false
   },
   {
     id: 674,
     title: "Happy Hop",
-    image: "https://chicken.parmacitieschools.org/images/happy-hop.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/happy-hop/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/happy-hop.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/happy-hop.html",
     isNew: false
   },
   {
     id: 675,
     title: "Happy Wheels",
-    image: "https://chicken.parmacitieschools.org/images/happywheels.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/happywheels/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/happywheels.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/happywheels.html",
     isNew: false
   },
   {
     id: 676,
     title: "Helicopter",
-    image: "https://chicken.parmacitieschools.org/images/helicopter.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/helicopter/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/helicopter.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/helicopter.html",
     isNew: false
   },
   {
     id: 677,
     title: "Helix Jump",
-    image: "https://chicken.parmacitieschools.org/images/helixjump.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/helixjump/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/helixjump.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/helixjump.html",
     isNew: false
   },
   {
     id: 678,
     title: "House Of Hazards",
-    image: "https://chicken.parmacitieschools.org/images/house-of-hazards.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/house-of-hazards/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/house-of-hazards.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/house-of-hazards.html",
     isNew: false
   },
   {
     id: 679,
     title: "Idle Breakout",
-    image: "https://chicken.parmacitieschools.org/images/idle-breakout.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/idle-breakout/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/idle-breakout.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/idle-breakout.html",
     isNew: false
   },
   {
     id: 680,
     title: "Idle Shark",
-    image: "https://chicken.parmacitieschools.org/images/idle-shark.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/idle-shark/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/idle-shark.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/idle-shark.html",
     isNew: false
   },
   {
     id: 681,
     title: "Infinite Craft",
-    image: "https://chicken.parmacitieschools.org/images/infinitecraft.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/infinitecraft/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/infinitecraft.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/infinitecraft.html",
     isNew: false
   },
   {
     id: 682,
     title: "Jelly Truck",
-    image: "https://chicken.parmacitieschools.org/images/jelly-truck.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/jelly-truck/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/jelly-truck.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/jelly-truck.html",
     isNew: false
   },
   {
     id: 683,
     title: "Just One Boss",
-    image: "https://chicken.parmacitieschools.org/images/just-one-boss.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/just-one-boss/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/just-one-boss.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/just-one-boss.html",
     isNew: false
   },
   {
     id: 684,
     title: "Knife Hit",
-    image: "https://chicken.parmacitieschools.org/images/knifehit.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/knifehit/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/knifehit.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/knifehit.html",
     isNew: false
   },
   {
     id: 685,
     title: "last Horizon",
-    image: "https://chicken.parmacitieschools.org/images/lasthorizon.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/lasthorizon/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/lasthorizon.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/lasthorizon.html",
     isNew: false
   },
   {
     id: 686,
     title: "lazy Jump 3d",
-    image: "https://chicken.parmacitieschools.org/images/lazyjump3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/lazyjump3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/lazyjump3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/lazyjump3d.html",
     isNew: false
   },
   {
     id: 687,
     title: "learn To Fly",
-    image: "https://chicken.parmacitieschools.org/images/learntofly.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/learntofly/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/learntofly.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/learntofly.html",
     isNew: false
   },
   {
     id: 688,
     title: "learn To Fly 2",
-    image: "https://chicken.parmacitieschools.org/images/learntofly2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/learntofly2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/learntofly2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/learntofly2.html",
     isNew: false
   },
   {
     id: 689,
     title: "learn to fly 3",
-    image: "https://chicken.parmacitieschools.org/images/learntofly3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/learntofly3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/learntofly3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/learntofly3.html",
     isNew: false
   },
   {
     id: 690,
     title: "line rider",
-    image: "https://chicken.parmacitieschools.org/images/linerider.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/linerider/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/linerider.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/linerider.html",
     isNew: false
   },
   {
     id: 691,
     title: "lows Adventures 2",
-    image: "https://chicken.parmacitieschools.org/images/lowsadventures2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/lowsadventures2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/lowsadventures2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/lowsadventures2.html",
     isNew: false
   },
   {
     id: 692,
     title: "Mario and Luigi: Superstar Saga",
-    image: "https://chicken.parmacitieschools.org/images/player#superstar.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=superstar",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/player#superstar.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/superstar",
     isNew: false
   },
   {
     id: 693,
     title: "Mario Kart: Super Circuit",
-    image: "https://chicken.parmacitieschools.org/images/player#mariokart.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=mariokart",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/player#mariokart.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/mariokart",
     isNew: false
   },
   {
     id: 694,
     title: "Pokemon Emerald",
-    image: "https://chicken.parmacitieschools.org/images/pokemonemerald.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player/#pokemonemerald",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pokemonemerald.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/player/#pokemonemerald",
     isNew: false
   },
   {
     id: 695,
     title: "Pokemon Green",
-    image: "https://chicken.parmacitieschools.org/images/pokemongreen.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player/#pokemongreen",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pokemongreen.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/player/#pokemongreen",
     isNew: false
   },
   {
     id: 696,
     title: "Pokemon Red",
-    image: "https://chicken.parmacitieschools.org/images/pokemonred.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player/#pokemonred",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pokemonred.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/player/#pokemonred",
     isNew: false
   },
   {
     id: 697,
     title: "Pokemon Sapphire",
-    image: "https://chicken.parmacitieschools.org/images/pokemonsapphire.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player/#pokemonsapphire",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pokemonsapphire.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/player/#pokemonsapphire",
     isNew: false
   },
   {
     id: 698,
     title: "Microsoft surf",
-    image: "https://chicken.parmacitieschools.org/images/surf.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/surf/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/surf.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/surf.html",
     isNew: false
   },
   {
@@ -4937,715 +4937,715 @@ const games = [
   {
     id: 701,
     title: "Monster Tracks",
-    image: "https://chicken.parmacitieschools.org/images/monstert.jpg",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/monstert.jpg",
     url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/monstertracks.html",
     isNew: false
   },
   {
     id: 703,
     title: "Motox3m",
-    image: "https://chicken.parmacitieschools.org/images/motox3m.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/motox3m/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/motox3m.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/motox3m.html",
     isNew: false
   },
   {
     id: 704,
     title: "Motox3m 2",
-    image: "https://chicken.parmacitieschools.org/images/moto-x3m-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/moto-x3m-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/moto-x3m-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/moto-x3m-2.html",
     isNew: false
   },
   {
     id: 705,
     title: "Motox3m Pool Party",
-    image: "https://chicken.parmacitieschools.org/images/moto-x3m-pool-party.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/moto-x3m-pool-party/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/moto-x3m-pool-party.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/moto-x3m-pool-party.html",
     isNew: false
   },
   {
     id: 706,
     title: "Motox3m Spooky",
-    image: "https://chicken.parmacitieschools.org/images/motox3m-spooky.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/motox3m-spooky/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/motox3m-spooky.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/motox3m-spooky.html",
     isNew: false
   },
   {
     id: 707,
     title: "Mutilate A Doll 2",
-    image: "https://chicken.parmacitieschools.org/images/mad2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/mad2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/mad2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/mad2.html",
     isNew: false
   },
   {
     id: 708,
     title: "myTeardrop",
-    image: "https://chicken.parmacitieschools.org/images/play.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/teardrop/play/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/play.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/teardrop/play.html",
     isNew: false
   },
   {
     id: 709,
     title: "Neon Rider",
-    image: "https://chicken.parmacitieschools.org/images/neonrider.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/neonrider/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/neonrider.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/neonrider.html",
     isNew: false
   },
   {
     id: 710,
     title: "Offline Paradise",
-    image: "https://chicken.parmacitieschools.org/images/OfflineParadise.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/OfflineParadise/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/OfflineParadise.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/OfflineParadise.html",
     isNew: false
   },
   {
     id: 711,
     title: "OMORI",
-    image: "https://chicken.parmacitieschools.org/images/omori.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/omori/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/omori.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/omori.html",
     isNew: false
   },
   {
     id: 712,
     title: "One Screen Run",
-    image: "https://chicken.parmacitieschools.org/images/one-screen-run.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/one-screen-run/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/one-screen-run.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/one-screen-run.html",
     isNew: false
   },
   {
     id: 713,
     title: "One Screen Run 2",
-    image: "https://chicken.parmacitieschools.org/images/one-screen-run-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/one-screen-run-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/one-screen-run-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/one-screen-run-2.html",
     isNew: false
   },
   {
     id: 714,
     title: "Osu!",
-    image: "https://chicken.parmacitieschools.org/images/osu.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/osu/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/osu.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/osu.html",
     isNew: false
   },
   {
     id: 715,
     title: "Osu! Mania",
-    image: "https://chicken.parmacitieschools.org/images/osumania.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/osumania/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/osumania.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/osumania.html",
     isNew: false
   },
   {
     id: 716,
     title: "ovo",
-    image: "https://chicken.parmacitieschools.org/images/ovo.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/ovo/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ovo.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/ovo.html",
     isNew: false
   },
   {
     id: 717,
     title: "Papa's Burgeria",
-    image: "https://chicken.parmacitieschools.org/images/burger.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/papasburgeria/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/burger.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/papasburgeria.html",
     isNew: false
   },
   {
     id: 718,
     title: "Papa's Pizzaria",
-    image: "https://chicken.parmacitieschools.org/images/pizza.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/pizza/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pizza.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/pizza.html",
     isNew: false
   },
   {
     id: 719,
     title: "Papas Pancakeria",
-    image: "https://chicken.parmacitieschools.org/images/papas-pancakeria.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/papas-pancakeria/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/papas-pancakeria.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/papas-pancakeria.html",
     isNew: false
   },
   {
     id: 720,
     title: "Papas Wingeria",
-    image: "https://chicken.parmacitieschools.org/images/papaswingeria.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/papaswingeria/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/papaswingeria.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/papaswingeria.html",
     isNew: false
   },
   {
     id: 721,
     title: "Papery Planes",
-    image: "https://chicken.parmacitieschools.org/images/papery-planes.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/papery-planes/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/papery-planes.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/papery-planes.html",
     isNew: false
   },
   {
     id: 722,
     title: "Pizza Tower",
-    image: "https://chicken.parmacitieschools.org/images/pizza-tower.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/pizza-tower/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pizza-tower.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/pizza-tower.html",
     isNew: false
   },
   {
     id: 723,
     title: "Plants vs Zombies",
-    image: "https://chicken.parmacitieschools.org/images/pvz.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/pvz/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pvz.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/pvz.html",
     isNew: false
   },
   {
     id: 724,
     title: "Pokemon: FireRed",
-    image: "https://chicken.parmacitieschools.org/images/pokemonred.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=pokemonred",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pokemonred.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/pokemonred",
     isNew: false
   },
   {
     id: 725,
     title: "Pokemon: LeafGreen",
-    image: "https://chicken.parmacitieschools.org/images/pokemongreen.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=pokemongreen",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/pokemongreen.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/pokemongreen",
     isNew: false
   },
   {
     id: 726,
     title: "Popcat Classic",
-    image: "https://chicken.parmacitieschools.org/images/popcat-classic.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/popcat-classic/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/popcat-classic.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/popcat-classic.html",
     isNew: false
   },
   {
     id: 727,
     title: "Portal Flash",
-    image: "https://chicken.parmacitieschools.org/images/portalflash.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/portalflash/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/portalflash.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/portalflash.html",
     isNew: false
   },
   {
     id: 728,
     title: "Red Ball 3",
-    image: "https://chicken.parmacitieschools.org/images/redball3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/redball3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/redball3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/redball3.html",
     isNew: false
   },
   {
     id: 729,
     title: "Red Ball 4",
-    image: "https://chicken.parmacitieschools.org/images/redball4.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/redball4/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/redball4.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/redball4.html",
     isNew: false
   },
   {
     id: 730,
     title: "Retro Bowl",
-    image: "https://chicken.parmacitieschools.org/images/retro-bowl.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/retro-bowl/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/retro-bowl.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/retro-bowl.html",
     isNew: false
   },
   {
     id: 731,
     title: "Rise-Of Neon Square",
-    image: "https://chicken.parmacitieschools.org/images/rise-of-neon-square.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/rise-of-neon-square/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rise-of-neon-square.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/rise-of-neon-square.html",
     isNew: false
   },
   {
     id: 732,
     title: "Ristar",
-    image: "https://chicken.parmacitieschools.org/images/ristar.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/ristar/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ristar.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/ristar.html",
     isNew: false
   },
   {
     id: 733,
     title: "Rocket Soccer Derby",
-    image: "https://chicken.parmacitieschools.org/images/rocketleague.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/rocketleague/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rocketleague.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/rocketleague.html",
     isNew: false
   },
   {
     id: 734,
     title: "Rooftop snipers",
-    image: "https://chicken.parmacitieschools.org/images/rooftopsnipers.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/rooftopsnipers/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rooftopsnipers.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/rooftopsnipers.html",
     isNew: false
   },
   {
     id: 735,
     title: "Rooftop snipers 2",
-    image: "https://chicken.parmacitieschools.org/images/rooftopsnipers2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/rooftopsnipers2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rooftopsnipers2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/rooftopsnipers2.html",
     isNew: false
   },
   {
     id: 736,
     title: "Run",
-    image: "https://chicken.parmacitieschools.org/images/run.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/run/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/run.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/run.html",
     isNew: false
   },
   {
     id: 737,
     title: "Run 2",
-    image: "https://chicken.parmacitieschools.org/images/run2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/run2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/run2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/run2.html",
     isNew: false
   },
   {
     id: 738,
     title: "Sand Game",
-    image: "https://chicken.parmacitieschools.org/images/sand-game.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/sand-game/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sand-game.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/sand-game.html",
     isNew: false
   },
   {
     id: 739,
     title: "Sandboxels",
-    image: "https://chicken.parmacitieschools.org/images/sandboxels.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/sandboxels/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sandboxels.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/sandboxels.html",
     isNew: false
   },
   {
     id: 740,
     title: "Short life 2",
-    image: "https://chicken.parmacitieschools.org/images/short-life-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/short-life-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/short-life-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/short-life-2.html",
     isNew: false
   },
   {
     id: 741,
     title: "Short Ride",
-    image: "https://chicken.parmacitieschools.org/images/short-ride.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/short-ride/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/short-ride.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/short-ride.html",
     isNew: false
   },
   {
     id: 742,
     title: "Sky Block",
-    image: "https://chicken.parmacitieschools.org/images/skyblock.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/skyblock/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/skyblock.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/skyblock.html",
     isNew: false
   },
   {
     id: 743,
     title: "Slope",
-    image: "https://chicken.parmacitieschools.org/images/slope.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/slope/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/slope.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/slope.html",
     isNew: false
   },
   {
     id: 744,
     title: "SM63",
-    image: "https://chicken.parmacitieschools.org/images/sm63.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/sm63/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sm63.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/sm63.html",
     isNew: false
   },
   {
     id: 745,
     title: "Smash Karts",
-    image: "https://chicken.parmacitieschools.org/images/smashk.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/smashk/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/smashk.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/smashk.html",
     isNew: false
   },
   {
     id: 746,
     title: "Snow Rider 3D",
-    image: "https://chicken.parmacitieschools.org/images/rider.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/rider/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/rider.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/rider.html",
     isNew: false
   },
   {
     id: 747,
     title: "Sonic Advance",
-    image: "https://chicken.parmacitieschools.org/images/sonic_advance.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=sonic_advance",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sonic_advance.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/sonic_advance",
     isNew: false
   },
   {
     id: 748,
     title: "Sonic Advance 2",
-    image: "https://chicken.parmacitieschools.org/images/sonic_advance2.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=sonic_advance2",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sonic_advance2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/sonic_advance2",
     isNew: false
   },
   {
     id: 749,
     title: "Sonic Advance 3",
-    image: "https://chicken.parmacitieschools.org/images/sonic_advance3.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=sonic_advance3",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sonic_advance3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/sonic_advance3",
     isNew: false
   },
   {
     id: 750,
     title: "Sonic the Hedgehog",
-    image: "https://chicken.parmacitieschools.org/images/sonic.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/sonic/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sonic.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/sonic.html",
     isNew: false
   },
   {
     id: 751,
     title: "Space Invaders",
-    image: "https://chicken.parmacitieschools.org/images/spaceinvaders.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/spaceinvaders/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/spaceinvaders.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/spaceinvaders.html",
     isNew: false
   },
   {
     id: 752,
     title: "Spongebob Fiery Tracks Of Fury",
-    image: "https://chicken.parmacitieschools.org/images/fist.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/fist/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/fist.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/fist.html",
     isNew: false
   },
   {
     id: 753,
     title: "SpongeBob Patty Panic",
-    image: "https://chicken.parmacitieschools.org/images/panic.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/panic/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/panic.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/panic.html",
     isNew: false
   },
   {
     id: 754,
     title: "Spongebob: Belly Bounce",
-    image: "https://chicken.parmacitieschools.org/images/bounce.jpg",
-    url: "player.html?game=bounce/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/bounce.jpg",
+    url: "bounce.html",
     isNew: false
   },
   {
     id: 755,
     title: "Stack Bump 3d",
-    image: "https://chicken.parmacitieschools.org/images/stack-bump-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/stack-bump-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/stack-bump-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/stack-bump-3d.html",
     isNew: false
   },
   {
     id: 756,
     title: "Stealing The Diamond",
-    image: "https://chicken.parmacitieschools.org/images/stealingthediamond.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/stealingthediamond/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/stealingthediamond.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/stealingthediamond.html",
     isNew: false
   },
   {
     id: 757,
     title: "Stickman Dismount",
-    image: "https://chicken.parmacitieschools.org/images/stickman-dismount.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/stickman-dismount/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/stickman-dismount.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/stickman-dismount.html",
     isNew: false
   },
   {
     id: 758,
     title: "Stickman Hook",
-    image: "https://chicken.parmacitieschools.org/images/stickman-hook.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/stickman-hook/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/stickman-hook.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/stickman-hook.html",
     isNew: false
   },
   {
     id: 759,
     title: "Stickman Survival",
-    image: "https://chicken.parmacitieschools.org/images/Stickman-Survival.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/Stickman-Survival/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/Stickman-Survival.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/Stickman-Survival.html",
     isNew: false
   },
   {
     id: 760,
     title: "Subway Surfers",
-    image: "https://chicken.parmacitieschools.org/images/subway.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/subway/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/subway.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/subway.html",
     isNew: false
   },
   {
     id: 761,
     title: "Super Brawl 2",
-    image: "https://chicken.parmacitieschools.org/images/sb2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/sb2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sb2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/sb2.html",
     isNew: false
   },
   {
     id: 762,
     title: "Super Mario 64",
-    image: "https://chicken.parmacitieschools.org/images/sm64.jpg",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/sm64.jpg",
     url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/sm64.html",
     isNew: false
   },
   {
     id: 763,
     title: "Super Mario Advance",
-    image: "https://chicken.parmacitieschools.org/images/supermarioadvance.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=supermarioadvance",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/supermarioadvance.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/supermarioadvance",
     isNew: false
   },
   {
     id: 764,
     title: "Super Mario Advance 2",
-    image: "https://chicken.parmacitieschools.org/images/supermarioadvance2.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=supermarioadvance2",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/supermarioadvance2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/supermarioadvance2",
     isNew: false
   },
   {
     id: 765,
     title: "Super Mario Advance 3",
-    image: "https://chicken.parmacitieschools.org/images/supermarioadvance3.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=supermarioadvance3",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/supermarioadvance3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/supermarioadvance3",
     isNew: false
   },
   {
     id: 766,
     title: "Super Mario Advance 4",
-    image: "https://chicken.parmacitieschools.org/images/supermarioadvance4.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=supermarioadvance4",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/supermarioadvance4.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/supermarioadvance4",
     isNew: false
   },
   {
     id: 767,
     title: "Super Mario Flash",
-    image: "https://chicken.parmacitieschools.org/images/supermarioflash.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/supermarioflash/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/supermarioflash.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/supermarioflash.html",
     isNew: false
   },
   {
     id: 768,
     title: "Super Mario Flash 2",
-    image: "https://chicken.parmacitieschools.org/images/supermarioflash2.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/supermarioflash2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/supermarioflash2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/supermarioflash2.html",
     isNew: false
   },
   {
     id: 769,
     title: "Super Mario Maker",
-    image: "https://chicken.parmacitieschools.org/images/super-mario-maker-online.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/super-mario-maker-online/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/super-mario-maker-online.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/super-mario-maker-online.html",
     isNew: false
   },
   {
     id: 770,
     title: "Super Meat Boy",
-    image: "https://chicken.parmacitieschools.org/images/supermeatboy.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/supermeatboy/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/supermeatboy.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/supermeatboy.html",
     isNew: false
   },
   {
     id: 771,
     title: "Super Puffer Fish 3d",
-    image: "https://chicken.parmacitieschools.org/images/super-puffer-fish-3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/super-puffer-fish-3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/super-puffer-fish-3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/super-puffer-fish-3d.html",
     isNew: false
   },
   {
     id: 772,
     title: "Super Smash Flash",
-    image: "https://chicken.parmacitieschools.org/images/ssf.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/ssf/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ssf.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/ssf.html",
     isNew: false
   },
   {
     id: 773,
     title: "Tank Trouble 2",
-    image: "https://chicken.parmacitieschools.org/images/tank-trouble-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/tank-trouble-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tank-trouble-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/tank-trouble-2.html",
     isNew: false
   },
   {
     id: 774,
     title: "Tetris",
-    image: "https://chicken.parmacitieschools.org/images/tetris.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/tetris/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/tetris.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/tetris.html",
     isNew: false
   },
   {
     id: 775,
     title: "The Backrooms",
-    image: "https://chicken.parmacitieschools.org/images/backrooms.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/backrooms/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/backrooms.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/backrooms.html",
     isNew: false
   },
   {
     id: 776,
     title: "The Final Earth",
-    image: "https://chicken.parmacitieschools.org/images/the-final-earth.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/the-final-earth/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/the-final-earth.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/the-final-earth.html",
     isNew: false
   },
   {
     id: 777,
     title: "The Final Earth 2",
-    image: "https://chicken.parmacitieschools.org/images/the-final-earth-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/the-final-earth-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/the-final-earth-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/the-final-earth-2.html",
     isNew: false
   },
   {
     id: 778,
     title: "The Impossible Game",
-    image: "https://chicken.parmacitieschools.org/images/theimpossiblegame.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/theimpossiblegame/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/theimpossiblegame.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/theimpossiblegame.html",
     isNew: false
   },
   {
     id: 779,
     title: "The Impossible Quiz",
-    image: "https://chicken.parmacitieschools.org/images/the-impossible-quiz.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/the-impossible-quiz/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/the-impossible-quiz.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/the-impossible-quiz.html",
     isNew: false
   },
   {
     id: 780,
     title: "The Impossible Quiz 2",
-    image: "https://chicken.parmacitieschools.org/images/the-impossible-quiz-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/the-impossible-quiz-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/the-impossible-quiz-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/the-impossible-quiz-2.html",
     isNew: false
   },
   {
     id: 781,
     title: "The Simpsons: Road Rage",
-    image: "https://chicken.parmacitieschools.org/images/simpsons.jpg",
-    url: "https://chicken.parmacitieschools.org/gba/player.html?game=simpsons",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/simpsons.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/gba/simpsons",
     isNew: false
   },
   {
     id: 782,
     title: "There is no game",
-    image: "https://chicken.parmacitieschools.org/images/there-is-no-game.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/there-is-no-game/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/there-is-no-game.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/there-is-no-game.html",
     isNew: false
   },
   {
     id: 783,
     title: "This Is The Only Level",
-    image: "https://chicken.parmacitieschools.org/images/thisistheonlylevel.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/thisistheonlylevel/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/thisistheonlylevel.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/thisistheonlylevel.html",
     isNew: false
   },
   {
     id: 784,
     title: "Traffic Jam 3D",
-    image: "https://chicken.parmacitieschools.org/images/traffic3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/traffic3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/traffic3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/traffic3d.html",
     isNew: false
   },
   {
     id: 785,
     title: "Twinshot",
-    image: "https://chicken.parmacitieschools.org/images/twinshot.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/twinshot/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/twinshot.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/twinshot.html",
     isNew: false
   },
   {
     id: 786,
     title: "Twinshot 2",
-    image: "https://chicken.parmacitieschools.org/images/twinshot2.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/twinshot2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/twinshot2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/twinshot2.html",
     isNew: false
   },
   {
     id: 787,
     title: "Ultimate Flash Sonic",
-    image: "https://chicken.parmacitieschools.org/images/ultimateflashsonic.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/ultimateflashsonic/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/ultimateflashsonic.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/ultimateflashsonic.html",
     isNew: false
   },
   {
     id: 788,
     title: "Unfair Mario",
-    image: "https://chicken.parmacitieschools.org/images/unfairmario.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/whatver/unfairmario/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/unfairmario.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/unfairmario.html",
     isNew: false
   },
   {
     id: 789,
     title: "Vex",
-    image: "https://chicken.parmacitieschools.org/images/vex.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/vex/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/vex.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/vex.html",
     isNew: false
   },
   {
     id: 790,
     title: "Vex 2",
-    image: "https://chicken.parmacitieschools.org/images/vex2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/vex2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/vex2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/vex2.html",
     isNew: false
   },
   {
     id: 791,
     title: "Vex 3",
-    image: "https://chicken.parmacitieschools.org/images/vex3.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/vex3/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/vex3.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/vex3.html",
     isNew: false
   },
   {
     id: 792,
     title: "Vex 4",
-    image: "https://chicken.parmacitieschools.org/images/vex4.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/vex4/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/vex4.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/vex4.html",
     isNew: false
   },
   {
     id: 793,
     title: "Vex 5",
-    image: "https://chicken.parmacitieschools.org/images/vex5.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/vex5/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/vex5.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/vex5.html",
     isNew: false
   },
   {
     id: 794,
     title: "Vex 6",
-    image: "https://chicken.parmacitieschools.org/images/vex6.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/vex6/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/vex6.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/vex6.html",
     isNew: false
   },
   {
     id: 795,
     title: "Vex 7",
-    image: "https://chicken.parmacitieschools.org/images/vex7.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/vex7/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/vex7.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/vex7.html",
     isNew: false
   },
   {
     id: 796,
     title: "Wolf 3d",
-    image: "https://chicken.parmacitieschools.org/images/wolf3d.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/wolf3d/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/wolf3d.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/wolf3d.html",
     isNew: false
   },
   {
     id: 797,
     title: "Worlds Hardest Game",
-    image: "https://chicken.parmacitieschools.org/images/worlds-hardest-game.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/worlds-hardest-game/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/worlds-hardest-game.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/worlds-hardest-game.html",
     isNew: false
   },
   {
     id: 798,
     title: "Worlds Hardest Game 2",
-    image: "https://chicken.parmacitieschools.org/images/worlds-hardest-game-2.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/worlds-hardest-game-2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/worlds-hardest-game-2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/worlds-hardest-game-2.html",
     isNew: false
   },
   {
     id: 799,
     title: "xx142-b2exe",
-    image: "https://chicken.parmacitieschools.org/images/xx142-b2exe.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/xx142-b2exe/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/xx142-b2exe.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/xx142-b2exe.html",
     isNew: false
   },
   {
     id: 800,
     title: "Zombocalypse",
-    image: "https://chicken.parmacitieschools.org/images/zombocalypse.jpg",
-    url: "player.html?game=https://chicken.parmacitieschools.org/livediesmos/zombocalypse/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/zombocalypse.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/livediesmos/zombocalypse.html",
     isNew: false
   },
   {
     id: 801,
     title: "Zombotron",
-    image: "https://chicken.parmacitieschools.org/images/zombotron.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/zombotron/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/zombotron.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/zombotron.html",
     isNew: false
   },
   {
     id: 802,
     title: "Zombotron 2",
-    image: "https://chicken.parmacitieschools.org/images/zombotron2.jpg",
-    url: "https://chicken.parmacitieschools.org/whatver/zombotron2/",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/images/zombotron2.jpg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/whatver/zombotron2.html",
     isNew: false
   },
 {
     id: 803,
     title: "FNF: Heartbreak Havoc: Vs. Sky Redux",
     image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/skyredux.png",
-    url: "player.html?game=https://chicken.parmacitieschools.org/fnf/redux/",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/fnf/redux.html",
     isNew: false
   },
     {
