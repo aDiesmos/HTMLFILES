@@ -7360,10 +7360,31 @@ const games = [
     isNew: false
 },
 {
+    id: 1055,
+    title: "OutRun",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/OutrunGenesis.png",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/OutrunGenesis.html",
+    isNew: true
+},
+{
     id: 1056,
     title: "Sonic In SM64",
     image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/SonicInSM64.jpeg",
     url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/SonicInSM64.html",
+    isNew: true
+},
+{
+    id: 1057,
+    title: "Sonic In SM64 PLUS",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/SonicInSM64Plus.jpeg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/SonicInSM64Plus.html",
+    isNew: true
+},
+{
+    id: 1058,
+    title: "3D Dash Editor",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/3ddasheditor.jpeg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/S3ddasheditor.html",
     isNew: true
 },
 {
@@ -7448,6 +7469,27 @@ const games = [
     title: "Stickman And Guns",
     image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickmanandguns.jpeg",
     url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickmanandguns.html",
+    isNew: true
+},
+{
+    id: 1071,
+    title: "Slender Man",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/slenderman.jpeg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/slenderman.html",
+    isNew: true
+},
+{
+    id: 1072,
+    title: "Sky Riders",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/SkyRiders.jpeg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/SkyRiders.html",
+    isNew: true
+},
+{
+    id: 1072,
+    title: "Slender Man",
+    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/slenderman.jpeg",
+    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/slenderman.html",
     isNew: true
 },
 ];
