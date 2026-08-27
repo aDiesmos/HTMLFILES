@@ -7381,13 +7381,6 @@ const games = [
     isNew: true
 },
 {
-    id: 1058,
-    title: "3D Dash Editor",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/3ddasheditor.jpeg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/S3ddasheditor.html",
-    isNew: true
-},
-{
     id: 1059,
     title: "Trollface Quest 2",
     image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/trollfacequest2.jpeg",
@@ -7466,27 +7459,6 @@ const games = [
 },
 {
     id: 1070,
-    title: "Stickman And Guns",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickmanandguns.jpeg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickmanandguns.html",
-    isNew: true
-},
-{
-    id: 1071,
-    title: "Slender Man",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/slenderman.jpeg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/slenderman.html",
-    isNew: true
-},
-{
-    id: 1072,
-    title: "Sky Riders",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/SkyRiders.jpeg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/SkyRiders.html",
-    isNew: true
-},
-{
-    id: 1072,
     title: "Slender Man",
     image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/slenderman.jpeg",
     url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/slenderman.html",

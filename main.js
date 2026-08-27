@@ -7443,13 +7443,6 @@ const games = [
     url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/trollfacequest13.html",
     isNew: true
 },
-{
-    id: 1070,
-    title: "Stickman And Guns",
-    image: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickmanandguns.jpeg",
-    url: "https://testingcf.jsdelivr.net/gh/aDiesmos/HTMLFILES/2026uploads/stickmanandguns.html",
-    isNew: true
-},
 ];
 const gamesGrid = document.getElementById('gamesGrid');
 const favoritesContainer = document.getElementById('favoritesContainer');
